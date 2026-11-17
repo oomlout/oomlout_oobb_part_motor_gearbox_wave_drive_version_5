@@ -37,8 +37,6 @@ def generate(**kwargs):
         "",
         "## Versions",
         "",
-        f"[Open the full-screen assembly instructions]({page['versions'][0]['html']}) in your browser. Version-specific instructions and printable PDFs are linked below.",
-        "",
         "| Image | Version and description | Main README | HTML assembly instructions | PDF download |",
         "| --- | --- | --- | --- | --- |",
     ]

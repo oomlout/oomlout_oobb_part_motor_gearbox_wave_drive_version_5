@@ -10,8 +10,6 @@ This is an entirely AI-generated coding project. The source code is largely unre
 
 ## Versions
 
-[Open the full-screen assembly instructions](https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/) in your browser. Version-specific instructions and printable PDFs are linked below.
-
 | Image | Version and description | Main README | HTML assembly instructions | PDF download |
 | --- | --- | --- | --- | --- |
 | [![AI-generated CAD render: 12:1 / NEMA 17](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/readme/motor_fit.png)](https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/) | **12:1 / NEMA 17**<br>Single roller bank; twelve 7 mm OD × 12 mm spacers; 6810 output bearing and 6704 wave bearing; 7 × 5 OOBB base. Includes optional printable spacers. | [README](README_DETAILS.md) | [Open in browser](https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/) | [Download PDF](https://github.com/oomlout/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/raw/refs/heads/main/parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/assembly_instructions.pdf) |
