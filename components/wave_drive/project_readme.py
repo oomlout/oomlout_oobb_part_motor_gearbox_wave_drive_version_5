@@ -41,7 +41,7 @@ def generate(**kwargs):
         "",
         f"The gearbox uses one 6810 output bearing, one 6704 wave bearing and a {c['motor_body_depth']:g} mm NEMA 17 body. Its centred {c['base_width']} x {c['base_height']} OOBB base has M6 grid holes and M3 half-grid holes. The output face carries captive M6 and M3 nuts.",
         "",
-        f"[Printable files and SCAD source]({rel}/) · [Complete print pack]({rel}/print_pack.zip) · [Dimensions, regeneration and assembly](README_DETAILS.md)",
+        f"[Printable files and SCAD source]({rel}/) · [Dimensions, regeneration and assembly](README_DETAILS.md)",
         "",
         "## Parts",
         "",

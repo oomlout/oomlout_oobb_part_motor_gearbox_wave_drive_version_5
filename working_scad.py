@@ -122,7 +122,7 @@ def make_part(part, **kwargs):
         if not manifest_path.exists():
             raise RuntimeError("Run a full build before --assembly-only")
         manifest = json.loads(manifest_path.read_text())
-        presentation_keys = {"assembly_cards", "assembly_card_style", "assembly_part_labels", "assembly_book", "assembly_steps", "generate_assembly_cards"}
+        presentation_keys = {"assembly_cards", "assembly_card_style", "assembly_part_labels", "assembly_book", "assembly_steps", "generate_assembly_cards", "package_outputs"}
         for key, value in c.items():
             if key not in presentation_keys and manifest["configuration"].get(key) != value:
                 raise ValueError(f"Mechanical/build setting changed ({key}); run python working.py first")
@@ -131,7 +131,7 @@ def make_part(part, **kwargs):
         manifest_path.write_text(json.dumps(manifest, indent=2)+"\n")
         assembly_cards.main(part_folder=folder, threads=c.get("render_threads", 8))
         documentation.generate(part_folder=folder)
-        if c.get("package_outputs", True):
+        if c.get("package_outputs", False):
             package_release.main(part_folder=folder)
         return folder
     # Base variables, not derived coordinates, are emitted so SCAD editing stays live.
@@ -239,7 +239,7 @@ def make_part(part, **kwargs):
             from wave_drive import assembly_cards
             assembly_cards.main(part_folder=folder, threads=c.get("render_threads", 8))
             documentation.generate(part_folder=folder)
-        if c.get("package_outputs", True):
+        if c.get("package_outputs", False):
             package_release.main(part_folder=folder)
     return folder
 

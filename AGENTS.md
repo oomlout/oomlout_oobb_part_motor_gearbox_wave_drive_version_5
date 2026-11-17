@@ -13,7 +13,7 @@
 - The 40 mm NEMA 17 uses a designed direct motor plate and eccentric adapter. Its 24 mm D shaft is a reference dimension; load capacity and printed fits still need physical verification.
 - This project belongs in `C:/gh/oomlout_oobb_part_motor_gearbox_wave_drive_version_5`; do not recreate the old ChatGPT-folder project.
 - `python working.py` must regenerate every active populated configuration completely, including documentation and graphics, without AI or manual generated-file edits.
-- Store every configuration's drawings, images, scenes, instructions, validation reports and print pack inside its own `parts/<part-id>/` directory. Do not recreate root presentation, release or tools directories.
+- Store every configuration's drawings, images, scenes, instructions and validation reports inside its own `parts/<part-id>/` directory. Do not recreate root presentation, release or tools directories. ZIP packaging is disabled by default; distribute individual files and do not recreate large backup or print-pack archives.
 - Keep reusable helpers in `components/wave_drive/`, inputs in `source_file/`, and prior generated builds under `parts/_archive/`.
 - Define named configurations, build flags, render settings and assembly instruction templates in `working_oomp_populate.py`.
 - Use a standard OOBB base with 5 mm plan corner radii, 1.5 mm upper/lower edge radii, M6 grid holes and M3 half-grid holes. The full output face is a nut-carrier/cover sandwich with captive M6 and M3 nuts wherever they fit; the motor shaft ends in a blind pocket underneath it.

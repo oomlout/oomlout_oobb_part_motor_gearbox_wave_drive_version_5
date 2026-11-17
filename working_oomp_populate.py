@@ -105,7 +105,7 @@ def define(**kwargs):
         "generate_stl": True,
         "generate_previews": True,
         "generate_renders": True,
-        "package_outputs": True,
+        "package_outputs": False,
         "render_threads": 8,
         "render_style": define_render_style(),
         "assembly_steps": define_assembly_steps(),

@@ -18,7 +18,7 @@ This is an entirely AI-generated coding project. Generated outputs are included 
 
 The gearbox uses one 6810 output bearing, one 6704 wave bearing and a 40 mm NEMA 17 body. Its centred 7 x 5 OOBB base has M6 grid holes and M3 half-grid holes. The output face carries captive M6 and M3 nuts.
 
-[Printable files and SCAD source](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/) · [Complete print pack](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_pack.zip) · [Dimensions, regeneration and assembly](README_DETAILS.md)
+[Printable files and SCAD source](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/) · [Dimensions, regeneration and assembly](README_DETAILS.md)
 
 ## Parts
 
