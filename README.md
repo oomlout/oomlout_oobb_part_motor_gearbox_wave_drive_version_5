@@ -10,7 +10,7 @@ This is an entirely AI-generated coding project. The source code is largely unre
 
 ## Versions
 
-Open **HTML assembly instructions** to view the full-screen steps directly in your browser. Use **PDF download** for the printable booklet.
+[Open the full-screen assembly instructions](https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/) in your browser. Version-specific instructions and printable PDFs are linked below.
 
 | Image | Version and description | Main README | HTML assembly instructions | PDF download |
 | --- | --- | --- | --- | --- |
