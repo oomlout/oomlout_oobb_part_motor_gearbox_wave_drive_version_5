@@ -1,0 +1,2014 @@
+{
+  "provenance": "OOBB SCAD meshes with the retained cream/teal/black/yellow studio palette.",
+  "samples": 24,
+  "view_transform": "AgX",
+  "world_color": [
+    0.77,
+    0.79,
+    0.81,
+    1.0
+  ],
+  "world_strength": 0.48,
+  "background": "#FAF8F2",
+  "materials": {
+    "nylon": {
+      "name": "Natural nylon spacers",
+      "color": "E9E5D8",
+      "roughness": 0.48,
+      "metallic": 0.0
+    },
+    "teal": {
+      "name": "Turquoise 10605",
+      "color": "00B1B7",
+      "roughness": 0.4,
+      "metallic": 0.0
+    },
+    "black": {
+      "name": "Black 10101",
+      "color": "121212",
+      "roughness": 0.39,
+      "metallic": 0.0
+    },
+    "yellow": {
+      "name": "Sunflower 10402",
+      "color": "FEC601",
+      "roughness": 0.4,
+      "metallic": 0.0
+    },
+    "steel": {
+      "name": "Bearing and nut steel",
+      "color": "BFC5C9",
+      "roughness": 0.26,
+      "metallic": 0.88
+    },
+    "bolt": {
+      "name": "Oxidised screw steel",
+      "color": "575D63",
+      "roughness": 0.31,
+      "metallic": 0.81
+    },
+    "context": {
+      "name": "Previously assembled - muted grey",
+      "color": "A6B6B5",
+      "roughness": 0.55,
+      "metallic": 0.0
+    }
+  },
+  "lights": [
+    {
+      "offset": [
+        70,
+        25,
+        185
+      ],
+      "power": 370000,
+      "size": 130
+    },
+    {
+      "offset": [
+        -100,
+        60,
+        95
+      ],
+      "power": 190000,
+      "size": 110
+    },
+    {
+      "offset": [
+        10,
+        -140,
+        105
+      ],
+      "power": 300000,
+      "size": 95
+    },
+    {
+      "offset": [
+        135,
+        160,
+        35
+      ],
+      "power": 110000,
+      "size": 140
+    }
+  ],
+  "views": {
+    "step_01": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "motor_mount_plate": [
+          0.0,
+          0.0,
+          29.700000000000003
+        ],
+        "case_nut_0": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "case_nut_1": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "case_nut_2": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "case_nut_3": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "case_nut_4": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "case_nut_5": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "motor_screw_0": [
+          0.0,
+          0.0,
+          54.0
+        ],
+        "motor_screw_1": [
+          0.0,
+          0.0,
+          54.0
+        ],
+        "motor_screw_2": [
+          0.0,
+          0.0,
+          54.0
+        ],
+        "motor_screw_3": [
+          0.0,
+          0.0,
+          54.0
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_02": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "cage_lower_cap": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "cage_nut_0": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_1": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_2": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_3": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_4": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_5": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_6": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_7": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_8": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_9": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_10": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ],
+        "cage_nut_11": [
+          0.0,
+          0.0,
+          37.800000000000004
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_03": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_nut_0",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "motor_eccentric": [
+          0.0,
+          0.0,
+          58.050000000000004
+        ],
+        "eccentric_join_nut_0": [
+          0.0,
+          0.0,
+          41.85
+        ],
+        "eccentric_join_nut_1": [
+          0.0,
+          0.0,
+          41.85
+        ],
+        "motor_clamp_0_nut_m3": [
+          21.6,
+          0.0,
+          58.050000000000004
+        ],
+        "motor_clamp_0_screw_shaft_clamp": [
+          43.2,
+          0.0,
+          58.050000000000004
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_04": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "wave_generator",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_nut_0",
+        "wave_nut_1",
+        "wave_nut_2",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_nut_0",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "wave_generator": [
+          0.0,
+          0.0,
+          45.900000000000006
+        ],
+        "wave_nut_0": [
+          0.0,
+          0.0,
+          28.35
+        ],
+        "wave_nut_1": [
+          0.0,
+          0.0,
+          28.35
+        ],
+        "wave_nut_2": [
+          0.0,
+          0.0,
+          28.35
+        ],
+        "wave_nut_3": [
+          0.0,
+          0.0,
+          28.35
+        ],
+        "bearing_6704": [
+          0.0,
+          0.0,
+          71.55000000000001
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_05": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_nut_0",
+        "wave_nut_1",
+        "wave_nut_2",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "motor_eccentric_cap": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "eccentric_join_screw_0": [
+          0.0,
+          0.0,
+          59.400000000000006
+        ],
+        "eccentric_join_screw_1": [
+          0.0,
+          0.0,
+          59.400000000000006
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_06": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "wave_bearing_cap": [
+          0.0,
+          0.0,
+          33.75
+        ],
+        "wave_screw_0": [
+          0.0,
+          0.0,
+          58.050000000000004
+        ],
+        "wave_screw_1": [
+          0.0,
+          0.0,
+          58.050000000000004
+        ],
+        "wave_screw_2": [
+          0.0,
+          0.0,
+          58.050000000000004
+        ],
+        "wave_screw_3": [
+          0.0,
+          0.0,
+          58.050000000000004
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_07": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "fixed_profile_ring": [
+          0.0,
+          0.0,
+          49.95
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_08": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "roller_00": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_01": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_02": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_03": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_04": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_05": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_06": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_07": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_08": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_09": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_10": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ],
+        "roller_11": [
+          0.0,
+          0.0,
+          39.150000000000006
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_09": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "output_cage",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "output_cage": [
+          0.0,
+          0.0,
+          41.85
+        ],
+        "output_nut_0": [
+          0.0,
+          0.0,
+          25.650000000000002
+        ],
+        "output_nut_1": [
+          0.0,
+          0.0,
+          25.650000000000002
+        ],
+        "output_nut_2": [
+          0.0,
+          0.0,
+          25.650000000000002
+        ],
+        "output_nut_3": [
+          0.0,
+          0.0,
+          25.650000000000002
+        ],
+        "cage_screw_0": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_1": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_2": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_3": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_4": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_5": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_6": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_7": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_8": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_9": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_10": [
+          0.0,
+          0.0,
+          74.25
+        ],
+        "cage_screw_11": [
+          0.0,
+          0.0,
+          74.25
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_10": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "bearing_6810": [
+          0.0,
+          0.0,
+          29.700000000000003
+        ],
+        "output_bearing_housing": [
+          0.0,
+          0.0,
+          58.050000000000004
+        ],
+        "case_screw_0": [
+          0.0,
+          0.0,
+          112.05000000000001
+        ],
+        "case_screw_1": [
+          0.0,
+          0.0,
+          112.05000000000001
+        ],
+        "case_screw_2": [
+          0.0,
+          0.0,
+          112.05000000000001
+        ],
+        "case_screw_3": [
+          0.0,
+          0.0,
+          112.05000000000001
+        ],
+        "case_screw_4": [
+          0.0,
+          0.0,
+          112.05000000000001
+        ],
+        "case_screw_5": [
+          0.0,
+          0.0,
+          112.05000000000001
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_11": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "output_retainer",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4",
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "output_retainer": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_nut_0": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_1": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_2": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_3": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_4": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_0": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_1": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_2": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_3": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_4": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_5": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_6": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_m3_nut_7": [
+          0.0,
+          0.0,
+          56.7
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "step_12": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        1500,
+        1100
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "output_retainer",
+        "output_cover",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_screw_0",
+        "output_nut_0",
+        "output_screw_1",
+        "output_nut_1",
+        "output_screw_2",
+        "output_nut_2",
+        "output_screw_3",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4",
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ],
+      "offsets": {
+        "output_cover": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_screw_0": [
+          0.0,
+          0.0,
+          59.400000000000006
+        ],
+        "output_screw_1": [
+          0.0,
+          0.0,
+          59.400000000000006
+        ],
+        "output_screw_2": [
+          0.0,
+          0.0,
+          59.400000000000006
+        ],
+        "output_screw_3": [
+          0.0,
+          0.0,
+          59.400000000000006
+        ]
+      },
+      "muted_names": [],
+      "arrow_offsets": {}
+    },
+    "part_motor_mount_plate": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "motor_mount_plate"
+      ]
+    },
+    "part_fixed_profile_ring": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "fixed_profile_ring"
+      ]
+    },
+    "part_output_bearing_housing": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_bearing_housing"
+      ]
+    },
+    "part_cage_lower_cap": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "cage_lower_cap"
+      ]
+    },
+    "part_output_cage": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_cage"
+      ]
+    },
+    "part_output_retainer": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_retainer"
+      ]
+    },
+    "part_output_cover": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_cover"
+      ]
+    },
+    "part_motor_eccentric": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "motor_eccentric"
+      ]
+    },
+    "part_motor_eccentric_cap": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "motor_eccentric_cap"
+      ]
+    },
+    "part_wave_generator": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "wave_generator"
+      ]
+    },
+    "part_wave_bearing_cap": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "wave_bearing_cap"
+      ]
+    },
+    "part_bearing_6810": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "bearing_6810"
+      ]
+    },
+    "part_bearing_6704": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "bearing_6704"
+      ]
+    },
+    "part_roller": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "roller_00"
+      ]
+    },
+    "part_screw_case": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "case_screw_0"
+      ]
+    },
+    "part_screw_motor": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "motor_screw_0"
+      ]
+    },
+    "part_screw_output": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_screw_0"
+      ]
+    },
+    "part_screw_wave": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "wave_screw_0"
+      ]
+    },
+    "part_screw_cage": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "cage_screw_0"
+      ]
+    },
+    "part_screw_eccentric": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "eccentric_join_screw_0"
+      ]
+    },
+    "part_screw_shaft_clamp": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "motor_clamp_0_screw_shaft_clamp"
+      ]
+    },
+    "part_nut_m2": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "cage_nut_0"
+      ]
+    },
+    "part_nut_m3": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "case_nut_0"
+      ]
+    },
+    "part_nut_m6": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_attachment_nut_0"
+      ]
+    },
+    "part_nema17": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    "book_cover": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.05
+      ],
+      "size": [
+        1800,
+        1200
+      ],
+      "margin": 1.12,
+      "include_names": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "output_retainer",
+        "output_cover",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_screw_0",
+        "output_nut_0",
+        "output_screw_1",
+        "output_nut_1",
+        "output_screw_2",
+        "output_nut_2",
+        "output_screw_3",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4",
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    }
+  }
+}

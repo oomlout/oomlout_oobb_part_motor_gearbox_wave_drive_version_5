@@ -1,0 +1,1914 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "976f32113bb98b3ccbdff245dc9c7d0caf6650ec7e7914a93c07d72470a340a9"
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "aed9c444bea39b337204bf58d0cbaad1717dac95c9fde60aee0610ba6798fb4a"
+  },
+  {
+    "path": "ASSEMBLY.md",
+    "sha256": "4d05b28307bd130571bdc8428ce56364aecb81596f6abee129bf08bb856a2737"
+  },
+  {
+    "path": "pytest.ini",
+    "sha256": "ddfcf6e0017476e9b9e8e55559c80e166c21f4f1ac242c7468dc85ad9dc69e52"
+  },
+  {
+    "path": "README.md",
+    "sha256": "bf9e93d86cfd2843a96f32cafe2199a80eb5e8443c61964fd14561d89efc06f9"
+  },
+  {
+    "path": "requirements.txt",
+    "sha256": "347cd49e72af6480668261c1334f958852137fa13d1c60138b1eefbb226e3535"
+  },
+  {
+    "path": "working.py",
+    "sha256": "d8b137c3568b353365aa07a410af9c6578f9f84aa6ecc0c9c0a4e304ee171002"
+  },
+  {
+    "path": "working.scad",
+    "sha256": "ac3ee51db3fe215d86fedd59dd373bc4d4a6144484ea3b778c6c3acc933f994e"
+  },
+  {
+    "path": "working_blender.py",
+    "sha256": "759e13d6f1e3660207af0a8e75ece1b7ff0a680f574c7c652a74adf7e2961280"
+  },
+  {
+    "path": "working_oomp.py",
+    "sha256": "e08ad9234310ef0d7a12c95b09b420245b5bd2d1935057e5d738bc9525e97084"
+  },
+  {
+    "path": "working_oomp_populate.py",
+    "sha256": "1ba318f78921d7f6056b6b8712a8b64f03bba685f1afe1f9430c82068623187c"
+  },
+  {
+    "path": "working_scad.py",
+    "sha256": "54f499388e4d62b2933feb15cfc3c548bb929f30ff82fc212ae47314fe1f9dfd"
+  },
+  {
+    "path": ".pytest_cache/.gitignore",
+    "sha256": "e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d"
+  },
+  {
+    "path": ".pytest_cache/CACHEDIR.TAG",
+    "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+  },
+  {
+    "path": ".pytest_cache/README.md",
+    "sha256": "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70"
+  },
+  {
+    "path": "presentation/blender.log",
+    "sha256": "b12e7b15b5de672aed0e22e498d847e1770f87a1bc5a981485e2522cb1b461e4"
+  },
+  {
+    "path": "presentation/compact_instances.py",
+    "sha256": "f773a92113d6731cbe7c76cc4d52713709c2a7a9ea4d42bcb2d87793e36abbe9"
+  },
+  {
+    "path": "presentation/fastener_validation.json",
+    "sha256": "c5b1858c7a1b0a21621cb1f667186ad54b497f3159366b5ecafb2302b43e444a"
+  },
+  {
+    "path": "presentation/motor_fit.json",
+    "sha256": "ac12021267bdea8b5157be05cdc53931ed27c7e2946629585b23f7bcfeb0790a"
+  },
+  {
+    "path": "presentation/motor_reference.py",
+    "sha256": "ef07d6f27429a7e28e33d0e306861c2186aa6f9139c33659c94e3081f41e553b"
+  },
+  {
+    "path": "presentation/plate_rounding_validation.json",
+    "sha256": "171b1968b6b6c8faa06bda46f1900965b3122a714d5dc99959b6e3e2232c635b"
+  },
+  {
+    "path": "presentation/sheets.py",
+    "sha256": "5434cc7514e056f9c27349dc854d3d273aec4e7d76d133269d70102456428f04"
+  },
+  {
+    "path": "presentation/stock_lengths_validation.json",
+    "sha256": "ce7ad592f249787acd6641a05bd96984c25b2a5d4078e714528925f2cdf9c10d"
+  },
+  {
+    "path": "presentation/studio.py",
+    "sha256": "2fd9fc6b8a530c30132a5b9f6e3633360217620c95a323644a55e84a4c782151"
+  },
+  {
+    "path": "presentation/style.json",
+    "sha256": "ab4f18c0a8b0cc8b44900392b031fd6c1931fdaf9aabb753d7566c213d8203bc"
+  },
+  {
+    "path": "presentation/style_sources.json",
+    "sha256": "1465923a3239938af0d32dc751bfeb6c8a1070d621ce0e6cb0453f70ba3e474a"
+  },
+  {
+    "path": "presentation/validation.json",
+    "sha256": "6a37b6313d51e3eccfd65dc9b2253454db44d024ed90d976720881839cff6295"
+  },
+  {
+    "path": "reference_migration/README.md",
+    "sha256": "aafe49be2d4914c963c90d23a5a7467154bfa1bf1f2ca143793719ad54c60a88"
+  },
+  {
+    "path": "reference_migration/sources.json",
+    "sha256": "5473f9c8e7934e410f9569b0ac4c5177e01104f840f40dbd6d94c98c7141be0f"
+  },
+  {
+    "path": "reference_migration/working_oomp_populate.py",
+    "sha256": "3faf88af80c0ee9778069b9928b97ab0c45fdb11a7ac2406091c0f7b7114ffe7"
+  },
+  {
+    "path": "release/dual_bank_20_to_1_source_reference.zip",
+    "sha256": "257db773e16b8cc7bc67e0f77bc4ac77c267a95ce37f3247c6894fddc36e39bb"
+  },
+  {
+    "path": "release/single_bank_6x8_reference.zip",
+    "sha256": "6d6d8bc05bfb945b7ee6cf334e1fa847ce4007f1c8ddb6363c322ed29068798b"
+  },
+  {
+    "path": "release/wave_drive_12_to_1_print_pack.zip",
+    "sha256": "0e66d69d25e16454bedb4b926042b5ddf2468f59e36c89792756e467f7cafb0c"
+  },
+  {
+    "path": "release/wave_drive_20_to_1_print_pack.zip",
+    "sha256": "2fdfefa2b0a810a7553814a276728ed22faf483fc982bb1344736e06ea33688c"
+  },
+  {
+    "path": "tests/test_compact_wave_drive.py",
+    "sha256": "e0ddf2a5a575a8dc25cec91ea046f55d801dff2564959d9468673c3fd5cb0c20"
+  },
+  {
+    "path": "tools/package_release.py",
+    "sha256": "9a39d6e0a8ecfb7aaed893bc6718c3e5eca18b3adb12323f7c6d29f96a4d4447"
+  },
+  {
+    "path": "tools/validate_fasteners.py",
+    "sha256": "379cac5b9d84752c3d1ad9374542fc304b401a4511524171a8adedfa20e3e8b1"
+  },
+  {
+    "path": "tools/validate_meshes.py",
+    "sha256": "b2a7f3f0190ee2067e58b9f42fc79444fd461099753f93eb594c1e8e24185ce6"
+  },
+  {
+    "path": "tools/validate_stock_lengths.py",
+    "sha256": "5c7c68c0ac1099def0b4c9bbaf001facfcb1ac678a5e9599a450392a17a6e7fc"
+  },
+  {
+    "path": "wave_components/compact_helpers.scad",
+    "sha256": "2fe4c3ca3f83cb4fdccc6dca33ce52db34bbbd1f8bf7c4f410dcf7e7b588efed"
+  },
+  {
+    "path": "wave_components/compact_recipe.py",
+    "sha256": "b0fd8ded08d9ac5ba283adc0f3def1fcccf7756784d9f4b0700f19f76d15fecb"
+  },
+  {
+    "path": "wave_components/nema17_reference.scad",
+    "sha256": "0d0334c510793980d7bda8e0e910c4ad72686a7e16d81be091523ea3171ef0a7"
+  },
+  {
+    "path": "wave_components/oobb_hardware.py",
+    "sha256": "989fe54e8c51f32018acea0163228ce0857417867bc2d1193ecee4864746a077"
+  },
+  {
+    "path": "wave_components/wave_drive.scad",
+    "sha256": "13a31db2f642793b22761bdcd9d6b20233e4f4a2f8157e65ab37c1901532c0d9"
+  },
+  {
+    "path": "wave_components/__init__.py",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "__pycache__/working_blender.cpython-312.pyc",
+    "sha256": "bdfb49155d6b13ec99a3368e66f9fa4150c0c1adf098dc1dea75021dd2227aaf"
+  },
+  {
+    "path": "__pycache__/working_oomp.cpython-312.pyc",
+    "sha256": "fbf9a791dc27bba78333141e170d295b87e49fdc3ec4f9d2750cb5f583f2acda"
+  },
+  {
+    "path": "__pycache__/working_oomp_populate.cpython-312.pyc",
+    "sha256": "a49c0d81c9ec11f289359c29d58d543a62b515e950c4930355fccc1f76ac0e88"
+  },
+  {
+    "path": "__pycache__/working_scad.cpython-312.pyc",
+    "sha256": "7f1205ec60d7d631befdca9ead89a9436951df651d9490f0fb3c5fc7b1a29c40"
+  },
+  {
+    "path": ".pytest_cache/v/cache/lastfailed",
+    "sha256": "380fda95baf63cabee17cc65b0bcd5a530cecfd4a2b465e92deff96634cfba79"
+  },
+  {
+    "path": ".pytest_cache/v/cache/nodeids",
+    "sha256": "d0630a20b055fe198a3360388dc0a17bf06b0cdd4835a960e358acb66830f391"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/3dpr.png",
+    "sha256": "2966fd8b47f3060ee620869345b914baf644d5faa43994f9e5769423b3f682dd"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/3dpr.png.log",
+    "sha256": "8b114d83fe838cefb8f70b729444ce1eb55b7953dbf7c81269d2b710fd23ee91"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/3dpr.scad",
+    "sha256": "2d4a341d2699fa74ae29322a41bdfbc183b3dd821cd67494e9f58e70cb84d03e"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/3dpr.stl",
+    "sha256": "adc3c94da2e20705b34dfabf90633dd59864d901fc6230d53d4ee21e01d2e322"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/3dpr.stl.log",
+    "sha256": "a1ca02fe7c1487a5da191850819681b59d25411173af1aed55c0f54a376a1344"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/animation.scad",
+    "sha256": "bfd753fe92a430f290ae2f5a56851b1762eb27547929d09067ca6397c6aaf176"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly.png",
+    "sha256": "c55c95976ea9d877fc9120611fcb337b53e714899f81ca1ce1d278d42fd040e0"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly.png.log",
+    "sha256": "399eb5856f3212dc8d75aa906f204338eab1285a802fb41e2f529bb79a1e93bc"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly.scad",
+    "sha256": "6ebfc39c6dfe1e36b39e063065ef4203e1fd8248182379459a04d7cf932ecc77"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/cage_lower_cap.scad",
+    "sha256": "86e03be542261c20b5ddb74c58b8639e5ea0c6d8c7edd398745bd1695bcd7cf1"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/cage_lower_cap.stl",
+    "sha256": "8f09a24de95ac8615660dd4aa6dbec84f2b7e7a217588bb3a1ecc87385fe6ab6"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/cage_lower_cap.stl.log",
+    "sha256": "0e36c4c77124fdf0179c43509540bfc9ae8405bd43cf9a9288e33ae9d4c94408"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_0.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_0.stl.log",
+    "sha256": "497adf96352a5c7ea680b4b528a91722232cdeaa7ece9b87bad3dfb2c1de3492"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_135.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_135.stl.log",
+    "sha256": "e261858a176851b03d3af2f3ec3d8d88e96016195db2893ad869b31c4f90106b"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_180.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_180.stl.log",
+    "sha256": "9fc4146a3134df898d9964a68b54f4342ac204d6a1da95ca6e2082cd348771e5"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_225.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_225.stl.log",
+    "sha256": "5f827252cfc16718c8aada71040848555085f10243fe5e50637febc059a0df12"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_270.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_270.stl.log",
+    "sha256": "861f0983ac68e944e55282c5ffe7517a9e28c8422de160a2f8e01d1ad55c5c5f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_315.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_315.stl.log",
+    "sha256": "74278a75d86de6378b12cdba85c95954c6e8a3608bb66f8d68b18c65b87f7648"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_45.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_45.stl.log",
+    "sha256": "f2003415f13002c1bf95f4d2f48638d1ea1748743dda39e55b43084a2e064a94"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_90.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_90.stl.log",
+    "sha256": "e261858a176851b03d3af2f3ec3d8d88e96016195db2893ad869b31c4f90106b"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/collision_check.scad",
+    "sha256": "2dca251dc26068943c0201ac0586b1c9c46d59db6b7eb7fb87b4926932fd5a4a"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/compact_helpers.scad",
+    "sha256": "2fe4c3ca3f83cb4fdccc6dca33ce52db34bbbd1f8bf7c4f410dcf7e7b588efed"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/cutaway.png",
+    "sha256": "02fdc2c3640294fbc6f4eae7363cf1b1d20333319281fd5b5a3abb0583c0d26a"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/cutaway.png.log",
+    "sha256": "8cb5774e649a9276a779e12eaad39b46145040037727ce2b4018432b36aa52fa"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/cutaway.scad",
+    "sha256": "0137e3d6362408f72e2289b403a8959f87b290b8e8d5ef5cf1e711b139cc5103"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/exploded.png",
+    "sha256": "cca1ab0a6e32d40bb7ca5e3b91baecc89b877e0caedaa0837dc0d95000a4ae2b"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/exploded.png.log",
+    "sha256": "b03246240aec97b6258b5437e8e9c55d0168ed0da593c52cf9d28f139a909da2"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/exploded.scad",
+    "sha256": "ec5336e26f320a01ac417b354002ed98db8630e13c762df8720f97c8c59030f0"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/exploded_motor.scad",
+    "sha256": "d604533e15287a4c7cff123a2e78616fa74d6d72edbb4fb4fc75eb8723e1a90b"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fit_coupons.png",
+    "sha256": "b2c8abf58d5f030e6890ddec2641b7e3820c259addf3fad2df5f7cdf9fa824fe"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fit_coupons.png.log",
+    "sha256": "e0be6419772c5788c97821911eba2fe2970b31fe81fb3066a4cc8837b71f709d"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fit_coupons.scad",
+    "sha256": "f8f9dc5f30076c0cdc5a41091735df73d954f13d3a07fe035aeeb9e7f20d517b"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fit_coupons.stl",
+    "sha256": "310b47fe78119aa00f8dbf1085a45bad2cc0f661ab3059faca5825f5f1f41d12"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fit_coupons.stl.log",
+    "sha256": "6cd42193f7f9c35757c565f3d455903389bdb9654be11c797cc6420b7fdd8e5f"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fixed_profile_ring.scad",
+    "sha256": "b3a3d6a99feb00d507e583d289e13948361f8663fcb9c9828e836e107d3a8f5e"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fixed_profile_ring.stl",
+    "sha256": "4bf152cb92a5e663995e7a30b7e539ed3156faab555987f7a96bb46dcea5ab3b"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/fixed_profile_ring.stl.log",
+    "sha256": "075162c32637993b897966ec5fcc85876982de4178e497b19a128967a44a37e2"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/geometry.scad",
+    "sha256": "13a31db2f642793b22761bdcd9d6b20233e4f4a2f8157e65ab37c1901532c0d9"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/hardware.yaml",
+    "sha256": "a9a38b42b90818def143eb167edca61a3f256b4e0cc782728b7c1c947435c920"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/manifest.json",
+    "sha256": "ee6d4e7cc7d2ec2d62fb3ea158a47e4497f9c6c5ad5c05368efd64efdddfeb61"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/mesh_validation.json",
+    "sha256": "dbbca021c5220300eedab85eae6c646dc92a198d9002ffff92a29419262a3f8d"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motion_section.png",
+    "sha256": "c7f475ca115ab03cbd237203467f86d877917ff7c033479a9d62c4496b7bc544"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motion_section.png.log",
+    "sha256": "e9de2d2a1cab3d9a5426e263282e60fda338fb75b5512b6d3b8a74708a2b6274"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motion_section.scad",
+    "sha256": "314cbc050aad82aa00e01c8c7b1ffb18567e0c49159622eb4abdaa58817eba3c"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_eccentric.scad",
+    "sha256": "d3dafa727585b3a44c50efd92ffb1163c684541366f1b31157085bae966372da"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_eccentric.stl",
+    "sha256": "e77f619675a7f54b6dfc5debe4028861bf85ed9be0a0d3c59f1bf1f52cd38603"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_eccentric.stl.log",
+    "sha256": "286710841232e5ea84deef41e2a2f02ae0c898fba51d254eff4980f3333e4f82"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_eccentric_cap.scad",
+    "sha256": "5862211ff14f8ed64b2afe2c96b501c0a615c55051c65cc7b714185aa8342e89"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_eccentric_cap.stl",
+    "sha256": "313e1aec8235c383f7735d18a4ba0876b740ee70c8ba863c47fe093deb3fd828"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_eccentric_cap.stl.log",
+    "sha256": "619596c03dccacb1018d071d5c8c83ab9d8cbda9aa3a5bb5a11e785520026473"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_fit.scad",
+    "sha256": "8c7d05b57fbe392683a86ad64f8040d192f6d0238d87452755eb7ef3e8b568dc"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_fit_check.scad",
+    "sha256": "a4596746bebd736391a49b8da0c0fca505d56d994b1876a8ded787b9991fa2b8"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_mount_plate.scad",
+    "sha256": "46c4e4e216e2c2a582c13cec6f00eafe444d4a7b0a189fb63f4bd95600f76a1a"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_mount_plate.stl",
+    "sha256": "ad754a6194f4483d0e9ecb3ff307e1a90dffbf43a2c1ac8bab205bf83a08f2d8"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_mount_plate.stl.log",
+    "sha256": "bda4ae6ba759245c04ad5e5ffaedc71d01e961493afc179a5b16188abd8b6e80"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/motor_reference_parameters.scad",
+    "sha256": "140ba821a1151f4d2aa3667d6502ac6e37af97e5dfd7a1560c015dd325a56df3"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/nema17_reference.scad",
+    "sha256": "0d0334c510793980d7bda8e0e910c4ad72686a7e16d81be091523ea3171ef0a7"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/oobb_hardware.scad",
+    "sha256": "f623b060bc2dd0f5d134e048e34139eb8f02c36245fe167824796a90fa7b0f91"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_bearing_housing.scad",
+    "sha256": "b79e92c509d71dde7119208212ef2e7492e597b1ddec872c305a10a784140035"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_bearing_housing.stl",
+    "sha256": "1597f51616a5801a29bfef6ba73b928e8e4fa79a96c1859513dc8496990ff646"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_bearing_housing.stl.log",
+    "sha256": "f796466f9b5d46fabbc1cc31fdeb90ddd41c891a3b8e864ee7839e697cb7d0e1"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_cage.scad",
+    "sha256": "f66a44ac61b5459ffdaca773d1b720565d11264c436544c644bf9d8ad7dc8af4"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_cage.stl",
+    "sha256": "f205b73b399a7bcc4db79ce3ad6cec4f91f6c6e2947b5b167a9c9350b4e92f99"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_cage.stl.log",
+    "sha256": "328284d923b4f946392541b7a5d64266cc7b152f355ae7b5bb2f69be6a620fb0"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_hub.scad",
+    "sha256": "cff82a41634e48c4ca3934223064bc0ac04d64529d1c023de98f8b90ff241eac"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_hub.stl",
+    "sha256": "aa2c2914573631754c3ecbcc7eb8175626550299d628b684d9f2eec00042b614"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_hub.stl.log",
+    "sha256": "3696df242cb6e3168ecf4a3a0aeddf670e4fc768920f0368f932dc1851d6e262"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_retainer.scad",
+    "sha256": "8f7b41697fa1bd9015661206a642db9810350a33a95b550eb831ef5cf7358376"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_retainer.stl",
+    "sha256": "3d52682b25309f39f8e215e33c8c42aba49eb8a3a18b972c66ea93782c5f7846"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/output_retainer.stl.log",
+    "sha256": "30250113b0e00c9a2ee3ce6114099ff01c9f8fc978cbf8f3c1077c684c354a7d"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/parameters.scad",
+    "sha256": "9c99f88d9c19e349b89f45d2bfba8c6ea525d57e41c95b0fb2ecb5a72d840d28"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_bed_01.scad",
+    "sha256": "98ae99440fceb20a64d4ab8a39a02e5f47e6d4a7b546972f3abb6a705f456408"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_bed_01.stl",
+    "sha256": "12920aa27f9c2d31202f377af7328c998c09e79568c61580ba2a591db9e5855a"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_bed_01.stl.log",
+    "sha256": "7b4a5d11dcc47aad8e8ca3e6e6d4f79dbeb9f72ac082cb478f39dfa0834219a4"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_bed_02.scad",
+    "sha256": "69d1a610d70a35c449826a49f688b3af4a6fba41eabce4e2d5dd8b1b5d757078"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_bed_02.stl",
+    "sha256": "9faf6990b73e3d676b12a964f6baee71d2824a5324badf7ec73217fc7891b1c4"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/print_bed_02.stl.log",
+    "sha256": "35fa366eb9ff703ab03253fe65c0d3421143aef671828daa287dd7d92b0c0296"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/README.md",
+    "sha256": "ad32cb6ab0405246c0ccf63e749573be37dcf570e4bed69f087b0d5dd991b7a9"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/validation.txt",
+    "sha256": "aff5b5f6be5f8c3c3315a865709fa011ccec64691b9b211070cad9775d5bf951"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/wave_bearing_cap.scad",
+    "sha256": "068df68d6e19df7c5333ebd7beda1e8884e8eb6c6739fd18cbd55b93dc4bf99e"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/wave_bearing_cap.stl",
+    "sha256": "4342af73e393456e304be769ea42294cb407e897842d5de9bbb0951a20a31abe"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/wave_bearing_cap.stl.log",
+    "sha256": "23df6a18313e852924ce2b95eff185e8fddc3d532996b7f960e16eb170c1f548"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/wave_generator.scad",
+    "sha256": "d9a636ce185da381205c6aa4b1292113ffbd1a052a574c00fe4a94b54d74ac2c"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/wave_generator.stl",
+    "sha256": "a6b4b170bbfd8e01b0ec6bb2707871d652a51580f9b4e511eab24811fab55b06"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/wave_generator.stl.log",
+    "sha256": "ae99658f322c67f63db28d2c9939a8c1a59456af0c51d5af8f2e440fd4c27d04"
+  },
+  {
+    "path": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/working.yaml",
+    "sha256": "6d399d979b74b5687ff9a9698051d72d704f79bc0049ff3c6ef9226fd779edce"
+  },
+  {
+    "path": "parts_source/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/working.yaml",
+    "sha256": "bf1ee8ee1966753803318aed9834aa43d7c68609c3cebb9f0df9b1785894801c"
+  },
+  {
+    "path": "presentation/cache/check_bearings.scad",
+    "sha256": "6e1e54e90c4fe27f4b08f2133ba32f72ff4d5289ce9a2428943e5b0d7fbf503f"
+  },
+  {
+    "path": "presentation/cache/check_bearings.stl",
+    "sha256": "9fa801ff6b85c95f2e081bb8b14ef14edc0e9f28623d1f867befe0650683949a"
+  },
+  {
+    "path": "presentation/cache/check_bearings.stl.log",
+    "sha256": "4e7245f111de2b2d291c59825dd42018083a3a0478b64eb151da6e96895ffea5"
+  },
+  {
+    "path": "presentation/cache/check_cage.scad",
+    "sha256": "4e06f370701ad788f4937f50a843ed47e9571d8f76ec5137471c9cc03199940c"
+  },
+  {
+    "path": "presentation/cache/check_cage.stl",
+    "sha256": "90a0fe1b545e5deccfc261d415dc280ae6572603823f89f920e8c59db979df60"
+  },
+  {
+    "path": "presentation/cache/check_cage.stl.log",
+    "sha256": "9f18bdf5cdf03336484452b9855f50e7abd83785599298834ffee08b5803417a"
+  },
+  {
+    "path": "presentation/cache/check_fixed.scad",
+    "sha256": "09e3596fdc601d776f06b3653503fdb180a0be3a9041b1ee76b1306a6a7503ca"
+  },
+  {
+    "path": "presentation/cache/check_fixed.stl",
+    "sha256": "ff25963e8fcbe6eed619d8d69f3eab45e4a6041143937c9335447f243d3df14d"
+  },
+  {
+    "path": "presentation/cache/check_fixed.stl.log",
+    "sha256": "cc722868d1ce28ec094f91d2652739fea6587e752c49271c08c088fc92417df4"
+  },
+  {
+    "path": "presentation/cache/check_input.scad",
+    "sha256": "ed0c40dfeb98a5f364ced082cab6c78d8c1132d01e64321e3526aa83b041aeee"
+  },
+  {
+    "path": "presentation/cache/check_input.stl",
+    "sha256": "09ead822766926b3d52fd2b72ada4e82ccb439e095cbc34b7c736d45bd7dbe7b"
+  },
+  {
+    "path": "presentation/cache/check_input.stl.log",
+    "sha256": "52685eaf7f759c7af97df98d3680c5557fcc9cf01a6bf852201de28f0b155467"
+  },
+  {
+    "path": "presentation/cache/check_rollers.scad",
+    "sha256": "f6b8e89c9daf5e474070c301e61efde242c392f6e8366fe5d5034b450e786937"
+  },
+  {
+    "path": "presentation/cache/check_rollers.stl",
+    "sha256": "350f322f403727620fee145cce32888d5ba9e5919282316811f4f92570ad19e6"
+  },
+  {
+    "path": "presentation/cache/check_rollers.stl.log",
+    "sha256": "fe912cb938b45dccd71fb40cbafd577c97734ce8c98424657c5fa751fee37947"
+  },
+  {
+    "path": "presentation/cache/check_wave.scad",
+    "sha256": "eba822dbdd3f3b7138499bc5b778d6d4f2037681df38be5827bfa71247da1dd2"
+  },
+  {
+    "path": "presentation/cache/check_wave.stl",
+    "sha256": "b7a916a1bff490c449213161a5495d32a4159660177b5bead5c33be126809c02"
+  },
+  {
+    "path": "presentation/cache/check_wave.stl.log",
+    "sha256": "7dd0d8f12190572376ec0bea233fec3c9ab837e9b603c2a4c020a44efebfa993"
+  },
+  {
+    "path": "presentation/cache/fastener_check.scad",
+    "sha256": "a065df2476230260987896fd03db0f952949dc3b0b79cc459dcade9a17515965"
+  },
+  {
+    "path": "presentation/cache/fastener_check.stl",
+    "sha256": "1b3e73669e8c9e96e38de6fc4becc64a1be8cb98eefd8db516f4f80de562d356"
+  },
+  {
+    "path": "presentation/cache/fastener_check.stl.log",
+    "sha256": "298bb126859ed14d05c23d0ca20f6c914b7cb86921c377edc3ee0c8149ea74dd"
+  },
+  {
+    "path": "presentation/cache/instances.json",
+    "sha256": "4b9d9cb3075ac720b55406847520ff56c4276046d8e018882393c2994a493996"
+  },
+  {
+    "path": "presentation/cache/meshes.npz",
+    "sha256": "784cc1d9ce9c86b3796b435c3ee11bee5269e9380d2e6650c8d5a9e28cbba6ad"
+  },
+  {
+    "path": "presentation/cache/plate_rounding_before.json",
+    "sha256": "fb6a2435329b756f050c9d1875bf5213c079328c25749727535d414b128c0ba0"
+  },
+  {
+    "path": "presentation/cache/single_bank_geometry.scad",
+    "sha256": "1e9bb39dbed6b35f63124d47c7945bebbefe4b3fd7d6aa3a809fbf3dbf6afe51"
+  },
+  {
+    "path": "presentation/hardware/bearing_6704.scad",
+    "sha256": "f64b81914b489c4bb7268eeccf419630e1e4a1f558f7b627537f21d47c2ea6f0"
+  },
+  {
+    "path": "presentation/hardware/bearing_6704.stl",
+    "sha256": "9f5ef736eab5ff8569843a7fb1f4eaabbc491a90d871348a32bb43eb0aa2eb39"
+  },
+  {
+    "path": "presentation/hardware/bearing_6704.stl.log",
+    "sha256": "79f97f2a75738658bbaa950e275f921979be4665c8629fd437916016553aeb8a"
+  },
+  {
+    "path": "presentation/hardware/bearing_6810.scad",
+    "sha256": "d992e8b51be365c9f714ac3b1f669264c2b905c083f0926715fd1f0931401b77"
+  },
+  {
+    "path": "presentation/hardware/bearing_6810.stl",
+    "sha256": "75d56f3e997130607095725518518d6cacd73a55b311ea6604ff386347652ccf"
+  },
+  {
+    "path": "presentation/hardware/bearing_6810.stl.log",
+    "sha256": "79f97f2a75738658bbaa950e275f921979be4665c8629fd437916016553aeb8a"
+  },
+  {
+    "path": "presentation/hardware/grub_m3.scad",
+    "sha256": "331d268325cc68e06e5e8ffc600537b9f1b35a83f2848da36ed907f7a3837540"
+  },
+  {
+    "path": "presentation/hardware/grub_m3.stl",
+    "sha256": "7c471bc300eb5d7ca93d19baa710e79068f250e11983d3b50eac7df3dc1ce74d"
+  },
+  {
+    "path": "presentation/hardware/grub_m3.stl.log",
+    "sha256": "e8cdca5b7137d511895e101bd915ed128904735b1805369d3aca603c1134bc66"
+  },
+  {
+    "path": "presentation/hardware/motor_fit_check.stl",
+    "sha256": "01409bb5f7d231b7f0ee3dd24cad59aced2dbc4b7e8b71a3356f49cc7f3e4afa"
+  },
+  {
+    "path": "presentation/hardware/motor_fit_check.stl.log",
+    "sha256": "a2ebe583f01f81524c61146c72e8804a6bdc6278476c3d1faa5fae80ba362153"
+  },
+  {
+    "path": "presentation/hardware/nema17_connector.scad",
+    "sha256": "7839d15932fba91ec1c5d9fa5f231785750d51b1a5cb03f6c3ad5137c37ce613"
+  },
+  {
+    "path": "presentation/hardware/nema17_connector.stl",
+    "sha256": "f6b35ea65451c1a72275cfeb1dabfd1249c80e8dde7d669d2d490d7fc0baa17f"
+  },
+  {
+    "path": "presentation/hardware/nema17_connector.stl.log",
+    "sha256": "11b0a83b3dc4e7cf872ed129d9f0071139e5cbcd6e4041c982e895cb33c1aa56"
+  },
+  {
+    "path": "presentation/hardware/nema17_front.scad",
+    "sha256": "b699bac0f9990b2bb5948a128c7be25ee6cc400f01876a780ba2e3405e090f97"
+  },
+  {
+    "path": "presentation/hardware/nema17_front.stl",
+    "sha256": "c39fe059f9813cafb4dd8259a83e2e3b03b16d7ff4cdeeccb37d1f9f188f93da"
+  },
+  {
+    "path": "presentation/hardware/nema17_front.stl.log",
+    "sha256": "24c9d61832dbb3355c3f608a800a3e2c08f0080b2af9f11011c8b96f8a45c776"
+  },
+  {
+    "path": "presentation/hardware/nema17_pilot.scad",
+    "sha256": "b1892c0afc73bfd540c7dca950f208362ca124f753b69b95e94d99191a15c2e0"
+  },
+  {
+    "path": "presentation/hardware/nema17_pilot.stl",
+    "sha256": "d8ca0d6fe2d6e3889af5cff087346eb34901a69503f8611b3b67dd8c67bd0687"
+  },
+  {
+    "path": "presentation/hardware/nema17_pilot.stl.log",
+    "sha256": "44f3937a224fcc92c40b27ad86816ed15d341ce7121cf1c2cc20ec0d61c97e65"
+  },
+  {
+    "path": "presentation/hardware/nema17_rear.scad",
+    "sha256": "1359734ca78f504aaeb032ca8d7b87858fc233e88c550b510f3edd72a2b556f4"
+  },
+  {
+    "path": "presentation/hardware/nema17_rear.stl",
+    "sha256": "803d12f6dc825170e227102a5031e375f1510644cb9dc9008fb23eaa91080ef5"
+  },
+  {
+    "path": "presentation/hardware/nema17_rear.stl.log",
+    "sha256": "08efaade3376ab38add3ca9015a586debe28d38f67d63b901e543c0bae6b94f8"
+  },
+  {
+    "path": "presentation/hardware/nema17_shaft.scad",
+    "sha256": "0f1cc8b291944cc78a1a91e98bc661702f79d4a23e796a9177036c17f9b1efd9"
+  },
+  {
+    "path": "presentation/hardware/nema17_shaft.stl",
+    "sha256": "41ca715c3afb07665474b27ca9221819665b3c72ed72aa23a98bdcd869be6c1b"
+  },
+  {
+    "path": "presentation/hardware/nema17_shaft.stl.log",
+    "sha256": "0401ad33be463c71fa81b3980681b393e548a223854bc97761f689fa7479648e"
+  },
+  {
+    "path": "presentation/hardware/nema17_stator.scad",
+    "sha256": "80deadc9d450055f7d999eb16ca35c8948d4ec14ff21aa0a743426b65ff85002"
+  },
+  {
+    "path": "presentation/hardware/nema17_stator.stl",
+    "sha256": "5f11e9aacceb052df0608ecedd0a10cb800c027e8e42d80f943328c1440853b9"
+  },
+  {
+    "path": "presentation/hardware/nema17_stator.stl.log",
+    "sha256": "6714c736a9474ef429a33f8f3b6e734ea2ab3c5c0795a8015c98120b1a7e6d6e"
+  },
+  {
+    "path": "presentation/hardware/nut_m2.scad",
+    "sha256": "d0a8f408effd9fe360cfd4d273e1e94266e401da3ee06f86bed1557de3184f6b"
+  },
+  {
+    "path": "presentation/hardware/nut_m2.stl",
+    "sha256": "5bfa5d3f0cb7c4cc9b0ac7ecf9e36135d5ba3e8fdce96735a0dfbf685258ef80"
+  },
+  {
+    "path": "presentation/hardware/nut_m2.stl.log",
+    "sha256": "ae21c44200e5db1878fe20e0d11f6925b62b327df145ed413727197d0b9b3621"
+  },
+  {
+    "path": "presentation/hardware/nut_m3.scad",
+    "sha256": "50d72a0e956ea8b8a73cf055a052578a4148e55a1dd8aa84434929535c08ab2c"
+  },
+  {
+    "path": "presentation/hardware/nut_m3.stl",
+    "sha256": "a93915fca86e5563a53a9c72b0c3b9dd349bea4ce7e6895ab44b208594013361"
+  },
+  {
+    "path": "presentation/hardware/nut_m3.stl.log",
+    "sha256": "14e26d3b65b5b5455bf9d86bd468e97b05860ee886de26d85359c7c3a3d3e528"
+  },
+  {
+    "path": "presentation/hardware/roller.scad",
+    "sha256": "7abf35100692a252863d30471664d974cc913d1730f884930965a7ce312e2ef6"
+  },
+  {
+    "path": "presentation/hardware/roller.stl",
+    "sha256": "b22a6a0dbb097f36dd3189326c005225524b123391a127ac0c06a1b0872ac423"
+  },
+  {
+    "path": "presentation/hardware/roller.stl.log",
+    "sha256": "ee4ba2cd182a5a8bea98d6292529900b242c9218549e007ea9a43e06f6d134f2"
+  },
+  {
+    "path": "presentation/hardware/screw_cage.scad",
+    "sha256": "b758da5f5d479be752fe2a4bd900c3ab976c81b98743d6fa8150ccc49d75ba20"
+  },
+  {
+    "path": "presentation/hardware/screw_cage.stl",
+    "sha256": "305e58cb380ccdf8735e545abf4b2ea6b5f109221440447db89646376600d9f7"
+  },
+  {
+    "path": "presentation/hardware/screw_cage.stl.log",
+    "sha256": "149c4e74f6fb94fad476a732b053d8b92586c342e8cdaa06effe5ac26ef7093a"
+  },
+  {
+    "path": "presentation/hardware/screw_case.scad",
+    "sha256": "3d42f67f789bae69ba45222319750b5fe118affbad9f39440acf907df98b01ee"
+  },
+  {
+    "path": "presentation/hardware/screw_case.stl",
+    "sha256": "090543fef54d05052723f4898ad6fa2aa89c0f9f2f0353b9b588134337e810e0"
+  },
+  {
+    "path": "presentation/hardware/screw_case.stl.log",
+    "sha256": "149c4e74f6fb94fad476a732b053d8b92586c342e8cdaa06effe5ac26ef7093a"
+  },
+  {
+    "path": "presentation/hardware/screw_motor.scad",
+    "sha256": "bb40b6ad9a24a2fdd223bdb61401fb5c46024fe6c8f48d85c35793722a34393a"
+  },
+  {
+    "path": "presentation/hardware/screw_motor.stl",
+    "sha256": "33dbd4831598d8aa5c52d68c95a7d9c8aaabe432cdd79d414e9306ef33556fdf"
+  },
+  {
+    "path": "presentation/hardware/screw_motor.stl.log",
+    "sha256": "92d1c42762e935dbdf14926e79d05b99124d7f57fab5962c91f11379f15f52c8"
+  },
+  {
+    "path": "presentation/hardware/screw_output.scad",
+    "sha256": "a41690caa045b6a13c90d7956a12623146b1b12e74702607c63c035fc7d85a08"
+  },
+  {
+    "path": "presentation/hardware/screw_output.stl",
+    "sha256": "24d5e3ad659e3a0c160a5fa1c088ac0e7d64b394db130598d7fb02b4359ef5de"
+  },
+  {
+    "path": "presentation/hardware/screw_output.stl.log",
+    "sha256": "10be3f92ac23b9d6c22e14ee947d99c97f5ab677521eee33f843f0c4cd8e2fa2"
+  },
+  {
+    "path": "presentation/hardware/screw_ring_join.scad",
+    "sha256": "be7d705da7c600b51f507a9bc2a19ff46761d8d074076cac0613d10c0949dbf8"
+  },
+  {
+    "path": "presentation/hardware/screw_ring_join.stl",
+    "sha256": "e6bebd6b0ec9ddbae6605e048ea9c39099404855f91ced2f86ac4643e8d369ce"
+  },
+  {
+    "path": "presentation/hardware/screw_ring_join.stl.log",
+    "sha256": "149c4e74f6fb94fad476a732b053d8b92586c342e8cdaa06effe5ac26ef7093a"
+  },
+  {
+    "path": "presentation/hardware/screw_wave.scad",
+    "sha256": "bb40b6ad9a24a2fdd223bdb61401fb5c46024fe6c8f48d85c35793722a34393a"
+  },
+  {
+    "path": "presentation/hardware/screw_wave.stl",
+    "sha256": "33dbd4831598d8aa5c52d68c95a7d9c8aaabe432cdd79d414e9306ef33556fdf"
+  },
+  {
+    "path": "presentation/hardware/screw_wave.stl.log",
+    "sha256": "c9f66db6d90a5de8e8f99dd01b1b81cc3b80b79c628f83bba0aefe50bc9d1cdd"
+  },
+  {
+    "path": "presentation/hardware/shaft.scad",
+    "sha256": "2bac63c5b51be8b874a6fdbd37715d549cb501474ccd4bb5d238dd3a4e10e4f5"
+  },
+  {
+    "path": "presentation/hardware/shaft.stl",
+    "sha256": "b68fb6bfd7a8e4b6109b4684857778081d3c0ab15f46e1210f8a8378a76d9098"
+  },
+  {
+    "path": "presentation/hardware/shaft.stl.log",
+    "sha256": "0401ad33be463c71fa81b3980681b393e548a223854bc97761f689fa7479648e"
+  },
+  {
+    "path": "presentation/images/assembly.png",
+    "sha256": "848dd77a1b4fd83597cb50486e909252df0133d359e8d667b3730f0050a65520"
+  },
+  {
+    "path": "presentation/images/exploded.png",
+    "sha256": "f88aecdfb15aefd19ee32fccfca56920d1ee9ef3b8ff3c323907a12dc5675565"
+  },
+  {
+    "path": "presentation/images/exploded_motor.png",
+    "sha256": "5cbb3aa1508010a35224dde88bc0081e136558deab33ebf472c100643b0d88ac"
+  },
+  {
+    "path": "presentation/images/motor_fit.png",
+    "sha256": "d9ab60d71fab462e99ae745b278370e81cc359ec19f1bd1017432952575ccb08"
+  },
+  {
+    "path": "presentation/images/motor_side.png",
+    "sha256": "fd3cd2fdc86f54e2d73a748f4d27b7381ed1e3d412f172452335aaf1ba13176a"
+  },
+  {
+    "path": "presentation/images/open_mechanism.png",
+    "sha256": "7b426ef99bdece403d348e122d64f6b4f82256c9a717e4b5404e439b4326dbbd"
+  },
+  {
+    "path": "presentation/images/parts.png",
+    "sha256": "89c15ee344176e16821b5c52e66b60c8aff90b22b350d46eabc3a5e1d0dbb40c"
+  },
+  {
+    "path": "presentation/raw/anchors.json",
+    "sha256": "4659c64c6fd04777a541991706185d14396eaa51c6e00abd2d1a7247c84cf9d1"
+  },
+  {
+    "path": "presentation/raw/assembly.png",
+    "sha256": "bfa5a2d2666921c2fca67c0743aa68d377ee425b0ab8965a59e3ec51db19209b"
+  },
+  {
+    "path": "presentation/raw/exploded.png",
+    "sha256": "f9f5c74c84aab5aa733a22ee187f08ace7d85cfe030c5b108af3f3b5b8825a8c"
+  },
+  {
+    "path": "presentation/raw/exploded_motor.png",
+    "sha256": "630ad810fa73d3791c52722931a3c2e395cf91c7f727e0d365018e53b3d7852d"
+  },
+  {
+    "path": "presentation/raw/motor_fit.png",
+    "sha256": "85fd4417623be487162b1a71cdfac3ed3fdddeeffcdbe26b931977a7bbd5ee6e"
+  },
+  {
+    "path": "presentation/raw/motor_side.png",
+    "sha256": "fc2eaf29581685f5eb76e3e05d307ab2e616936a415a6094ddf996b254fa97b2"
+  },
+  {
+    "path": "presentation/raw/open_mechanism.png",
+    "sha256": "a70d61316ad755c1a4f6923c4d718b8c0290b262ae3b73c0f221e648ce2869e4"
+  },
+  {
+    "path": "presentation/raw/parts.png",
+    "sha256": "cb757ece7068b0b9cf14dbbc24f2e3d05c6a6f02acb2689ee3fff5d75d57ef80"
+  },
+  {
+    "path": "presentation/raw/scenes.json",
+    "sha256": "314587f7b2ba5057c000b0634e6f5906ced0123dcf1be393da7c7ff2322825da"
+  },
+  {
+    "path": "presentation/scenes/wave_drive.blend",
+    "sha256": "ce09bf499e7be0600afbe7f737570be9c40369c52518b8ef1620173fcd5886f8"
+  },
+  {
+    "path": "presentation/scenes/wave_drive.blend1",
+    "sha256": "81c7e1c43c4726b3fb7cf80e168c593c91adc43a820ef02212d01dc901827966"
+  },
+  {
+    "path": "presentation/__pycache__/compact_instances.cpython-312.pyc",
+    "sha256": "48f20eab811427d1f9451e23c40f91b46efa920d04bda0e4e57ff5a7db629280"
+  },
+  {
+    "path": "presentation/__pycache__/dual_instances.cpython-312.pyc",
+    "sha256": "c5b13b9969596a8fa435fd8fb7c70a10680169507a24d1aed8a2814492b80fc3"
+  },
+  {
+    "path": "presentation/__pycache__/motor_reference.cpython-312.pyc",
+    "sha256": "e5e77f1e75587ff4441962a1d75f5444331e53195cec46417e8f5d729389847c"
+  },
+  {
+    "path": "presentation/__pycache__/sheets.cpython-312.pyc",
+    "sha256": "f7a811b73394861a16803281ba53a3006fef27432cea5e242949374470ebb969"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L12_a0.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L12_a0.stl.log",
+    "sha256": "9b6fc6bf5d46eb0ad058f6d9966d6465324e54a4a432d44e79bd3a018c4f3d2f"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L12_a45.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L12_a45.stl.log",
+    "sha256": "53e8b35fab23985a9bfbccba2e65533e6f317d58aaad8f235cd021bc26a283ac"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L6_a0.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L6_a0.stl.log",
+    "sha256": "02c63e05c74a09d5ada82fd509ae5710b40a738b0aaa252c67e08b63c0545fad"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L6_a45.stl",
+    "sha256": "91e75e9e74c227e0fbb10aed31a963bcb352a63cd3e49d0ebf96cbd209d4537f"
+  },
+  {
+    "path": "presentation/cache/compact_stock_lengths/collision_L6_a45.stl.log",
+    "sha256": "90f4671a7d2f4c85d3e5608c853eba2e43aa607ce5c5bbfa1bbbaac559de3c53"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L12_a0.stl",
+    "sha256": "e7a5b43137dba7920eb039bcd1f9c30f1dcbd5b0d507b1ec412c5eae93c67129"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L12_a0.stl.log",
+    "sha256": "9b664f50660c2ceea430afbc0f0523e33d270f284ebd777e14775144de50e9d0"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L12_a45.stl",
+    "sha256": "b629fabe7d151ed6c33161979d42dad6a1e8e054bdd8d5d8f205f50658df1807"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L12_a45.stl.log",
+    "sha256": "74065cd3b0332ba1141d8b1e015c64255b25ab32fa821eeb43c24e72db0dba72"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L15_a0.stl",
+    "sha256": "6523bc8ac4d8868c774202fbac78e455e9316291273c2ebb4f3866bd8cd6e9d4"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L15_a0.stl.log",
+    "sha256": "3e1b9d50eda6f7b31f1dacbd6002f896568e56bdadcc7e435deed3b8c5504103"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L15_a45.stl",
+    "sha256": "aef84880a1be6cfa8960d694830d854294d459b6cec56fbc4a3211ce0a97c275"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L15_a45.stl.log",
+    "sha256": "1be135b560492298c1e551d9273a576d3a64323f4ae6cf743bd5f60b993b8cc5"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L18_a0.stl",
+    "sha256": "6a729f75dc2ef235e160c91444aa6b14d0450770fb7c0b69dc2e0b09971dacb2"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L18_a0.stl.log",
+    "sha256": "f69363bed12eb3fff19006eb9bd2268ca7714284f1f88a9eee0aa470edb1c4be"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L18_a45.stl",
+    "sha256": "57ef401944afdadafefa48d1127b66ad4481f73e4daaeed439b7b35929fa28f6"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L18_a45.stl.log",
+    "sha256": "5578d23804e2909bf8aca9f69bfdc5f8c002854083c4d17453ddc7fa84083b20"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L20_a0.stl",
+    "sha256": "6b9c765f8aa96fdc5e143cba526124629eb0fe6a7431a4fa661869c4e657385c"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L20_a0.stl.log",
+    "sha256": "2fba1221ac29b9a80f44faf05cc2c4307e379a5e66210e474cf7c85fcd3458e1"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L20_a45.stl",
+    "sha256": "8efd1c7b14b95847501a608f3bb33510a5bf1aa0b8644621d92dfeb89bc8216f"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L20_a45.stl.log",
+    "sha256": "df31f36b8b2f66a2e6cb6e48849464a91b09950fd16888580b679c4f6eed5a50"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L25_a0.stl",
+    "sha256": "f1a832c5de1a689306b26d41507daf1de239a866c4fe070a2b85d85889f275d1"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L25_a0.stl.log",
+    "sha256": "208e301630f3234cf5eb3d7bf2689e9274182cb1b506c978af8f99ab4a081395"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L25_a45.stl",
+    "sha256": "b3fe622835c6b62d3a45870d8e1736a5e63fa4334f8644cf137aaa72bd5abe33"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L25_a45.stl.log",
+    "sha256": "30421933e6b322790e27a9ec584765290fc67411f0b270310f4c42f78ec6c128"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L30_a0.stl",
+    "sha256": "5d5687bc566bb94917c28b680ab822a03b54bc9eb7460a18b3b2eefaea66677d"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L30_a0.stl.log",
+    "sha256": "4e4bcc57a497a4e143c2ab4ab6d13416e618c8456ac94fcac1bf868a70b3722a"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L30_a45.stl",
+    "sha256": "f87874fb540326fd8404a92a60aad6d719c2db8d4eba6833eb3a700cddad62c0"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L30_a45.stl.log",
+    "sha256": "23b9292c2a7eb030997199a3808daa2e79ab2e8e7599672364a0f6c74f953626"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L6_a0.stl",
+    "sha256": "a9e269fdca1f30a124f54ec7ca4c26debdb29d707cb2a1a2f7aa4ae63dee9056"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L6_a0.stl.log",
+    "sha256": "4002227b8141c0156802c895623df557f2e0f3b2ba8d2e194de15befe863dbfa"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L6_a45.stl",
+    "sha256": "24d0f6b3a3ab421467f6c20d1e0442f121c60be41d78374d3c46b2ea5899c619"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/collision_L6_a45.stl.log",
+    "sha256": "43546fca193bd7ef7b85b922523d0e49ecb577a5e93c279ed56dd5ebe5afebfd"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/output_cage_lower_6mm.stl",
+    "sha256": "59f24acc12cf7e37c26c6c48a395bb45bb906fcfdb4a048410035414587a9d5b"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/output_cage_lower_6mm.stl.log",
+    "sha256": "16acecd11ae713129cd4904e416fa6403ad5dc37c2cae26d8b10e7016c4a0e27"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/output_cage_upper_6mm.stl",
+    "sha256": "62ef9a1cce08e9a82904deaceaad0efbb3605c5ccec46a18b8dfd53ee2e34a85"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/output_cage_upper_6mm.stl.log",
+    "sha256": "a2b3ce86ce61687117e3d3a4cf0b8fddcfcfdec8a859d209fc061748dd49efbe"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/wave_bearing_cap_6mm.stl",
+    "sha256": "4342af73e393456e304be769ea42294cb407e897842d5de9bbb0951a20a31abe"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/wave_bearing_cap_6mm.stl.log",
+    "sha256": "b74e95cca04e331d9e4f9d4e501ad8af65753134657477b63fed7bfc747bc8a1"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/wave_generator_6mm.stl",
+    "sha256": "f55c55788906d2d0a37bf455ad35c0d7df075162f96a0aad4d01e84516287025"
+  },
+  {
+    "path": "presentation/cache/stock_lengths/wave_generator_6mm.stl.log",
+    "sha256": "02675bde8d7f764a516177a38c0545e404ac3342c6564bcffea224658514377d"
+  },
+  {
+    "path": "references/mishin/files.json",
+    "sha256": "92dcc8a3135f0b4059c2c3ce0d4d69db9e7b9320a45cc5c77f0d25ed59286ce1"
+  },
+  {
+    "path": "references/mishin/gist_metadata.json",
+    "sha256": "f15048ba5c2282c690ac7ea9b35d16b0bbb1cd419cf7770aae3d34bd17438945"
+  },
+  {
+    "path": "references/mishin/INSPECTION.md",
+    "sha256": "b94e027171e959d67ad1e12d85576277226a8034a5d5f7d959d1984ff8779a1a"
+  },
+  {
+    "path": "references/mishin/urals_page.html",
+    "sha256": "c6a9de44c7c00720d63d1163fb0ef990bb458beb800f8fd7cfbb0661912122f1"
+  },
+  {
+    "path": "references/mishin/wave_gear_with_rollers.fs",
+    "sha256": "60fc6b68799cdcd7e16293f44a02a7e3e9e435298fa569a057bc7d4de146751b"
+  },
+  {
+    "path": "references/mishin/wave_roller_gear.py",
+    "sha256": "6461f78ae79ec7e46018314959aaf53036a8a8c3a8c888c11a40b8145ca4468a"
+  },
+  {
+    "path": "references/mishin/onshape/inspection.json",
+    "sha256": "82740b56fbfe5e5b612d0ed5b18566f7072e7ba0dd7415c84a2f9f093d61ba36"
+  },
+  {
+    "path": "references/mishin/onshape/mishin_generator_example_all_parts.step",
+    "sha256": "8318d3119a6bd451ee7dacbfeb5110dd2e0183b8b94d4a873111919aebf7eeab"
+  },
+  {
+    "path": "references/mishin/onshape/mishin_nema17_all_parts.step",
+    "sha256": "657fdf894e46e596cbcc478cff9e7e379cce07401d33411a8c6d1bf491dd3c99"
+  },
+  {
+    "path": "references/mishin/onshape/mishin_wave_gearbox_all_parts.step",
+    "sha256": "0b378e7a5451d600dbe1543face836276c3e6162d654d3cd7afdbdf0a2ef49a4"
+  },
+  {
+    "path": "references/mishin/onshape/Roller Wave Gear Icon.svg",
+    "sha256": "28ed38a2cea602683150bf24236e3a3b19d60cb2c7ae0e98bc96b34b1d492be3"
+  },
+  {
+    "path": "references/mishin/onshape/variables.json",
+    "sha256": "27e9847dd6702c107ec934ab865dd47acc7a466fe6e556344f5e9d611819b21c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/dual_instances.py",
+    "sha256": "59731758326ae571073e323b9c03992805b39ce2e0b809a10ba6c6a9066d5dce"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/dual_recipe.py",
+    "sha256": "8502dd1fd4d2daa4150a5ff64419349334779b4f5321bd50cc6045b645c8e723"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/test_dual_wave_drive.py",
+    "sha256": "48240814876aabd8132529b86b56d97b4329865abdefbd178b4e389b45d860cc"
+  },
+  {
+    "path": "reference_migration/gearbox_native/double_bearing_housing.py",
+    "sha256": "9d4bf5a3e6a35f13c73a72395f95c2649313fe2dd73e886c669b9fcd05327401"
+  },
+  {
+    "path": "reference_migration/gearbox_native/simple_double_bearing.py",
+    "sha256": "89c528fba7a3b8b690791cc75e29fe48a792d498cd5e0b117522ce96ae0c03ab"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/eccentric_cam.scad",
+    "sha256": "3f7bb50f7863d2d3c62e65d63572295b629cf28f325da066a3142492f25de45a"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/eccentric_cam.stl",
+    "sha256": "255f1549df40508bf9b49a1b69ebc8f6d49dea67544c269d7d0dd5951ccda079"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/eccentric_cam.stl.log",
+    "sha256": "725968c0220f6526bb97f7a4ceac9193b73beccf3ea2143375551a3deff3809f"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/fixed_profile_ring.scad",
+    "sha256": "b3a3d6a99feb00d507e583d289e13948361f8663fcb9c9828e836e107d3a8f5e"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/fixed_profile_ring.stl",
+    "sha256": "5c226516c1f2cb170064a2d35eb86957f11340ba83b3c3aa60a7b34c328e22e0"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/fixed_profile_ring.stl.log",
+    "sha256": "8d6d544e24e9c34ca5e5616941cf2d84db9c622ed9656f300db660e41e367abd"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/input_spacer_lower.scad",
+    "sha256": "74e95ecc3e15525625c1241d6b4f111d2dc9d887238c5c0918253c0ce65dcea8"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/input_spacer_lower.stl",
+    "sha256": "fc8bd41f004478b06fbba52a2bf9939fff732e27903f93ba1c39bcbe2dd1d85a"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/input_spacer_lower.stl.log",
+    "sha256": "9377b6a8ac99cc34e98bf17bbd88c548bbda18d0b8b58dc51623f8ad39dce92a"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/input_spacer_upper.scad",
+    "sha256": "a3199ff59545522faab4bef3ef227be060e303a6c0e382d5160f886d42843274"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/input_spacer_upper.stl",
+    "sha256": "8edea146b9ea40eb4a2b4962be9f2a83a5d2807fd24b6bf7914bbf7c160022a6"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/input_spacer_upper.stl.log",
+    "sha256": "725968c0220f6526bb97f7a4ceac9193b73beccf3ea2143375551a3deff3809f"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/old_visual_screw_housing.scad",
+    "sha256": "6dd679973507a29dbfd43f62a096707e4743b19838e129200dd0bfc66d321aec"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/old_visual_screw_housing.stl",
+    "sha256": "8f5279b6972ec3387cb2608ab8bc4cbe3177b95b487eb8bbac64b12936510699"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/old_visual_screw_housing.stl.log",
+    "sha256": "1e25ec8b80e8d945a9726a4a57f75d247c1f8ebb34e8d1e81e53373745542a6b"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/output_cage.scad",
+    "sha256": "f66a44ac61b5459ffdaca773d1b720565d11264c436544c644bf9d8ad7dc8af4"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/output_cage.stl",
+    "sha256": "0c03f5e7c4703479f9ae9194d75f188c13c37251d657539a77afc173b19306c4"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/output_cage.stl.log",
+    "sha256": "29a78e29ba5a81f024e59824a6dda40ac0ca8f436948d2f6ae5115bbb4aea8aa"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/output_cage_cap.scad",
+    "sha256": "86e03be542261c20b5ddb74c58b8639e5ea0c6d8c7edd398745bd1695bcd7cf1"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/output_cage_cap.stl",
+    "sha256": "7edac21ba099ef51c2aa4ea99cde95e2701f94c94c36113aaf23f08398279106"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/output_cage_cap.stl.log",
+    "sha256": "b558d8bcd1b6642f4043fe7a6d28c110ae8c9ce9f540397b1d94a1a25a502b20"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/roller.scad",
+    "sha256": "8b44cf4cf850e4f4e71549783e8de8c359dcdd3a3cd1be965a3055127ddffb3b"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/roller.stl",
+    "sha256": "d33e6ecd44658b3b2be39c96e288284c10a08566f1733e57b903b1158ea0a90a"
+  },
+  {
+    "path": "reference_migration/single_bank_generated/roller.stl.log",
+    "sha256": "888064e8ba6011590ce2aefaa15665cf6a68461827b5af0118a264dc04418600"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/3dpr.png",
+    "sha256": "dc061d7459bb49b71c7e69a3cd33ac3fcecdc5fb1fb5559bb89d4ca81c559abb"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/3dpr.png.log",
+    "sha256": "92aaa3396a1a0c910f2ac3aa1a0d2648ad6ce78e6c6da988be0593e92a7f8e2c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/3dpr.scad",
+    "sha256": "20aeeb5e7b9ece1286dbd8774ec0115dde0f5781328390424d1150998472f0a9"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/3dpr.stl",
+    "sha256": "8e40148ff1363242677cf38976e859ec938849afd07ed312345ad39476fc9a56"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/3dpr.stl.log",
+    "sha256": "508dfa611dc9d2c418083c4fc87689643e468ae2c95567c8fe562aa8d02d6e6c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/animation.scad",
+    "sha256": "bfd753fe92a430f290ae2f5a56851b1762eb27547929d09067ca6397c6aaf176"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/assembly.png",
+    "sha256": "6edefa19e1c3b7143ee3ee2e865671470787056e9ccc5b25f912f87363f1bfc3"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/assembly.png.log",
+    "sha256": "95427fb66b03943e48f9080de4ec02ea1fa26df65d27ac7db1a38fcf0baff85b"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/assembly.scad",
+    "sha256": "6ebfc39c6dfe1e36b39e063065ef4203e1fd8248182379459a04d7cf932ecc77"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/build_environment.json",
+    "sha256": "be2abe09e8c2b90175f172931ec2461f78999d59562cefff5d92acd2434b26e6"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_0.stl",
+    "sha256": "e7a5b43137dba7920eb039bcd1f9c30f1dcbd5b0d507b1ec412c5eae93c67129"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_0.stl.log",
+    "sha256": "c042dfd29b34894bc3f4930dbf844c1bfc3f23c41fe57582ada31996bf6a26ac"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_135.stl",
+    "sha256": "cafdc9fa1d23d1673a7445c510747d4c7bcafeb055a14b9cf0b525eae2176b52"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_135.stl.log",
+    "sha256": "e5cbfec1a71d97ed0d025b127ae968cf1e495971eff318442b2c8a52636e9cfb"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_180.stl",
+    "sha256": "45eb03cdde6d843e0140b71c30c00752af54c45d2df66cee654757355bc6e439"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_180.stl.log",
+    "sha256": "dcf6351811ec673ebe9a7e60c536ae2039b41e1f7e5cecf16f532990bd1a821f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_225.stl",
+    "sha256": "9452cf763622e6322561d61f3e4d24c994689c6a3711229e0010312f55005e9f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_225.stl.log",
+    "sha256": "dbce85421ad9005b0a2e11a33d4ad7570f643242d1c054358ef41904530310fc"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_270.stl",
+    "sha256": "a99e0d5d7dd05bf3d11aff3de919bba8b835407e3440a0478f2ccd80b86629f0"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_270.stl.log",
+    "sha256": "fe1e314b44d74cb95d7f67e7b525d76a3d4e5b164859a23e8ec5bcb19f80883a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_315.stl",
+    "sha256": "777244b8b761d1656932985d63b189f9bd075d849ea9d98c9286c2f8c3d886bc"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_315.stl.log",
+    "sha256": "376c182287afdaa9ef3cec52ac7f7d3724b2a1bc11e8834f4a5dfc3666e0f11b"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_45.stl",
+    "sha256": "b629fabe7d151ed6c33161979d42dad6a1e8e054bdd8d5d8f205f50658df1807"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_45.stl.log",
+    "sha256": "1d7908b8a6bf505df323cd38a49fd7b67dc04f7898bbbf53026718b0a7ea90fc"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_90.stl",
+    "sha256": "2890e28fda3bf53e615ff01262deef7763386f42579e70ddc49645feee3d049b"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_90.stl.log",
+    "sha256": "6004d05cc00d095540782093393b8f92e11e921206dc5a7cfd69d57344df934f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/collision_check.scad",
+    "sha256": "2dca251dc26068943c0201ac0586b1c9c46d59db6b7eb7fb87b4926932fd5a4a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/cutaway.png",
+    "sha256": "5cc0d5d775c747b846b18ed904d28802760fa840ece7ee3c066f4c035c7057fd"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/cutaway.png.log",
+    "sha256": "b94983c84f0b01080b9d9e0f43c15c01842c9e90e06dc4f14356588da1763378"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/cutaway.scad",
+    "sha256": "e8f6e08ac5d580970f1f48f91e63b324c0d44f95ef03636862b203162b9663cc"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/eccentric_cam_lower.scad",
+    "sha256": "2a449d478e8e4245d801b0438a6fe21a9b2ba0501b7d5dbb79896e97f7ec2bdc"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/eccentric_cam_lower.stl",
+    "sha256": "255f1549df40508bf9b49a1b69ebc8f6d49dea67544c269d7d0dd5951ccda079"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/eccentric_cam_lower.stl.log",
+    "sha256": "cf7af5ce07c9769fe5f63158b238cff46d61e8627ebd38353f9600408d8ee80f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/eccentric_cam_upper.scad",
+    "sha256": "28092d47acf692611f3d635879ffefeed450ed6bfa944f0551239ac7ddf2a16a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/eccentric_cam_upper.stl",
+    "sha256": "7be73a9a11309b50dafe352d216401f09aa6fb838157b1f3880668999814a78c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/eccentric_cam_upper.stl.log",
+    "sha256": "c23c2c8003ff611c1fbf0ea678881a94cf922f867a9fa11e0274ba1bc4df39e1"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/exploded.png",
+    "sha256": "8a72c831027f2977d701e6524e6a5833e5bf6b2b6258512d56d8dee23987e38f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/exploded.png.log",
+    "sha256": "e4ae40688470bcd83bcb32659716cd5fa58eb84bbd24899822707c76dc248490"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/exploded.scad",
+    "sha256": "ec5336e26f320a01ac417b354002ed98db8630e13c762df8720f97c8c59030f0"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/exploded_motor.scad",
+    "sha256": "8cf40dd9cc557e2bc30cce4fcf318c05644a03ff8f910c65c84bdf6bb40556f3"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fit_coupons.png",
+    "sha256": "af04f39fc8c72576698ee4df5fc7180f8705cd08be41334c9bbfb804efbbc00c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fit_coupons.png.log",
+    "sha256": "6ed94858ab37d2ac8d75e4bad918962bad212ef2f9cd28f580ed8f8c9bb9e4ea"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fit_coupons.scad",
+    "sha256": "f8f9dc5f30076c0cdc5a41091735df73d954f13d3a07fe035aeeb9e7f20d517b"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fit_coupons.stl",
+    "sha256": "b0d8c2c567e2a0a54c4f5677f6c8aab619e336420f64c3130b4ca50fa16d0479"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fit_coupons.stl.log",
+    "sha256": "75bba68a0e513197630afda0eef7f154f702f12c7e2e85ce005c202e7086fb76"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fixed_profile_ring_lower.scad",
+    "sha256": "2049152ac750f4ae91afa28c92837d5b7ccfc49307859e1469d700370de659bf"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fixed_profile_ring_lower.stl",
+    "sha256": "c2dc8c27a36c6e527e06745f512500aa62263bd55d802471c2661abdec9e88c4"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fixed_profile_ring_lower.stl.log",
+    "sha256": "bf3cdb80c029694464c0af8911a07dd97327c797ebb0b8f7c77b35e34466f38a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fixed_profile_ring_upper.scad",
+    "sha256": "079134e571d5dad2adf37b9f6f7b34bf69d2c0c5df06bf1a392b787ba56d2923"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fixed_profile_ring_upper.stl",
+    "sha256": "ef90fd85c876cc610f916ee77fc2263fcbb13a6a49b046435bffaea9551dff8a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/fixed_profile_ring_upper.stl.log",
+    "sha256": "749c69d7534ac11409ef7dafad0a6465cae06fbcfe640c67747d12e927e32768"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/geometry.scad",
+    "sha256": "094ecdf1423f17028c2d4d42ba4e0293e992cfb98337e6869179155745162c1c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/hardware.yaml",
+    "sha256": "6fccd685b6dcd920e724fac0e421785b4c678cb999854779e0aeecf890599113"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/housing_bottom.scad",
+    "sha256": "7064fb08aac93ef10349343be42f5c991110fd9b0166eee12dbe6b5418694d2d"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/housing_bottom.stl",
+    "sha256": "5bfb7a96533859a6f4bd8a9231e3d0eb8853f732f0ac1d90c252e8d95b5b468d"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/housing_bottom.stl.log",
+    "sha256": "cfcaee62dafaf452afc3dc2240b78e6f52a1f3ba821e1f1a839b5cc1a52cc063"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/housing_top.scad",
+    "sha256": "b7f1c26bba92b55b4c88ba42aef6a134fa312412f8d2bdaf43841cf2f45da902"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/housing_top.stl",
+    "sha256": "8b623a7c262ac5ed6d4ebf1a7bf3b3d202ca9888b2a38eec697ee66b21aa3f51"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/housing_top.stl.log",
+    "sha256": "273de9ab918a8ca6a364f09d96d9baad1eac739191eda57f989bc67b85315f9e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_bearing_journal.scad",
+    "sha256": "596ce1cc5fd4da3e0656d34dc7daf05b071302b76be0b278f8c20a7d96e40ba5"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_bearing_journal.stl",
+    "sha256": "584a34257b14d4643c166a64ac7ea9b0dcabca5463723d8981d2ac64694fd7d2"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_bearing_journal.stl.log",
+    "sha256": "08703799277f6f306d873e3ecce8c2110e7301ad37f720d05a156aa8b4a2fb0e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_collar.scad",
+    "sha256": "0242ca858afb14de1bd0861fdfaab40e72bc82bc68848c99f74cbf386415cc26"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_collar.stl",
+    "sha256": "78dc08971967b3c4be8b795e6c3210c2b3918066b0201f730b25123e55150e1a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_collar.stl.log",
+    "sha256": "8c888bde4f5cb142e58fb89c29236c3efa59a64e44869af469f4685407ac538e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_middle_lower.scad",
+    "sha256": "96a95fedfbb9f4c8693fd1d19cd9888dce3f42a1767211fa89dbd20b156dea7f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_middle_lower.stl",
+    "sha256": "d31f1526c48cdc09e9c2777665772e546831f687088c4d9bf33d85ffbd4e7ce5"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_middle_lower.stl.log",
+    "sha256": "08703799277f6f306d873e3ecce8c2110e7301ad37f720d05a156aa8b4a2fb0e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_middle_upper.scad",
+    "sha256": "aa3b218592c5fc0937daf0773dab5204313a30b960c69d575ee4bfaec3b1da35"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_middle_upper.stl",
+    "sha256": "bbd9f74772b1bcde06ae90d875b082a6fb5ac908e5b2d6e3aaea63a6c3a2ac54"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_middle_upper.stl.log",
+    "sha256": "bf4b579e9d803303e1c031c40238108ca5643d631ef6847e5f8cd057d04b6ab5"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_outer.scad",
+    "sha256": "61c92e3d1bb0722f721b32669aa44cae92a5fe4f7c85107356023f24b19f6e14"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_outer.stl",
+    "sha256": "3f761d2549c5fb74056bf73afd3356d427f31ba5756d9d8bde92fe94fd131a38"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/input_spacer_outer.stl.log",
+    "sha256": "3020d4036f2bc8b364acf5a988e25ef79b1e72ce98e7c2e8e4ef43359803f5be"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/manifest.json",
+    "sha256": "36d88b69ba2d1223e1015e48f9145aa6f25c71d905d66d29eb3e1c9e51c72095"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/mesh_validation.json",
+    "sha256": "727b34835850fa6f655b234c13baa8802f0b295038ca56b4109aec33e01a1e43"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/motion_section.png",
+    "sha256": "8136492450740be7db049c29f150eeed10a9a0c16e5a3e1168edf13aac381e05"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/motion_section.png.log",
+    "sha256": "ac54e22071a0ee99875def4af822e161b9d470bcd5553879b8b6b5b27ff8a27d"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/motion_section.scad",
+    "sha256": "314cbc050aad82aa00e01c8c7b1ffb18567e0c49159622eb4abdaa58817eba3c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/motor_fit.scad",
+    "sha256": "8c7d05b57fbe392683a86ad64f8040d192f6d0238d87452755eb7ef3e8b568dc"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/motor_fit_check.scad",
+    "sha256": "a4596746bebd736391a49b8da0c0fca505d56d994b1876a8ded787b9991fa2b8"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/motor_reference_parameters.scad",
+    "sha256": "14b82249223f30e6f5637e1b4cde593e435587e51f5da86d63a99620a47c38e4"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/nema17_reference.scad",
+    "sha256": "364e0b8195ee4583473e142bfe0f862c58750b799ff95c6ffe3cf00b279ae3c2"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/oobb_hardware.scad",
+    "sha256": "f623b060bc2dd0f5d134e048e34139eb8f02c36245fe167824796a90fa7b0f91"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_bearing_hub.scad",
+    "sha256": "cff82a41634e48c4ca3934223064bc0ac04d64529d1c023de98f8b90ff241eac"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_bearing_hub.stl",
+    "sha256": "5917a1638d62961415ff5f30e9cac427b5cfae8a9bb4150c7ed3803f17daa063"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_bearing_hub.stl.log",
+    "sha256": "16a10b3ffaff9ee026a0c0c6cdf19ddfd4ac7b4e3855f1fdf5aaaf2adef1fe01"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_bearing_retainer.scad",
+    "sha256": "8f7b41697fa1bd9015661206a642db9810350a33a95b550eb831ef5cf7358376"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_bearing_retainer.stl",
+    "sha256": "083d3502159b52f7be1e6137101285c7d99da487f10fc27058d069985119b257"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_bearing_retainer.stl.log",
+    "sha256": "c91f018ba96efd6805bedb2bd9bb93229ce496864914263d1844ea54cf5c2fa4"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_joint.scad",
+    "sha256": "9ef496aac3590a34674073418b699fdc39f99b60bf5324dbcab1e6ebc6191696"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_joint.stl",
+    "sha256": "7ffc2e67c4fc02d2439a0706e88ef5c743a7520c159bc97c1580ec486ad4bba2"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_joint.stl.log",
+    "sha256": "7a1b77a8a91aca19c7b3888e0bc215da9315adb146e67ed55761151b79a9de81"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_lower.scad",
+    "sha256": "1ab0ef6aefa36aa4c3424e05ad0ed7f437f2161fe8f5b77938fa4b512f5e710d"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_lower.stl",
+    "sha256": "fa4bd2e18500e9bbab8d0b4f565b1f3c36d44c7a6155cd52b876f810e9feae24"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_lower.stl.log",
+    "sha256": "b2bf7c5e67ce764ab820d21ad563ae1d20645a5c644184bb06938384e89ad5b8"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_upper.scad",
+    "sha256": "a54f2386e3d588db122cff423231d310066bec5a87487668905f4709500b36a4"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_upper.stl",
+    "sha256": "6b8e207fef594cfa78d2a34d7e991a3530ddcc63197598efc523ab58ea234e4a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/output_cage_upper.stl.log",
+    "sha256": "da7b0d291deff468b289da10aac43f6871f96a092489b4cd5eb8c5683bd6f3a2"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/parameters.scad",
+    "sha256": "11ce1a5454751bad99fc58c413d880e333bec0f8dd8d3b46296f29463050fcd8"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_01.scad",
+    "sha256": "d11fd4d4443b30e1253e3e0c4f17dd3704448f0e4564d62c562518237b51bef4"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_01.stl",
+    "sha256": "f1419564cb89ee539397228ee0569c128d0df451cb333d1eb57caee90f522aa5"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_01.stl.log",
+    "sha256": "f09b26ae431dd560c6653f3173d06165051b9d5a233b1896b0b0621c8d802788"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_02.scad",
+    "sha256": "afb80397da1cbd46c934c1dfac31eeb352858a6562df4a88e227b19db2790e7e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_02.stl",
+    "sha256": "81b8e187fcb0e5bc4bae784df248b3b6803faaf79276e89bec03b83ce09aa61c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_02.stl.log",
+    "sha256": "786927ce1b7607c6220480a9faf9284ead6eb1fe016bc9533c2226a5657349bf"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_03.scad",
+    "sha256": "8276da1eec04c4f586a35b2cdd4dbbb606e89595c925fd743520ad83b59e6902"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_03.stl",
+    "sha256": "aec986694174968278fa1aafc6cdd93c8f19da422de371887ff20dfc328741c0"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_03.stl.log",
+    "sha256": "86b5772143b9bebf876d57f16e9a9a592a3c17d6fb2830bcbd78d388841df762"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_04.scad",
+    "sha256": "d2d6663ccb0e04af2401ef37beeada36f17f768f701408f42edb8668bc89846c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_04.stl",
+    "sha256": "d4cdee33ff83fc2b3ed9b8e356e75bd2c1b21c64e190f48b0fa8f431454ae6af"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_04.stl.log",
+    "sha256": "61a9a07af3471c6c221660905f6e67c1f3b9d120670024095bd38943bd781620"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_05.scad",
+    "sha256": "d640ff81625dff3cdc9636d0b7b8cdc5a972f5e336fdae4c8b7a229d45963dc6"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_05.stl",
+    "sha256": "8c6d6110c52e97fe8cf5db109beb85a6bc7b73f9f2c304fffcedd0a9c0c2a72e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/print_bed_05.stl.log",
+    "sha256": "86b146099ab67bf45ea2f3f32a1ff185da58194cfe0b132017ef43643b3d2c2c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/README.md",
+    "sha256": "55887d2081c94c685b30c3c569f432cd20e083c30666446d8cadba3cbd3a0e67"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/stationary_joint_ring.scad",
+    "sha256": "0a1d767691826cda18042ef3c42fe79fe7d8992bed7b0dd63b463c7849404814"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/stationary_joint_ring.stl",
+    "sha256": "90ea4d0d06298e5ffa675f2a907c363f69285f1f74476075fc9c14c22a07f3ae"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/stationary_joint_ring.stl.log",
+    "sha256": "e5288fabf1cb5ee2dac3c436630620924ffb4285fc4746ee5bfc4904b187a713"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/validation.txt",
+    "sha256": "64a9b13fbe60be6c962641f2cf22b06cb07c2dbc58d0e337a16eb445cb9e34d3"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/wave_bearing_cap.scad",
+    "sha256": "068df68d6e19df7c5333ebd7beda1e8884e8eb6c6739fd18cbd55b93dc4bf99e"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/wave_bearing_cap.stl",
+    "sha256": "4342af73e393456e304be769ea42294cb407e897842d5de9bbb0951a20a31abe"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/wave_bearing_cap.stl.log",
+    "sha256": "f569cd1f9a20d73f3a47cc9685270de9e4868353c9ce57e1a55e2be4d328fb43"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/wave_generator.scad",
+    "sha256": "d9a636ce185da381205c6aa4b1292113ffbd1a052a574c00fe4a94b54d74ac2c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/wave_generator.stl",
+    "sha256": "67ef9d4e5ad8afe3cae5603dd08dbdcdb536a0297c506b8e02b634f8e4fb7f0a"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/wave_generator.stl.log",
+    "sha256": "fece52b9f1c61e761e7a4751799b7cdcd3381ac4905ee4ac00a77ac2734bc4d1"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts/working.yaml",
+    "sha256": "23efda45b1202890b070e6260257c09ecbac2134a0177d36b3903b1f4656a53f"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/parts_source/working.yaml",
+    "sha256": "6b2e5ff5e1a56165872ffc7d3811263aa1f4a6efee9be38d5a0e37615898aa2c"
+  },
+  {
+    "path": "reference_migration/dual_bank_generated/__pycache__/test_dual_wave_drive.cpython-312-pytest-9.0.3.pyc",
+    "sha256": "905c8deae72d89d6612b8520101dc651e9257be7bdd3002c2391562eae44a288"
+  },
+  {
+    "path": "reference_migration/parts/oobb_part_motor_gearbox_cycloidal_simple_double_bearing_version_2_20_to_1_reduction/HARDWARE.md",
+    "sha256": "37b108f6afdaa7d90123d862d31ee6932cb6b31d49a0bb6e8ea0eac4b0e2c275"
+  },
+  {
+    "path": "tests/__pycache__/test_compact_wave_drive.cpython-312-pytest-9.0.3.pyc",
+    "sha256": "b1fa745d66880421581d86290a17798867342a1619aa05d30067a144aed382fc"
+  },
+  {
+    "path": "tests/__pycache__/test_dual_wave_drive.cpython-312-pytest-9.0.3.pyc",
+    "sha256": "fc2a82a50fdfd4ae9b206dc4de1381aa91992db8091bdfc62bd43e643adb233d"
+  },
+  {
+    "path": "tests/__pycache__/test_wave_drive.cpython-312-pytest-9.0.3.pyc",
+    "sha256": "54e4c9615f752ac021e9c2a4f8e1a359b7fa5193dfe5e0279942cd57e0be1a94"
+  },
+  {
+    "path": "wave_components/wave_profile/working.py",
+    "sha256": "1f4aa9a845b9f25f0737c77ab33343b88d79619fc11b412e538203909ffe9b74"
+  },
+  {
+    "path": "wave_components/wave_profile/__init__.py",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "wave_components/__pycache__/compact_recipe.cpython-312.pyc",
+    "sha256": "2e181c15307f3f6f7e71fbcaf1cf66124ab63aef4eeed852cb20de33ee30385b"
+  },
+  {
+    "path": "wave_components/__pycache__/dual_recipe.cpython-312.pyc",
+    "sha256": "7a35e4c162959ec3d8a1a271dd647df1d2f5123722982f7b0c93174ca684e22f"
+  },
+  {
+    "path": "wave_components/__pycache__/oobb_hardware.cpython-312.pyc",
+    "sha256": "253baa0039d08c71fff00a314a3dd9f4d84df7d68be5208bb1628b96d657a86f"
+  },
+  {
+    "path": "wave_components/__pycache__/__init__.cpython-312.pyc",
+    "sha256": "7a06fc7ab84dbeb66e8c25d9d8ba36bed61126eee31c8d88704570388e1e5416"
+  },
+  {
+    "path": "wave_components/wave_profile/__pycache__/working.cpython-312.pyc",
+    "sha256": "03525c78d3e9d8589229f4b93836b7435f4e6a0a955650f26f387d7a7ff9749b"
+  },
+  {
+    "path": "wave_components/wave_profile/__pycache__/__init__.cpython-312.pyc",
+    "sha256": "60bb7793137e9b80ffa7884a6cd74ebfc1550967b0114d1d0dabe5e442d2de6f"
+  }
+]

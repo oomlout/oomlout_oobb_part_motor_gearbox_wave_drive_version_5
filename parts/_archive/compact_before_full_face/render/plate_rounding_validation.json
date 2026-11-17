@@ -1,0 +1,16 @@
+[
+  {
+    "part": "housing_bottom",
+    "corner_radius_mm": 1.5,
+    "bounds_unchanged": true,
+    "removed_volume_mm3": 5.803937721604598,
+    "corner_vertex_radius_error_mm": 0.0005140125366700499
+  },
+  {
+    "part": "housing_top",
+    "corner_radius_mm": 1.5,
+    "bounds_unchanged": true,
+    "removed_volume_mm3": 5.803937721604598,
+    "corner_vertex_radius_error_mm": 0.0005140125366700499
+  }
+]

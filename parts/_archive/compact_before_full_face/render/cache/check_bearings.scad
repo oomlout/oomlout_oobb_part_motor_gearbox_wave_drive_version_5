@@ -1,0 +1,4 @@
+include <C:/od/OneDrive/Documents/ChatGPT/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/parameters.scad>
+include <C:/od/OneDrive/Documents/ChatGPT/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/oobb_hardware.scad>
+include <C:/od/OneDrive/Documents/ChatGPT/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/geometry.scad>
+nominal_bearings(0);

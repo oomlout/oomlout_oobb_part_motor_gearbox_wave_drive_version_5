@@ -1,0 +1,26 @@
+key,name,detail,quantity,id,bip_39_3_word_space,identity_source
+motor_mount_plate,Motor base plate,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_mount_plate,century feature initial,Project-local assembly identity
+fixed_profile_ring,Fixed profile ring,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__fixed_profile_ring,present canvas inside,Project-local assembly identity
+output_bearing_housing,6810 bearing housing,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_bearing_housing,chaos goose trim,Project-local assembly identity
+cage_lower_cap,Lower cage with teeth,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__cage_lower_cap,number music school,Project-local assembly identity
+output_cage,Upper cage and hub,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cage,unable coyote coconut,Project-local assembly identity
+output_retainer,Output nut carrier,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_retainer,hello cruel original,Project-local assembly identity
+output_cover,OOBB output cover,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cover,action rocket juice,Project-local assembly identity
+motor_eccentric,Lower eccentric shaft,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric,lake sustain industry,Project-local assembly identity
+motor_eccentric_cap,Upper eccentric collar,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric_cap,bubble trim year,Project-local assembly identity
+wave_generator,Lower wave clamshell,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_generator,maple manage embody,Project-local assembly identity
+wave_bearing_cap,Upper wave clamshell,,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_bearing_cap,paddle illegal entire,Project-local assembly identity
+bearing_6810,6810 bearing,50 x 65 x 7 mm,1,hardware_bearing_6800_series_6810_size_50_mm_id_65_mm_od_7_mm_depth,slender into grief,OOMP catalogue identity
+bearing_6704,6704 bearing,20 x 27 x 4 mm,1,hardware_bearing_6700_series_6704_size_20_mm_id_27_mm_od_4_mm_depth,learn trigger catch,OOMP catalogue identity
+roller,Nylon spacer roller,7 OD x 12 mm; 3.2 bore,12,hardware_spacer_m3_nylon_white_7_mm_outer_diameter_12_mm_depth,limb method jump,OOMP catalogue identity
+screw_case,M3 x 30 socket cap,,6,hardware_screw_socket_cap_hex_head_black_m3_diameter_30_mm_length,lawsuit city verb,OOMP catalogue identity
+screw_motor,M3 x 6 socket cap,,4,hardware_screw_socket_cap_hex_head_black_m3_diameter_6_mm_length,neglect evil skirt,OOMP catalogue identity
+screw_output,M3 x 12 socket cap,,4,hardware_screw_socket_cap_hex_head_black_m3_diameter_12_mm_length,hat wonder crater,OOMP catalogue identity
+screw_wave,M3 x 8 socket cap,,4,hardware_screw_socket_cap_hex_head_black_m3_diameter_8_mm_length,popular snake indicate,OOMP catalogue identity
+screw_cage,M2 x 18 countersunk,Hex drive; length includes head,12,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__screw_cage__m2_x_18_countersunk_hex_drive;_length_includes_head,throw fox entry,Project-local assembly identity
+screw_eccentric,M2 x 16 countersunk,Hex drive; length includes head,2,hardware_screw_countersunk_hex_head_black_m2_diameter_16_mm_length,grow relax become,OOMP catalogue identity
+screw_shaft_clamp,M3 x 8 countersunk,Hex drive; length includes head,1,hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length,trouble series collect,OOMP catalogue identity
+nut_m2,M2 hex nut,,14,hardware_nut_m2,enlist chuckle two,OOMP catalogue identity
+nut_m3,M3 hex nut,,23,hardware_nut_m3,glimpse harvest shrimp,OOMP catalogue identity
+nut_m6,M6 hex nut,,5,hardware_nut_m6,arrange steak cabin,OOMP catalogue identity
+nema17,NEMA 17 motor,40 mm body; 24 mm D shaft,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft,example code badge,Project-local assembly identity

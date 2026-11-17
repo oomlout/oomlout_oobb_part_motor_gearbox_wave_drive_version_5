@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "page_count": 3,
+  "card_count": 12,
+  "paper_mm": [
+    297,
+    210
+  ],
+  "panels_per_page": 4,
+  "physical_items": 101,
+  "unique_part_types": 25,
+  "quantity_audit": "Every production instance added once; six motor meshes count as one motor",
+  "layout_checks": "Text fits; arrows remain in diagram; all text is black; only numbers and part details; MD5-alpha links extracted",
+  "context_check": "Every panel retains every previously introduced production instance",
+  "physical_validation": "Not physically assembled or load tested",
+  "pdf_sha256": "495daf807af7eab19378cc86944794eb18e0d24c4e1adf9f9ea04addba5fd6e0"
+}

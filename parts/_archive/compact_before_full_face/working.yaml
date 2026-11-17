@@ -1,0 +1,504 @@
+style: version_5
+reduction: 12
+bearing_output: '6810'
+bearing_wave: '6704'
+roller_diameter: 7.0
+roller_bore_diameter: 3.2
+roller_length: 12.0
+roller_lengths_available:
+- 6
+- 12
+- 15
+- 18
+- 20
+- 25
+- 30
+roller_material: nylon
+roller_bank_count: 1
+motor_plate_depth: 4.0
+motor_body_depth: 40.0
+motor_shaft_length: 24.0
+motor_hole_pitch: 31.0
+motor_thread_depth: 6.0
+motor_pilot_diameter: 22.0
+motor_pilot_height: 2.0
+output_holder_wall: 7.0
+max_screw_length: 35.0
+eccentricity: 0.75
+wave_radius: 23.25
+profile_clearance: 0.15
+roller_slot_clearance: 0.3
+roller_end_clearance: 0.3
+cage_wall: 4.0
+cage_plate_depth: 3.0
+bearing_seat_clearance: 0.1
+journal_clearance: 0.05
+bearing_axial_clearance: 0.2
+output_plate_diameter: 65.0
+output_plate_depth: 6.0
+output_grid_pitch: 15.0
+output_face_clearance: 0.3
+output_socket_recess: 4.0
+output_screw_length: 16
+output_nut_depth: 5.2
+output_nut_height: 5.0
+motor_shaft_end_clearance: 0.5
+base_width: 6
+base_height: 6
+oobb_grid_pitch: 15.0
+oobb_size_allowance: 1.0
+base_edge_radius: 1.5
+housing_flange_corner_radius: 1.5
+housing_screw_pitch_radius: 35.5
+housing_screw_count: 6
+input_shaft_diameter: 5.0
+input_shaft_flat_depth: 0.5
+shaft_fit_clearance: 0.1
+cage_screw_count: 4
+profile_samples_per_cavity: 100
+circle_fragments: 120
+overhang: true
+run_scad: true
+run_solidcraft: false
+generate_stl: true
+generate_previews: true
+generate_renders: true
+validate_geometry: true
+package_outputs: true
+render_threads: 8
+render_style:
+  provenance: OOBB SCAD meshes with the retained cream/teal/black/yellow studio palette.
+  samples: 48
+  view_transform: AgX
+  world_color:
+  - 0.77
+  - 0.79
+  - 0.81
+  - 1.0
+  world_strength: 0.48
+  background: '#FAF8F2'
+  materials:
+    nylon:
+      name: Natural nylon spacers
+      color: E9E5D8
+      roughness: 0.48
+      metallic: 0.0
+    teal:
+      name: Turquoise 10605
+      color: 00B1B7
+      roughness: 0.4
+      metallic: 0.0
+    black:
+      name: Black 10101
+      color: '121212'
+      roughness: 0.39
+      metallic: 0.0
+    yellow:
+      name: Sunflower 10402
+      color: FEC601
+      roughness: 0.4
+      metallic: 0.0
+    steel:
+      name: Bearing and nut steel
+      color: BFC5C9
+      roughness: 0.26
+      metallic: 0.88
+    bolt:
+      name: Oxidised screw steel
+      color: 575D63
+      roughness: 0.31
+      metallic: 0.81
+  lights:
+  - offset:
+    - 70
+    - 25
+    - 185
+    power: 370000
+    size: 130
+  - offset:
+    - -100
+    - 60
+    - 95
+    power: 190000
+    size: 110
+  - offset:
+    - 10
+    - -140
+    - 105
+    power: 300000
+    size: 95
+  - offset:
+    - 135
+    - 160
+    - 35
+    power: 110000
+    size: 140
+  views:
+    assembly:
+      eye:
+      - 0.86
+      - 1.4
+      - 0.87
+      size:
+      - 1510
+      - 1080
+      margin: 1.12
+    open_mechanism:
+      eye:
+      - 0.65
+      - 1.4
+      - 1.9
+      size:
+      - 1510
+      - 1080
+      margin: 1.12
+    exploded:
+      eye:
+      - 0.45
+      - 1.4
+      - 0.65
+      size:
+      - 1200
+      - 1800
+      margin: 1.12
+      spacing: 10
+    parts:
+      eye:
+      - 0.25
+      - -0.7
+      - 2.3
+      size:
+      - 1510
+      - 1080
+      margin: 1.1
+    motor_fit:
+      eye:
+      - 0.86
+      - 1.4
+      - 0.5
+      size:
+      - 1510
+      - 1260
+      margin: 1.15
+    motor_side:
+      eye:
+      - 0
+      - 1
+      - 0
+      size:
+      - 1100
+      - 1300
+      margin: 1.18
+    exploded_motor:
+      eye:
+      - 0.45
+      - 1.4
+      - 0.55
+      size:
+      - 1200
+      - 2000
+      margin: 1.12
+      spacing: 10
+assembly_steps:
+- Print the fit coupons. Check the 6810 seat, 6704 seat, motor D shaft, roller windows
+  and OOBB nut pockets before the full build.
+- Mount the {motor_body_depth:g} mm NEMA 17 to the {base_width} x {base_height} OOBB
+  plate with four M3 x {motor_screw_length} socket caps. Confirm {motor_thread_engagement:g}
+  mm engagement fits the actual motor threads.
+- Preload the {cage_screw_count} M2 x {cage_screw_length} cage screws into the lower
+  cap before fitting it around the shaft. Align their heads with the hex-key access
+  holes in the motor plate.
+- Load the eccentric nut and fit the eccentric at Z={cam_base_z:g} mm above the motor
+  face. Tighten its M3 x 8 grub onto the shaft flat while the ring and rollers are
+  absent.
+- Load four M3 nuts in the wave wheel, seat the 6704, and lower the wheel over the
+  eccentric journal. Fit the upper eccentric collar and tighten its grub onto the
+  flat with the intended bearing clearance.
+- Close the wave bearing cap with four M3 x {wave_screw_length} socket caps. Lower
+  the fixed ring over the mechanism and align the housing holes.
+- At input angle zero, the eccentric points along +X. Insert all {roller_count} nylon
+  spacers axially, then lower the cage over them with its fingers downward. Preload
+  its output nuts and fit the cage nuts in their top pockets.
+- Tighten the cage screws through the motor-plate access holes with an L hex key.
+  Keep the key clear of the motor cable/connector.
+- Load the five M6 output nuts into the output hub and place the hub above the cage.
+  Its central blind recess clears the motor shaft tip by {motor_shaft_end_clearance:g}
+  mm. Fit the single 6810 around the hub.
+- Fit the upper bearing housing with its mouth downward. Install the {housing_screw_count}
+  M3 x {case_screw_length} case caps and nuts. The fixed ring and upper housing retain
+  the bearing outer race.
+- Fit the full-face output plate and its four M3 x {output_screw_length} socket caps.
+  Its five M6 attachment holes lie on a {output_grid_pitch:g} mm OOBB grid; the corner
+  M3 holes retain the plate. Use the generated attachment-depth limits when choosing
+  payload bolts.
+- Turn the input slowly by hand and check one reverse output turn per {reduction}
+  input turns. Physical fit, motor bearing loads, vibration and printed strength remain
+  untested.
+variant: default
+taxonomy_1: oobb
+taxonomy_2: part
+taxonomy_3: motor_gearbox
+taxonomy_4: wave_drive
+taxonomy_5: version_5
+taxonomy_6: 12_to_1_reduction
+oobb_type: wave_drive
+oobb_details:
+  style: version_5
+  reduction: 12
+  bearing_output: '6810'
+  bearing_wave: '6704'
+  roller_diameter: 7.0
+  roller_bore_diameter: 3.2
+  roller_length: 12.0
+  roller_lengths_available:
+  - 6
+  - 12
+  - 15
+  - 18
+  - 20
+  - 25
+  - 30
+  roller_material: nylon
+  roller_bank_count: 1
+  motor_plate_depth: 4.0
+  motor_body_depth: 40.0
+  motor_shaft_length: 24.0
+  motor_hole_pitch: 31.0
+  motor_thread_depth: 6.0
+  motor_pilot_diameter: 22.0
+  motor_pilot_height: 2.0
+  output_holder_wall: 7.0
+  max_screw_length: 35.0
+  eccentricity: 0.75
+  wave_radius: 23.25
+  profile_clearance: 0.15
+  roller_slot_clearance: 0.3
+  roller_end_clearance: 0.3
+  cage_wall: 4.0
+  cage_plate_depth: 3.0
+  bearing_seat_clearance: 0.1
+  journal_clearance: 0.05
+  bearing_axial_clearance: 0.2
+  output_plate_diameter: 65.0
+  output_plate_depth: 6.0
+  output_grid_pitch: 15.0
+  output_face_clearance: 0.3
+  output_socket_recess: 4.0
+  output_screw_length: 16
+  output_nut_depth: 5.2
+  output_nut_height: 5.0
+  motor_shaft_end_clearance: 0.5
+  base_width: 6
+  base_height: 6
+  oobb_grid_pitch: 15.0
+  oobb_size_allowance: 1.0
+  base_edge_radius: 1.5
+  housing_flange_corner_radius: 1.5
+  housing_screw_pitch_radius: 35.5
+  housing_screw_count: 6
+  input_shaft_diameter: 5.0
+  input_shaft_flat_depth: 0.5
+  shaft_fit_clearance: 0.1
+  cage_screw_count: 4
+  profile_samples_per_cavity: 100
+  circle_fragments: 120
+  overhang: true
+  run_scad: true
+  run_solidcraft: false
+  generate_stl: true
+  generate_previews: true
+  generate_renders: true
+  validate_geometry: true
+  package_outputs: true
+  render_threads: 8
+  render_style:
+    provenance: OOBB SCAD meshes with the retained cream/teal/black/yellow studio
+      palette.
+    samples: 48
+    view_transform: AgX
+    world_color:
+    - 0.77
+    - 0.79
+    - 0.81
+    - 1.0
+    world_strength: 0.48
+    background: '#FAF8F2'
+    materials:
+      nylon:
+        name: Natural nylon spacers
+        color: E9E5D8
+        roughness: 0.48
+        metallic: 0.0
+      teal:
+        name: Turquoise 10605
+        color: 00B1B7
+        roughness: 0.4
+        metallic: 0.0
+      black:
+        name: Black 10101
+        color: '121212'
+        roughness: 0.39
+        metallic: 0.0
+      yellow:
+        name: Sunflower 10402
+        color: FEC601
+        roughness: 0.4
+        metallic: 0.0
+      steel:
+        name: Bearing and nut steel
+        color: BFC5C9
+        roughness: 0.26
+        metallic: 0.88
+      bolt:
+        name: Oxidised screw steel
+        color: 575D63
+        roughness: 0.31
+        metallic: 0.81
+    lights:
+    - offset:
+      - 70
+      - 25
+      - 185
+      power: 370000
+      size: 130
+    - offset:
+      - -100
+      - 60
+      - 95
+      power: 190000
+      size: 110
+    - offset:
+      - 10
+      - -140
+      - 105
+      power: 300000
+      size: 95
+    - offset:
+      - 135
+      - 160
+      - 35
+      power: 110000
+      size: 140
+    views:
+      assembly:
+        eye:
+        - 0.86
+        - 1.4
+        - 0.87
+        size:
+        - 1510
+        - 1080
+        margin: 1.12
+      open_mechanism:
+        eye:
+        - 0.65
+        - 1.4
+        - 1.9
+        size:
+        - 1510
+        - 1080
+        margin: 1.12
+      exploded:
+        eye:
+        - 0.45
+        - 1.4
+        - 0.65
+        size:
+        - 1200
+        - 1800
+        margin: 1.12
+        spacing: 10
+      parts:
+        eye:
+        - 0.25
+        - -0.7
+        - 2.3
+        size:
+        - 1510
+        - 1080
+        margin: 1.1
+      motor_fit:
+        eye:
+        - 0.86
+        - 1.4
+        - 0.5
+        size:
+        - 1510
+        - 1260
+        margin: 1.15
+      motor_side:
+        eye:
+        - 0
+        - 1
+        - 0
+        size:
+        - 1100
+        - 1300
+        margin: 1.18
+      exploded_motor:
+        eye:
+        - 0.45
+        - 1.4
+        - 0.55
+        size:
+        - 1200
+        - 2000
+        margin: 1.12
+        spacing: 10
+  assembly_steps:
+  - Print the fit coupons. Check the 6810 seat, 6704 seat, motor D shaft, roller windows
+    and OOBB nut pockets before the full build.
+  - Mount the {motor_body_depth:g} mm NEMA 17 to the {base_width} x {base_height}
+    OOBB plate with four M3 x {motor_screw_length} socket caps. Confirm {motor_thread_engagement:g}
+    mm engagement fits the actual motor threads.
+  - Preload the {cage_screw_count} M2 x {cage_screw_length} cage screws into the lower
+    cap before fitting it around the shaft. Align their heads with the hex-key access
+    holes in the motor plate.
+  - Load the eccentric nut and fit the eccentric at Z={cam_base_z:g} mm above the
+    motor face. Tighten its M3 x 8 grub onto the shaft flat while the ring and rollers
+    are absent.
+  - Load four M3 nuts in the wave wheel, seat the 6704, and lower the wheel over the
+    eccentric journal. Fit the upper eccentric collar and tighten its grub onto the
+    flat with the intended bearing clearance.
+  - Close the wave bearing cap with four M3 x {wave_screw_length} socket caps. Lower
+    the fixed ring over the mechanism and align the housing holes.
+  - At input angle zero, the eccentric points along +X. Insert all {roller_count}
+    nylon spacers axially, then lower the cage over them with its fingers downward.
+    Preload its output nuts and fit the cage nuts in their top pockets.
+  - Tighten the cage screws through the motor-plate access holes with an L hex key.
+    Keep the key clear of the motor cable/connector.
+  - Load the five M6 output nuts into the output hub and place the hub above the cage.
+    Its central blind recess clears the motor shaft tip by {motor_shaft_end_clearance:g}
+    mm. Fit the single 6810 around the hub.
+  - Fit the upper bearing housing with its mouth downward. Install the {housing_screw_count}
+    M3 x {case_screw_length} case caps and nuts. The fixed ring and upper housing
+    retain the bearing outer race.
+  - Fit the full-face output plate and its four M3 x {output_screw_length} socket
+    caps. Its five M6 attachment holes lie on a {output_grid_pitch:g} mm OOBB grid;
+    the corner M3 holes retain the plate. Use the generated attachment-depth limits
+    when choosing payload bolts.
+  - Turn the input slowly by hand and check one reverse output turn per {reduction}
+    input turns. Physical fit, motor bearing loads, vibration and printed strength
+    remain untested.
+  variant: default
+  taxonomy_1: oobb
+  taxonomy_2: part
+  taxonomy_3: motor_gearbox
+  taxonomy_4: wave_drive
+  taxonomy_5: version_5
+  taxonomy_6: 12_to_1_reduction
+  oobb_type: wave_drive
+  oobb_name: version_5
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+id: oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction
+name: oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction
+name_proper: Oobb Part Motor Gearbox Wave Drive Version 5 12 To 1 Reduction
+directory: parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction

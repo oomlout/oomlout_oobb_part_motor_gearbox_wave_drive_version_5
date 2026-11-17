@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "fastener_instances": 44,
+  "planar_contact_fragments": 334,
+  "volumetric_components": [
+    {
+      "bounds_mm": [
+        [
+          80.0,
+          0.0,
+          0.0
+        ],
+        [
+          81.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "volume_mm3": 1.0
+    }
+  ],
+  "scope": "Nominal screw and nut envelopes against every native gearbox body and the full motor at input angle zero; intended motor thread engagement uses smooth nominal bores."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "page_count": 13,
+  "card_count": 26,
+  "paper_mm": [
+    210,
+    297
+  ],
+  "physical_items": 101,
+  "unique_part_types": 25,
+  "quantity_audit": "Every production instance consumed exactly once; six motor meshes count as one motor",
+  "layout_checks": "Text height checked before writing; all insertion-arrow endpoints within diagram; BIP39 labels extracted from PDF",
+  "physical_validation": "Not physically assembled or load tested",
+  "pdf_sha256": "11c6ec499d0d2c950900f78231dd0f7b0bd4de0b257bab27f7eede03b5f4ea88"
+}

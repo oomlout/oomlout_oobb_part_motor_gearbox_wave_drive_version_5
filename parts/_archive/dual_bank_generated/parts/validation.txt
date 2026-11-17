@@ -1,0 +1,8 @@
+Dual-bank default: 20:1, forty 7 x 12 mm nylon spacers, four 6704 and two 6810 bearings.
+27 Python checks cover both bank phases, 361 poses, stock lengths, engagement and inventory.
+19 printed designs / 26 instances; five 220 x 220 mm print beds.
+See mesh_validation.json for watertight solids and eight default collision poses.
+See presentation/stock_lengths_validation.json for all seven requested spacer lengths.
+See presentation/fastener_validation.json for 136 nominal fasteners against native geometry.
+The motor is an aligned 40 mm reference, not a completed mounting conversion.
+Physical fit, nylon wear, heat, backlash, dynamic balance and speed/torque are untested.

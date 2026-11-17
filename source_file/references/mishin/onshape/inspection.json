@@ -1,0 +1,53 @@
+[
+  {
+    "file": "mishin_generator_example_all_parts.step",
+    "format": "STEP AP242",
+    "include_hidden_instances": true,
+    "solid_count": 4,
+    "solid_names": [
+      "Wave Generator",
+      "Separator (Output Shaft)",
+      "Eccentric Cam (Input shaft)",
+      "Body (Inner Cycloid Ring Gear)"
+    ],
+    "sha256": "8318d3119a6bd451ee7dacbfeb5110dd2e0183b8b94d4a873111919aebf7eeab"
+  },
+  {
+    "file": "mishin_nema17_all_parts.step",
+    "format": "STEP AP242",
+    "include_hidden_instances": true,
+    "solid_count": 10,
+    "solid_names": [
+      "Output Bearing Lip Ring",
+      "Separator (Output Shaft)",
+      "Output Housing",
+      "Output Shaft",
+      "Separator (Output Shaft) 2",
+      "Body (Inner Cycloid Ring Gear)",
+      "Output Spacer",
+      "Body (Inner Cycloid Ring Gear) 2",
+      "Eccentric Cam (Input shaft)",
+      "Motor Mount"
+    ],
+    "sha256": "657fdf894e46e596cbcc478cff9e7e379cce07401d33411a8c6d1bf491dd3c99"
+  },
+  {
+    "file": "mishin_wave_gearbox_all_parts.step",
+    "format": "STEP AP242",
+    "include_hidden_instances": true,
+    "solid_count": 10,
+    "solid_names": [
+      "Output Bearing Housing",
+      "Motor Mount",
+      "Output Spacer",
+      "Separator (Output Shaft)",
+      "Eccentric Cam (Input shaft)",
+      "Output Shaft",
+      "Body (Inner Cycloid Ring Gear)",
+      "Wave Generator",
+      "Output Handle",
+      "Output Bearing Lip Ring"
+    ],
+    "sha256": "0b378e7a5451d600dbe1543face836276c3e6162d654d3cd7afdbdf0a2ef49a4"
+  }
+]

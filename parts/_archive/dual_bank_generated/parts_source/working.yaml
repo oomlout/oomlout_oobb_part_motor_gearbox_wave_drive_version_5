@@ -1,0 +1,117 @@
+style: version_5
+reduction: 20
+bearing_output: '6810'
+bearing_input: '6704'
+bearing_wave: '6704'
+roller_diameter: 7.0
+roller_bore_diameter: 3.2
+roller_length: 12.0
+roller_lengths_available:
+- 6
+- 12
+- 15
+- 18
+- 20
+- 25
+- 30
+roller_material: nylon
+central_joint_depth: 6.0
+max_screw_length: 35.0
+eccentricity: 0.75
+wave_radius: 40.0
+profile_clearance: 0.15
+roller_slot_clearance: 0.3
+roller_end_clearance: 0.3
+cage_wall: 4.0
+cage_plate_depth: 3.0
+bearing_seat_clearance: 0.1
+journal_clearance: 0.05
+bearing_axial_clearance: 0.2
+retainer_depth: 4.0
+housing_radius: 57.5
+housing_flange_width: 119.0
+housing_flange_depth: 3.0
+housing_flange_corner_radius: 1.5
+housing_screw_pitch_radius: 53.0
+housing_screw_count: 8
+input_shaft_diameter: 5.0
+input_shaft_flat_depth: 0.5
+shaft_fit_clearance: 0.1
+cage_screw_count: 5
+cage_screw_pilot_diameter: 1.6
+profile_samples_per_cavity: 100
+circle_fragments: 120
+overhang: true
+run_scad: true
+run_solidcraft: false
+taxonomy_1: oobb
+taxonomy_2: part
+taxonomy_3: motor_gearbox
+taxonomy_4: wave_drive
+taxonomy_5: version_5
+taxonomy_6: 20_to_1_reduction
+oobb_details:
+  style: version_5
+  reduction: 20
+  bearing_output: '6810'
+  bearing_input: '6704'
+  bearing_wave: '6704'
+  roller_diameter: 7.0
+  roller_bore_diameter: 3.2
+  roller_length: 12.0
+  roller_lengths_available:
+  - 6
+  - 12
+  - 15
+  - 18
+  - 20
+  - 25
+  - 30
+  roller_material: nylon
+  central_joint_depth: 6.0
+  max_screw_length: 35.0
+  eccentricity: 0.75
+  wave_radius: 40.0
+  profile_clearance: 0.15
+  roller_slot_clearance: 0.3
+  roller_end_clearance: 0.3
+  cage_wall: 4.0
+  cage_plate_depth: 3.0
+  bearing_seat_clearance: 0.1
+  journal_clearance: 0.05
+  bearing_axial_clearance: 0.2
+  retainer_depth: 4.0
+  housing_radius: 57.5
+  housing_flange_width: 119.0
+  housing_flange_depth: 3.0
+  housing_flange_corner_radius: 1.5
+  housing_screw_pitch_radius: 53.0
+  housing_screw_count: 8
+  input_shaft_diameter: 5.0
+  input_shaft_flat_depth: 0.5
+  shaft_fit_clearance: 0.1
+  cage_screw_count: 5
+  cage_screw_pilot_diameter: 1.6
+  profile_samples_per_cavity: 100
+  circle_fragments: 120
+  overhang: true
+  run_scad: true
+  run_solidcraft: false
+  taxonomy_1: oobb
+  taxonomy_2: part
+  taxonomy_3: motor_gearbox
+  taxonomy_4: wave_drive
+  taxonomy_5: version_5
+  taxonomy_6: 20_to_1_reduction
+  oobb_name: version_5
+  oobb_type: wave_drive
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+id: oobb_part_motor_gearbox_wave_drive_version_5_20_to_1_reduction

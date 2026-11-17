@@ -1,0 +1,74 @@
+{
+  "pipeline": "OpenSCAD STL -> Blender Cycles -> Pillow sheets",
+  "printed_instances": 11,
+  "bearing_instances": 2,
+  "shaft_instances": 0,
+  "nylon_roller_instances": 12,
+  "fastener_instances": 44,
+  "total_instances": 75,
+  "gearbox_instances": 69,
+  "motor_reference_meshes": 6,
+  "native_scad_registration_checks": [
+    {
+      "group": "cage",
+      "bounds_error_mm": 0.0,
+      "relative_volume_error": 0.0
+    },
+    {
+      "group": "input",
+      "bounds_error_mm": 0.0,
+      "relative_volume_error": 0.0
+    },
+    {
+      "group": "wave",
+      "bounds_error_mm": 0.0,
+      "relative_volume_error": 1.4220543113033777e-16
+    },
+    {
+      "group": "bearings",
+      "bounds_error_mm": 0.0,
+      "relative_volume_error": 1.7303172457344053e-16
+    },
+    {
+      "group": "fixed",
+      "bounds_error_mm": 0.0,
+      "relative_volume_error": 3.7929006334520296e-16
+    },
+    {
+      "group": "rollers",
+      "bounds_error_mm": 0.0,
+      "relative_volume_error": 2.0756899866010762e-16
+    }
+  ],
+  "source_sha256": {
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\motor_mount_plate.stl": "ad754a6194f4483d0e9ecb3ff307e1a90dffbf43a2c1ac8bab205bf83a08f2d8",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\fixed_profile_ring.stl": "4bf152cb92a5e663995e7a30b7e539ed3156faab555987f7a96bb46dcea5ab3b",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\output_bearing_housing.stl": "1597f51616a5801a29bfef6ba73b928e8e4fa79a96c1859513dc8496990ff646",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\cage_lower_cap.stl": "8f09a24de95ac8615660dd4aa6dbec84f2b7e7a217588bb3a1ecc87385fe6ab6",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\output_cage.stl": "f205b73b399a7bcc4db79ce3ad6cec4f91f6c6e2947b5b167a9c9350b4e92f99",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\output_hub.stl": "aa2c2914573631754c3ecbcc7eb8175626550299d628b684d9f2eec00042b614",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\output_retainer.stl": "3d52682b25309f39f8e215e33c8c42aba49eb8a3a18b972c66ea93782c5f7846",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\motor_eccentric.stl": "e77f619675a7f54b6dfc5debe4028861bf85ed9be0a0d3c59f1bf1f52cd38603",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\motor_eccentric_cap.stl": "313e1aec8235c383f7735d18a4ba0876b740ee70c8ba863c47fe093deb3fd828",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\wave_generator.stl": "a6b4b170bbfd8e01b0ec6bb2707871d652a51580f9b4e511eab24811fab55b06",
+    "parts\\oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction\\wave_bearing_cap.stl": "4342af73e393456e304be769ea42294cb407e897842d5de9bbb0951a20a31abe",
+    "presentation\\hardware\\bearing_6810.stl": "75d56f3e997130607095725518518d6cacd73a55b311ea6604ff386347652ccf",
+    "presentation\\hardware\\bearing_6704.stl": "9f5ef736eab5ff8569843a7fb1f4eaabbc491a90d871348a32bb43eb0aa2eb39",
+    "presentation\\hardware\\roller.stl": "b22a6a0dbb097f36dd3189326c005225524b123391a127ac0c06a1b0872ac423",
+    "presentation\\hardware\\screw_case.stl": "090543fef54d05052723f4898ad6fa2aa89c0f9f2f0353b9b588134337e810e0",
+    "presentation\\hardware\\nut_m3.stl": "a93915fca86e5563a53a9c72b0c3b9dd349bea4ce7e6895ab44b208594013361",
+    "presentation\\hardware\\screw_motor.stl": "33dbd4831598d8aa5c52d68c95a7d9c8aaabe432cdd79d414e9306ef33556fdf",
+    "presentation\\hardware\\screw_output.stl": "24d5e3ad659e3a0c160a5fa1c088ac0e7d64b394db130598d7fb02b4359ef5de",
+    "presentation\\hardware\\screw_wave.stl": "33dbd4831598d8aa5c52d68c95a7d9c8aaabe432cdd79d414e9306ef33556fdf",
+    "presentation\\hardware\\screw_cage.stl": "305e58cb380ccdf8735e545abf4b2ea6b5f109221440447db89646376600d9f7",
+    "presentation\\hardware\\nut_m2.stl": "5bfa5d3f0cb7c4cc9b0ac7ecf9e36135d5ba3e8fdce96735a0dfbf685258ef80",
+    "presentation\\hardware\\grub_m3.stl": "7c471bc300eb5d7ca93d19baa710e79068f250e11983d3b50eac7df3dc1ce74d",
+    "presentation\\hardware\\nema17_front.stl": "c39fe059f9813cafb4dd8259a83e2e3b03b16d7ff4cdeeccb37d1f9f188f93da",
+    "presentation\\hardware\\nema17_stator.stl": "5f11e9aacceb052df0608ecedd0a10cb800c027e8e42d80f943328c1440853b9",
+    "presentation\\hardware\\nema17_rear.stl": "803d12f6dc825170e227102a5031e375f1510644cb9dc9008fb23eaa91080ef5",
+    "presentation\\hardware\\nema17_pilot.stl": "d8ca0d6fe2d6e3889af5cff087346eb34901a69503f8611b3b67dd8c67bd0687",
+    "presentation\\hardware\\nema17_shaft.stl": "41ca715c3afb07665474b27ca9221819665b3c72ed72aa23a98bdcd869be6c1b",
+    "presentation\\hardware\\nema17_connector.stl": "f6b35ea65451c1a72275cfeb1dabfd1249c80e8dde7d669d2d490d7fc0baa17f"
+  },
+  "hardware_detail": "Nominal envelopes; screw threads and internal bearing balls omitted. Ivory rollers are purchased 7 mm OD nylon spacers; they are excluded from the print beds."
+}

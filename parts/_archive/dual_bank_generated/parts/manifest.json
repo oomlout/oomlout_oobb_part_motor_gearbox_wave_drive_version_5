@@ -1,0 +1,1014 @@
+{
+  "configuration": {
+    "style": "version_5",
+    "reduction": 20,
+    "bearing_output": "6810",
+    "bearing_input": "6704",
+    "bearing_wave": "6704",
+    "roller_diameter": 7.0,
+    "roller_bore_diameter": 3.2,
+    "roller_length": 12.0,
+    "roller_lengths_available": [
+      6,
+      12,
+      15,
+      18,
+      20,
+      25,
+      30
+    ],
+    "roller_material": "nylon",
+    "central_joint_depth": 6.0,
+    "max_screw_length": 35.0,
+    "eccentricity": 0.75,
+    "wave_radius": 40.0,
+    "profile_clearance": 0.15,
+    "roller_slot_clearance": 0.3,
+    "roller_end_clearance": 0.3,
+    "cage_wall": 4.0,
+    "cage_plate_depth": 3.0,
+    "bearing_seat_clearance": 0.1,
+    "journal_clearance": 0.05,
+    "bearing_axial_clearance": 0.2,
+    "retainer_depth": 4.0,
+    "housing_radius": 57.5,
+    "housing_flange_width": 119.0,
+    "housing_flange_depth": 3.0,
+    "housing_flange_corner_radius": 1.5,
+    "housing_screw_pitch_radius": 53.0,
+    "housing_screw_count": 8,
+    "input_shaft_diameter": 5.0,
+    "input_shaft_flat_depth": 0.5,
+    "shaft_fit_clearance": 0.1,
+    "cage_screw_count": 5,
+    "cage_screw_pilot_diameter": 1.6,
+    "profile_samples_per_cavity": 100,
+    "circle_fragments": 120,
+    "overhang": true,
+    "run_scad": true,
+    "run_solidcraft": false,
+    "taxonomy_1": "oobb",
+    "taxonomy_2": "part",
+    "taxonomy_3": "motor_gearbox",
+    "taxonomy_4": "wave_drive",
+    "taxonomy_5": "version_5",
+    "taxonomy_6": "20_to_1_reduction",
+    "oobb_name": "version_5",
+    "oobb_type": "wave_drive",
+    "roller_count": 20,
+    "roller_bank_count": 2,
+    "total_roller_count": 40,
+    "cavity_count": 21,
+    "roller_radius": 3.5,
+    "pitch_radius": 43.5,
+    "cage_inner_radius": 41.5,
+    "cage_outer_radius": 45.5,
+    "cage_joint_radius": 46.5,
+    "stationary_joint_inner_radius": 47.5,
+    "profile_min_radius": 46.25,
+    "profile_max_radius": 47.75,
+    "output_bearing": {
+      "id": 50.0,
+      "od": 65.0,
+      "depth": 7.0
+    },
+    "input_bearing": {
+      "id": 20.0,
+      "od": 27.0,
+      "depth": 4.0
+    },
+    "wave_bearing": {
+      "id": 20.0,
+      "od": 27.0,
+      "depth": 4.0
+    },
+    "opposed_bank_phase_degrees": 180.0,
+    "upper_profile_rotation": 8.571428571428571,
+    "bearing_z": 3.0,
+    "ring_z": 10.0,
+    "cage_base_z": 10.2,
+    "window_z": 13.2,
+    "wave_height": 12.0,
+    "window_height": 12.6,
+    "wave_z": 13.5,
+    "roller_z": 13.5,
+    "roller_window_z": 13.2,
+    "roller_window_height": 12.6,
+    "joint_z": 25.799999999999997,
+    "mirror_z": 28.799999999999997,
+    "assembly_height": 57.599999999999994,
+    "ring_height": 15.799999999999997,
+    "shaft_length": 85,
+    "wave_cap_depth": 4.2,
+    "wave_seat_z": 3.5999999999999996,
+    "wave_bearing_z": 17.200000000000003,
+    "cam_z": 16.1,
+    "cam_height": 5.2,
+    "outer_spacer_z": 8.2,
+    "outer_spacer_length": 7.900000000000002,
+    "middle_spacer_z": 21.3,
+    "middle_spacer_length": 7.4999999999999964,
+    "case_head_seat": 3.2,
+    "case_screw_length": 12,
+    "case_nut_z": 12.2,
+    "output_head_recess": 2.0,
+    "output_screw_length": 12,
+    "wave_head_recess": 3.2,
+    "wave_screw_length": 6,
+    "wave_nut_z": 3.1000000000000005,
+    "ring_join_screw_length": 14,
+    "ring_join_head_seat": 14.799999999999997,
+    "cage_screw_length": 16,
+    "cage_head_seat": 12.399999999999999,
+    "output_direction": "opposite_to_input"
+  },
+  "pieces": [
+    {
+      "name": "housing_bottom",
+      "module": "housing",
+      "arguments": [
+        false
+      ],
+      "quantity": 1,
+      "size": [
+        119.0,
+        119.0
+      ]
+    },
+    {
+      "name": "housing_top",
+      "module": "housing",
+      "arguments": [
+        true
+      ],
+      "quantity": 1,
+      "size": [
+        119.0,
+        119.0
+      ]
+    },
+    {
+      "name": "fixed_profile_ring_lower",
+      "module": "fixed_ring",
+      "arguments": [
+        false
+      ],
+      "quantity": 1,
+      "size": [
+        115.0,
+        115.0
+      ]
+    },
+    {
+      "name": "fixed_profile_ring_upper",
+      "module": "fixed_ring",
+      "arguments": [
+        true
+      ],
+      "quantity": 1,
+      "size": [
+        115.0,
+        115.0
+      ]
+    },
+    {
+      "name": "stationary_joint_ring",
+      "module": "stationary_joint",
+      "arguments": [],
+      "quantity": 1,
+      "size": [
+        115.0,
+        115.0
+      ]
+    },
+    {
+      "name": "output_cage_lower",
+      "module": "cage",
+      "arguments": [
+        false
+      ],
+      "quantity": 1,
+      "size": [
+        91.0,
+        91.0
+      ]
+    },
+    {
+      "name": "output_cage_upper",
+      "module": "cage",
+      "arguments": [
+        true
+      ],
+      "quantity": 1,
+      "size": [
+        91.0,
+        91.0
+      ]
+    },
+    {
+      "name": "output_cage_joint",
+      "module": "cage_joint",
+      "arguments": [],
+      "quantity": 1,
+      "size": [
+        93.0,
+        93.0
+      ]
+    },
+    {
+      "name": "output_bearing_hub",
+      "module": "output_hub",
+      "arguments": [],
+      "quantity": 2,
+      "size": [
+        50,
+        50
+      ]
+    },
+    {
+      "name": "output_bearing_retainer",
+      "module": "output_retainer",
+      "arguments": [],
+      "quantity": 2,
+      "size": [
+        53,
+        53
+      ]
+    },
+    {
+      "name": "wave_generator",
+      "module": "wave_generator",
+      "arguments": [],
+      "quantity": 2,
+      "size": [
+        80.0,
+        80.0
+      ]
+    },
+    {
+      "name": "wave_bearing_cap",
+      "module": "wave_cap",
+      "arguments": [],
+      "quantity": 2,
+      "size": [
+        44,
+        44
+      ]
+    },
+    {
+      "name": "eccentric_cam_lower",
+      "module": "eccentric_cam",
+      "arguments": [
+        false
+      ],
+      "quantity": 1,
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "eccentric_cam_upper",
+      "module": "eccentric_cam",
+      "arguments": [
+        true
+      ],
+      "quantity": 1,
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "input_bearing_journal",
+      "module": "input_journal",
+      "arguments": [],
+      "quantity": 2,
+      "size": [
+        22,
+        22
+      ]
+    },
+    {
+      "name": "input_spacer_outer",
+      "module": "input_spacer",
+      "arguments": [
+        7.900000000000002,
+        false,
+        false
+      ],
+      "quantity": 2,
+      "size": [
+        22,
+        22
+      ]
+    },
+    {
+      "name": "input_spacer_middle_lower",
+      "module": "input_spacer",
+      "arguments": [
+        7.4999999999999964,
+        true,
+        false
+      ],
+      "quantity": 1,
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "input_spacer_middle_upper",
+      "module": "input_spacer",
+      "arguments": [
+        7.4999999999999964,
+        true,
+        true
+      ],
+      "quantity": 1,
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "name": "input_collar",
+      "module": "input_collar",
+      "arguments": [],
+      "quantity": 2,
+      "size": [
+        36,
+        36
+      ]
+    }
+  ],
+  "printed_piece_count": 26,
+  "hardware": [
+    {
+      "item": "6810 bearing",
+      "quantity": 2,
+      "dimensions": "50 x 65 x 7 mm",
+      "role": "output cage support"
+    },
+    {
+      "item": "6704 bearing",
+      "quantity": 4,
+      "dimensions": "20 x 27 x 4 mm",
+      "role": "two input supports and two opposed wave bearings"
+    },
+    {
+      "item": "Nylon spacer roller",
+      "quantity": 40,
+      "dimensions": "7 OD x 3.2 ID x 12 mm",
+      "role": "two independent banks; free rollers, no fixed axle"
+    },
+    {
+      "item": "5 mm D shaft",
+      "quantity": 1,
+      "dimensions": "85 mm long",
+      "role": "shared keyed input"
+    },
+    {
+      "item": "Case socket cap screw",
+      "size": "M3",
+      "length_mm": 12,
+      "quantity": 16,
+      "role": "end housings to profile rings"
+    },
+    {
+      "item": "Ring joint socket cap screw",
+      "size": "M3",
+      "length_mm": 14,
+      "quantity": 16,
+      "role": "profile rings to stationary centre ring"
+    },
+    {
+      "item": "Output socket cap screw",
+      "size": "M3",
+      "length_mm": 12,
+      "quantity": 16,
+      "role": "retainers, bearing hubs and cage floors"
+    },
+    {
+      "item": "Wave cap socket cap screw",
+      "size": "M3",
+      "length_mm": 6,
+      "quantity": 8,
+      "role": "two wave bearing caps"
+    },
+    {
+      "item": "Cage joint socket cap screw",
+      "size": "M2",
+      "length_mm": 16,
+      "quantity": 10,
+      "role": "two cage halves to one central output plate"
+    },
+    {
+      "item": "M3 x 8 grub screw",
+      "quantity": 2,
+      "length_mm": 8,
+      "role": "shaft collars"
+    },
+    {
+      "item": "M3 hex nut",
+      "quantity": 58,
+      "role": "cases, stationary joints, output hubs, wave caps and collars"
+    },
+    {
+      "item": "M2 hex nut",
+      "quantity": 10,
+      "role": "cage centre joint"
+    }
+  ],
+  "layout": [
+    {
+      "part": "housing_bottom",
+      "instance": 0,
+      "xy": [
+        59.5,
+        59.5
+      ],
+      "call": "housing(false);"
+    },
+    {
+      "part": "housing_top",
+      "instance": 0,
+      "xy": [
+        188.5,
+        59.5
+      ],
+      "call": "housing(true);"
+    },
+    {
+      "part": "fixed_profile_ring_lower",
+      "instance": 0,
+      "xy": [
+        57.5,
+        186.5
+      ],
+      "call": "fixed_ring(false);"
+    },
+    {
+      "part": "fixed_profile_ring_upper",
+      "instance": 0,
+      "xy": [
+        182.5,
+        186.5
+      ],
+      "call": "fixed_ring(true);"
+    },
+    {
+      "part": "stationary_joint_ring",
+      "instance": 0,
+      "xy": [
+        57.5,
+        311.5
+      ],
+      "call": "stationary_joint();"
+    },
+    {
+      "part": "output_cage_lower",
+      "instance": 0,
+      "xy": [
+        170.5,
+        299.5
+      ],
+      "call": "cage(false);"
+    },
+    {
+      "part": "output_cage_upper",
+      "instance": 0,
+      "xy": [
+        271.5,
+        299.5
+      ],
+      "call": "cage(true);"
+    },
+    {
+      "part": "output_cage_joint",
+      "instance": 0,
+      "xy": [
+        46.5,
+        425.5
+      ],
+      "call": "cage_joint();"
+    },
+    {
+      "part": "output_bearing_hub",
+      "instance": 0,
+      "xy": [
+        128.0,
+        404.0
+      ],
+      "call": "output_hub();"
+    },
+    {
+      "part": "output_bearing_hub",
+      "instance": 1,
+      "xy": [
+        188.0,
+        404.0
+      ],
+      "call": "output_hub();"
+    },
+    {
+      "part": "output_bearing_retainer",
+      "instance": 0,
+      "xy": [
+        249.5,
+        405.5
+      ],
+      "call": "output_retainer();"
+    },
+    {
+      "part": "output_bearing_retainer",
+      "instance": 1,
+      "xy": [
+        312.5,
+        405.5
+      ],
+      "call": "output_retainer();"
+    },
+    {
+      "part": "wave_generator",
+      "instance": 0,
+      "xy": [
+        40.0,
+        522.0
+      ],
+      "call": "wave_generator();"
+    },
+    {
+      "part": "wave_generator",
+      "instance": 1,
+      "xy": [
+        130.0,
+        522.0
+      ],
+      "call": "wave_generator();"
+    },
+    {
+      "part": "wave_bearing_cap",
+      "instance": 0,
+      "xy": [
+        202.0,
+        504.0
+      ],
+      "call": "wave_cap();"
+    },
+    {
+      "part": "wave_bearing_cap",
+      "instance": 1,
+      "xy": [
+        256.0,
+        504.0
+      ],
+      "call": "wave_cap();"
+    },
+    {
+      "part": "eccentric_cam_lower",
+      "instance": 0,
+      "xy": [
+        300.0,
+        494.0
+      ],
+      "call": "eccentric_cam(false);"
+    },
+    {
+      "part": "eccentric_cam_upper",
+      "instance": 0,
+      "xy": [
+        334.0,
+        494.0
+      ],
+      "call": "eccentric_cam(true);"
+    },
+    {
+      "part": "input_bearing_journal",
+      "instance": 0,
+      "xy": [
+        11.0,
+        583.0
+      ],
+      "call": "input_journal();"
+    },
+    {
+      "part": "input_bearing_journal",
+      "instance": 1,
+      "xy": [
+        43.0,
+        583.0
+      ],
+      "call": "input_journal();"
+    },
+    {
+      "part": "input_spacer_outer",
+      "instance": 0,
+      "xy": [
+        75.0,
+        583.0
+      ],
+      "call": "input_spacer(7.900000000000002, false, false);"
+    },
+    {
+      "part": "input_spacer_outer",
+      "instance": 1,
+      "xy": [
+        107.0,
+        583.0
+      ],
+      "call": "input_spacer(7.900000000000002, false, false);"
+    },
+    {
+      "part": "input_spacer_middle_lower",
+      "instance": 0,
+      "xy": [
+        140.0,
+        584.0
+      ],
+      "call": "input_spacer(7.4999999999999964, true, false);"
+    },
+    {
+      "part": "input_spacer_middle_upper",
+      "instance": 0,
+      "xy": [
+        174.0,
+        584.0
+      ],
+      "call": "input_spacer(7.4999999999999964, true, true);"
+    },
+    {
+      "part": "input_collar",
+      "instance": 0,
+      "xy": [
+        214.0,
+        590.0
+      ],
+      "call": "input_collar();"
+    },
+    {
+      "part": "input_collar",
+      "instance": 1,
+      "xy": [
+        260.0,
+        590.0
+      ],
+      "call": "input_collar();"
+    }
+  ],
+  "print_beds": [
+    {
+      "size_mm": [
+        220,
+        220
+      ],
+      "parts": [
+        {
+          "part": "housing_bottom",
+          "instance": 0,
+          "size": [
+            119.0,
+            119.0
+          ],
+          "xy": [
+            62.5,
+            62.5
+          ]
+        },
+        {
+          "part": "output_cage_lower",
+          "instance": 0,
+          "size": [
+            91.0,
+            91.0
+          ],
+          "xy": [
+            171.5,
+            48.5
+          ]
+        },
+        {
+          "part": "output_bearing_retainer",
+          "instance": 0,
+          "size": [
+            53,
+            53
+          ],
+          "xy": [
+            29.5,
+            152.5
+          ]
+        },
+        {
+          "part": "output_bearing_retainer",
+          "instance": 1,
+          "size": [
+            53,
+            53
+          ],
+          "xy": [
+            86.5,
+            152.5
+          ]
+        },
+        {
+          "part": "output_bearing_hub",
+          "instance": 0,
+          "size": [
+            50,
+            50
+          ],
+          "xy": [
+            142.0,
+            151.0
+          ]
+        },
+        {
+          "part": "wave_bearing_cap",
+          "instance": 0,
+          "size": [
+            44,
+            44
+          ],
+          "xy": [
+            193.0,
+            148.0
+          ]
+        },
+        {
+          "part": "eccentric_cam_upper",
+          "instance": 0,
+          "size": [
+            24,
+            24
+          ],
+          "xy": [
+            138.0,
+            110.0
+          ]
+        },
+        {
+          "part": "input_spacer_middle_lower",
+          "instance": 0,
+          "size": [
+            24,
+            24
+          ],
+          "xy": [
+            166.0,
+            110.0
+          ]
+        },
+        {
+          "part": "input_spacer_middle_upper",
+          "instance": 0,
+          "size": [
+            24,
+            24
+          ],
+          "xy": [
+            194.0,
+            110.0
+          ]
+        }
+      ]
+    },
+    {
+      "size_mm": [
+        220,
+        220
+      ],
+      "parts": [
+        {
+          "part": "housing_top",
+          "instance": 0,
+          "size": [
+            119.0,
+            119.0
+          ],
+          "xy": [
+            62.5,
+            62.5
+          ]
+        },
+        {
+          "part": "output_cage_upper",
+          "instance": 0,
+          "size": [
+            91.0,
+            91.0
+          ],
+          "xy": [
+            171.5,
+            48.5
+          ]
+        },
+        {
+          "part": "output_bearing_hub",
+          "instance": 1,
+          "size": [
+            50,
+            50
+          ],
+          "xy": [
+            28.0,
+            151.0
+          ]
+        },
+        {
+          "part": "wave_bearing_cap",
+          "instance": 1,
+          "size": [
+            44,
+            44
+          ],
+          "xy": [
+            79.0,
+            148.0
+          ]
+        },
+        {
+          "part": "input_collar",
+          "instance": 0,
+          "size": [
+            36,
+            36
+          ],
+          "xy": [
+            123.0,
+            144.0
+          ]
+        },
+        {
+          "part": "input_collar",
+          "instance": 1,
+          "size": [
+            36,
+            36
+          ],
+          "xy": [
+            163.0,
+            144.0
+          ]
+        },
+        {
+          "part": "eccentric_cam_lower",
+          "instance": 0,
+          "size": [
+            24,
+            24
+          ],
+          "xy": [
+            197.0,
+            138.0
+          ]
+        },
+        {
+          "part": "input_bearing_journal",
+          "instance": 0,
+          "size": [
+            22,
+            22
+          ],
+          "xy": [
+            137.0,
+            109.0
+          ]
+        },
+        {
+          "part": "input_bearing_journal",
+          "instance": 1,
+          "size": [
+            22,
+            22
+          ],
+          "xy": [
+            163.0,
+            109.0
+          ]
+        },
+        {
+          "part": "input_spacer_outer",
+          "instance": 0,
+          "size": [
+            22,
+            22
+          ],
+          "xy": [
+            189.0,
+            109.0
+          ]
+        }
+      ]
+    },
+    {
+      "size_mm": [
+        220,
+        220
+      ],
+      "parts": [
+        {
+          "part": "fixed_profile_ring_lower",
+          "instance": 0,
+          "size": [
+            115.0,
+            115.0
+          ],
+          "xy": [
+            60.5,
+            60.5
+          ]
+        },
+        {
+          "part": "output_cage_joint",
+          "instance": 0,
+          "size": [
+            93.0,
+            93.0
+          ],
+          "xy": [
+            168.5,
+            49.5
+          ]
+        }
+      ]
+    },
+    {
+      "size_mm": [
+        220,
+        220
+      ],
+      "parts": [
+        {
+          "part": "fixed_profile_ring_upper",
+          "instance": 0,
+          "size": [
+            115.0,
+            115.0
+          ],
+          "xy": [
+            60.5,
+            60.5
+          ]
+        },
+        {
+          "part": "wave_generator",
+          "instance": 0,
+          "size": [
+            80.0,
+            80.0
+          ],
+          "xy": [
+            162.0,
+            43.0
+          ]
+        },
+        {
+          "part": "input_spacer_outer",
+          "instance": 1,
+          "size": [
+            22,
+            22
+          ],
+          "xy": [
+            133.0,
+            98.0
+          ]
+        }
+      ]
+    },
+    {
+      "size_mm": [
+        220,
+        220
+      ],
+      "parts": [
+        {
+          "part": "stationary_joint_ring",
+          "instance": 0,
+          "size": [
+            115.0,
+            115.0
+          ],
+          "xy": [
+            60.5,
+            60.5
+          ]
+        },
+        {
+          "part": "wave_generator",
+          "instance": 1,
+          "size": [
+            80.0,
+            80.0
+          ],
+          "xy": [
+            162.0,
+            43.0
+          ]
+        }
+      ]
+    }
+  ],
+  "validation_status": "generated; see validation reports for executed checks"
+}

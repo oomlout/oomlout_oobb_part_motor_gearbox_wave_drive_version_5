@@ -1,0 +1,51 @@
+- item: 6810 bearing
+  quantity: 2
+  dimensions: 50 x 65 x 7 mm
+  role: output cage support
+- item: 6704 bearing
+  quantity: 4
+  dimensions: 20 x 27 x 4 mm
+  role: two input supports and two opposed wave bearings
+- item: Nylon spacer roller
+  quantity: 40
+  dimensions: 7 OD x 3.2 ID x 12 mm
+  role: two independent banks; free rollers, no fixed axle
+- item: 5 mm D shaft
+  quantity: 1
+  dimensions: 85 mm long
+  role: shared keyed input
+- item: Case socket cap screw
+  size: M3
+  length_mm: 12
+  quantity: 16
+  role: end housings to profile rings
+- item: Ring joint socket cap screw
+  size: M3
+  length_mm: 14
+  quantity: 16
+  role: profile rings to stationary centre ring
+- item: Output socket cap screw
+  size: M3
+  length_mm: 12
+  quantity: 16
+  role: retainers, bearing hubs and cage floors
+- item: Wave cap socket cap screw
+  size: M3
+  length_mm: 6
+  quantity: 8
+  role: two wave bearing caps
+- item: Cage joint socket cap screw
+  size: M2
+  length_mm: 16
+  quantity: 10
+  role: two cage halves to one central output plate
+- item: M3 x 8 grub screw
+  quantity: 2
+  length_mm: 8
+  role: shaft collars
+- item: M3 hex nut
+  quantity: 58
+  role: cases, stationary joints, output hubs, wave caps and collars
+- item: M2 hex nut
+  quantity: 10
+  role: cage centre joint

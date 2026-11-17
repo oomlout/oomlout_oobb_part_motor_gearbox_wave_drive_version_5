@@ -1,0 +1,17 @@
+[
+  {
+    "source": "C:\\gh\\oomlout_oobb_part_motor_gearbox_cycloidal_version_5\\presentation\\scripts\\studio.py",
+    "sha256": "f310a128c0ddcd7e911ec16213f164199a314506bfb9d4c110452242bd5199a3",
+    "use": "Read-only style reference; never executed or imported by this project"
+  },
+  {
+    "source": "C:\\gh\\oomlout_oobb_part_motor_gearbox_cycloidal_version_5\\presentation\\scripts\\sheets.py",
+    "sha256": "715cdbbbafd92a55f11d30708e76b0c991e5d558c2d64256d60f645cf2a26c78",
+    "use": "Read-only style reference; never executed or imported by this project"
+  },
+  {
+    "source": "C:\\gh\\oomlout_oobb_part_motor_gearbox_cycloidal_version_5\\presentation\\scripts\\build.py",
+    "sha256": "b96f49d89e76ace5cfb5f8290b25b53e74e01dd784ca5a1c4bae55147b45bfbc",
+    "use": "Read-only style reference; never executed or imported by this project"
+  }
+]

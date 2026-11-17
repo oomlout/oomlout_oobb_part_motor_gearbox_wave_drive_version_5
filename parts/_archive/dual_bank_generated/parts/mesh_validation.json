@@ -1,0 +1,497 @@
+{
+  "solids": [
+    {
+      "name": "housing_bottom",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 80123.013,
+      "bounds_mm": [
+        [
+          -59.5,
+          -59.5,
+          0.0
+        ],
+        [
+          59.5,
+          59.5,
+          10.0
+        ]
+      ]
+    },
+    {
+      "name": "housing_top",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 80123.013,
+      "bounds_mm": [
+        [
+          -59.5,
+          -59.5,
+          0.0
+        ],
+        [
+          59.5,
+          59.5,
+          10.0
+        ]
+      ]
+    },
+    {
+      "name": "fixed_profile_ring_lower",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 49836.035,
+      "bounds_mm": [
+        [
+          -57.5,
+          -57.5,
+          0.0
+        ],
+        [
+          57.5,
+          57.5,
+          15.799999999999997
+        ]
+      ]
+    },
+    {
+      "name": "fixed_profile_ring_upper",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 49836.212,
+      "bounds_mm": [
+        [
+          -57.5,
+          -57.5,
+          0.0
+        ],
+        [
+          57.5,
+          57.5,
+          15.799999999999997
+        ]
+      ]
+    },
+    {
+      "name": "stationary_joint_ring",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 17828.387,
+      "bounds_mm": [
+        [
+          -57.5,
+          -57.5,
+          0.0
+        ],
+        [
+          57.5,
+          57.5,
+          6.0
+        ]
+      ]
+    },
+    {
+      "name": "output_cage_lower",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 23012.456,
+      "bounds_mm": [
+        [
+          -45.5,
+          -45.5,
+          0.0
+        ],
+        [
+          45.5,
+          45.5,
+          15.6
+        ]
+      ]
+    },
+    {
+      "name": "output_cage_upper",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 23012.456,
+      "bounds_mm": [
+        [
+          -45.5,
+          -45.5,
+          0.0
+        ],
+        [
+          45.5,
+          45.5,
+          15.6
+        ]
+      ]
+    },
+    {
+      "name": "output_cage_joint",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 37167.603,
+      "bounds_mm": [
+        [
+          -46.5,
+          -46.5,
+          0.0
+        ],
+        [
+          46.5,
+          46.5,
+          6.0
+        ]
+      ]
+    },
+    {
+      "name": "output_bearing_hub",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 9260.23,
+      "bounds_mm": [
+        [
+          -24.95,
+          -24.95,
+          0.0
+        ],
+        [
+          24.95,
+          24.95,
+          7.2
+        ]
+      ]
+    },
+    {
+      "name": "output_bearing_retainer",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 5813.563,
+      "bounds_mm": [
+        [
+          -26.2,
+          -26.2,
+          0.0
+        ],
+        [
+          26.2,
+          26.2,
+          4.0
+        ]
+      ]
+    },
+    {
+      "name": "wave_generator",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 48843.686,
+      "bounds_mm": [
+        [
+          -40.0,
+          -40.0,
+          0.0
+        ],
+        [
+          40.0,
+          40.0,
+          12.0
+        ]
+      ]
+    },
+    {
+      "name": "wave_bearing_cap",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 3869.2,
+      "bounds_mm": [
+        [
+          -22.0,
+          -22.0,
+          0.0
+        ],
+        [
+          22.0,
+          22.0,
+          4.2
+        ]
+      ]
+    },
+    {
+      "name": "eccentric_cam_lower",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 1580.702,
+      "bounds_mm": [
+        [
+          -10.25,
+          -11.0,
+          0.0
+        ],
+        [
+          11.75,
+          11.0,
+          5.2
+        ]
+      ]
+    },
+    {
+      "name": "eccentric_cam_upper",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 1580.702,
+      "bounds_mm": [
+        [
+          -11.75,
+          -11.0,
+          0.0
+        ],
+        [
+          10.25,
+          11.0,
+          5.2
+        ]
+      ]
+    },
+    {
+      "name": "input_bearing_journal",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 1580.702,
+      "bounds_mm": [
+        [
+          -11.0,
+          -11.0,
+          0.0
+        ],
+        [
+          11.0,
+          11.0,
+          5.2
+        ]
+      ]
+    },
+    {
+      "name": "input_spacer_outer",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 1056.086,
+      "bounds_mm": [
+        [
+          -7.0,
+          -7.0,
+          0.0
+        ],
+        [
+          7.0,
+          7.0,
+          7.900000000000002
+        ]
+      ]
+    },
+    {
+      "name": "input_spacer_middle_lower",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 1228.704,
+      "bounds_mm": [
+        [
+          -10.25,
+          -11.0,
+          0.0
+        ],
+        [
+          11.75,
+          11.0,
+          7.4999999999999964
+        ]
+      ]
+    },
+    {
+      "name": "input_spacer_middle_upper",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 1228.704,
+      "bounds_mm": [
+        [
+          -11.75,
+          -11.0,
+          0.0
+        ],
+        [
+          10.25,
+          11.0,
+          7.4999999999999964
+        ]
+      ]
+    },
+    {
+      "name": "input_collar",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 6016.647,
+      "bounds_mm": [
+        [
+          -18.0,
+          -18.0,
+          0.0
+        ],
+        [
+          18.0,
+          18.0,
+          13.0
+        ]
+      ]
+    }
+  ],
+  "collision_angles": [
+    {
+      "angle": 0,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 449
+    },
+    {
+      "angle": 45,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 423
+    },
+    {
+      "angle": 90,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 428
+    },
+    {
+      "angle": 135,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 439
+    },
+    {
+      "angle": 180,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 463
+    },
+    {
+      "angle": 225,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 423
+    },
+    {
+      "angle": 270,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 402
+    },
+    {
+      "angle": 315,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 428
+    }
+  ],
+  "status": "passed",
+  "source_sha256": {
+    "parameters.scad": "11ce1a5454751bad99fc58c413d880e333bec0f8dd8d3b46296f29463050fcd8",
+    "geometry.scad": "094ecdf1423f17028c2d4d42ba4e0293e992cfb98337e6869179155745162c1c",
+    "oobb_hardware.scad": "f623b060bc2dd0f5d134e048e34139eb8f02c36245fe167824796a90fa7b0f91"
+  },
+  "print_beds": [
+    {
+      "bed": 1,
+      "parts": 9,
+      "bounds_mm": [
+        [
+          3.0,
+          3.0,
+          0.0
+        ],
+        [
+          217.0,
+          178.7,
+          15.6
+        ]
+      ]
+    },
+    {
+      "bed": 2,
+      "parts": 10,
+      "bounds_mm": [
+        [
+          3.0,
+          3.0,
+          0.0
+        ],
+        [
+          217.0,
+          175.95,
+          15.6
+        ]
+      ]
+    },
+    {
+      "bed": 3,
+      "parts": 2,
+      "bounds_mm": [
+        [
+          3.0,
+          3.0,
+          0.0
+        ],
+        [
+          215.0,
+          118.0,
+          15.799999999999997
+        ]
+      ]
+    },
+    {
+      "bed": 4,
+      "parts": 3,
+      "bounds_mm": [
+        [
+          3.0,
+          3.0,
+          0.0
+        ],
+        [
+          202.0,
+          118.0,
+          15.799999999999997
+        ]
+      ]
+    },
+    {
+      "bed": 5,
+      "parts": 2,
+      "bounds_mm": [
+        [
+          3.0,
+          3.0,
+          0.0
+        ],
+        [
+          202.0,
+          118.0,
+          12.0
+        ]
+      ]
+    }
+  ],
+  "scad_python_profile_max_error_mm": 4.9317588266255914e-09,
+  "limitations": "Geometric checks only. Printed fit, friction, wear, backlash and torque require bench tests."
+}

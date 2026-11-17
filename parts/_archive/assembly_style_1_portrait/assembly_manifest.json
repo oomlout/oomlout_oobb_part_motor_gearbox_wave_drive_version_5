@@ -1,0 +1,2100 @@
+{
+  "style": {
+    "page_mm": [
+      210,
+      297
+    ],
+    "margin_mm": 10,
+    "gutter_mm": 7,
+    "border_radius_mm": 3,
+    "parts_box_width_mm": 55,
+    "paper": "FBF9F3",
+    "ink": "22383A",
+    "accent": "007D83",
+    "border": "ABC4C2",
+    "image_size": [
+      1400,
+      1080
+    ],
+    "samples": 24,
+    "eye": [
+      1.2,
+      -1.6,
+      1.35
+    ],
+    "underside_eye": [
+      1.2,
+      -1.6,
+      -1.5
+    ],
+    "font_body_pt": 9,
+    "font_code_pt": 8,
+    "bip39_words": 3,
+    "revision": "1",
+    "title": "OOBB wave drive | {reduction}:1"
+  },
+  "configuration_title": "OOBB wave drive | 12:1",
+  "parts": {
+    "motor_mount_plate": {
+      "key": "motor_mount_plate",
+      "name": "Motor base plate",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_mount_plate",
+      "identity_source": "Project-local assembly identity",
+      "md5": "256a85cff46eb462801739670643ba4d",
+      "bip_39_full_array": [
+        "century",
+        "feature",
+        "initial",
+        "trip",
+        "twice",
+        "course",
+        "able",
+        "transfer",
+        "grow",
+        "craft",
+        "update",
+        "oppose"
+      ],
+      "bip_39_full_space": "century feature initial trip twice course able transfer grow craft update oppose",
+      "bip_39_full_no_space": "centuryfeatureinitialtriptwicecourseabletransfergrowcraftupdateoppose",
+      "bip_39_full_underscore": "century_feature_initial_trip_twice_course_able_transfer_grow_craft_update_oppose",
+      "bip_39_2_word_array": [
+        "century",
+        "feature"
+      ],
+      "bip_39_2_word_space": "century feature",
+      "bip_39_2_word_no_space": "centuryfeature",
+      "bip_39_2_word_underscore": "century_feature",
+      "bip_39_3_word_array": [
+        "century",
+        "feature",
+        "initial"
+      ],
+      "bip_39_3_word_space": "century feature initial",
+      "bip_39_3_word_no_space": "centuryfeatureinitial",
+      "bip_39_3_word_underscore": "century_feature_initial",
+      "bip39_label": "century feature initial",
+      "quantity": 1
+    },
+    "fixed_profile_ring": {
+      "key": "fixed_profile_ring",
+      "name": "Fixed profile ring",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__fixed_profile_ring",
+      "identity_source": "Project-local assembly identity",
+      "md5": "aa0435d4b1cb3b46c35e4c511e958af7",
+      "bip_39_full_array": [
+        "present",
+        "canvas",
+        "inside",
+        "glory",
+        "recipe",
+        "pet",
+        "aspect",
+        "sister",
+        "extra",
+        "visa",
+        "glance",
+        "uphold"
+      ],
+      "bip_39_full_space": "present canvas inside glory recipe pet aspect sister extra visa glance uphold",
+      "bip_39_full_no_space": "presentcanvasinsidegloryrecipepetaspectsisterextravisaglanceuphold",
+      "bip_39_full_underscore": "present_canvas_inside_glory_recipe_pet_aspect_sister_extra_visa_glance_uphold",
+      "bip_39_2_word_array": [
+        "present",
+        "canvas"
+      ],
+      "bip_39_2_word_space": "present canvas",
+      "bip_39_2_word_no_space": "presentcanvas",
+      "bip_39_2_word_underscore": "present_canvas",
+      "bip_39_3_word_array": [
+        "present",
+        "canvas",
+        "inside"
+      ],
+      "bip_39_3_word_space": "present canvas inside",
+      "bip_39_3_word_no_space": "presentcanvasinside",
+      "bip_39_3_word_underscore": "present_canvas_inside",
+      "bip39_label": "present canvas inside",
+      "quantity": 1
+    },
+    "output_bearing_housing": {
+      "key": "output_bearing_housing",
+      "name": "6810 bearing housing",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_bearing_housing",
+      "identity_source": "Project-local assembly identity",
+      "md5": "264c93a2eac92c1941a991beb8f59006",
+      "bip_39_full_array": [
+        "chaos",
+        "goose",
+        "trim",
+        "stereo",
+        "name",
+        "arrow",
+        "allow",
+        "cram",
+        "salt",
+        "sibling",
+        "goat",
+        "asset"
+      ],
+      "bip_39_full_space": "chaos goose trim stereo name arrow allow cram salt sibling goat asset",
+      "bip_39_full_no_space": "chaosgoosetrimstereonamearrowallowcramsaltsiblinggoatasset",
+      "bip_39_full_underscore": "chaos_goose_trim_stereo_name_arrow_allow_cram_salt_sibling_goat_asset",
+      "bip_39_2_word_array": [
+        "chaos",
+        "goose"
+      ],
+      "bip_39_2_word_space": "chaos goose",
+      "bip_39_2_word_no_space": "chaosgoose",
+      "bip_39_2_word_underscore": "chaos_goose",
+      "bip_39_3_word_array": [
+        "chaos",
+        "goose",
+        "trim"
+      ],
+      "bip_39_3_word_space": "chaos goose trim",
+      "bip_39_3_word_no_space": "chaosgoosetrim",
+      "bip_39_3_word_underscore": "chaos_goose_trim",
+      "bip39_label": "chaos goose trim",
+      "quantity": 1
+    },
+    "cage_lower_cap": {
+      "key": "cage_lower_cap",
+      "name": "Lower cage with teeth",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__cage_lower_cap",
+      "identity_source": "Project-local assembly identity",
+      "md5": "97723f034c167c383ad8ece295470e78",
+      "bip_39_full_array": [
+        "number",
+        "music",
+        "school",
+        "oblige",
+        "guitar",
+        "bright",
+        "twin",
+        "budget",
+        "tip",
+        "pretty",
+        "seminar",
+        "van"
+      ],
+      "bip_39_full_space": "number music school oblige guitar bright twin budget tip pretty seminar van",
+      "bip_39_full_no_space": "numbermusicschoolobligeguitarbrighttwinbudgettipprettyseminarvan",
+      "bip_39_full_underscore": "number_music_school_oblige_guitar_bright_twin_budget_tip_pretty_seminar_van",
+      "bip_39_2_word_array": [
+        "number",
+        "music"
+      ],
+      "bip_39_2_word_space": "number music",
+      "bip_39_2_word_no_space": "numbermusic",
+      "bip_39_2_word_underscore": "number_music",
+      "bip_39_3_word_array": [
+        "number",
+        "music",
+        "school"
+      ],
+      "bip_39_3_word_space": "number music school",
+      "bip_39_3_word_no_space": "numbermusicschool",
+      "bip_39_3_word_underscore": "number_music_school",
+      "bip39_label": "number music school",
+      "quantity": 1
+    },
+    "output_cage": {
+      "key": "output_cage",
+      "name": "Upper cage and hub",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cage",
+      "identity_source": "Project-local assembly identity",
+      "md5": "ec4634b3bf37440c2ab458d883c2dfd3",
+      "bip_39_full_array": [
+        "unable",
+        "coyote",
+        "coconut",
+        "lazy",
+        "inmate",
+        "alcohol",
+        "print",
+        "mention",
+        "sudden",
+        "bulk",
+        "retire",
+        "please"
+      ],
+      "bip_39_full_space": "unable coyote coconut lazy inmate alcohol print mention sudden bulk retire please",
+      "bip_39_full_no_space": "unablecoyotecoconutlazyinmatealcoholprintmentionsuddenbulkretireplease",
+      "bip_39_full_underscore": "unable_coyote_coconut_lazy_inmate_alcohol_print_mention_sudden_bulk_retire_please",
+      "bip_39_2_word_array": [
+        "unable",
+        "coyote"
+      ],
+      "bip_39_2_word_space": "unable coyote",
+      "bip_39_2_word_no_space": "unablecoyote",
+      "bip_39_2_word_underscore": "unable_coyote",
+      "bip_39_3_word_array": [
+        "unable",
+        "coyote",
+        "coconut"
+      ],
+      "bip_39_3_word_space": "unable coyote coconut",
+      "bip_39_3_word_no_space": "unablecoyotecoconut",
+      "bip_39_3_word_underscore": "unable_coyote_coconut",
+      "bip39_label": "unable coyote coconut",
+      "quantity": 1
+    },
+    "output_retainer": {
+      "key": "output_retainer",
+      "name": "Output nut carrier",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_retainer",
+      "identity_source": "Project-local assembly identity",
+      "md5": "6ac69272f12d1c5a0d70ff4dc0e72d08",
+      "bip_39_full_array": [
+        "hello",
+        "cruel",
+        "original",
+        "time",
+        "spike",
+        "code",
+        "cupboard",
+        "cable",
+        "evidence",
+        "already",
+        "slender",
+        "away"
+      ],
+      "bip_39_full_space": "hello cruel original time spike code cupboard cable evidence already slender away",
+      "bip_39_full_no_space": "hellocrueloriginaltimespikecodecupboardcableevidencealreadyslenderaway",
+      "bip_39_full_underscore": "hello_cruel_original_time_spike_code_cupboard_cable_evidence_already_slender_away",
+      "bip_39_2_word_array": [
+        "hello",
+        "cruel"
+      ],
+      "bip_39_2_word_space": "hello cruel",
+      "bip_39_2_word_no_space": "hellocruel",
+      "bip_39_2_word_underscore": "hello_cruel",
+      "bip_39_3_word_array": [
+        "hello",
+        "cruel",
+        "original"
+      ],
+      "bip_39_3_word_space": "hello cruel original",
+      "bip_39_3_word_no_space": "hellocrueloriginal",
+      "bip_39_3_word_underscore": "hello_cruel_original",
+      "bip39_label": "hello cruel original",
+      "quantity": 1
+    },
+    "output_cover": {
+      "key": "output_cover",
+      "name": "OOBB output cover",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cover",
+      "identity_source": "Project-local assembly identity",
+      "md5": "02976de32c3b481a9e9214ac940c1f72",
+      "bip_39_full_array": [
+        "action",
+        "rocket",
+        "juice",
+        "flash",
+        "region",
+        "ask",
+        "kid",
+        "dream",
+        "prosper",
+        "parrot",
+        "amazing",
+        "tongue"
+      ],
+      "bip_39_full_space": "action rocket juice flash region ask kid dream prosper parrot amazing tongue",
+      "bip_39_full_no_space": "actionrocketjuiceflashregionaskkiddreamprosperparrotamazingtongue",
+      "bip_39_full_underscore": "action_rocket_juice_flash_region_ask_kid_dream_prosper_parrot_amazing_tongue",
+      "bip_39_2_word_array": [
+        "action",
+        "rocket"
+      ],
+      "bip_39_2_word_space": "action rocket",
+      "bip_39_2_word_no_space": "actionrocket",
+      "bip_39_2_word_underscore": "action_rocket",
+      "bip_39_3_word_array": [
+        "action",
+        "rocket",
+        "juice"
+      ],
+      "bip_39_3_word_space": "action rocket juice",
+      "bip_39_3_word_no_space": "actionrocketjuice",
+      "bip_39_3_word_underscore": "action_rocket_juice",
+      "bip39_label": "action rocket juice",
+      "quantity": 1
+    },
+    "motor_eccentric": {
+      "key": "motor_eccentric",
+      "name": "Lower eccentric shaft",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric",
+      "identity_source": "Project-local assembly identity",
+      "md5": "7cbb5dccd5e385c5a78bd129c074713d",
+      "bip_39_full_array": [
+        "lake",
+        "sustain",
+        "industry",
+        "profit",
+        "debate",
+        "tissue",
+        "owner",
+        "kick",
+        "clap",
+        "admit",
+        "brisk",
+        "kitten"
+      ],
+      "bip_39_full_space": "lake sustain industry profit debate tissue owner kick clap admit brisk kitten",
+      "bip_39_full_no_space": "lakesustainindustryprofitdebatetissueownerkickclapadmitbriskkitten",
+      "bip_39_full_underscore": "lake_sustain_industry_profit_debate_tissue_owner_kick_clap_admit_brisk_kitten",
+      "bip_39_2_word_array": [
+        "lake",
+        "sustain"
+      ],
+      "bip_39_2_word_space": "lake sustain",
+      "bip_39_2_word_no_space": "lakesustain",
+      "bip_39_2_word_underscore": "lake_sustain",
+      "bip_39_3_word_array": [
+        "lake",
+        "sustain",
+        "industry"
+      ],
+      "bip_39_3_word_space": "lake sustain industry",
+      "bip_39_3_word_no_space": "lakesustainindustry",
+      "bip_39_3_word_underscore": "lake_sustain_industry",
+      "bip39_label": "lake sustain industry",
+      "quantity": 1
+    },
+    "motor_eccentric_cap": {
+      "key": "motor_eccentric_cap",
+      "name": "Upper eccentric collar",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric_cap",
+      "identity_source": "Project-local assembly identity",
+      "md5": "1d5d17fb9af0811d005fc3b382494bd6",
+      "bip_39_full_array": [
+        "bubble",
+        "trim",
+        "year",
+        "curious",
+        "amount",
+        "model",
+        "accident",
+        "wear",
+        "receive",
+        "banner",
+        "fancy",
+        "punch"
+      ],
+      "bip_39_full_space": "bubble trim year curious amount model accident wear receive banner fancy punch",
+      "bip_39_full_no_space": "bubbletrimyearcuriousamountmodelaccidentwearreceivebannerfancypunch",
+      "bip_39_full_underscore": "bubble_trim_year_curious_amount_model_accident_wear_receive_banner_fancy_punch",
+      "bip_39_2_word_array": [
+        "bubble",
+        "trim"
+      ],
+      "bip_39_2_word_space": "bubble trim",
+      "bip_39_2_word_no_space": "bubbletrim",
+      "bip_39_2_word_underscore": "bubble_trim",
+      "bip_39_3_word_array": [
+        "bubble",
+        "trim",
+        "year"
+      ],
+      "bip_39_3_word_space": "bubble trim year",
+      "bip_39_3_word_no_space": "bubbletrimyear",
+      "bip_39_3_word_underscore": "bubble_trim_year",
+      "bip39_label": "bubble trim year",
+      "quantity": 1
+    },
+    "wave_generator": {
+      "key": "wave_generator",
+      "name": "Lower wave clamshell",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_generator",
+      "identity_source": "Project-local assembly identity",
+      "md5": "8790dd21db060299e85496364344d0ea",
+      "bip_39_full_array": [
+        "maple",
+        "manage",
+        "embody",
+        "render",
+        "gasp",
+        "erupt",
+        "pattern",
+        "name",
+        "curve",
+        "boss",
+        "crouch",
+        "steel"
+      ],
+      "bip_39_full_space": "maple manage embody render gasp erupt pattern name curve boss crouch steel",
+      "bip_39_full_no_space": "maplemanageembodyrendergasperuptpatternnamecurvebosscrouchsteel",
+      "bip_39_full_underscore": "maple_manage_embody_render_gasp_erupt_pattern_name_curve_boss_crouch_steel",
+      "bip_39_2_word_array": [
+        "maple",
+        "manage"
+      ],
+      "bip_39_2_word_space": "maple manage",
+      "bip_39_2_word_no_space": "maplemanage",
+      "bip_39_2_word_underscore": "maple_manage",
+      "bip_39_3_word_array": [
+        "maple",
+        "manage",
+        "embody"
+      ],
+      "bip_39_3_word_space": "maple manage embody",
+      "bip_39_3_word_no_space": "maplemanageembody",
+      "bip_39_3_word_underscore": "maple_manage_embody",
+      "bip39_label": "maple manage embody",
+      "quantity": 1
+    },
+    "wave_bearing_cap": {
+      "key": "wave_bearing_cap",
+      "name": "Upper wave clamshell",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_bearing_cap",
+      "identity_source": "Project-local assembly identity",
+      "md5": "9ece212e17af4aa13463e98d3eeb7fdb",
+      "bip_39_full_array": [
+        "paddle",
+        "illegal",
+        "entire",
+        "consider",
+        "visa",
+        "explain",
+        "spice",
+        "large",
+        "minor",
+        "warrior",
+        "that",
+        "replace"
+      ],
+      "bip_39_full_space": "paddle illegal entire consider visa explain spice large minor warrior that replace",
+      "bip_39_full_no_space": "paddleillegalentireconsidervisaexplainspicelargeminorwarriorthatreplace",
+      "bip_39_full_underscore": "paddle_illegal_entire_consider_visa_explain_spice_large_minor_warrior_that_replace",
+      "bip_39_2_word_array": [
+        "paddle",
+        "illegal"
+      ],
+      "bip_39_2_word_space": "paddle illegal",
+      "bip_39_2_word_no_space": "paddleillegal",
+      "bip_39_2_word_underscore": "paddle_illegal",
+      "bip_39_3_word_array": [
+        "paddle",
+        "illegal",
+        "entire"
+      ],
+      "bip_39_3_word_space": "paddle illegal entire",
+      "bip_39_3_word_no_space": "paddleillegalentire",
+      "bip_39_3_word_underscore": "paddle_illegal_entire",
+      "bip39_label": "paddle illegal entire",
+      "quantity": 1
+    },
+    "bearing_6810": {
+      "key": "bearing_6810",
+      "name": "6810 bearing",
+      "detail": "50 x 65 x 7 mm",
+      "id": "hardware_bearing_6800_series_6810_size_50_mm_id_65_mm_od_7_mm_depth",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "cb4eb99a384ce4439e763e05c6830f0a",
+      "bip_39_full_array": [
+        "slender",
+        "into",
+        "grief",
+        "identify",
+        "soft",
+        "canyon",
+        "keep",
+        "sick",
+        "alarm",
+        "cross",
+        "sense",
+        "between"
+      ],
+      "bip_39_full_space": "slender into grief identify soft canyon keep sick alarm cross sense between",
+      "bip_39_full_no_space": "slenderintogriefidentifysoftcanyonkeepsickalarmcrosssensebetween",
+      "bip_39_full_underscore": "slender_into_grief_identify_soft_canyon_keep_sick_alarm_cross_sense_between",
+      "bip_39_2_word_array": [
+        "slender",
+        "into"
+      ],
+      "bip_39_2_word_space": "slender into",
+      "bip_39_2_word_no_space": "slenderinto",
+      "bip_39_2_word_underscore": "slender_into",
+      "bip_39_3_word_array": [
+        "slender",
+        "into",
+        "grief"
+      ],
+      "bip_39_3_word_space": "slender into grief",
+      "bip_39_3_word_no_space": "slenderintogrief",
+      "bip_39_3_word_underscore": "slender_into_grief",
+      "bip39_label": "slender into grief",
+      "quantity": 1
+    },
+    "bearing_6704": {
+      "key": "bearing_6704",
+      "name": "6704 bearing",
+      "detail": "20 x 27 x 4 mm",
+      "id": "hardware_bearing_6700_series_6704_size_20_mm_id_27_mm_od_4_mm_depth",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "7edd1090264a248f9e6140547bebe5c5",
+      "bip_39_full_array": [
+        "learn",
+        "trigger",
+        "catch",
+        "erode",
+        "pelican",
+        "elephant",
+        "kangaroo",
+        "chimney",
+        "federal",
+        "tent",
+        "west",
+        "melody"
+      ],
+      "bip_39_full_space": "learn trigger catch erode pelican elephant kangaroo chimney federal tent west melody",
+      "bip_39_full_no_space": "learntriggercatcherodepelicanelephantkangaroochimneyfederaltentwestmelody",
+      "bip_39_full_underscore": "learn_trigger_catch_erode_pelican_elephant_kangaroo_chimney_federal_tent_west_melody",
+      "bip_39_2_word_array": [
+        "learn",
+        "trigger"
+      ],
+      "bip_39_2_word_space": "learn trigger",
+      "bip_39_2_word_no_space": "learntrigger",
+      "bip_39_2_word_underscore": "learn_trigger",
+      "bip_39_3_word_array": [
+        "learn",
+        "trigger",
+        "catch"
+      ],
+      "bip_39_3_word_space": "learn trigger catch",
+      "bip_39_3_word_no_space": "learntriggercatch",
+      "bip_39_3_word_underscore": "learn_trigger_catch",
+      "bip39_label": "learn trigger catch",
+      "quantity": 1
+    },
+    "roller": {
+      "key": "roller",
+      "name": "Nylon spacer roller",
+      "detail": "7 OD x 12 mm; 3.2 bore",
+      "id": "hardware_spacer_m3_nylon_white_7_mm_outer_diameter_12_mm_depth",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "81d185e3cb9642e83879b78f94e82608",
+      "bip_39_full_array": [
+        "limb",
+        "method",
+        "jump",
+        "now",
+        "goddess",
+        "inject",
+        "tiger",
+        "dad",
+        "moon",
+        "point",
+        "another",
+        "avoid"
+      ],
+      "bip_39_full_space": "limb method jump now goddess inject tiger dad moon point another avoid",
+      "bip_39_full_no_space": "limbmethodjumpnowgoddessinjecttigerdadmoonpointanotheravoid",
+      "bip_39_full_underscore": "limb_method_jump_now_goddess_inject_tiger_dad_moon_point_another_avoid",
+      "bip_39_2_word_array": [
+        "limb",
+        "method"
+      ],
+      "bip_39_2_word_space": "limb method",
+      "bip_39_2_word_no_space": "limbmethod",
+      "bip_39_2_word_underscore": "limb_method",
+      "bip_39_3_word_array": [
+        "limb",
+        "method",
+        "jump"
+      ],
+      "bip_39_3_word_space": "limb method jump",
+      "bip_39_3_word_no_space": "limbmethodjump",
+      "bip_39_3_word_underscore": "limb_method_jump",
+      "bip39_label": "limb method jump",
+      "quantity": 12
+    },
+    "screw_case": {
+      "key": "screw_case",
+      "name": "M3 x 30 socket cap",
+      "detail": "",
+      "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_30_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "7e252fca70adce3700f60f1c0b0bd9dc",
+      "bip_39_full_array": [
+        "lawsuit",
+        "city",
+        "verb",
+        "throw",
+        "table",
+        "breeze",
+        "adult",
+        "sea",
+        "bright",
+        "flame",
+        "wait",
+        "rifle"
+      ],
+      "bip_39_full_space": "lawsuit city verb throw table breeze adult sea bright flame wait rifle",
+      "bip_39_full_no_space": "lawsuitcityverbthrowtablebreezeadultseabrightflamewaitrifle",
+      "bip_39_full_underscore": "lawsuit_city_verb_throw_table_breeze_adult_sea_bright_flame_wait_rifle",
+      "bip_39_2_word_array": [
+        "lawsuit",
+        "city"
+      ],
+      "bip_39_2_word_space": "lawsuit city",
+      "bip_39_2_word_no_space": "lawsuitcity",
+      "bip_39_2_word_underscore": "lawsuit_city",
+      "bip_39_3_word_array": [
+        "lawsuit",
+        "city",
+        "verb"
+      ],
+      "bip_39_3_word_space": "lawsuit city verb",
+      "bip_39_3_word_no_space": "lawsuitcityverb",
+      "bip_39_3_word_underscore": "lawsuit_city_verb",
+      "bip39_label": "lawsuit city verb",
+      "quantity": 6
+    },
+    "screw_motor": {
+      "key": "screw_motor",
+      "name": "M3 x 6 socket cap",
+      "detail": "",
+      "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_6_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "9409bf2a90fec4a643345a86c2835ad1",
+      "bip_39_full_array": [
+        "neglect",
+        "evil",
+        "skirt",
+        "capable",
+        "unable",
+        "farm",
+        "art",
+        "mercy",
+        "man",
+        "beef",
+        "stove",
+        "pen"
+      ],
+      "bip_39_full_space": "neglect evil skirt capable unable farm art mercy man beef stove pen",
+      "bip_39_full_no_space": "neglectevilskirtcapableunablefarmartmercymanbeefstovepen",
+      "bip_39_full_underscore": "neglect_evil_skirt_capable_unable_farm_art_mercy_man_beef_stove_pen",
+      "bip_39_2_word_array": [
+        "neglect",
+        "evil"
+      ],
+      "bip_39_2_word_space": "neglect evil",
+      "bip_39_2_word_no_space": "neglectevil",
+      "bip_39_2_word_underscore": "neglect_evil",
+      "bip_39_3_word_array": [
+        "neglect",
+        "evil",
+        "skirt"
+      ],
+      "bip_39_3_word_space": "neglect evil skirt",
+      "bip_39_3_word_no_space": "neglectevilskirt",
+      "bip_39_3_word_underscore": "neglect_evil_skirt",
+      "bip39_label": "neglect evil skirt",
+      "quantity": 4
+    },
+    "screw_output": {
+      "key": "screw_output",
+      "name": "M3 x 12 socket cap",
+      "detail": "",
+      "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_12_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "699fa0ca1f3c788a8092c8ecc749280c",
+      "bip_39_full_array": [
+        "hat",
+        "wonder",
+        "crater",
+        "dinosaur",
+        "shy",
+        "earn",
+        "across",
+        "flip",
+        "under",
+        "demise",
+        "energy",
+        "blouse"
+      ],
+      "bip_39_full_space": "hat wonder crater dinosaur shy earn across flip under demise energy blouse",
+      "bip_39_full_no_space": "hatwondercraterdinosaurshyearnacrossflipunderdemiseenergyblouse",
+      "bip_39_full_underscore": "hat_wonder_crater_dinosaur_shy_earn_across_flip_under_demise_energy_blouse",
+      "bip_39_2_word_array": [
+        "hat",
+        "wonder"
+      ],
+      "bip_39_2_word_space": "hat wonder",
+      "bip_39_2_word_no_space": "hatwonder",
+      "bip_39_2_word_underscore": "hat_wonder",
+      "bip_39_3_word_array": [
+        "hat",
+        "wonder",
+        "crater"
+      ],
+      "bip_39_3_word_space": "hat wonder crater",
+      "bip_39_3_word_no_space": "hatwondercrater",
+      "bip_39_3_word_underscore": "hat_wonder_crater",
+      "bip39_label": "hat wonder crater",
+      "quantity": 4
+    },
+    "screw_wave": {
+      "key": "screw_wave",
+      "name": "M3 x 8 socket cap",
+      "detail": "",
+      "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_8_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "a839a5cbb3621b27a6dfeffb447d57db",
+      "bip_39_full_array": [
+        "popular",
+        "snake",
+        "indicate",
+        "grocery",
+        "canvas",
+        "need",
+        "opinion",
+        "worth",
+        "win",
+        "catalog",
+        "field",
+        "repair"
+      ],
+      "bip_39_full_space": "popular snake indicate grocery canvas need opinion worth win catalog field repair",
+      "bip_39_full_no_space": "popularsnakeindicategrocerycanvasneedopinionworthwincatalogfieldrepair",
+      "bip_39_full_underscore": "popular_snake_indicate_grocery_canvas_need_opinion_worth_win_catalog_field_repair",
+      "bip_39_2_word_array": [
+        "popular",
+        "snake"
+      ],
+      "bip_39_2_word_space": "popular snake",
+      "bip_39_2_word_no_space": "popularsnake",
+      "bip_39_2_word_underscore": "popular_snake",
+      "bip_39_3_word_array": [
+        "popular",
+        "snake",
+        "indicate"
+      ],
+      "bip_39_3_word_space": "popular snake indicate",
+      "bip_39_3_word_no_space": "popularsnakeindicate",
+      "bip_39_3_word_underscore": "popular_snake_indicate",
+      "bip39_label": "popular snake indicate",
+      "quantity": 4
+    },
+    "screw_cage": {
+      "key": "screw_cage",
+      "name": "M2 x 18 countersunk",
+      "detail": "Hex drive; length includes head",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__screw_cage__m2_x_18_countersunk_hex_drive;_length_includes_head",
+      "identity_source": "Project-local assembly identity",
+      "md5": "e14b892ed653b3f55ec01cf1786937a7",
+      "bip_39_full_array": [
+        "throw",
+        "fox",
+        "entry",
+        "protect",
+        "depth",
+        "wide",
+        "kitchen",
+        "adjust",
+        "vapor",
+        "select",
+        "evil",
+        "exercise"
+      ],
+      "bip_39_full_space": "throw fox entry protect depth wide kitchen adjust vapor select evil exercise",
+      "bip_39_full_no_space": "throwfoxentryprotectdepthwidekitchenadjustvaporselectevilexercise",
+      "bip_39_full_underscore": "throw_fox_entry_protect_depth_wide_kitchen_adjust_vapor_select_evil_exercise",
+      "bip_39_2_word_array": [
+        "throw",
+        "fox"
+      ],
+      "bip_39_2_word_space": "throw fox",
+      "bip_39_2_word_no_space": "throwfox",
+      "bip_39_2_word_underscore": "throw_fox",
+      "bip_39_3_word_array": [
+        "throw",
+        "fox",
+        "entry"
+      ],
+      "bip_39_3_word_space": "throw fox entry",
+      "bip_39_3_word_no_space": "throwfoxentry",
+      "bip_39_3_word_underscore": "throw_fox_entry",
+      "bip39_label": "throw fox entry",
+      "quantity": 12
+    },
+    "screw_eccentric": {
+      "key": "screw_eccentric",
+      "name": "M2 x 16 countersunk",
+      "detail": "Hex drive; length includes head",
+      "id": "hardware_screw_countersunk_hex_head_black_m2_diameter_16_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "6716a04ffb90c966065adb96b6b817ad",
+      "bip_39_full_array": [
+        "grow",
+        "relax",
+        "become",
+        "warm",
+        "arrive",
+        "reason",
+        "bonus",
+        "fork",
+        "note",
+        "remind",
+        "album",
+        "foil"
+      ],
+      "bip_39_full_space": "grow relax become warm arrive reason bonus fork note remind album foil",
+      "bip_39_full_no_space": "growrelaxbecomewarmarrivereasonbonusforknoteremindalbumfoil",
+      "bip_39_full_underscore": "grow_relax_become_warm_arrive_reason_bonus_fork_note_remind_album_foil",
+      "bip_39_2_word_array": [
+        "grow",
+        "relax"
+      ],
+      "bip_39_2_word_space": "grow relax",
+      "bip_39_2_word_no_space": "growrelax",
+      "bip_39_2_word_underscore": "grow_relax",
+      "bip_39_3_word_array": [
+        "grow",
+        "relax",
+        "become"
+      ],
+      "bip_39_3_word_space": "grow relax become",
+      "bip_39_3_word_no_space": "growrelaxbecome",
+      "bip_39_3_word_underscore": "grow_relax_become",
+      "bip39_label": "grow relax become",
+      "quantity": 2
+    },
+    "screw_shaft_clamp": {
+      "key": "screw_shaft_clamp",
+      "name": "M3 x 8 countersunk",
+      "detail": "Hex drive; length includes head",
+      "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "e91880b617c6f217bb01f9803b4bc21d",
+      "bip_39_full_array": [
+        "trouble",
+        "series",
+        "collect",
+        "convince",
+        "hundred",
+        "armed",
+        "ugly",
+        "dish",
+        "lens",
+        "surge",
+        "vacuum",
+        "design"
+      ],
+      "bip_39_full_space": "trouble series collect convince hundred armed ugly dish lens surge vacuum design",
+      "bip_39_full_no_space": "troubleseriescollectconvincehundredarmeduglydishlenssurgevacuumdesign",
+      "bip_39_full_underscore": "trouble_series_collect_convince_hundred_armed_ugly_dish_lens_surge_vacuum_design",
+      "bip_39_2_word_array": [
+        "trouble",
+        "series"
+      ],
+      "bip_39_2_word_space": "trouble series",
+      "bip_39_2_word_no_space": "troubleseries",
+      "bip_39_2_word_underscore": "trouble_series",
+      "bip_39_3_word_array": [
+        "trouble",
+        "series",
+        "collect"
+      ],
+      "bip_39_3_word_space": "trouble series collect",
+      "bip_39_3_word_no_space": "troubleseriescollect",
+      "bip_39_3_word_underscore": "trouble_series_collect",
+      "bip39_label": "trouble series collect",
+      "quantity": 1
+    },
+    "nut_m2": {
+      "key": "nut_m2",
+      "name": "M2 hex nut",
+      "detail": "",
+      "id": "hardware_nut_m2",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "4ac513ae8036eb31717a4f72371557c4",
+      "bip_39_full_array": [
+        "enlist",
+        "chuckle",
+        "two",
+        "about",
+        "huge",
+        "obvious",
+        "shine",
+        "enemy",
+        "impulse",
+        "reward",
+        "field",
+        "match"
+      ],
+      "bip_39_full_space": "enlist chuckle two about huge obvious shine enemy impulse reward field match",
+      "bip_39_full_no_space": "enlistchuckletwoabouthugeobviousshineenemyimpulserewardfieldmatch",
+      "bip_39_full_underscore": "enlist_chuckle_two_about_huge_obvious_shine_enemy_impulse_reward_field_match",
+      "bip_39_2_word_array": [
+        "enlist",
+        "chuckle"
+      ],
+      "bip_39_2_word_space": "enlist chuckle",
+      "bip_39_2_word_no_space": "enlistchuckle",
+      "bip_39_2_word_underscore": "enlist_chuckle",
+      "bip_39_3_word_array": [
+        "enlist",
+        "chuckle",
+        "two"
+      ],
+      "bip_39_3_word_space": "enlist chuckle two",
+      "bip_39_3_word_no_space": "enlistchuckletwo",
+      "bip_39_3_word_underscore": "enlist_chuckle_two",
+      "bip39_label": "enlist chuckle two",
+      "quantity": 14
+    },
+    "nut_m3": {
+      "key": "nut_m3",
+      "name": "M3 hex nut",
+      "detail": "",
+      "id": "hardware_nut_m3",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "632d2f1cf592d38bafebf6dcced02499",
+      "bip_39_full_array": [
+        "glimpse",
+        "harvest",
+        "shrimp",
+        "twenty",
+        "coffee",
+        "shift",
+        "sausage",
+        "learn",
+        "system",
+        "isolate",
+        "ankle",
+        "crane"
+      ],
+      "bip_39_full_space": "glimpse harvest shrimp twenty coffee shift sausage learn system isolate ankle crane",
+      "bip_39_full_no_space": "glimpseharvestshrimptwentycoffeeshiftsausagelearnsystemisolateanklecrane",
+      "bip_39_full_underscore": "glimpse_harvest_shrimp_twenty_coffee_shift_sausage_learn_system_isolate_ankle_crane",
+      "bip_39_2_word_array": [
+        "glimpse",
+        "harvest"
+      ],
+      "bip_39_2_word_space": "glimpse harvest",
+      "bip_39_2_word_no_space": "glimpseharvest",
+      "bip_39_2_word_underscore": "glimpse_harvest",
+      "bip_39_3_word_array": [
+        "glimpse",
+        "harvest",
+        "shrimp"
+      ],
+      "bip_39_3_word_space": "glimpse harvest shrimp",
+      "bip_39_3_word_no_space": "glimpseharvestshrimp",
+      "bip_39_3_word_underscore": "glimpse_harvest_shrimp",
+      "bip39_label": "glimpse harvest shrimp",
+      "quantity": 23
+    },
+    "nut_m6": {
+      "key": "nut_m6",
+      "name": "M6 hex nut",
+      "detail": "",
+      "id": "hardware_nut_m6",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "0c5aa07f0758332d210758db9c5a2270",
+      "bip_39_full_array": [
+        "arrange",
+        "steak",
+        "cabin",
+        "attitude",
+        "lobster",
+        "notable",
+        "lottery",
+        "twelve",
+        "swear",
+        "tissue",
+        "mass",
+        "there"
+      ],
+      "bip_39_full_space": "arrange steak cabin attitude lobster notable lottery twelve swear tissue mass there",
+      "bip_39_full_no_space": "arrangesteakcabinattitudelobsternotablelotterytwelvesweartissuemassthere",
+      "bip_39_full_underscore": "arrange_steak_cabin_attitude_lobster_notable_lottery_twelve_swear_tissue_mass_there",
+      "bip_39_2_word_array": [
+        "arrange",
+        "steak"
+      ],
+      "bip_39_2_word_space": "arrange steak",
+      "bip_39_2_word_no_space": "arrangesteak",
+      "bip_39_2_word_underscore": "arrange_steak",
+      "bip_39_3_word_array": [
+        "arrange",
+        "steak",
+        "cabin"
+      ],
+      "bip_39_3_word_space": "arrange steak cabin",
+      "bip_39_3_word_no_space": "arrangesteakcabin",
+      "bip_39_3_word_underscore": "arrange_steak_cabin",
+      "bip39_label": "arrange steak cabin",
+      "quantity": 5
+    },
+    "nema17": {
+      "key": "nema17",
+      "name": "NEMA 17 motor",
+      "detail": "40 mm body; 24 mm D shaft",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft",
+      "identity_source": "Project-local assembly identity",
+      "md5": "4e65a045db3fe55d79344ec81627071d",
+      "bip_39_full_array": [
+        "example",
+        "code",
+        "badge",
+        "reopen",
+        "wrestle",
+        "push",
+        "tooth",
+        "mean",
+        "siege",
+        "raise",
+        "scrub",
+        "deny"
+      ],
+      "bip_39_full_space": "example code badge reopen wrestle push tooth mean siege raise scrub deny",
+      "bip_39_full_no_space": "examplecodebadgereopenwrestlepushtoothmeansiegeraisescrubdeny",
+      "bip_39_full_underscore": "example_code_badge_reopen_wrestle_push_tooth_mean_siege_raise_scrub_deny",
+      "bip_39_2_word_array": [
+        "example",
+        "code"
+      ],
+      "bip_39_2_word_space": "example code",
+      "bip_39_2_word_no_space": "examplecode",
+      "bip_39_2_word_underscore": "example_code",
+      "bip_39_3_word_array": [
+        "example",
+        "code",
+        "badge"
+      ],
+      "bip_39_3_word_space": "example code badge",
+      "bip_39_3_word_no_space": "examplecodebadge",
+      "bip_39_3_word_underscore": "example_code_badge",
+      "bip39_label": "example code badge",
+      "quantity": 1
+    }
+  },
+  "steps": [
+    {
+      "title": "Mount the motor",
+      "action": "Seat the plate on the motor pilot. Tighten four M3 x 6 socket caps into the motor.",
+      "add": [
+        "nema17_*",
+        "motor_mount_plate",
+        "motor_screw_*"
+      ],
+      "show": [
+        "nema17_*",
+        "motor_mount_plate",
+        "motor_screw_*"
+      ],
+      "move": {
+        "motor_mount_plate": [
+          0,
+          0,
+          14
+        ],
+        "motor_screw_*": [
+          0,
+          0,
+          30
+        ]
+      },
+      "scope": "Main assembly",
+      "number": 1,
+      "key": "step_01",
+      "tools": "",
+      "loose_parts": {
+        "motor_mount_plate": 1,
+        "screw_motor": 4,
+        "nema17": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector",
+        "motor_mount_plate",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3"
+      ]
+    },
+    {
+      "title": "Load the cage nuts",
+      "action": "Turn the lower cage over. Seat one M2 nut in every tooth pocket; hold the nuts while turning it upright.",
+      "add": [
+        "cage_lower_cap",
+        "cage_nut_*"
+      ],
+      "show": [
+        "cage_lower_cap",
+        "cage_nut_*"
+      ],
+      "move": {
+        "cage_nut_*": [
+          0,
+          0,
+          -12
+        ]
+      },
+      "scope": "On the bench - underside",
+      "underside": true,
+      "number": 2,
+      "key": "step_02",
+      "tools": "",
+      "loose_parts": {
+        "cage_lower_cap": 1,
+        "nut_m2": 12
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "cage_lower_cap",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11"
+      ]
+    },
+    {
+      "title": "Lower the cage onto the plate",
+      "action": "Fit the prepared cage teeth upward. Point its small service hole toward the motor shaft flat (+X).",
+      "add": [],
+      "prepared": [
+        "cage_lower_cap"
+      ],
+      "prepared_note": "Prepared in step 02",
+      "show": [
+        "nema17_*",
+        "motor_mount_plate",
+        "motor_screw_*",
+        "cage_lower_cap",
+        "cage_nut_*"
+      ],
+      "move": {
+        "cage_lower_cap": [
+          0,
+          0,
+          28
+        ],
+        "cage_nut_*": [
+          0,
+          0,
+          28
+        ]
+      },
+      "scope": "Main assembly",
+      "number": 3,
+      "key": "step_03",
+      "tools": "",
+      "loose_parts": {},
+      "prepared_parts": {
+        "cage_lower_cap": 1
+      },
+      "added_instances": []
+    },
+    {
+      "title": "Load the eccentric joint nuts",
+      "action": "Press two M2 nuts into the underside of the lower eccentric. Keep the central D bore clear.",
+      "add": [
+        "motor_eccentric",
+        "eccentric_join_nut_*"
+      ],
+      "show": [
+        "motor_eccentric",
+        "eccentric_join_nut_*"
+      ],
+      "move": {
+        "eccentric_join_nut_*": [
+          0,
+          0,
+          -11
+        ]
+      },
+      "underside": true,
+      "scope": "On the bench - underside",
+      "number": 4,
+      "key": "step_04",
+      "tools": "",
+      "loose_parts": {
+        "motor_eccentric": 1,
+        "nut_m2": 2
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "motor_eccentric",
+        "eccentric_join_nut_0",
+        "eccentric_join_nut_1"
+      ]
+    },
+    {
+      "title": "Load the shaft-clamp nut",
+      "action": "Seat the M3 nut in the radial hex pocket. Align its thread with the side screw hole.",
+      "add": [
+        "motor_clamp_0_nut_m3"
+      ],
+      "show": [
+        "motor_eccentric",
+        "eccentric_join_nut_*",
+        "motor_clamp_0_nut_m3"
+      ],
+      "move": {
+        "motor_clamp_0_nut_m3": [
+          15,
+          0,
+          0
+        ]
+      },
+      "scope": "On the bench - side pocket",
+      "number": 5,
+      "key": "step_05",
+      "tools": "",
+      "loose_parts": {
+        "nut_m3": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "motor_clamp_0_nut_m3"
+      ]
+    },
+    {
+      "title": "Start the shaft-clamp screw",
+      "action": "Start the M3 x 8 countersunk screw in the nut. Leave its tip clear of the D bore.",
+      "add": [
+        "motor_clamp_0_screw_shaft_clamp"
+      ],
+      "show": [
+        "motor_eccentric",
+        "eccentric_join_nut_*",
+        "motor_clamp_*"
+      ],
+      "move": {
+        "motor_clamp_0_screw_shaft_clamp": [
+          20,
+          0,
+          0
+        ]
+      },
+      "scope": "On the bench - side pocket",
+      "number": 6,
+      "key": "step_06",
+      "tools": "",
+      "loose_parts": {
+        "screw_shaft_clamp": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "motor_clamp_0_screw_shaft_clamp"
+      ]
+    },
+    {
+      "title": "Fit the eccentric to the shaft",
+      "action": "Slide the prepared eccentric over the D shaft. Align the clamp screw with the shaft flat and snug it through the cage port.",
+      "add": [],
+      "prepared": [
+        "motor_eccentric"
+      ],
+      "prepared_note": "Prepared in steps 04-06",
+      "show": [
+        "nema17_*",
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "cage_nut_*",
+        "motor_eccentric",
+        "eccentric_join_nut_*",
+        "motor_clamp_*"
+      ],
+      "move": {
+        "motor_eccentric": [
+          0,
+          0,
+          28
+        ],
+        "eccentric_join_nut_*": [
+          0,
+          0,
+          28
+        ],
+        "motor_clamp_*": [
+          0,
+          0,
+          28
+        ]
+      },
+      "scope": "Main assembly",
+      "number": 7,
+      "key": "step_07",
+      "tools": "",
+      "loose_parts": {},
+      "prepared_parts": {
+        "motor_eccentric": 1
+      },
+      "added_instances": []
+    },
+    {
+      "title": "Load the lower clamshell nuts",
+      "action": "Turn the lower wave clamshell over and seat four M3 nuts. Hold them in place for the next step.",
+      "add": [
+        "wave_generator",
+        "wave_nut_*"
+      ],
+      "show": [
+        "wave_generator",
+        "wave_nut_*"
+      ],
+      "move": {
+        "wave_nut_*": [
+          0,
+          0,
+          -12
+        ]
+      },
+      "underside": true,
+      "scope": "On the bench - underside",
+      "number": 8,
+      "key": "step_08",
+      "tools": "",
+      "loose_parts": {
+        "wave_generator": 1,
+        "nut_m3": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "wave_generator",
+        "wave_nut_0",
+        "wave_nut_1",
+        "wave_nut_2",
+        "wave_nut_3"
+      ]
+    },
+    {
+      "title": "Fit the lower wave clamshell",
+      "action": "Lower the prepared clamshell around the eccentric journal, bearing recess upward. Retain all four nuts.",
+      "add": [],
+      "prepared": [
+        "wave_generator"
+      ],
+      "prepared_note": "Prepared in step 08",
+      "show": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "wave_generator",
+        "wave_nut_*"
+      ],
+      "move": {
+        "wave_generator": [
+          0,
+          0,
+          28
+        ],
+        "wave_nut_*": [
+          0,
+          0,
+          28
+        ]
+      },
+      "scope": "Main assembly - motor omitted for clarity",
+      "number": 9,
+      "key": "step_09",
+      "tools": "",
+      "loose_parts": {},
+      "prepared_parts": {
+        "wave_generator": 1
+      },
+      "added_instances": []
+    },
+    {
+      "title": "Seat the 6704 bearing",
+      "action": "Fit the 6704 over the eccentric journal and into the lower clamshell recess. Seat it squarely.",
+      "add": [
+        "bearing_6704"
+      ],
+      "show": [
+        "cage_lower_cap",
+        "motor_eccentric",
+        "wave_generator",
+        "bearing_6704"
+      ],
+      "move": {
+        "bearing_6704": [
+          0,
+          0,
+          24
+        ]
+      },
+      "scope": "Mechanism close-up - base omitted",
+      "number": 10,
+      "key": "step_10",
+      "tools": "",
+      "loose_parts": {
+        "bearing_6704": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "bearing_6704"
+      ]
+    },
+    {
+      "title": "Close the eccentric shaft",
+      "action": "Fit the upper eccentric collar. Tighten two M2 x 16 countersunk screws into the nuts loaded in step 04.",
+      "add": [
+        "motor_eccentric_cap",
+        "eccentric_join_screw_*"
+      ],
+      "show": [
+        "cage_lower_cap",
+        "motor_eccentric",
+        "wave_generator",
+        "bearing_6704",
+        "motor_eccentric_cap",
+        "eccentric_join_screw_*"
+      ],
+      "move": {
+        "motor_eccentric_cap": [
+          0,
+          0,
+          22
+        ],
+        "eccentric_join_screw_*": [
+          0,
+          0,
+          42
+        ]
+      },
+      "scope": "Mechanism close-up - base omitted",
+      "number": 11,
+      "key": "step_11",
+      "tools": "",
+      "loose_parts": {
+        "motor_eccentric_cap": 1,
+        "screw_eccentric": 2
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "motor_eccentric_cap",
+        "eccentric_join_screw_0",
+        "eccentric_join_screw_1"
+      ]
+    },
+    {
+      "title": "Close the wave clamshell",
+      "action": "Fit the upper wave half around the 6704. Tighten four M3 x 8 socket caps evenly into the lower nuts.",
+      "add": [
+        "wave_bearing_cap",
+        "wave_screw_*"
+      ],
+      "show": [
+        "cage_lower_cap",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "bearing_6704",
+        "wave_bearing_cap",
+        "wave_screw_*"
+      ],
+      "move": {
+        "wave_bearing_cap": [
+          0,
+          0,
+          24
+        ],
+        "wave_screw_*": [
+          0,
+          0,
+          42
+        ]
+      },
+      "scope": "Mechanism close-up - base omitted",
+      "number": 12,
+      "key": "step_12",
+      "tools": "",
+      "loose_parts": {
+        "wave_bearing_cap": 1,
+        "screw_wave": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "wave_bearing_cap",
+        "wave_screw_0",
+        "wave_screw_1",
+        "wave_screw_2",
+        "wave_screw_3"
+      ]
+    },
+    {
+      "title": "Fit the fixed outer ring",
+      "action": "Lower the fixed ring around the cage. Align its six fins with the base and its service hole with the cage port (+X).",
+      "add": [
+        "fixed_profile_ring"
+      ],
+      "show": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "wave_bearing_cap",
+        "motor_eccentric_cap",
+        "fixed_profile_ring"
+      ],
+      "move": {
+        "fixed_profile_ring": [
+          0,
+          0,
+          40
+        ]
+      },
+      "scope": "Main assembly - motor omitted for clarity",
+      "number": 13,
+      "key": "step_13",
+      "tools": "",
+      "loose_parts": {
+        "fixed_profile_ring": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "fixed_profile_ring"
+      ]
+    },
+    {
+      "title": "Insert all twelve rollers",
+      "action": "With the eccentric pointing toward +X, drop one nylon spacer into every cage slot. Use 7 mm OD x 12 mm spacers.",
+      "add": [
+        "roller_*"
+      ],
+      "show": [
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "wave_bearing_cap",
+        "motor_eccentric_cap",
+        "roller_*"
+      ],
+      "move": {
+        "roller_*": [
+          0,
+          0,
+          28
+        ]
+      },
+      "scope": "Mechanism close-up - base omitted",
+      "number": 14,
+      "key": "step_14",
+      "tools": "",
+      "loose_parts": {
+        "roller": 12
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11"
+      ]
+    },
+    {
+      "title": "Load the upper cage nuts",
+      "action": "Turn the upper cage over. Seat four M3 nuts in the off-grid underside pockets, then hold them while turning it upright.",
+      "add": [
+        "output_cage",
+        "output_nut_*"
+      ],
+      "show": [
+        "output_cage",
+        "output_nut_*"
+      ],
+      "move": {
+        "output_nut_*": [
+          0,
+          0,
+          -12
+        ]
+      },
+      "underside": true,
+      "scope": "On the bench - underside",
+      "number": 15,
+      "key": "step_15",
+      "tools": "",
+      "loose_parts": {
+        "output_cage": 1,
+        "nut_m3": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_cage",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3"
+      ]
+    },
+    {
+      "title": "Close every cage tooth",
+      "action": "Fit the prepared upper cage. Install one M2 x 18 countersunk screw per tooth, through the disc and into each lower nut.",
+      "add": [
+        "cage_screw_*"
+      ],
+      "prepared": [
+        "output_cage"
+      ],
+      "prepared_note": "Cage prepared in step 15",
+      "show": [
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "wave_bearing_cap",
+        "roller_*",
+        "output_cage",
+        "output_nut_*",
+        "cage_screw_*"
+      ],
+      "move": {
+        "output_cage": [
+          0,
+          0,
+          28
+        ],
+        "output_nut_*": [
+          0,
+          0,
+          28
+        ],
+        "cage_screw_*": [
+          0,
+          0,
+          51
+        ]
+      },
+      "scope": "Mechanism close-up - base omitted",
+      "number": 16,
+      "key": "step_16",
+      "tools": "",
+      "loose_parts": {
+        "screw_cage": 12
+      },
+      "prepared_parts": {
+        "output_cage": 1
+      },
+      "added_instances": [
+        "cage_screw_0",
+        "cage_screw_1",
+        "cage_screw_2",
+        "cage_screw_3",
+        "cage_screw_4",
+        "cage_screw_5",
+        "cage_screw_6",
+        "cage_screw_7",
+        "cage_screw_8",
+        "cage_screw_9",
+        "cage_screw_10",
+        "cage_screw_11"
+      ]
+    },
+    {
+      "title": "Fit the 6810 output bearing",
+      "action": "After tightening all twelve cage screws, seat the 6810 around the upper cage hub.",
+      "add": [
+        "bearing_6810"
+      ],
+      "show": [
+        "fixed_profile_ring",
+        "output_cage",
+        "cage_screw_*",
+        "bearing_6810"
+      ],
+      "move": {
+        "bearing_6810": [
+          0,
+          0,
+          25
+        ]
+      },
+      "scope": "Mechanism close-up - base omitted",
+      "number": 17,
+      "key": "step_17",
+      "tools": "",
+      "loose_parts": {
+        "bearing_6810": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "bearing_6810"
+      ]
+    },
+    {
+      "title": "Load the housing nuts",
+      "action": "Seat six M3 nuts in the top pockets of the bearing housing. Keep the bearing mouth facing downward.",
+      "add": [
+        "output_bearing_housing",
+        "case_nut_*"
+      ],
+      "show": [
+        "output_bearing_housing",
+        "case_nut_*"
+      ],
+      "move": {
+        "case_nut_*": [
+          0,
+          0,
+          16
+        ]
+      },
+      "scope": "On the bench - top face",
+      "number": 18,
+      "key": "step_18",
+      "tools": "",
+      "loose_parts": {
+        "output_bearing_housing": 1,
+        "nut_m3": 6
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_bearing_housing",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5"
+      ]
+    },
+    {
+      "title": "Lower the bearing housing",
+      "action": "Lower the prepared housing over the bearing outer race. Line up all six screw fins with the fixed ring and base.",
+      "add": [],
+      "prepared": [
+        "output_bearing_housing"
+      ],
+      "prepared_note": "Prepared in step 18",
+      "show": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_cage",
+        "bearing_6810",
+        "output_bearing_housing",
+        "case_nut_*"
+      ],
+      "move": {
+        "output_bearing_housing": [
+          0,
+          0,
+          30
+        ],
+        "case_nut_*": [
+          0,
+          0,
+          30
+        ]
+      },
+      "scope": "Main assembly - motor omitted for clarity",
+      "number": 19,
+      "key": "step_19",
+      "tools": "",
+      "loose_parts": {},
+      "prepared_parts": {
+        "output_bearing_housing": 1
+      },
+      "added_instances": []
+    },
+    {
+      "title": "Join the case from below",
+      "action": "Insert six M3 x 30 socket caps upward through the base and fixed ring. Tighten evenly into the housing nuts.",
+      "add": [
+        "case_screw_*"
+      ],
+      "show": [
+        "nema17_*",
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "case_nut_*",
+        "case_screw_*",
+        "bearing_6810",
+        "output_cage"
+      ],
+      "move": {
+        "case_screw_*": [
+          0,
+          0,
+          -38
+        ]
+      },
+      "underside": true,
+      "scope": "Main assembly - underside",
+      "number": 20,
+      "key": "step_20",
+      "tools": "",
+      "loose_parts": {
+        "screw_case": 6
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "case_screw_0",
+        "case_screw_1",
+        "case_screw_2",
+        "case_screw_3",
+        "case_screw_4",
+        "case_screw_5"
+      ]
+    },
+    {
+      "title": "Load the five M6 attachment nuts",
+      "action": "On the bench, put the nut carrier hex pockets upward. Seat five M6 nuts at the centre and the four full-grid positions.",
+      "add": [
+        "output_retainer",
+        "output_attachment_nut_*"
+      ],
+      "show": [
+        "output_retainer",
+        "output_attachment_nut_*"
+      ],
+      "move": {
+        "output_attachment_nut_*": [
+          0,
+          0,
+          18
+        ]
+      },
+      "scope": "On the bench - top face",
+      "number": 21,
+      "key": "step_21",
+      "tools": "",
+      "loose_parts": {
+        "output_retainer": 1,
+        "nut_m6": 5
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_retainer",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4"
+      ]
+    },
+    {
+      "title": "Load the eight M3 attachment nuts",
+      "action": "Seat eight M3 nuts in the remaining half-grid and corner pockets. Leave the four off-grid assembly holes clear.",
+      "add": [
+        "output_attachment_m3_nut_*"
+      ],
+      "show": [
+        "output_retainer",
+        "output_attachment_nut_*",
+        "output_attachment_m3_nut_*"
+      ],
+      "move": {
+        "output_attachment_m3_nut_*": [
+          0,
+          0,
+          16
+        ]
+      },
+      "scope": "On the bench - top face",
+      "number": 22,
+      "key": "step_22",
+      "tools": "",
+      "loose_parts": {
+        "nut_m3": 8
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7"
+      ]
+    },
+    {
+      "title": "Fit the loaded nut carrier",
+      "action": "Keep all thirteen nuts upright. Lower the carrier inside the 6810 bore onto the upper cage hub; align the four fixing holes.",
+      "add": [],
+      "prepared": [
+        "output_retainer"
+      ],
+      "prepared_note": "Prepared in steps 21-22",
+      "show": [
+        "output_bearing_housing",
+        "bearing_6810",
+        "output_cage",
+        "output_retainer",
+        "output_attachment*"
+      ],
+      "move": {
+        "output_retainer": [
+          0,
+          0,
+          25
+        ],
+        "output_attachment*": [
+          0,
+          0,
+          25
+        ]
+      },
+      "scope": "Output close-up - base omitted",
+      "number": 23,
+      "key": "step_23",
+      "tools": "",
+      "loose_parts": {},
+      "prepared_parts": {
+        "output_retainer": 1
+      },
+      "added_instances": []
+    },
+    {
+      "title": "Close the OOBB output face",
+      "action": "Fit the cover. Tighten four M3 x 12 socket caps in the off-grid holes into the upper cage nuts. Leave the OOBB holes free.",
+      "add": [
+        "output_cover",
+        "output_screw_*"
+      ],
+      "show": [
+        "output_bearing_housing",
+        "bearing_6810",
+        "output_cage",
+        "output_retainer",
+        "output_attachment*",
+        "output_cover",
+        "output_screw_*"
+      ],
+      "move": {
+        "output_cover": [
+          0,
+          0,
+          24
+        ],
+        "output_screw_*": [
+          0,
+          0,
+          44
+        ]
+      },
+      "scope": "Output close-up - base omitted",
+      "number": 24,
+      "key": "step_24",
+      "tools": "",
+      "loose_parts": {
+        "output_cover": 1,
+        "screw_output": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_cover",
+        "output_screw_0",
+        "output_screw_1",
+        "output_screw_2",
+        "output_screw_3"
+      ]
+    },
+    {
+      "title": "Tighten through the service port",
+      "action": "Align the case port, cage port and shaft screw. Use a 2 mm hex driver with a shaft no larger than 2.4 mm. Withdraw it before turning.",
+      "add": [],
+      "show": [
+        "*"
+      ],
+      "move": {},
+      "eye": [
+        2,
+        -0.7,
+        0.6
+      ],
+      "scope": "Final adjustment - +X service side",
+      "tools": "2 mm hex driver\nShaft diameter <= 2.4 mm",
+      "number": 25,
+      "key": "step_25",
+      "loose_parts": {},
+      "prepared_parts": {},
+      "added_instances": []
+    },
+    {
+      "title": "Turn the drive by hand",
+      "action": "With power disconnected, turn the input 12 times. The output should turn once in reverse. Check for free motion and the 0.8 mm gap below the output face.",
+      "add": [],
+      "show": [
+        "*"
+      ],
+      "move": {},
+      "scope": "Completed assembly",
+      "tools": "No additional parts\nPower disconnected",
+      "number": 26,
+      "key": "step_26",
+      "loose_parts": {},
+      "prepared_parts": {},
+      "added_instances": []
+    }
+  ],
+  "physical_item_count": 101,
+  "source_sha256": {
+    "motor_mount_plate.stl": "e09277c786f795c8870b545e580d22b98bc20cf344177987b8266ca76bd4d22a",
+    "fixed_profile_ring.stl": "3a42cfba4399d71588097b01af229ee4f07cb31d810c42ec2c7c586d2c8e1366",
+    "output_bearing_housing.stl": "db9853486345e44ab328286d79881b48088c133e685bdca23e67c3d0a9beaf7c",
+    "cage_lower_cap.stl": "23afafe371ad8b568327f78b84cbfa585d05709f5aa2216cbdd3940eab0d11b4",
+    "output_cage.stl": "528ddb90e171584701d2957b60e1a97fb6005f85f1205efea9dd9e5391900de5",
+    "output_retainer.stl": "685c2889a74d491e92e88575ee2de048c368aed548f1e37ddf8bd63897ef72c1",
+    "output_cover.stl": "37d4eb98b30c29b9797346afc579d310ea6ccacac72529ed705615105d140292",
+    "motor_eccentric.stl": "f04227da99114c9491c7e1372fc91b3e666e0bc23c1a218ab0ba5efed286bc86",
+    "motor_eccentric_cap.stl": "3bc4654770e98b2356424a6bb0f81108b9cd0bede5538d78b8728a24340f1a48",
+    "wave_generator.stl": "607e26dfc5884439d14337436e96a4b398b414a0e8b9bb60620a62df7535e6ea",
+    "wave_bearing_cap.stl": "8b669a9112f7cbf8e04e8a64c22d40ac73ca251fbd070b7ed4ca1125466cfbdd",
+    "render\\hardware\\bearing_6810.stl": "75d56f3e997130607095725518518d6cacd73a55b311ea6604ff386347652ccf",
+    "render\\hardware\\bearing_6704.stl": "9f5ef736eab5ff8569843a7fb1f4eaabbc491a90d871348a32bb43eb0aa2eb39",
+    "render\\hardware\\roller.stl": "b22a6a0dbb097f36dd3189326c005225524b123391a127ac0c06a1b0872ac423",
+    "render\\hardware\\screw_case.stl": "090543fef54d05052723f4898ad6fa2aa89c0f9f2f0353b9b588134337e810e0",
+    "render\\hardware\\nut_m3.stl": "a93915fca86e5563a53a9c72b0c3b9dd349bea4ce7e6895ab44b208594013361",
+    "render\\hardware\\screw_motor.stl": "33dbd4831598d8aa5c52d68c95a7d9c8aaabe432cdd79d414e9306ef33556fdf",
+    "render\\hardware\\screw_output.stl": "24d5e3ad659e3a0c160a5fa1c088ac0e7d64b394db130598d7fb02b4359ef5de",
+    "render\\hardware\\screw_wave.stl": "de0848553daee817404c950b4e65eea1f79bb6493bc7d1ee11b9d63f06ffa7e4",
+    "render\\hardware\\screw_cage.stl": "069bb71e3a6935c15e2bf0f1d2a80604b5cee908e6efa047ae6443f9a0168f2b",
+    "render\\hardware\\nut_m2.stl": "5bfa5d3f0cb7c4cc9b0ac7ecf9e36135d5ba3e8fdce96735a0dfbf685258ef80",
+    "render\\hardware\\screw_shaft_clamp.stl": "3c83e0f740220ff889258430471b496f5d88a00590bf9979bd1122bfa73dfaa5",
+    "render\\hardware\\screw_eccentric.stl": "2bca8a3cbd2483bc99345d169bf60cac90702589d0e28067c778159cf68c97a4",
+    "render\\hardware\\nut_m6.stl": "4c631db8b081d4061d295dd43f0211cd81a6ebbe1c8bdb3ea8c41b1f6cc00f94",
+    "render\\hardware\\nema17_front.stl": "c39fe059f9813cafb4dd8259a83e2e3b03b16d7ff4cdeeccb37d1f9f188f93da",
+    "render\\hardware\\nema17_stator.stl": "5f11e9aacceb052df0608ecedd0a10cb800c027e8e42d80f943328c1440853b9",
+    "render\\hardware\\nema17_rear.stl": "803d12f6dc825170e227102a5031e375f1510644cb9dc9008fb23eaa91080ef5",
+    "render\\hardware\\nema17_pilot.stl": "d8ca0d6fe2d6e3889af5cff087346eb34901a69503f8611b3b67dd8c67bd0687",
+    "render\\hardware\\nema17_shaft.stl": "41ca715c3afb07665474b27ca9221819665b3c72ed72aa23a98bdcd869be6c1b",
+    "render\\hardware\\nema17_connector.stl": "f6b35ea65451c1a72275cfeb1dabfd1249c80e8dde7d669d2d490d7fc0baa17f"
+  },
+  "recipe_sha256": "21d7c2a1d6c727c98b08d9b37194025480f04116bcb35cd44927f2e0d4d7d12d",
+  "generator_sha256": {
+    "working_oomp_populate.py": "65c68aab1ff212c22d3e184a2415f84f9c0a56d821a680194b8af4db1f273d34",
+    "components\\wave_drive\\assembly_cards.py": "40403fedd8833a8fc65c94c3115d9392aae1d73319fc9a7bcc9233c6a615fa3d",
+    "components\\wave_drive\\render_studio.py": "08acc32cb5fed12a3b95513df2ded92e72e4dbbe1098ecfe0d89548d9e2bb7c8"
+  },
+  "bip39_method": "OOMP MD5(UTF-8 identity), BIP39 entropy encoding, first three words. These are identification labels, not recovery phrases. Project-local IDs are explicitly marked in the inventory."
+}

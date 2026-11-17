@@ -1,0 +1,46 @@
+[
+  {
+    "file": "gist_metadata.json",
+    "sha256": "f15048ba5c2282c690ac7ea9b35d16b0bbb1cd419cf7770aae3d34bd17438945"
+  },
+  {
+    "file": "INSPECTION.md",
+    "sha256": "b94e027171e959d67ad1e12d85576277226a8034a5d5f7d959d1984ff8779a1a"
+  },
+  {
+    "file": "onshape/inspection.json",
+    "sha256": "82740b56fbfe5e5b612d0ed5b18566f7072e7ba0dd7415c84a2f9f093d61ba36"
+  },
+  {
+    "file": "onshape/mishin_generator_example_all_parts.step",
+    "sha256": "8318d3119a6bd451ee7dacbfeb5110dd2e0183b8b94d4a873111919aebf7eeab"
+  },
+  {
+    "file": "onshape/mishin_nema17_all_parts.step",
+    "sha256": "657fdf894e46e596cbcc478cff9e7e379cce07401d33411a8c6d1bf491dd3c99"
+  },
+  {
+    "file": "onshape/mishin_wave_gearbox_all_parts.step",
+    "sha256": "0b378e7a5451d600dbe1543face836276c3e6162d654d3cd7afdbdf0a2ef49a4"
+  },
+  {
+    "file": "onshape/Roller Wave Gear Icon.svg",
+    "sha256": "28ed38a2cea602683150bf24236e3a3b19d60cb2c7ae0e98bc96b34b1d492be3"
+  },
+  {
+    "file": "onshape/variables.json",
+    "sha256": "27e9847dd6702c107ec934ab865dd47acc7a466fe6e556344f5e9d611819b21c"
+  },
+  {
+    "file": "urals_page.html",
+    "sha256": "c6a9de44c7c00720d63d1163fb0ef990bb458beb800f8fd7cfbb0661912122f1"
+  },
+  {
+    "file": "wave_gear_with_rollers.fs",
+    "sha256": "60fc6b68799cdcd7e16293f44a02a7e3e9e435298fa569a057bc7d4de146751b"
+  },
+  {
+    "file": "wave_roller_gear.py",
+    "sha256": "6461f78ae79ec7e46018314959aaf53036a8a8c3a8c888c11a40b8145ca4468a"
+  }
+]

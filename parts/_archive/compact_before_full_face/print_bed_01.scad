@@ -1,0 +1,10 @@
+include <parameters.scad>;
+use <oobb_hardware.scad>;
+include <geometry.scad>;
+translate([47.5, 47.5, 0]) motor_mount_plate();
+translate([135.5, 42.5, 0]) fixed_ring();
+translate([42.5, 135.5, 0]) output_housing();
+translate([118.5, 128.5, 0]) output_retainer();
+translate([183.75, 124.75, 0]) cage();
+translate([191.0, 15.0, 0]) motor_eccentric();
+translate([191.0, 43.0, 0]) motor_eccentric_cap();

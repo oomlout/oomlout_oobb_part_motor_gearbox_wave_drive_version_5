@@ -1,0 +1,13 @@
+include <parameters.scad>;
+use <oobb_hardware.scad>;
+include <geometry.scad>;
+translate([62.5, 62.5, 0]) housing(true);
+translate([171.5, 48.5, 0]) cage(true);
+translate([28.0, 151.0, 0]) output_hub();
+translate([79.0, 148.0, 0]) wave_cap();
+translate([123.0, 144.0, 0]) input_collar();
+translate([163.0, 144.0, 0]) input_collar();
+translate([197.0, 138.0, 0]) eccentric_cam(false);
+translate([137.0, 109.0, 0]) input_journal();
+translate([163.0, 109.0, 0]) input_journal();
+translate([189.0, 109.0, 0]) input_spacer(7.900000000000002, false, false);

@@ -1,0 +1,64 @@
+[
+  {
+    "roller_length_mm": 6,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "angles": [
+      {
+        "input_angle": 0,
+        "interference_mm3": 0
+      },
+      {
+        "input_angle": 45,
+        "interference_mm3": 0
+      }
+    ],
+    "status": "geometry_passed",
+    "assembly_height_mm": 33.3
+  },
+  {
+    "roller_length_mm": 12,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "angles": [
+      {
+        "input_angle": 0,
+        "interference_mm3": 0
+      },
+      {
+        "input_angle": 45,
+        "interference_mm3": 0
+      }
+    ],
+    "status": "geometry_passed",
+    "assembly_height_mm": 35.099999999999994
+  },
+  {
+    "roller_length_mm": 15,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Motor shaft too short: increase verified motor shaft length for this roller"
+  },
+  {
+    "roller_length_mm": 18,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Motor shaft too short: increase verified motor shaft length for this roller"
+  },
+  {
+    "roller_length_mm": 20,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Motor shaft too short: increase verified motor shaft length for this roller"
+  },
+  {
+    "roller_length_mm": 25,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Motor shaft too short: increase verified motor shaft length for this roller"
+  },
+  {
+    "roller_length_mm": 30,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Motor shaft too short: increase verified motor shaft length for this roller"
+  }
+]

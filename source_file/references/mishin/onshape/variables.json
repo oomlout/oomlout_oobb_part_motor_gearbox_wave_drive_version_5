@@ -1,0 +1,43 @@
+{
+  "source": "Transcribed from signed-in Onshape Variables tabs on 2026-11-16; original spelling retained; all lengths are millimetres.",
+  "main": {
+    "rollerDia": 7,
+    "rollersNum": 14,
+    "rollerHeight": 5,
+    "inBearingInnertDia": 35,
+    "inBearingOuterDia": 47,
+    "inBearingHeight": 8,
+    "outBearingInnerDia": 50,
+    "outBearingOuterDia": 65,
+    "outBearingHeight": 7,
+    "bodyDia": 90,
+    "outputHoles": 6,
+    "inputShaftDia": 5,
+    "partsOffset": 0.8,
+    "bearingInnerTolerance": 0.1,
+    "bearingOuterTolerance": 0.2,
+    "outputThredInsertDia": 5,
+    "secondStageRollersNum": 8,
+    "housingHolesNum": 6
+  },
+  "nema17": {
+    "rollerDia": 5,
+    "rollersNum": 8,
+    "rollerHeight": 5,
+    "inBearingInnertDia": 15,
+    "inBearingOuterDia": 24,
+    "inBearingHeight": 5,
+    "outBearingInnerDia": 20,
+    "outBearingOuterDia": 32,
+    "outBearingHeight": 7,
+    "bodyDia": 36,
+    "outputHoles": 4,
+    "inputShaftDia": 5,
+    "partsOffset": 0.8,
+    "bearingInnerTolerance": 0.1,
+    "bearingOuterTolerance": 0.2,
+    "outputThredInsertDia": 5,
+    "secondStageRollersNum": 8,
+    "housingHolesNum": 6
+  }
+}
