@@ -35,17 +35,20 @@ def main(**kwargs):
     cage_stack = []
     joint_stack = []
     for record in fasteners:
-        if record["part"] in ["screw_eccentric", "screw_wave"]:
+        if record["part"] in ["screw_eccentric", "screw_wave", "screw_output"]:
             joint_mesh = trimesh.load(folder/"render/hardware"/(record["part"]+".stl"), force="mesh")
             bounds = joint_mesh.apply_transform(record["matrix"]).bounds
             eccentric = record["part"] == "screw_eccentric"
-            nut_bottom = c["eccentric_join_nut_z"] if eccentric else c["wave_z"]+c["wave_nut_z"]
-            underside = c["cam_base_z"] if eccentric else c["wave_z"]
-            head_top = c["eccentric_join_head_z"] if eccentric else c["wave_z"]+c["wave_height"]
+            output = record["part"] == "screw_output"
+            nut_bottom = c["output_nut_z"] if output else c["eccentric_join_nut_z"] if eccentric else c["wave_z"]+c["wave_nut_z"]
+            underside = c["cage_floor_z"] if output else c["cam_base_z"] if eccentric else c["wave_z"]
+            head_top = c["output_head_seat"] if output else c["eccentric_join_head_z"] if eccentric else c["wave_z"]+c["wave_height"]-c["wave_head_recess"]
             assert bounds[0, 2] <= nut_bottom+1e-4
             assert bounds[0, 2] >= underside-1e-4
             assert abs(bounds[1, 2]-head_top) < 1e-4
-            joint_stack.append({"name":record["name"], "size":"M3", "head":"countersunk", "tip_clearance_mm":float(bounds[0, 2]-underside), "nut_engagement_mm":2.5})
+            surface = c["assembly_height"] if output else c["cam_cap_z"]+c["cam_cap_height"] if eccentric else c["wave_z"]+c["wave_height"]
+            assert abs(bounds[1, 2]-surface-c["countersunk_head_proud"]) < 1e-4
+            joint_stack.append({"name":record["name"], "size":"M3", "head":"countersunk", "head_proud_mm":float(bounds[1, 2]-surface), "tip_clearance_mm":float(bounds[0, 2]-underside), "nut_engagement_mm":2.5})
         if record["part"] != "screw_cage":
             continue
         bounds = cage_screw.copy().apply_transform(record["matrix"]).bounds

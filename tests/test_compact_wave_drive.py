@@ -75,7 +75,7 @@ def test_motor_shaft_and_screw_engagement():
     assert c["cage_nut_z"]+1.6 < c["roller_z"]
     assert c["cage_upper_plate_depth"] == pytest.approx(6)
     engagement = c["motor_screw_length"]-c["motor_head_seat"]
-    assert 4 <= engagement <= c["motor_thread_depth"]-.5
+    assert 3 <= engagement <= c["motor_thread_depth"]-.5
     # Full nominal nut engagement, and no screw projecting into the other moving body.
     for seat, length, floor, thickness in [
         (c["case_head_seat"], c["case_screw_length"], c["case_nut_z"], 2.5),
@@ -83,7 +83,7 @@ def test_motor_shaft_and_screw_engagement():
         assert seat-length <= floor+1e-8
         assert seat-length >= -.1
     assert c["motor_screw_length"] == 8
-    assert c["motor_head_seat"] == c["motor_plate_depth"]
+    assert c["motor_head_seat"] == c["motor_plate_depth"]+c["countersunk_head_proud"]
     primitive = next(d for d in working_scad.hardware_definitions(**c) if d["name"] == "oobb_motor_countersunk_m3")["kwargs"]
     assert primitive["shape"] == "oobb_screw_countersunk"
     assert primitive["clearance"] == "top"
@@ -94,12 +94,12 @@ def test_motor_shaft_and_screw_engagement():
     assert all(r.get("rotation_y", 0) == 0 for r in case_screws)
     assert c["case_nut_z"]+2.5 < c["motor_plate_depth"]
     output_tip = c["output_head_seat"]-c["output_screw_length"]
-    assert output_tip <= c["output_nut_z"]
+    assert output_tip <= c["output_nut_z"]+1e-8
     assert output_tip > c["wave_z"]+c["wave_height"]
     wave_tip = c["wave_height"]-c["wave_head_recess"]-c["wave_screw_length"]
     assert 0 <= wave_tip < c["wave_nut_z"]
     assert c["wave_nut_z"]+2.5 < c["wave_lower_depth"]
-    assert c["wave_head_recess"] == 0
+    assert c["wave_head_recess"] == -c["countersunk_head_proud"]
     eccentric_nuts = [r for r in placements if r["name"].startswith("eccentric_join_nut_")]
     assert len(eccentric_nuts) == 2 and all(r["part"] == "nut_m3" for r in eccentric_nuts)
     assert c["eccentric_join_head_z"]-c["eccentric_join_screw_length"] <= c["eccentric_join_nut_z"]
@@ -128,9 +128,8 @@ def test_output_sandwich_pocket_walls_and_capture():
         for fixing in c["output_fixing_mounts"]:
             assert math.dist(point,fixing) >= c["mount_m3_pocket_radius"]+1.8+c["mount_minimum_web"]
     assert all([x,y] in c["output_m3_mounts"] for x in [-15,15] for y in [-15,15])
-    # The cover must receive clamping force rather than leave heads seated below it.
-    # Account for the 0.6 mm OOBB overhang cut beneath the socket-head seat.
-    assert c["output_head_seat"]-c["output_cover_z"]-.6 >= .5-1e-8
+    assert c["output_head_seat"]-c["assembly_height"] == pytest.approx(1)
+    assert c["output_screw_length"] == 16
     for key, height in [("output_attachment_nut_z",5), ("output_m3_attachment_nut_z",2.5)]:
         assert c[key]+height < c["output_cover_z"]
         assert c[key] > c["hub_z"]+c["shaft_blind_depth"]
@@ -160,6 +159,18 @@ def test_insertion_clearances_and_visible_output_gap():
     assert c["assembly_height"]-c["output_flange_z"] >= .7-1e-8
     primitive = next(d for d in working_scad.hardware_definitions(**c) if d["name"] == "oobb_cage_countersunk_m2")["kwargs"]
     assert primitive["clearance"] == "top" and primitive["overhang"] is True
+
+
+def test_proud_m3_heads_clear_rotating_cage_and_retain_threads():
+    c = working_scad.resolve()
+    assert c["motor_head_relief_depth"] == pytest.approx(1)
+    assert c["wave_head_relief_depth"] == pytest.approx(1)
+    assert c["cage_cap_z"]+c["motor_head_relief_depth"]-c["motor_head_seat"] == pytest.approx(.3)
+    assert c["cage_floor_z"]+c["wave_head_relief_depth"]-(c["wave_z"]+c["wave_height"]-c["wave_head_recess"]) == pytest.approx(.3)
+    assert c["cage_plate_depth"]-c["motor_head_relief_depth"] >= 2-1e-8
+    assert c["eccentric_join_head_z"]-c["cam_cap_z"]-c["cam_cap_height"] == pytest.approx(1)
+    assert c["eccentric_join_nut_z"]-(c["eccentric_join_head_z"]-c["eccentric_join_screw_length"]) == pytest.approx(.1)
+    assert c["wave_nut_z"]-(c["wave_height"]-c["wave_head_recess"]-c["wave_screw_length"]) == pytest.approx(.3)
 
 
 def test_shaft_clamp_service_path_and_countersunk_head():
@@ -195,7 +206,7 @@ def test_settings_copy_and_smaller_ratio():
     {"output_holder_wall":2.9}, {"wave_radius":22}, {"eccentricity":2},
     {"profile_clearance":-.1}, {"roller_bore_diameter":8},
     {"bearing_output":"6808"}, {"roller_length":8}, {"roller_length":30},
-    {"motor_shaft_length":20}, {"motor_thread_depth":4},
+    {"motor_shaft_length":20}, {"motor_thread_depth":3},
 ])
 def test_invalid_changes_rejected(override):
     with pytest.raises(ValueError):

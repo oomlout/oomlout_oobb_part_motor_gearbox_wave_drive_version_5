@@ -32,6 +32,9 @@ case_boss_wall: 2.0
 case_boss_rounding_fraction: 1.0
 case_boss_overlap: 1.5
 max_screw_length: 35.0
+countersunk_head_proud: 1.0
+countersunk_head_clearance: 0.3
+m3_countersunk_radius: 3.6
 eccentricity: 0.75
 wave_radius: 23.25
 profile_clearance: 0.15
@@ -61,8 +64,7 @@ output_fixing_x: 20.0
 output_fixing_y: 10.0
 output_face_clearance: 0.8
 output_radial_clearance: 0.6
-output_socket_recess: 3.2
-output_screw_length: 12
+output_screw_length: 16
 output_nut_depth: 5.2
 output_nut_height: 5.0
 output_m3_nut_depth: 2.7
@@ -244,12 +246,13 @@ assembly_steps:
 - Print the fit coupons. Check the 6810 seat, 6704 seat, motor shaft, roller windows
   and OOBB nut pockets before the full build.
 - Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g}
-  mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads flush with
-  the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor threads.
+  mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads {countersunk_head_proud:g}
+  mm proud of the plate. Confirm {motor_thread_engagement:g} mm engagement fits the
+  motor threads.
 - Print cage_lower_cap with its teeth upright. Print output_cage with its broad closure
   face on the bed and integrated hub upward; inspect the bridge over its central blind
-  recess. The cage rings remain {cage_plate_depth:g} mm thick to support the captive
-  nuts and service bore.
+  recess. The lower cage has an underside clearance ring for the motor screw heads;
+  the upper cage has a clearance ring above the wave screws.
 - Seat {cage_screw_count} M2 nuts in the underside of the lower cage, one for each
   tooth, and lower it around the motor shaft. Its {cage_center_diameter:g} mm centre
   opening can also pass over the already fitted eccentric shaft and collars; fit the
@@ -265,8 +268,8 @@ assembly_steps:
   its fit clearance.
 - Fit the upper eccentric collar and join it to the lower eccentric using two M3 x
   {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These lengths
-  include the head. Both heads sit flush; the journal shoulders preserve the bearing
-  axial clearance.
+  include the head. Both heads sit {countersunk_head_proud:g} mm proud; the journal
+  shoulders preserve the bearing axial clearance.
 - Close the upper 6704 clamshell (wave_bearing_cap) with four M3 x {wave_screw_length}
   countersunk screws. Lower the fixed ring over the upright cage and align its rounded
   rectangular bosses. Its +X service hole must line up with the lower cage's hole
@@ -290,10 +293,10 @@ assembly_steps:
   Load all {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment nuts;
   all pockets fit inside the 50 mm bearing bore.
 - 'Close the sandwich with the stepped output_cover and four M3 x {output_screw_length}
-  socket caps in the off-grid fixing positions {output_fixing_mounts}. The freed corner
-  grid holes now take attachment nuts: {output_m6_mount_count} M6 and {output_m3_mount_count}
-  M3 in total. The face remains {output_above_housing:g} mm above the teal housing,
-  with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g}
+  countersunk screws in the off-grid fixing positions {output_fixing_mounts}. The
+  freed corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and
+  {output_m3_mount_count} M3 in total. The face remains {output_above_housing:g} mm
+  above the teal housing, with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g}
   mm radial neck clearance. Use light preload at the printed cage nut seats and the
   generated attachment-depth limits.'
 - To tighten the motor shaft clamp after assembly, turn the input until the housing
@@ -346,8 +349,8 @@ assembly_card_style:
 assembly_cards:
 - title: Mount the motor and capture the case nuts
   action: Load six M3 nuts from below the plate. Seat the plate on the motor pilot
-    and install four M3 x {motor_screw_length} countersunk screws flush with its top
-    face.
+    and install four M3 x {motor_screw_length} countersunk screws with heads {countersunk_head_proud:g}
+    mm proud of its top face.
   add:
   - nema17_*
   - motor_mount_plate
@@ -600,8 +603,8 @@ assembly_cards:
     - 0
     - 24
 - title: Close the output face
-  action: Fit the output cover and tighten four M3 x {output_screw_length} socket
-    caps in the off-grid fixing holes. Align the service ports to adjust the shaft
+  action: Fit the output cover and tighten four M3 x {output_screw_length} countersunk
+    screws in the off-grid fixing holes. Align the service ports to adjust the shaft
     clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn
     the input {reduction} times for one reverse output turn.
   add:
@@ -678,8 +681,8 @@ assembly_part_labels:
     name: M3 x {motor_screw_length} countersunk
     catalogue_id: hardware_screw_countersunk_hex_head_black_m3_diameter_{motor_screw_length}_mm_length
   screw_output:
-    name: M3 x {output_screw_length} socket cap
-    catalogue_id: hardware_screw_socket_cap_hex_head_black_m3_diameter_{output_screw_length}_mm_length
+    name: M3 x {output_screw_length} countersunk
+    catalogue_id: hardware_screw_countersunk_hex_head_black_m3_diameter_{output_screw_length}_mm_length
   screw_wave:
     name: M3 x {wave_screw_length} countersunk
     catalogue_id: hardware_screw_countersunk_hex_head_black_m3_diameter_{wave_screw_length}_mm_length
@@ -788,6 +791,9 @@ oobb_details:
   case_boss_rounding_fraction: 1.0
   case_boss_overlap: 1.5
   max_screw_length: 35.0
+  countersunk_head_proud: 1.0
+  countersunk_head_clearance: 0.3
+  m3_countersunk_radius: 3.6
   eccentricity: 0.75
   wave_radius: 23.25
   profile_clearance: 0.15
@@ -817,8 +823,7 @@ oobb_details:
   output_fixing_y: 10.0
   output_face_clearance: 0.8
   output_radial_clearance: 0.6
-  output_socket_recess: 3.2
-  output_screw_length: 12
+  output_screw_length: 16
   output_nut_depth: 5.2
   output_nut_height: 5.0
   output_m3_nut_depth: 2.7
@@ -1001,13 +1006,13 @@ oobb_details:
   - Print the fit coupons. Check the 6810 seat, 6704 seat, motor shaft, roller windows
     and OOBB nut pockets before the full build.
   - Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g}
-    mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads flush
-    with the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor
-    threads.
+    mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads {countersunk_head_proud:g}
+    mm proud of the plate. Confirm {motor_thread_engagement:g} mm engagement fits
+    the motor threads.
   - Print cage_lower_cap with its teeth upright. Print output_cage with its broad
     closure face on the bed and integrated hub upward; inspect the bridge over its
-    central blind recess. The cage rings remain {cage_plate_depth:g} mm thick to support
-    the captive nuts and service bore.
+    central blind recess. The lower cage has an underside clearance ring for the motor
+    screw heads; the upper cage has a clearance ring above the wave screws.
   - Seat {cage_screw_count} M2 nuts in the underside of the lower cage, one for each
     tooth, and lower it around the motor shaft. Its {cage_center_diameter:g} mm centre
     opening can also pass over the already fitted eccentric shaft and collars; fit
@@ -1024,8 +1029,8 @@ oobb_details:
     its fit clearance.
   - Fit the upper eccentric collar and join it to the lower eccentric using two M3
     x {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These
-    lengths include the head. Both heads sit flush; the journal shoulders preserve
-    the bearing axial clearance.
+    lengths include the head. Both heads sit {countersunk_head_proud:g} mm proud;
+    the journal shoulders preserve the bearing axial clearance.
   - Close the upper 6704 clamshell (wave_bearing_cap) with four M3 x {wave_screw_length}
     countersunk screws. Lower the fixed ring over the upright cage and align its rounded
     rectangular bosses. Its +X service hole must line up with the lower cage's hole
@@ -1049,12 +1054,12 @@ oobb_details:
     cuts. Load all {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment
     nuts; all pockets fit inside the 50 mm bearing bore.
   - 'Close the sandwich with the stepped output_cover and four M3 x {output_screw_length}
-    socket caps in the off-grid fixing positions {output_fixing_mounts}. The freed
-    corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and {output_m3_mount_count}
-    M3 in total. The face remains {output_above_housing:g} mm above the teal housing,
-    with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g}
-    mm radial neck clearance. Use light preload at the printed cage nut seats and
-    the generated attachment-depth limits.'
+    countersunk screws in the off-grid fixing positions {output_fixing_mounts}. The
+    freed corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and
+    {output_m3_mount_count} M3 in total. The face remains {output_above_housing:g}
+    mm above the teal housing, with a {output_face_clearance:g} mm underside gap and
+    {output_radial_clearance:g} mm radial neck clearance. Use light preload at the
+    printed cage nut seats and the generated attachment-depth limits.'
   - To tighten the motor shaft clamp after assembly, turn the input until the housing
     port, rotating cage port and screw head all line up along +X. Insert a straight
     2 mm hex driver with a shaft no larger than {shaft_driver_diameter:g} mm through
@@ -1105,8 +1110,8 @@ oobb_details:
   assembly_cards:
   - title: Mount the motor and capture the case nuts
     action: Load six M3 nuts from below the plate. Seat the plate on the motor pilot
-      and install four M3 x {motor_screw_length} countersunk screws flush with its
-      top face.
+      and install four M3 x {motor_screw_length} countersunk screws with heads {countersunk_head_proud:g}
+      mm proud of its top face.
     add:
     - nema17_*
     - motor_mount_plate
@@ -1359,8 +1364,8 @@ oobb_details:
       - 0
       - 24
   - title: Close the output face
-    action: Fit the output cover and tighten four M3 x {output_screw_length} socket
-      caps in the off-grid fixing holes. Align the service ports to adjust the shaft
+    action: Fit the output cover and tighten four M3 x {output_screw_length} countersunk
+      screws in the off-grid fixing holes. Align the service ports to adjust the shaft
       clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn
       the input {reduction} times for one reverse output turn.
     add:
@@ -1437,8 +1442,8 @@ oobb_details:
       name: M3 x {motor_screw_length} countersunk
       catalogue_id: hardware_screw_countersunk_hex_head_black_m3_diameter_{motor_screw_length}_mm_length
     screw_output:
-      name: M3 x {output_screw_length} socket cap
-      catalogue_id: hardware_screw_socket_cap_hex_head_black_m3_diameter_{output_screw_length}_mm_length
+      name: M3 x {output_screw_length} countersunk
+      catalogue_id: hardware_screw_countersunk_hex_head_black_m3_diameter_{output_screw_length}_mm_length
     screw_wave:
       name: M3 x {wave_screw_length} countersunk
       catalogue_id: hardware_screw_countersunk_hex_head_black_m3_diameter_{wave_screw_length}_mm_length

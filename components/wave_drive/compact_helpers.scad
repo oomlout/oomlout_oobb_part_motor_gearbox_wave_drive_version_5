@@ -67,7 +67,7 @@ module wave_cap() {
         translate([0,0,-eps]) cylinder(r=13.5+bearing_seat_clearance,h=2.1+eps);
         at_mounts(wave_mounts) {
             translate([0,0,-eps]) screw_hole("m3",wave_cap_depth+2*eps);
-            translate([0,0,wave_cap_depth]) oobb_countersunk_m3();
+            translate([0,0,wave_cap_depth-wave_head_recess]) oobb_countersunk_m3();
         }
     }
 }

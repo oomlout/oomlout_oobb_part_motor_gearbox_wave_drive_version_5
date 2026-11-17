@@ -148,10 +148,10 @@ def resolve(**kwargs):
     c["cam_cap_z"] = c["cam_z"]+5.2
     c["cam_cap_height"] = 6.8
     c["shaft_clamp_z"] = c["shaft_clamp_axis_z"]
-    c["eccentric_join_head_z"] = c["cam_cap_z"]+c["cam_cap_height"]
+    c["eccentric_join_head_z"] = c["cam_cap_z"]+c["cam_cap_height"]+c["countersunk_head_proud"]
     c["eccentric_join_nut_z"] = c["eccentric_join_head_z"]-c["eccentric_join_screw_length"]+.1
-    c["wave_head_recess"] = 0.0
-    c["wave_nut_z"] = c["wave_height"]-c["wave_screw_length"]+.3
+    c["wave_head_recess"] = -c["countersunk_head_proud"]
+    c["wave_nut_z"] = c["wave_height"]-c["wave_head_recess"]-c["wave_screw_length"]+.3
     if c["wave_nut_z"] < .2 or c["wave_nut_z"]+2.5 > c["wave_lower_depth"]-.5:
         raise ValueError("Wave screws must fully engage nuts retained inside the lower clamshell")
     if math.hypot(c["eccentricity"], c["eccentric_join_pitch_radius"])-3.6-c["input_shaft_diameter"]/2-c["shaft_fit_clearance"] < .5:
@@ -162,15 +162,23 @@ def resolve(**kwargs):
     c["case_socket_depth"] = c["case_socket_recess"]+c["cage_head_lift"]
     c["case_head_seat"] = c["housing_top_z"]-c["case_socket_depth"]
     c["housing_top_depth"] = c["housing_top_z"]-c["hub_z"]
-    c["motor_head_seat"] = c["motor_plate_depth"]
+    c["motor_head_seat"] = c["motor_plate_depth"]+c["countersunk_head_proud"]
+    c["motor_head_relief_depth"] = max(0, c["motor_head_seat"]+c["countersunk_head_clearance"]-c["cage_cap_z"])
+    c["wave_head_relief_depth"] = max(0, c["wave_z"]+c["wave_height"]-c["wave_head_recess"]+c["countersunk_head_clearance"]-c["cage_floor_z"])
+    if not 0 <= c["countersunk_head_proud"] <= 1:
+        raise ValueError("M3 countersunk head lift must leave a supported cone; use 0 to 1 mm")
+    if c["cage_plate_depth"]-c["motor_head_relief_depth"] < 1.5 or c["cage_upper_plate_depth"]-c["wave_head_relief_depth"] < 2:
+        raise ValueError("Raised screw heads need clearance without weakening the cage plates")
     c["assembly_height"] = c["housing_top_z"]+c["output_above_housing"]
     c["output_cover_z"] = c["assembly_height"]-c["output_cover_depth"]
     c["output_plate_z"] = c["output_cover_z"]
     c["output_flange_z"] = c["housing_top_z"]+c["output_face_clearance"]
     c["output_neck_height"] = c["output_cover_z"]-c["retainer_z"]
     c["retainer_depth"] = c["output_neck_height"]
-    c["output_head_seat"] = c["assembly_height"]-c["output_socket_recess"]
+    c["output_head_seat"] = c["assembly_height"]+c["countersunk_head_proud"]
     c["motor_thread_engagement"] = c["motor_screw_length"]-c["motor_head_seat"]
+    if c["motor_thread_engagement"] < 3:
+        raise ValueError("Motor screws need at least 3 mm nominal thread engagement")
     c["shaft_blind_depth"] = max(0,c["motor_shaft_length"]+c["motor_shaft_end_clearance"]-c["hub_z"])
     c["output_attachment_nut_z"] = c["output_cover_z"]-c["output_nut_depth"]+.1
     c["output_m3_attachment_nut_z"] = c["output_cover_z"]-c["output_m3_nut_depth"]+.1
@@ -185,7 +193,7 @@ def resolve(**kwargs):
         raise ValueError("Leave at least 0.7 mm of output face above its visible gap")
     if c["shaft_blind_depth"] > c["hub_height"]-.5+1e-8:
         raise ValueError("Motor shaft recess would break through the output hub")
-    if c["output_neck_height"] < 0 or c["output_cover_depth"]-c["output_socket_recess"] < 1:
+    if c["output_neck_height"] < 0 or c["output_cover_depth"]-(1.9-c["countersunk_head_proud"]) < 1:
         raise ValueError("Output plate must clear the stationary housing and retain its screw heads")
     if c["output_attachment_nut_z"]-.1-.6-(c["hub_z"]+c["shaft_blind_depth"]) < .5-1e-8:
         raise ValueError("Nut pocket bridges must leave a blind floor above the motor shaft")
@@ -194,7 +202,7 @@ def resolve(**kwargs):
     if c["output_head_seat"]-c["output_screw_length"] < c["wave_z"]+c["wave_height"]+.2:
         raise ValueError("Output screws would enter the moving wave wheel")
     c["output_nut_z"] = c["cage_floor_z"]+c["cage_head_lift"]+.2
-    if c["output_head_seat"]-c["output_screw_length"] > c["output_nut_z"]:
+    if c["output_head_seat"]-c["output_screw_length"] > c["output_nut_z"]+1e-8:
         raise ValueError("Output screws do not fully engage the captive cage nuts")
     c["cage_head_seat"] = c["hub_z"]
     c["cage_nut_z"] = c["cage_head_seat"]-c["cage_screw_length"]
@@ -363,7 +371,7 @@ def bom(**kwargs):
             "role": "motor plate to four tapped motor holes",
         },
         {
-            "item": "Output socket cap screw",
+            "item": "Output countersunk screw",
             "size": "M3",
             "length_mm": c["output_screw_length"],
             "quantity": 4,

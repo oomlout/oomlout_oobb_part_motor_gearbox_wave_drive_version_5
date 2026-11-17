@@ -9,9 +9,11 @@ difference() {
 			rotate(a = [0, 0, 0]) {
 				difference() {
 					union() {
-						cylinder(h = 3, r = 2.9);
-						translate(v = [0, 0, -12.0]) {
-							cylinder(h = 12, r = 1.5);
+						translate(v = [0, 0, -1.7]) {
+							cylinder(h = 1.7, r1 = 1.5, r2 = 2.9);
+						}
+						translate(v = [0, 0, -16.0]) {
+							cylinder(h = 16, r = 1.5);
 						}
 					}
 					union();
@@ -21,4 +23,4 @@ difference() {
 	}
 	union();
 }
- translate([0,0,2]) cylinder(r=1.0,h=1.01,$fn=6); }
+ translate([0,0,-0.45]) cylinder(r=1.1547005383792517,h=0.46,$fn=6); }

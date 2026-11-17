@@ -47,23 +47,25 @@ cam_shoulder_z=cam_z-cam_base_z;
 cam_cap_z=cam_z+5.2;
 cam_cap_height=6.8;
 shaft_clamp_z=shaft_clamp_axis_z;
-eccentric_join_head_z=cam_cap_z+cam_cap_height;
+eccentric_join_head_z=cam_cap_z+cam_cap_height+countersunk_head_proud;
 eccentric_join_nut_z=eccentric_join_head_z-eccentric_join_screw_length+0.1;
 eccentric_join_mounts=[[eccentricity,-eccentric_join_pitch_radius],[eccentricity,eccentric_join_pitch_radius]];
-wave_head_recess=0;
+wave_head_recess=-countersunk_head_proud;
 wave_nut_z=wave_height-wave_head_recess-wave_screw_length+0.3;
 housing_top_z=hub_z+bearing_stack_height+3.5;
 case_socket_depth=case_socket_recess+cage_head_lift;
 case_head_seat=housing_top_z-case_socket_depth;
 housing_top_depth=housing_top_z-hub_z;
-motor_head_seat=motor_plate_depth;
+motor_head_seat=motor_plate_depth+countersunk_head_proud;
+motor_head_relief_depth=max(0,motor_head_seat+countersunk_head_clearance-cage_cap_z);
+wave_head_relief_depth=max(0,wave_z+wave_height-wave_head_recess+countersunk_head_clearance-cage_floor_z);
 assembly_height=housing_top_z+output_above_housing;
 output_cover_z=assembly_height-output_cover_depth;
 output_plate_z=output_cover_z;
 output_flange_z=housing_top_z+output_face_clearance;
 output_neck_height=output_cover_z-retainer_z;
 retainer_depth=output_neck_height;
-output_head_seat=assembly_height-output_socket_recess;
+output_head_seat=assembly_height+countersunk_head_proud;
 shaft_blind_depth=max(0,motor_shaft_length+motor_shaft_end_clearance-hub_z);
 output_nut_z=cage_floor_z+cage_head_lift+0.3;
 cage_head_seat=hub_z;
@@ -161,6 +163,12 @@ module cage_face_down() {
             translate([0,0,hub_height]) tube(cage_outer,12.6,cage_upper_plate_depth);
         }
         if(shaft_blind_depth>0) translate([0,0,hub_height-shaft_blind_depth]) cylinder(r=12.6,h=shaft_blind_depth+cage_upper_plate_depth+eps);
+        // A full annular sweep clears the proud wave screws at every input angle.
+        if(wave_head_relief_depth>0)
+            translate([0,0,hub_height+cage_upper_plate_depth-wave_head_relief_depth])
+                tube(18+eccentricity+m3_countersunk_radius+countersunk_head_clearance,
+                    18-eccentricity-m3_countersunk_radius-countersunk_head_clearance,
+                    wave_head_relief_depth+eps);
         at_mounts(output_mounts) {
             translate([0,0,-eps]) screw_hole("m3",hub_height+cage_upper_plate_depth+2*eps);
             translate([0,0,hub_height+cage_upper_plate_depth-(2.7+cage_head_lift)])
@@ -192,6 +200,11 @@ module cage_cap() {
             translate([0,0,-eps]) screw_hole("m2",cage_plate_depth+window_height+2*eps);
             translate([0,0,-eps]) scale([1,1,(cage_nut_z+1.6-cage_cap_z+eps)/2.2]) oobb_nut_m2();
         }
+        // This ring rotates over the four stationary motor screw heads.
+        if(motor_head_relief_depth>0) translate([0,0,-eps])
+            tube(sqrt(2)*motor_hole_pitch/2+m3_countersunk_radius+countersunk_head_clearance,
+                sqrt(2)*motor_hole_pitch/2-m3_countersunk_radius-countersunk_head_clearance,
+                motor_head_relief_depth+eps);
         translate([0,0,shaft_clamp_z-cage_cap_z]) shaft_service_port();
     }
 }
@@ -221,7 +234,7 @@ module output_cover() {
         }
         at_mounts(output_mounts) {
             translate([0,0,-eps]) screw_hole("m3",output_cover_depth+2*eps);
-            translate([0,0,output_cover_depth-output_socket_recess]) socket_recess("m3",output_socket_recess+eps);
+            translate([0,0,output_cover_depth+countersunk_head_proud]) oobb_countersunk_m3();
         }
         at_mounts(output_attachment_mounts) translate([0,0,-eps]) screw_hole("m6",output_cover_depth+2*eps);
         at_mounts(output_m3_attachment_mounts) translate([0,0,-eps]) screw_hole("m3",output_cover_depth+2*eps);
@@ -256,7 +269,7 @@ module motor_eccentric_cap() {
         translate([0,0,-eps]) shaft_cut(cam_cap_height+2*eps);
         at_mounts(eccentric_join_mounts) {
             translate([0,0,-eps]) screw_hole("m3",cam_cap_height+2*eps);
-            translate([0,0,cam_cap_height]) oobb_countersunk_m3();
+            translate([0,0,cam_cap_height+countersunk_head_proud]) oobb_countersunk_m3();
         }
     }
 }

@@ -5,7 +5,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 26142.944,
+      "volume_mm3": 26225.952,
       "bounds_mm": [
         [
           -52.0,
@@ -62,7 +62,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 15718.426,
+      "volume_mm3": 14734.689,
       "bounds_mm": [
         [
           -29.25,
@@ -81,7 +81,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 10063.685,
+      "volume_mm3": 9068.872,
       "bounds_mm": [
         [
           -29.25,
@@ -119,7 +119,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 11628.017,
+      "volume_mm3": 11857.284,
       "bounds_mm": [
         [
           -32.5,
@@ -138,7 +138,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 6175.788,
+      "volume_mm3": 6085.342,
       "bounds_mm": [
         [
           -23.25,
@@ -157,7 +157,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 7020.939,
+      "volume_mm3": 7103.948,
       "bounds_mm": [
         [
           -23.25,
@@ -176,7 +176,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 3214.226,
+      "volume_mm3": 3169.003,
       "bounds_mm": [
         [
           -10.5,
@@ -195,7 +195,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 2249.458,
+      "volume_mm3": 2290.962,
       "bounds_mm": [
         [
           -10.25,
@@ -273,9 +273,9 @@
   ],
   "status": "passed",
   "source_sha256": {
-    "parameters.scad": "34507ec3778185f77c30c607a738fc300f40d828ccc24d0f69998ed40d50fbfc",
-    "geometry.scad": "ffe2eee1f930337a95b53e0cfc5781e874a9bf8ed99c4875ae245dbe7b417cd1",
-    "compact_helpers.scad": "3717d579425eb016a93817399d123879f70c1b45450fe2a160f96988bae3e2c1",
+    "parameters.scad": "c84fe1c0b7e8c8063ecc429e34b2a2254fd8149833463845a29261b78058d724",
+    "geometry.scad": "a7fc2e786088dcd3d3675ec7989291f15db7c855212cab02ef115340b9d91720",
+    "compact_helpers.scad": "b0ef62a121444e8dcbaf6a19fed67ea60813d1a2bc52250ee15ab16a816cf03d",
     "oobb_hardware.scad": "b2cc3e6dc7a68915093d1d95f96ff134bd735518249c67e60bcf3e8244f6bb53"
   },
   "print_beds": [

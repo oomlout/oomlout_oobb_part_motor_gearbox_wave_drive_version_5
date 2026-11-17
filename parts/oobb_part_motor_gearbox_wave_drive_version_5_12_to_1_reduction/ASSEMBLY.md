@@ -11,11 +11,11 @@ Each parts box lists the new parts for that panel, with the image followed by a 
 
 Every panel retains the complete assembly-so-far in its normal materials. Nuts are shown below or above the receiving part in the same panel; increased separation exposes nuts underneath their receiving parts, without arrows. Hardware threads and bearing internals are simplified in the CAD illustration. Printed panels contain only numbers, diagrams and part details; the companion notes retain the written sequence.
 
-Before assembly, clean bridge material and check the fit coupons. Print the lower cage teeth upward and the upper cage broad face down, hub upward. Inspect the upper cage's bridged central roof. Countersunk screw lengths include the head; socket-cap lengths are measured below the head.
+Before assembly, clean bridge material and check the fit coupons. Print the lower cage teeth upward and the upper cage broad face down, hub upward. Inspect the upper cage's bridged central roof. Countersunk screw lengths include the head; socket-cap lengths are measured below the head. The M3 motor, eccentric, wave and output joining heads intentionally sit 1 mm proud; do not force them flush. The M2 cage screws remain seated, and the radial M3 shaft clamp tightens onto the motor shaft.
 
 ## 01. Mount the motor and capture the case nuts
 
-Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x 8 countersunk screws flush with its top face.
+Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x 8 countersunk screws with heads 1 mm proud of its top face.
 
 [![AI-generated CAD assembly step 1: Mount the motor and capture the case nuts](assembly/cards/step_01.png)](assembly/cards/step_01.png)
 
@@ -81,7 +81,7 @@ Fit five M6 nuts and eight M3 nuts in the carrier's upward-facing pockets. Lower
 
 ## 12. Close the output face
 
-Fit the output cover and tighten four M3 x 12 socket caps in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input 12 times for one reverse output turn.
+Fit the output cover and tighten four M3 x 16 countersunk screws in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input 12 times for one reverse output turn.
 
 [![AI-generated CAD assembly step 12: Close the output face](assembly/cards/step_12.png)](assembly/cards/step_12.png)
 

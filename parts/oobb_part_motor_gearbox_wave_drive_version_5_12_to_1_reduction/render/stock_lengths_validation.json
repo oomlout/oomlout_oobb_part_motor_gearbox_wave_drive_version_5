@@ -25,7 +25,7 @@
     "roller_length_mm": 15,
     "scope": "Compact motor stack; only 12 mm is the release default",
     "status": "rejected_by_stack_constraints",
-    "reason": "Cage countersunk screws must engage the lower nuts without protruding"
+    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
   },
   {
     "roller_length_mm": 18,

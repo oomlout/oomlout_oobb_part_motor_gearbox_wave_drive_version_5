@@ -35,6 +35,9 @@
     "case_boss_rounding_fraction": 1.0,
     "case_boss_overlap": 1.5,
     "max_screw_length": 35.0,
+    "countersunk_head_proud": 1.0,
+    "countersunk_head_clearance": 0.3,
+    "m3_countersunk_radius": 3.6,
     "eccentricity": 0.75,
     "wave_radius": 23.25,
     "profile_clearance": 0.15,
@@ -64,8 +67,7 @@
     "output_fixing_y": 10.0,
     "output_face_clearance": 0.8,
     "output_radial_clearance": 0.6,
-    "output_socket_recess": 3.2,
-    "output_screw_length": 12,
+    "output_screw_length": 16,
     "output_nut_depth": 5.2,
     "output_nut_height": 5.0,
     "output_m3_nut_depth": 2.7,
@@ -291,19 +293,19 @@
     },
     "assembly_steps": [
       "Print the fit coupons. Check the 6810 seat, 6704 seat, motor shaft, roller windows and OOBB nut pockets before the full build.",
-      "Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g} mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads flush with the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor threads.",
-      "Print cage_lower_cap with its teeth upright. Print output_cage with its broad closure face on the bed and integrated hub upward; inspect the bridge over its central blind recess. The cage rings remain {cage_plate_depth:g} mm thick to support the captive nuts and service bore.",
+      "Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g} mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads {countersunk_head_proud:g} mm proud of the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor threads.",
+      "Print cage_lower_cap with its teeth upright. Print output_cage with its broad closure face on the bed and integrated hub upward; inspect the bridge over its central blind recess. The lower cage has an underside clearance ring for the motor screw heads; the upper cage has a clearance ring above the wave screws.",
       "Seat {cage_screw_count} M2 nuts in the underside of the lower cage, one for each tooth, and lower it around the motor shaft. Its {cage_center_diameter:g} mm centre opening can also pass over the already fitted eccentric shaft and collars; fit the 6704 and rolling clamshells afterwards. Align its radial service hole along +X.",
       "Preload two M3 nuts into the underside of the lower eccentric and an M3 nut into its radial pocket. Preload the M3 x {shaft_clamp_screw_length} countersunk shaft-clamp screw before closing the gearbox; its head has top clearance, so the tip can tighten onto the motor shaft. Fit the eccentric at Z={cam_base_z:g} mm with the clamp facing +X.",
       "Load four M3 nuts into the lower 6704 clamshell (wave_generator), slide it over the eccentric journal and seat the 6704. The joint is at Z={wave_split_z:g} mm, exactly through the bearing centre; each half encloses 2 mm of bearing width plus its fit clearance.",
-      "Fit the upper eccentric collar and join it to the lower eccentric using two M3 x {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These lengths include the head. Both heads sit flush; the journal shoulders preserve the bearing axial clearance.",
+      "Fit the upper eccentric collar and join it to the lower eccentric using two M3 x {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These lengths include the head. Both heads sit {countersunk_head_proud:g} mm proud; the journal shoulders preserve the bearing axial clearance.",
       "Close the upper 6704 clamshell (wave_bearing_cap) with four M3 x {wave_screw_length} countersunk screws. Lower the fixed ring over the upright cage and align its rounded rectangular bosses. Its +X service hole must line up with the lower cage's hole and shaft-clamp screw.",
       "At input angle zero, the eccentric points along +X. Insert all {roller_count} nylon spacers axially between the lower cage teeth. Preload the four M3 output nuts into the underside of the combined upper closure/hub (output_cage), then fit it over the teeth.",
       "Install one M2 x {cage_screw_length} countersunk screw through every tooth from above into its captive lower nut. The OOBB top-clearance cuts let the complete heads pass through the integrated upper disc. Tighten all {cage_screw_count} before fitting the 6810 and output carrier. Countersunk screw lengths include their heads.",
       "Fit the single 6810 around the integrated upper hub. There is no separate output_hub disc. The central blind recess clears the motor shaft tip by {motor_shaft_end_clearance:g} mm.",
       "Fit the upper bearing housing with its mouth downward. Install the {housing_screw_count} M3 x {case_screw_length} socket caps from the top into the captive base nuts. The fixed ring and upper housing retain the bearing outer race.",
       "Place the recessed output nut carrier (output_retainer) on the hub inside the 6810 with its hex pockets upward. The hub backs the carrier's nut-pocket bridge cuts. Load all {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment nuts; all pockets fit inside the 50 mm bearing bore.",
-      "Close the sandwich with the stepped output_cover and four M3 x {output_screw_length} socket caps in the off-grid fixing positions {output_fixing_mounts}. The freed corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and {output_m3_mount_count} M3 in total. The face remains {output_above_housing:g} mm above the teal housing, with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g} mm radial neck clearance. Use light preload at the printed cage nut seats and the generated attachment-depth limits.",
+      "Close the sandwich with the stepped output_cover and four M3 x {output_screw_length} countersunk screws in the off-grid fixing positions {output_fixing_mounts}. The freed corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and {output_m3_mount_count} M3 in total. The face remains {output_above_housing:g} mm above the teal housing, with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g} mm radial neck clearance. Use light preload at the printed cage nut seats and the generated attachment-depth limits.",
       "To tighten the motor shaft clamp after assembly, turn the input until the housing port, rotating cage port and screw head all line up along +X. Insert a straight 2 mm hex driver with a shaft no larger than {shaft_driver_diameter:g} mm through the {shaft_access_diameter:g} mm service bore at Z={shaft_clamp_z:g} mm. The bore is for the slim driver, not a full-size bit holder or screw insertion. Withdraw the driver before rotating the input.",
       "Turn the input slowly by hand and check one reverse output turn per {reduction} input turns. Physical fit, motor bearing loads, vibration and printed strength remain untested."
     ],
@@ -353,7 +355,7 @@
     "assembly_cards": [
       {
         "title": "Mount the motor and capture the case nuts",
-        "action": "Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x {motor_screw_length} countersunk screws flush with its top face.",
+        "action": "Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x {motor_screw_length} countersunk screws with heads {countersunk_head_proud:g} mm proud of its top face.",
         "add": [
           "nema17_*",
           "motor_mount_plate",
@@ -685,7 +687,7 @@
       },
       {
         "title": "Close the output face",
-        "action": "Fit the output cover and tighten four M3 x {output_screw_length} socket caps in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input {reduction} times for one reverse output turn.",
+        "action": "Fit the output cover and tighten four M3 x {output_screw_length} countersunk screws in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input {reduction} times for one reverse output turn.",
         "add": [
           "output_cover",
           "output_screw_*"
@@ -785,8 +787,8 @@
         "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{motor_screw_length}_mm_length"
       },
       "screw_output": {
-        "name": "M3 x {output_screw_length} socket cap",
-        "catalogue_id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_{output_screw_length}_mm_length"
+        "name": "M3 x {output_screw_length} countersunk",
+        "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{output_screw_length}_mm_length"
       },
       "screw_wave": {
         "name": "M3 x {wave_screw_length} countersunk",
@@ -925,23 +927,25 @@
     "cam_cap_z": 15.399999999999999,
     "cam_cap_height": 6.8,
     "shaft_clamp_z": 5.8,
-    "eccentric_join_head_z": 22.2,
-    "eccentric_join_nut_z": 6.299999999999999,
-    "wave_head_recess": 0.0,
-    "wave_nut_z": 0.3,
+    "eccentric_join_head_z": 23.2,
+    "eccentric_join_nut_z": 7.299999999999999,
+    "wave_head_recess": -1.0,
+    "wave_nut_z": 1.3,
     "housing_top_z": 36.6,
     "case_socket_depth": 6.6,
     "case_head_seat": 30.0,
     "housing_top_depth": 10.700000000000003,
-    "motor_head_seat": 4.0,
+    "motor_head_seat": 5.0,
+    "motor_head_relief_depth": 1.0,
+    "wave_head_relief_depth": 1.0000000000000036,
     "assembly_height": 38.1,
     "output_cover_z": 33.800000000000004,
     "output_plate_z": 33.800000000000004,
     "output_flange_z": 37.4,
     "output_neck_height": 5.800000000000004,
     "retainer_depth": 5.800000000000004,
-    "output_head_seat": 34.9,
-    "motor_thread_engagement": 4.0,
+    "output_head_seat": 39.1,
+    "motor_thread_engagement": 3.0,
     "shaft_blind_depth": 0,
     "output_attachment_nut_z": 28.700000000000006,
     "output_m3_attachment_nut_z": 31.200000000000006,
@@ -1192,9 +1196,9 @@
       "role": "motor plate to four tapped motor holes"
     },
     {
-      "item": "Output socket cap screw",
+      "item": "Output countersunk screw",
       "size": "M3",
-      "length_mm": 12,
+      "length_mm": 16,
       "quantity": 4
     },
     {

@@ -24,13 +24,13 @@ One bank of 12 nylon spacers, 7 mm OD x 12 mm long. Output speed is -1/12 of inp
 
 Main circular body: 71.2 mm OD with 3 mm bearing-seat walls. Six rounded rectangular screw fins have 5.7 mm rounding, ending on the screw centreline; their rear rounding is buried in the cylinder so the visible junction stays flat. Nut-pocket walls are 2 mm nominal. Base grid: 7 x 5 OOBB units (104 x 74 mm rectangle), 4 mm deep. The central cylinder and boss footprint extend the base where needed. Corner and upper/lower rectangle edge radii: 5 / 1.5 mm.
 
-Full output face: 65 mm OD, with 5 captive M6 and 8 captive M3 attachment nuts on the OOBB grid and half-grid. A separate nut carrier and 4.3 mm cover trap them. Four off-grid M3 assembly screws at [[20.0, 10.0], [-10.0, 20.0], [-20.0, -10.0], [10.0, -20.0]] clamp the sandwich into captive cage nuts, freeing the former corner fixing holes for four more M3 attachments. The rotated corner pockets include at least 0.5 mm of edge material, including the OOBB bridge cuts. The input ends in a blind pocket.
+Full output face: 65 mm OD, with 5 captive M6 and 8 captive M3 attachment nuts on the OOBB grid and half-grid. A separate nut carrier and 4.3 mm cover trap them. Four off-grid M3 x 16 countersunk assembly screws, with heads 1 mm proud, at [[20.0, 10.0], [-10.0, 20.0], [-20.0, -10.0], [10.0, -20.0]] clamp the sandwich into captive cage nuts, freeing the former corner fixing holes for four more M3 attachments. The rotated corner pockets include at least 0.5 mm of edge material, including the OOBB bridge cuts. The input ends in a blind pocket.
 
 The base includes M6 grid holes and M3 half-grid holes outside the housing. On the output face, half-grid positions are omitted where a nut pocket would meet another pocket, an assembly fixing or the edge. Every provided attachment hole has its own captive nut.
 
 The output nut carrier sits inside the 6810's 50 mm bore. Its stepped cover ends 1.5 mm above the teal housing. The 6704 rolling member has two full-diameter clamshell halves joined exactly at the bearing centre, Z=13.3 mm. Two M3 x 16 countersunk screws with captive nuts join the eccentric shaft pieces; an M3 x 8 countersunk screw with captive nut and head clearance secures them to the motor shaft.
 
-All 12 teeth are integrated into the lower cage and print upright. Every tooth gets an M2 x 20 countersunk screw, tightened from above into a lower captive nut. The upper closure and support disc are one printed part, with its broad face on the bed and hub upward. Its central blind roof is a bridge; inspect it after printing. The lower ring is 3 mm thick; the upper closure is 6 mm. Raising the cage screw heads 3 mm accommodates the longer screws and leaves 1.6 mm nominal clearance below their tips. Raised nut seats preserve full engagement. The bearing/output stack is also 3 mm higher; deeper case head wells retain the 30 mm case screws.
+All 12 teeth are integrated into the lower cage and print upright. Every tooth gets an M2 x 20 countersunk screw, tightened from above into a lower captive nut. The upper closure and support disc are one printed part, with its broad face on the bed and hub upward. Its central blind roof is a bridge; inspect it after printing. The lower ring is 3 mm thick; the upper closure is 6 mm. Raising the cage screw heads 3 mm accommodates the longer screws and leaves 1.6 mm nominal clearance below their tips. Raised nut seats preserve full engagement. Annular clearance pockets clear the raised M3 motor and wave screw heads throughout rotation. The bearing/output stack is also 3 mm higher; deeper case head wells retain the 30 mm case screws.
 
 Assembly clearance: every cage screw uses OOBB clearance=top so its head passes through the upper disc before fitting the bearing/output carrier. The 25 mm lower opening slides over the bare assembled eccentric shaft and its fasteners; fit the 6704 and rolling clamshells afterwards. The output face has a 0.8 mm underside gap above the housing and 0.6 mm radial neck clearance. See render/assembly_access_validation.json for continuous insertion checks.
 Shaft service access: align the housing and lower-cage ports with the shaft screw at input angle zero (+X). A straight 2 mm hex driver, maximum shaft diameter 2.4 mm, reaches the screw through a 2.6 mm bore at Z=5.8 mm, below the rollers. Preload the screw before closing the case; the port passes a driver, not its head. See render/shaft_access_validation.json for the complete-assembly clearance check.
@@ -45,7 +45,7 @@ Open motor_fit.scad, exploded_motor.scad or animation.scad. Blender views and th
 
 ![Exploded assembly](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/render/images/exploded_motor.png)
 
-Motor mounting: four M3 x 8 countersunk screws sit flush in the base and engage 4 mm of the motor threads. Six M3 x 30 socket caps enter from the top housing into captive M3 nuts loaded from underneath the base. Their tips stop at the base underside.
+Motor mounting: four M3 x 8 countersunk screws sit 1 mm proud of the base and engage 3 mm of the motor threads. Six M3 x 30 socket caps enter from the top housing into captive M3 nuts loaded from underneath the base. Their tips stop at the base underside.
 
 ## Hardware
 
@@ -56,7 +56,7 @@ Motor mounting: four M3 x 8 countersunk screws sit flush in the base and engage 
 | Nylon spacer roller | 12 | 7 OD x 3.2 ID x 12 mm |
 | Case socket cap screw | 6 | M3 x 30 mm |
 | Motor countersunk screw | 4 | M3 x 8 mm |
-| Output socket cap screw | 4 | M3 x 12 mm |
+| Output countersunk screw | 4 | M3 x 16 mm |
 | Wave clamshell countersunk screw | 4 | M3 x 12 mm |
 | Cage tooth countersunk screw | 12 | M2 x 20 mm |
 | Eccentric countersunk screw | 2 | M3 x 16 mm |
@@ -99,11 +99,11 @@ Each parts box lists the new parts for that panel, with the image followed by a 
 
 Every panel retains the complete assembly-so-far in its normal materials. Nuts are shown below or above the receiving part in the same panel; increased separation exposes nuts underneath their receiving parts, without arrows. Hardware threads and bearing internals are simplified in the CAD illustration. Printed panels contain only numbers, diagrams and part details; the companion notes retain the written sequence.
 
-Before assembly, clean bridge material and check the fit coupons. Print the lower cage teeth upward and the upper cage broad face down, hub upward. Inspect the upper cage's bridged central roof. Countersunk screw lengths include the head; socket-cap lengths are measured below the head.
+Before assembly, clean bridge material and check the fit coupons. Print the lower cage teeth upward and the upper cage broad face down, hub upward. Inspect the upper cage's bridged central roof. Countersunk screw lengths include the head; socket-cap lengths are measured below the head. The M3 motor, eccentric, wave and output joining heads intentionally sit 1 mm proud; do not force them flush. The M2 cage screws remain seated, and the radial M3 shaft clamp tightens onto the motor shaft.
 
 ## 01. Mount the motor and capture the case nuts
 
-Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x 8 countersunk screws flush with its top face.
+Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x 8 countersunk screws with heads 1 mm proud of its top face.
 
 [![AI-generated CAD assembly step 1: Mount the motor and capture the case nuts](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/cards/step_01.png)](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/cards/step_01.png)
 
@@ -169,7 +169,7 @@ Fit five M6 nuts and eight M3 nuts in the carrier's upward-facing pockets. Lower
 
 ## 12. Close the output face
 
-Fit the output cover and tighten four M3 x 12 socket caps in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input 12 times for one reverse output turn.
+Fit the output cover and tighten four M3 x 16 countersunk screws in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input 12 times for one reverse output turn.
 
 [![AI-generated CAD assembly step 12: Close the output face](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/cards/step_12.png)](parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/cards/step_12.png)
 

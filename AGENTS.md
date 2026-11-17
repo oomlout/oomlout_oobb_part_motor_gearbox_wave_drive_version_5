@@ -23,13 +23,14 @@
 - Regenerate with `python working.py`; use `--scad-only` for drawings without mesh export and `--no-renders` for meshes/checks without Blender. Verify with `python -m pytest -q`.
 
 
-- Motor-to-base fasteners are four M3 x 8 countersunk screws, flush on top. Six M3 x 30 case socket caps enter downward from the top housing into captive M3 nuts loaded underneath the base.
+- Motor-to-base fasteners are four M3 x 8 countersunk screws, with heads 1 mm proud. Six M3 x 30 case socket caps enter downward from the top housing into captive M3 nuts loaded underneath the base.
 - Assembly style: four numbered panels per landscape A4 sheet, cumulative full-colour CAD, combined nut-loading/placement steps, black-only text, no titles or prose on panels; part image then small x2-style quantity and oom.lt/a/{md5_6_alpha} link.
 
 - Use twelve M2 x 20 countersunk cage screws. Raise head seats 3 mm and captive nut seats 1 mm; preserve full nut engagement and 1.6 mm nominal clearance above the cage underside. Raise the bearing/output stack with the 6 mm upper closure; keep case screws at 30 mm using deeper head wells.
 - Assembly booklet: stronger panel borders, no arrows, increased explosion, only quantities greater than one as small bottom-right thumbnail overlays. Tight URL line spacing, smaller prefix, smaller bold alpha code. Include cover, sparse project details, four-step pages, signature padding, printed OOBB parts summary on the penultimate page, and back cover.
 
-- Use M3 x 16 countersunk screws and captive M3 nuts for the eccentric joint (6.75 mm pitch radius), and four flush M3 x 12 countersunk screws for the wave clamshell.
+- Use M3 x 16 countersunk screws and captive M3 nuts for the eccentric joint (6.75 mm pitch radius), and four M3 x 12 countersunk screws for the wave clamshell. Their heads sit 1 mm proud; raise the captive nut seats to preserve full engagement.
+- Output-cover joiners are four M3 x 16 countersunk screws, heads 1 mm proud. All axial M3 countersunk joining heads use this offset. Keep the M2 cage screws seated and unchanged, and keep the radial M3 shaft clamp contacting the motor shaft. Annular cage reliefs clear the proud motor and wave screws throughout rotation.
 - Assembly style 4 uses Consolas numbers/URLs, Segoe UI Semibold part names, pure-black (#000000) 3 pt panel and 1.1 pt parts-box borders, 8.5 mm thumbnails, and quantities shifted 1 mm right. Printed parts have no shortlinks or codes anywhere in the booklet or inventory. Hardware keeps its links.
 - Covers use the black Oomlout symbol without words. Include the GitHub project name on the print-oriented cover and technical bullets inside. Step 13 is a full-page boxed completed view; the penultimate page has separate printed/hardware boxes with shared hardware quantities merged.
 

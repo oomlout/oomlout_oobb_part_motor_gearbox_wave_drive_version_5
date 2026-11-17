@@ -91,7 +91,6 @@ def hardware_meshes(**kwargs):
         bodies[name] = f"tube({spec['od']/2},{spec['id']/2},{spec['depth']});"
     for name, size, length in [
         ("screw_case", "m3", c["case_screw_length"]),
-        ("screw_output", "m3", c["output_screw_length"]),
     ]:
         primitive = {
             "shape": "oobb_screw_socket_cap",
@@ -110,6 +109,7 @@ def hardware_meshes(**kwargs):
         bodies[name] = f"difference() {{ {hardware_scad(shape)} translate([0,0,{2 if size == "m3" else 1}]) cylinder(r={socket},h=1.01,$fn=6); }}"
     for name, size, length in [
         ("screw_motor", "m3", c["motor_screw_length"]),
+        ("screw_output", "m3", c["output_screw_length"]),
         ("screw_eccentric", "m3", c["eccentric_join_screw_length"]),
         ("screw_wave", "m3", c["wave_screw_length"]),
         ("screw_cage", "m2", c["cage_screw_length"]),

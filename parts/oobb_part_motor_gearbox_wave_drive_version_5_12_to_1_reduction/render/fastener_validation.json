@@ -65,49 +65,87 @@
   ],
   "eccentric_and_clamshell_stack": [
     {
+      "name": "output_screw_0",
+      "size": "M3",
+      "head": "countersunk",
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 3.200000000000003,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "output_screw_1",
+      "size": "M3",
+      "head": "countersunk",
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 3.200000000000003,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "output_screw_2",
+      "size": "M3",
+      "head": "countersunk",
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 3.200000000000003,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "output_screw_3",
+      "size": "M3",
+      "head": "countersunk",
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 3.200000000000003,
+      "nut_engagement_mm": 2.5
+    },
+    {
       "name": "wave_screw_0",
       "size": "M3",
       "head": "countersunk",
-      "tip_clearance_mm": 1.7763568394002505e-15,
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 1.0000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_1",
       "size": "M3",
       "head": "countersunk",
-      "tip_clearance_mm": 1.7763568394002505e-15,
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 1.0000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_2",
       "size": "M3",
       "head": "countersunk",
-      "tip_clearance_mm": 1.7763568394002505e-15,
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 1.0000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_3",
       "size": "M3",
       "head": "countersunk",
-      "tip_clearance_mm": 1.7763568394002505e-15,
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 1.0000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "eccentric_join_screw_0",
       "size": "M3",
       "head": "countersunk",
-      "tip_clearance_mm": 3.7999999999999994,
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 4.799999999999999,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "eccentric_join_screw_1",
       "size": "M3",
       "head": "countersunk",
-      "tip_clearance_mm": 3.7999999999999994,
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 4.799999999999999,
       "nut_engagement_mm": 2.5
     }
   ],
-  "planar_contact_fragments": 266,
+  "planar_contact_fragments": 138,
   "volumetric_components": [
     {
       "bounds_mm": [

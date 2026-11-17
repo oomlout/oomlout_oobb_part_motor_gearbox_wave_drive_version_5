@@ -19,9 +19,9 @@
   length_mm: 8
   quantity: 4
   role: motor plate to four tapped motor holes
-- item: Output socket cap screw
+- item: Output countersunk screw
   size: M3
-  length_mm: 12
+  length_mm: 16
   quantity: 4
 - item: Wave clamshell countersunk screw
   size: M3
