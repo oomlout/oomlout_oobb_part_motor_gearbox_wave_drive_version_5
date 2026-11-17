@@ -1,0 +1,318 @@
+{
+  "solids": [
+    {
+      "name": "motor_mount_plate",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 26142.944,
+      "bounds_mm": [
+        [
+          -52.0,
+          -44.0,
+          0.0
+        ],
+        [
+          52.0,
+          44.0,
+          4.0
+        ]
+      ]
+    },
+    {
+      "name": "fixed_profile_ring",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 32710.254,
+      "bounds_mm": [
+        [
+          -38.86877296494399,
+          -44.0,
+          0.0
+        ],
+        [
+          38.86877296494399,
+          44.0,
+          21.9
+        ]
+      ]
+    },
+    {
+      "name": "output_bearing_housing",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 11593.567,
+      "bounds_mm": [
+        [
+          -38.86877296494399,
+          -44.0,
+          0.0
+        ],
+        [
+          38.86877296494399,
+          44.0,
+          10.700000000000003
+        ]
+      ]
+    },
+    {
+      "name": "output_cage",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 15718.426,
+      "bounds_mm": [
+        [
+          -29.25,
+          -29.25,
+          0.0
+        ],
+        [
+          29.25,
+          29.25,
+          8.1
+        ]
+      ]
+    },
+    {
+      "name": "cage_lower_cap",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 10063.685,
+      "bounds_mm": [
+        [
+          -29.25,
+          -29.25,
+          0.0
+        ],
+        [
+          29.25,
+          29.25,
+          15.6
+        ]
+      ]
+    },
+    {
+      "name": "output_retainer",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 7986.851,
+      "bounds_mm": [
+        [
+          -26.2,
+          -26.2,
+          0.0
+        ],
+        [
+          26.2,
+          26.2,
+          5.800000000000004
+        ]
+      ]
+    },
+    {
+      "name": "output_cover",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 11628.017,
+      "bounds_mm": [
+        [
+          -32.5,
+          -32.5,
+          0.0
+        ],
+        [
+          32.5,
+          32.5,
+          4.3
+        ]
+      ]
+    },
+    {
+      "name": "wave_generator",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 6175.788,
+      "bounds_mm": [
+        [
+          -23.25,
+          -23.25,
+          0.0
+        ],
+        [
+          23.25,
+          23.25,
+          5.699999999999999
+        ]
+      ]
+    },
+    {
+      "name": "wave_bearing_cap",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 7020.939,
+      "bounds_mm": [
+        [
+          -23.25,
+          -23.25,
+          0.0
+        ],
+        [
+          23.25,
+          23.25,
+          6.300000000000001
+        ]
+      ]
+    },
+    {
+      "name": "motor_eccentric",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 3214.024,
+      "bounds_mm": [
+        [
+          -10.5,
+          -11.0,
+          0.0
+        ],
+        [
+          11.75,
+          11.0,
+          13.0
+        ]
+      ]
+    },
+    {
+      "name": "motor_eccentric_cap",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 2256.54,
+      "bounds_mm": [
+        [
+          -10.25,
+          -11.0,
+          0.0
+        ],
+        [
+          11.75,
+          11.0,
+          6.8
+        ]
+      ]
+    },
+    {
+      "name": "printable_spacer",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 365.137,
+      "bounds_mm": [
+        [
+          -3.5,
+          -3.5,
+          0.0
+        ],
+        [
+          3.5,
+          3.5,
+          12.0
+        ]
+      ]
+    }
+  ],
+  "collision_angles": [
+    {
+      "angle": 0,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 45,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 90,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 135,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 180,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 225,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 270,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    },
+    {
+      "angle": 315,
+      "interference_mm3": 0,
+      "planar_contact_fragments": 0
+    }
+  ],
+  "status": "passed",
+  "source_sha256": {
+    "parameters.scad": "9a939ba16c0854aa183c5a27a110a4e8690d3aa500e77a225c3bdb4ac035d42a",
+    "geometry.scad": "9fd3b84b0303ffb50475ee67d0237bbe97831faf850095f85ac514881f566bab",
+    "compact_helpers.scad": "16c448ba7ac8b5171a50b4fe0db21d9d9a9395a2fc51ee903a905c428b509e21",
+    "oobb_hardware.scad": "b2cc3e6dc7a68915093d1d95f96ff134bd735518249c67e60bcf3e8244f6bb53"
+  },
+  "print_beds": [
+    {
+      "bed": 1,
+      "parts": 12,
+      "bounds_mm": [
+        [
+          3.0,
+          3.367668408425523,
+          0.0
+        ],
+        [
+          215.73533681685103,
+          211.4706736337021,
+          21.9
+        ]
+      ]
+    },
+    {
+      "bed": 2,
+      "parts": 11,
+      "bounds_mm": [
+        [
+          3.0,
+          3.0,
+          0.0
+        ],
+        [
+          215.0,
+          118.5,
+          15.6
+        ]
+      ]
+    }
+  ],
+  "scad_python_profile_max_error_mm": 5.0110401750241555e-09,
+  "print_instance_count": 23,
+  "limitations": "Geometric checks only. Printed fit, friction, wear, backlash and torque require bench tests."
+}

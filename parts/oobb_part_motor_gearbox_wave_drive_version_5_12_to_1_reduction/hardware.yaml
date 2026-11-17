@@ -1,0 +1,52 @@
+- item: 6810 bearing
+  quantity: 1
+  dimensions: 50 x 65 x 7 mm
+  role: single upper output support
+- item: 6704 bearing
+  quantity: 1
+  dimensions: 20 x 27 x 4 mm
+  role: wave wheel on the motor eccentric
+- item: Nylon spacer roller
+  quantity: 12
+  dimensions: 7 OD x 3.2 ID x 12 mm
+  role: one bank; free rollers without fixed axles
+- item: Case socket cap screw
+  size: M3
+  length_mm: 30
+  quantity: 6
+- item: Motor countersunk screw
+  size: M3
+  length_mm: 8
+  quantity: 4
+  role: motor plate to four tapped motor holes
+- item: Output socket cap screw
+  size: M3
+  length_mm: 12
+  quantity: 4
+- item: Wave clamshell countersunk screw
+  size: M3
+  length_mm: 12
+  quantity: 4
+- item: Cage tooth countersunk screw
+  size: M2
+  length_mm: 20
+  quantity: 12
+- item: Eccentric countersunk screw
+  size: M3
+  quantity: 2
+  length_mm: 16
+  role: join the eccentric halves; length includes the countersunk head
+- item: Shaft clamp countersunk screw
+  size: M3
+  quantity: 1
+  length_mm: 8
+  role: motor shaft flat; captive nut and clearance above the head, serviced through
+    aligned radial port
+- item: M3 hex nut
+  quantity: 25
+  role: assembly nuts plus captive half-grid output attachment nuts
+- item: M6 hex nut
+  quantity: 5
+  role: OOBB output attachment; payload bolts depend on attached plate thickness
+- item: M2 hex nut
+  quantity: 12

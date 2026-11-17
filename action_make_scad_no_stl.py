@@ -1,22 +1,15 @@
+"""Run the populated SCAD gearbox configurations."""
 import copy
-import working_scad
+import working
+
 
 def main(**kwargs):
-    kwargs["run_oomp_populate"] = True
-
-    kwargs["run_oomp"] = True
-
-    kwargs["run_action"] = False
-    #kwargs["run_action"] = False
-
-    kwargs["run_scad"] = True
+    kwargs = copy.deepcopy(kwargs)
     kwargs["run_solidcraft"] = False
+    kwargs.setdefault("scad_only", True)
+    kwargs.setdefault("no_renders", True)
+    return working.main(**kwargs)
 
-    kwargs["generate_stl"] = False
 
-    import working
-    working.run(**kwargs)
-
-if __name__ == '__main__':
-    kwargs = {}
-    main(**kwargs)
+if __name__ == "__main__":
+    main()

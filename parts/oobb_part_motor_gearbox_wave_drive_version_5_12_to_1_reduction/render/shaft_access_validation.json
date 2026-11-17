@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "Straight driver envelope from outside the housing to 0.05 mm in front of the M3 screw head; complete assembly, motor, rollers and all fasteners at input/cage angle zero.",
+  "volumetric_components": [
+    {
+      "bounds_mm": [
+        [
+          80.0,
+          0.0,
+          0.0
+        ],
+        [
+          81.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "volume_mm3": 1.0
+    }
+  ]
+}

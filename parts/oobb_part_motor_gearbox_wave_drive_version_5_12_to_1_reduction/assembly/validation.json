@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "page_count": 8,
+  "card_count": 13,
+  "paper_mm": [
+    297,
+    210
+  ],
+  "panels_per_instruction_page": 4,
+  "page_roles": [
+    "cover",
+    "details",
+    "instructions",
+    "instructions",
+    "instructions",
+    "summary",
+    "parts",
+    "back"
+  ],
+  "parts_summary_page": 7,
+  "printed_parts_in_summary": 11,
+  "hardware_items_in_summary": 90,
+  "summary_step": 13,
+  "page_order": "Reader order; signature padded. Apply booklet imposition only at print time.",
+  "physical_items": 101,
+  "quantity_audit": "Every physical item introduced once; singleton multipliers hidden; printed and hardware summary reconciled to production inventory; identical hardware roles combined",
+  "layout_checks": "Text fits; only black typography; compact URL code/prefix hierarchy; no instruction prose or arrows; blank spacer has no marks",
+  "physical_validation": "Not physically assembled or load tested",
+  "pdf_sha256": "54033e6adf39ce12289d62ef2968d8931b1650a340b6aaef02e9c5d72b988f58",
+  "html_sha256": "e3b0e4f97a5c5564fa92e2d2475e853370a276f656aa49288b93996c3861523f",
+  "html_slides": 17,
+  "html_steps": 13,
+  "html_self_contained": true
+}

@@ -1,0 +1,4 @@
+Original: C:/gh/oomlout_media/logos/logo_vector_unshaded/oomlout-LOGO-unshaded-vector.svg
+Copied unchanged on 2026-11-17.
+assembly_booklet.py retains the first three symbol subpaths, omits lettering and sets fill to #000000.
+The generated symbol is stored in each parts/<id>/assembly/assets/ folder.

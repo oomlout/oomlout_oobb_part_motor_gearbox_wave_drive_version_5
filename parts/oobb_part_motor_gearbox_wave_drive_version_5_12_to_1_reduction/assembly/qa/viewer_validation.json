@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": [
+    "Offline startup at step 1",
+    "Keyboard, dropdown, hardware links and fullscreen controls",
+    "Boundary controls and reloadable deep links",
+    "Portrait, landscape and swipe navigation"
+  ],
+  "browser_errors": [],
+  "network_requests": 0
+}

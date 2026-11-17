@@ -1,2 +1,19 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.py text eol=lf
+*.scad text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.csv text eol=lf
+*.stl binary
+*.pdf binary
+*.zip binary
+*.png binary
+# Preserve generator and validated-artifact bytes used by the manifests.
+/components/wave_drive/** -text
+/working_oomp_populate.py -text
+/source_file/oomlout_logo_unshaded_original.svg -text
+/parts/** -text

@@ -1,83 +1,49 @@
+"""Deterministic populate -> catalogue -> SCAD build. No AI actions or SolidCraft."""
+import argparse
 import copy
+from pathlib import Path
+
 
 def main(**kwargs):
-    run_oomp_populate = kwargs.get("run_oomp_populate", True)
-    #run_oomp_populate = False
-    kwargs["run_oomp_populate"] = run_oomp_populate
+    import working_oomp_populate
+    import working_oomp
+    import working_scad
+    kwargs = copy.deepcopy(kwargs)
+    kwargs.setdefault("output_root", Path(__file__).resolve().parent)
+    kwargs.setdefault("run_oomp_populate", True)
+    kwargs.setdefault("run_oomp", True)
+    kwargs.setdefault("run_scad", True)
+    if kwargs.get("run_solidcraft", False):
+        raise ValueError("This project uses the SCAD pipeline; set run_solidcraft=False")
+    controls = {"output_root", "run_oomp_populate", "run_oomp", "run_scad", "run_solidcraft", "run_action", "run_svg", "scad_only", "no_renders", "assembly_only", "part_filter", "render", "images", "generate_stl", "typ", "export_stl", "export_extras"}
+    recipe = {key:value for key,value in kwargs.items() if key not in controls}
+    options = None
+    if kwargs["run_oomp_populate"]:
+        options = working_oomp_populate.main(output_root=kwargs["output_root"], **recipe)
+    catalogue_kwargs = {
+        "output_root": kwargs["output_root"],
+        "part_filter": kwargs.get("part_filter", ""),
+    }
+    if options is not None:
+        catalogue_kwargs["part_ids"] = [option["id"] for option in options]
+    parts = None
+    if kwargs["run_oomp"]:
+        parts = working_oomp.main(**catalogue_kwargs)
+    if kwargs["run_scad"]:
+        return working_scad.main(parts=parts, **kwargs)
+    return parts
 
-    run_oomp = kwargs.get("run_oomp", True)
-    #run_oomp = False
-    kwargs["run_oomp"] = run_oomp
-
-    run_scad = kwargs.get("run_scad", True)
-    #run_scad = False
-    kwargs["run_scad"] = run_scad
-
-    run_action = kwargs.get("run_action", True)
-    #run_action = False
-    kwargs["run_action"] = run_action
-
-    generate_stl = kwargs.get("generate_stl", False)
-    #generate_stl = True
-    kwargs["generate_stl"] = generate_stl
-
-    run(**kwargs)
 
 def run(**kwargs):
-
-    import working_cad
-    selected_solidcraft = working_cad.solidcraft_mode(kwargs.get("run_solidcraft", False))
-    native_context = dict(kwargs.pop("solidcraft_context", None) or {})
-    if selected_solidcraft == "working_scad":
-        native_context["recipe_source"] = "working_scad"
-    native_context["export_extras"] = kwargs.pop("export_extras", native_context.get("export_extras", False))
-    native_context["export_stl"] = kwargs.pop("export_stl", native_context.get("export_stl", False))
-    native_context["verify_solidcraft"] = kwargs.pop("verify_solidcraft", native_context.get("verify_solidcraft", False))
+    return main(**kwargs)
 
 
-    kwargs_2 = copy.deepcopy(kwargs)
-    #pop run and generate variables from kwargs
-    pop_values = ["run_oomp_populate", "run_oomp", "run_scad", "run_action", "generate_stl", "run_svg", "run_solidcraft", "solidcraft_context"]
-    for key in pop_values:
-        kwargs_2.pop(key, None)
-
-
-    if kwargs.get("run_oomp_populate", False):
-        import working_oomp_populate
-        working_oomp_populate.main(**kwargs_2)
-
-    if kwargs.get("run_oomp", False):
-        import working_oomp
-        oomp_kwargs = copy.deepcopy(kwargs_2)
-        if kwargs.get("run_solidcraft", False):
-            oomp_kwargs["wait_for_completion"] = True
-        working_oomp.main(**oomp_kwargs)
-
-    if kwargs.get("run_scad", False):        
-        kwargs2 = copy.deepcopy(kwargs_2)
-        if kwargs.get("generate_stl", False):
-            kwargs2["typ"] = "all"
-        import working_scad
-        working_scad.main(**kwargs2)
-
-    #add run_svg
-    if kwargs.get("run_svg", False):        
-        import working_svg
-        working_svg.main(**kwargs_2)
-
-
-    if kwargs.get("run_action", False):
-        import working_action
-        working_action.main(**kwargs)    
-
-    # Opt-in native route runs after legacy actions/OOMP regeneration.
-    if kwargs.get("run_solidcraft", False):
-        import working_solidcraft
-        working_solidcraft.main(solidcraft_context=native_context)
-
-
-
-
-if __name__ == '__main__':
-    kwargs = {}
-    main(**kwargs)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--scad-only", action="store_true", help="Generate editable SCAD and instructions without rendering meshes")
+    parser.add_argument("--no-renders", action="store_true", help="Build meshes and checks without Blender images")
+    parser.add_argument("--assembly-only", action="store_true", help="Regenerate populated assembly cards from validated existing production meshes")
+    parser.add_argument("--part-filter", default="")
+    parser.add_argument("--render", action="store_true", default=None, help="Explicitly enable STL export")
+    parser.add_argument("--images", action="store_true", default=None, help="Explicitly enable SCAD previews")
+    main(**vars(parser.parse_args()))

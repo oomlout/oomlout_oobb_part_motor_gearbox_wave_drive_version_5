@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "fastener_instances": 75,
+  "cage_screw_stack": [
+    {
+      "name": "cage_screw_0",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_1",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_2",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_3",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_4",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_5",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_6",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_7",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_8",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_9",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_10",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    },
+    {
+      "name": "cage_screw_11",
+      "tip_clearance_mm": 1.5999999999999988,
+      "nut_engagement_mm": 1.6
+    }
+  ],
+  "eccentric_and_clamshell_stack": [
+    {
+      "name": "wave_screw_0",
+      "size": "M3",
+      "head": "countersunk",
+      "tip_clearance_mm": 1.7763568394002505e-15,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "wave_screw_1",
+      "size": "M3",
+      "head": "countersunk",
+      "tip_clearance_mm": 1.7763568394002505e-15,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "wave_screw_2",
+      "size": "M3",
+      "head": "countersunk",
+      "tip_clearance_mm": 1.7763568394002505e-15,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "wave_screw_3",
+      "size": "M3",
+      "head": "countersunk",
+      "tip_clearance_mm": 1.7763568394002505e-15,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "eccentric_join_screw_0",
+      "size": "M3",
+      "head": "countersunk",
+      "tip_clearance_mm": 3.7999999999999994,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "eccentric_join_screw_1",
+      "size": "M3",
+      "head": "countersunk",
+      "tip_clearance_mm": 3.7999999999999994,
+      "nut_engagement_mm": 2.5
+    }
+  ],
+  "planar_contact_fragments": 266,
+  "volumetric_components": [
+    {
+      "bounds_mm": [
+        [
+          80.0,
+          0.0,
+          0.0
+        ],
+        [
+          81.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "volume_mm3": 1.0
+    }
+  ],
+  "scope": "Nominal screw and nut envelopes against every native gearbox body and the full motor at input angle zero; intended motor thread engagement uses smooth nominal bores."
+}

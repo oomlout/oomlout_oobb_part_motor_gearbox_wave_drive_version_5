@@ -1,0 +1,15 @@
+include <parameters.scad>;
+use <oobb_hardware.scad>;
+include <geometry.scad>;
+translate([55.0, 47.36766840842552, 0]) motor_mount_plate();
+translate([155.36766840842552, 47.36766840842552, 0]) fixed_ring();
+translate([47.36766840842552, 140.10300522527658, 0]) output_housing();
+translate([128.23533681685103, 128.23533681685103, 0]) output_retainer();
+translate([187.98533681685103, 118.98533681685105, 0]) wave_generator();
+translate([15.0, 200.4706736337021, 0]) motor_eccentric();
+translate([43.0, 200.4706736337021, 0]) motor_eccentric_cap();
+translate([168.23533681685103, 149.73533681685103, 0]) roller();
+translate([179.23533681685103, 149.73533681685103, 0]) roller();
+translate([190.23533681685103, 149.73533681685103, 0]) roller();
+translate([201.23533681685103, 149.73533681685103, 0]) roller();
+translate([212.23533681685103, 149.73533681685103, 0]) roller();

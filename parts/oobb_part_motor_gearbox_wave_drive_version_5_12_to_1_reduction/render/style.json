@@ -1,0 +1,185 @@
+{
+  "provenance": "OOBB SCAD meshes with the retained cream/teal/black/yellow studio palette.",
+  "samples": 48,
+  "view_transform": "AgX",
+  "world_color": [
+    0.77,
+    0.79,
+    0.81,
+    1.0
+  ],
+  "world_strength": 0.48,
+  "background": "#FAF8F2",
+  "materials": {
+    "nylon": {
+      "name": "Natural nylon spacers",
+      "color": "E9E5D8",
+      "roughness": 0.48,
+      "metallic": 0.0
+    },
+    "teal": {
+      "name": "Turquoise 10605",
+      "color": "00B1B7",
+      "roughness": 0.4,
+      "metallic": 0.0
+    },
+    "black": {
+      "name": "Black 10101",
+      "color": "121212",
+      "roughness": 0.39,
+      "metallic": 0.0
+    },
+    "yellow": {
+      "name": "Sunflower 10402",
+      "color": "FEC601",
+      "roughness": 0.4,
+      "metallic": 0.0
+    },
+    "steel": {
+      "name": "Bearing and nut steel",
+      "color": "BFC5C9",
+      "roughness": 0.26,
+      "metallic": 0.88
+    },
+    "bolt": {
+      "name": "Oxidised screw steel",
+      "color": "575D63",
+      "roughness": 0.31,
+      "metallic": 0.81
+    }
+  },
+  "lights": [
+    {
+      "offset": [
+        70,
+        25,
+        185
+      ],
+      "power": 370000,
+      "size": 130
+    },
+    {
+      "offset": [
+        -100,
+        60,
+        95
+      ],
+      "power": 190000,
+      "size": 110
+    },
+    {
+      "offset": [
+        10,
+        -140,
+        105
+      ],
+      "power": 300000,
+      "size": 95
+    },
+    {
+      "offset": [
+        135,
+        160,
+        35
+      ],
+      "power": 110000,
+      "size": 140
+    }
+  ],
+  "views": {
+    "assembly": {
+      "eye": [
+        0.86,
+        1.4,
+        0.87
+      ],
+      "size": [
+        1510,
+        1080
+      ],
+      "margin": 1.12
+    },
+    "open_mechanism": {
+      "eye": [
+        0.65,
+        1.4,
+        1.9
+      ],
+      "size": [
+        1510,
+        1080
+      ],
+      "margin": 1.12
+    },
+    "exploded": {
+      "eye": [
+        0.45,
+        1.4,
+        0.65
+      ],
+      "size": [
+        1600,
+        3200
+      ],
+      "sheet_size": [
+        1600,
+        3400
+      ],
+      "margin": 1.12,
+      "spacing": 24
+    },
+    "parts": {
+      "eye": [
+        0.25,
+        -0.7,
+        2.3
+      ],
+      "size": [
+        1510,
+        1080
+      ],
+      "margin": 1.1
+    },
+    "motor_fit": {
+      "eye": [
+        0.86,
+        1.4,
+        0.5
+      ],
+      "size": [
+        1510,
+        1260
+      ],
+      "margin": 1.15
+    },
+    "motor_side": {
+      "eye": [
+        0,
+        1,
+        0
+      ],
+      "size": [
+        1100,
+        1300
+      ],
+      "margin": 1.18
+    },
+    "exploded_motor": {
+      "eye": [
+        0.45,
+        1.4,
+        0.55
+      ],
+      "size": [
+        1600,
+        3600
+      ],
+      "sheet_size": [
+        1600,
+        3800
+      ],
+      "margin": 1.12,
+      "spacing": 24
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "cage_head_entry",
+    "scope": "2.15 mm radius screw-head envelope through the integrated upper disc before the bearing and output nut carrier are installed.",
+    "status": "passed",
+    "volumetric_components": [
+      {
+        "bounds_mm": [
+          [
+            80.0,
+            0.0,
+            0.0
+          ],
+          [
+            81.0,
+            1.0,
+            1.0
+          ]
+        ],
+        "volume_mm3": 1.0
+      }
+    ]
+  },
+  {
+    "name": "lower_cage_over_eccentric",
+    "scope": "Continuous conservative convex sweep of the assembled eccentric shaft and its screws/nuts through the lower cage; install the 6704 and rolling clamshells afterwards.",
+    "status": "passed",
+    "volumetric_components": [
+      {
+        "bounds_mm": [
+          [
+            80.0,
+            0.0,
+            0.0
+          ],
+          [
+            81.0,
+            1.0,
+            1.0
+          ]
+        ],
+        "volume_mm3": 1.0
+      }
+    ]
+  }
+]

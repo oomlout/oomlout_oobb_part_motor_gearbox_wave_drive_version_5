@@ -1,0 +1,54 @@
+[
+  {
+    "roller_length_mm": 6,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
+  },
+  {
+    "roller_length_mm": 12,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "angles": [
+      {
+        "input_angle": 0,
+        "interference_mm3": 0
+      },
+      {
+        "input_angle": 45,
+        "interference_mm3": 0
+      }
+    ],
+    "status": "geometry_passed",
+    "assembly_height_mm": 38.1
+  },
+  {
+    "roller_length_mm": 15,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Cage countersunk screws must engage the lower nuts without protruding"
+  },
+  {
+    "roller_length_mm": 18,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
+  },
+  {
+    "roller_length_mm": 20,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
+  },
+  {
+    "roller_length_mm": 25,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
+  },
+  {
+    "roller_length_mm": 30,
+    "scope": "Compact motor stack; only 12 mm is the release default",
+    "status": "rejected_by_stack_constraints",
+    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
+  }
+]

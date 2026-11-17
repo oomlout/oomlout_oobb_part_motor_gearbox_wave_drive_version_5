@@ -1,0 +1,1991 @@
+{
+  "style": {
+    "page_mm": [
+      297,
+      210
+    ],
+    "columns": 2,
+    "rows": 2,
+    "margin_mm": 6,
+    "gutter_mm": 4,
+    "border_radius_mm": 3,
+    "border_width_pt": 3.0,
+    "component_border_width_pt": 1.1,
+    "thumbnail_height_mm": 8.5,
+    "quantity_shift_mm": 1.0,
+    "paper": "FFFFFF",
+    "ink": "000000",
+    "accent": "000000",
+    "border": "000000",
+    "image_size": [
+      1500,
+      1100
+    ],
+    "samples": 24,
+    "eye": [
+      1.2,
+      -1.6,
+      1.35
+    ],
+    "underside_eye": [
+      1.2,
+      -1.6,
+      -1.5
+    ],
+    "font_body_pt": 7,
+    "font_code_pt": 6.4,
+    "font_url_prefix_pt": 4.8,
+    "quantity_pt": 5.8,
+    "explosion_scale": 1.35,
+    "draw_arrows": false,
+    "revision": "4",
+    "title": "OOBB wave drive | {reduction}:1"
+  },
+  "configuration_title": "OOBB wave drive | 12:1",
+  "parts": {
+    "motor_mount_plate": {
+      "key": "motor_mount_plate",
+      "name": "Motor base plate",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_mount_plate",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "fixed_profile_ring": {
+      "key": "fixed_profile_ring",
+      "name": "Fixed profile ring",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__fixed_profile_ring",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "output_bearing_housing": {
+      "key": "output_bearing_housing",
+      "name": "6810 bearing housing",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_bearing_housing",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "cage_lower_cap": {
+      "key": "cage_lower_cap",
+      "name": "Lower cage with teeth",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__cage_lower_cap",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "output_cage": {
+      "key": "output_cage",
+      "name": "Upper cage and hub",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cage",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "output_retainer": {
+      "key": "output_retainer",
+      "name": "Output nut carrier",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_retainer",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "output_cover": {
+      "key": "output_cover",
+      "name": "OOBB output cover",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cover",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "motor_eccentric": {
+      "key": "motor_eccentric",
+      "name": "Lower eccentric shaft",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "motor_eccentric_cap": {
+      "key": "motor_eccentric_cap",
+      "name": "Upper eccentric collar",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric_cap",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "wave_generator": {
+      "key": "wave_generator",
+      "name": "Lower wave clamshell",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_generator",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "wave_bearing_cap": {
+      "key": "wave_bearing_cap",
+      "name": "Upper wave clamshell",
+      "detail": "",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_bearing_cap",
+      "identity_source": "Project-local assembly identity",
+      "quantity": 1
+    },
+    "bearing_6810": {
+      "key": "bearing_6810",
+      "name": "6810 bearing",
+      "detail": "50 x 65 x 7 mm",
+      "id": "hardware_bearing_6800_series_6810_size_50_mm_id_65_mm_od_7_mm_depth",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "cb4eb99a384ce4439e763e05c6830f0a",
+      "md5_6_alpha": "7xku1",
+      "short_url": "https://oom.lt/a/7xku1",
+      "short_label": "oom.lt/a/7xku1",
+      "quantity": 1
+    },
+    "bearing_6704": {
+      "key": "bearing_6704",
+      "name": "6704 bearing",
+      "detail": "20 x 27 x 4 mm",
+      "id": "hardware_bearing_6700_series_6704_size_20_mm_id_27_mm_od_4_mm_depth",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "7edd1090264a248f9e6140547bebe5c5",
+      "md5_6_alpha": "4y780",
+      "short_url": "https://oom.lt/a/4y780",
+      "short_label": "oom.lt/a/4y780",
+      "quantity": 1
+    },
+    "roller": {
+      "key": "roller",
+      "name": "Spacer 7mm OD 12mm depth",
+      "detail": "7 OD x 12 mm; 3.2 bore",
+      "id": "hardware_spacer_m3_nylon_white_7_mm_outer_diameter_12_mm_depth",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "81d185e3cb9642e83879b78f94e82608",
+      "md5_6_alpha": "52cn9",
+      "short_url": "https://oom.lt/a/52cn9",
+      "short_label": "oom.lt/a/52cn9",
+      "quantity": 12
+    },
+    "screw_case": {
+      "key": "screw_case",
+      "name": "M3 x 30 socket cap",
+      "detail": "",
+      "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_30_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "7e252fca70adce3700f60f1c0b0bd9dc",
+      "md5_6_alpha": "4x6wf",
+      "short_url": "https://oom.lt/a/4x6wf",
+      "short_label": "oom.lt/a/4x6wf",
+      "quantity": 6
+    },
+    "screw_motor": {
+      "key": "screw_motor",
+      "name": "M3 x 8 countersunk",
+      "detail": "",
+      "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "e91880b617c6f217bb01f9803b4bc21d",
+      "md5_6_alpha": "93f5s",
+      "short_url": "https://oom.lt/a/93f5s",
+      "short_label": "oom.lt/a/93f5s",
+      "quantity": 4
+    },
+    "screw_output": {
+      "key": "screw_output",
+      "name": "M3 x 12 socket cap",
+      "detail": "",
+      "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_12_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "699fa0ca1f3c788a8092c8ecc749280c",
+      "md5_6_alpha": "44d5s",
+      "short_url": "https://oom.lt/a/44d5s",
+      "short_label": "oom.lt/a/44d5s",
+      "quantity": 4
+    },
+    "screw_wave": {
+      "key": "screw_wave",
+      "name": "M3 x 12 countersunk",
+      "detail": "",
+      "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_12_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "2c6fb230ab08b4e2319686abe673d7e1",
+      "md5_6_alpha": "1qf1u",
+      "short_url": "https://oom.lt/a/1qf1u",
+      "short_label": "oom.lt/a/1qf1u",
+      "quantity": 4
+    },
+    "screw_cage": {
+      "key": "screw_cage",
+      "name": "M2 x 20 countersunk",
+      "detail": "Hex drive; length includes head",
+      "id": "hardware_screw_countersunk_hex_head_black_m2_diameter_20_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "7d8693653082a054ebcd71147110517d",
+      "md5_6_alpha": "4wbkj",
+      "short_url": "https://oom.lt/a/4wbkj",
+      "short_label": "oom.lt/a/4wbkj",
+      "quantity": 12
+    },
+    "screw_eccentric": {
+      "key": "screw_eccentric",
+      "name": "M3 x 16 countersunk",
+      "detail": "Hex drive; length includes head",
+      "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_16_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "8dc04ae0424362764ab344c4d6c2d0ef",
+      "md5_6_alpha": "5j422",
+      "short_url": "https://oom.lt/a/5j422",
+      "short_label": "oom.lt/a/5j422",
+      "quantity": 2
+    },
+    "screw_shaft_clamp": {
+      "key": "screw_shaft_clamp",
+      "name": "M3 x 8 countersunk",
+      "detail": "Hex drive; length includes head",
+      "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "e91880b617c6f217bb01f9803b4bc21d",
+      "md5_6_alpha": "93f5s",
+      "short_url": "https://oom.lt/a/93f5s",
+      "short_label": "oom.lt/a/93f5s",
+      "quantity": 1
+    },
+    "nut_m2": {
+      "key": "nut_m2",
+      "name": "M2 hex nut",
+      "detail": "",
+      "id": "hardware_nut_m2",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "4ac513ae8036eb31717a4f72371557c4",
+      "md5_6_alpha": "2x0yb",
+      "short_url": "https://oom.lt/a/2x0yb",
+      "short_label": "oom.lt/a/2x0yb",
+      "quantity": 12
+    },
+    "nut_m3": {
+      "key": "nut_m3",
+      "name": "M3 hex nut",
+      "detail": "",
+      "id": "hardware_nut_m3",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "632d2f1cf592d38bafebf6dcced02499",
+      "md5_6_alpha": "3vb5b",
+      "short_url": "https://oom.lt/a/3vb5b",
+      "short_label": "oom.lt/a/3vb5b",
+      "quantity": 25
+    },
+    "nut_m6": {
+      "key": "nut_m6",
+      "name": "M6 hex nut",
+      "detail": "",
+      "id": "hardware_nut_m6",
+      "identity_source": "OOMP catalogue identity",
+      "md5": "0c5aa07f0758332d210758db9c5a2270",
+      "md5_6_alpha": "hcps",
+      "short_url": "https://oom.lt/a/hcps",
+      "short_label": "oom.lt/a/hcps",
+      "quantity": 5
+    },
+    "nema17": {
+      "key": "nema17",
+      "name": "NEMA 17 motor",
+      "detail": "40 mm body; 24 mm D shaft",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft",
+      "identity_source": "Project-local assembly identity",
+      "md5": "4e65a045db3fe55d79344ec81627071d",
+      "md5_6_alpha": "324dc",
+      "short_url": "https://oom.lt/a/324dc",
+      "short_label": "oom.lt/a/324dc",
+      "quantity": 1
+    }
+  },
+  "steps": [
+    {
+      "title": "Mount the motor and capture the case nuts",
+      "action": "Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x 8 countersunk screws flush with its top face.",
+      "add": [
+        "nema17_*",
+        "motor_mount_plate",
+        "case_nut_*",
+        "motor_screw_*"
+      ],
+      "move": {
+        "motor_mount_plate": [
+          0,
+          0,
+          22
+        ],
+        "case_nut_*": [
+          0,
+          0,
+          12
+        ],
+        "motor_screw_*": [
+          0,
+          0,
+          40
+        ]
+      },
+      "targets": {
+        "case_nut_*": [
+          0,
+          0,
+          22
+        ],
+        "motor_screw_*": [
+          0,
+          0,
+          22
+        ]
+      },
+      "number": 1,
+      "key": "step_01",
+      "tools": "",
+      "loose_parts": {
+        "motor_mount_plate": 1,
+        "nut_m3": 6,
+        "screw_motor": 4,
+        "nema17": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector",
+        "motor_mount_plate",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Fit the cage with its captive nuts",
+      "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft flat (+X).",
+      "add": [
+        "cage_lower_cap",
+        "cage_nut_*"
+      ],
+      "move": {
+        "cage_lower_cap": [
+          0,
+          0,
+          42
+        ],
+        "cage_nut_*": [
+          0,
+          0,
+          28
+        ]
+      },
+      "targets": {
+        "cage_nut_*": [
+          0,
+          0,
+          42
+        ]
+      },
+      "number": 2,
+      "key": "step_02",
+      "tools": "",
+      "loose_parts": {
+        "cage_lower_cap": 1,
+        "nut_m2": 12
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "cage_lower_cap",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Prepare and fit the lower eccentric",
+      "action": "Load two M2 joint nuts from below and one radial M3 clamp nut. Start the M3 x 8 countersunk screw, leaving the bore clear. Slide onto the D shaft and snug the clamp through the cage port.",
+      "add": [
+        "motor_eccentric",
+        "eccentric_join_nut_*",
+        "motor_clamp_*"
+      ],
+      "move": {
+        "motor_eccentric": [
+          0,
+          0,
+          43
+        ],
+        "eccentric_join_nut_*": [
+          0,
+          0,
+          31
+        ],
+        "motor_clamp_0_nut_m3": [
+          16,
+          0,
+          43
+        ],
+        "motor_clamp_0_screw_shaft_clamp": [
+          32,
+          0,
+          43
+        ]
+      },
+      "targets": {
+        "eccentric_join_nut_*": [
+          0,
+          0,
+          43
+        ],
+        "motor_clamp_*": [
+          0,
+          0,
+          43
+        ]
+      },
+      "number": 3,
+      "key": "step_03",
+      "tools": "",
+      "loose_parts": {
+        "motor_eccentric": 1,
+        "screw_shaft_clamp": 1,
+        "nut_m3": 3
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "motor_eccentric",
+        "eccentric_join_nut_0",
+        "eccentric_join_nut_1",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_nut_0",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Fit the lower wave half and 6704",
+      "action": "Seat four M3 nuts underneath the lower clamshell. Lower it around the eccentric journal and seat the 6704 bearing squarely in its recess.",
+      "add": [
+        "wave_generator",
+        "wave_nut_*",
+        "bearing_6704"
+      ],
+      "move": {
+        "wave_generator": [
+          0,
+          0,
+          34
+        ],
+        "wave_nut_*": [
+          0,
+          0,
+          21
+        ],
+        "bearing_6704": [
+          0,
+          0,
+          53
+        ]
+      },
+      "targets": {
+        "wave_nut_*": [
+          0,
+          0,
+          34
+        ],
+        "bearing_6704": [
+          0,
+          0,
+          34
+        ]
+      },
+      "number": 4,
+      "key": "step_04",
+      "tools": "",
+      "loose_parts": {
+        "wave_generator": 1,
+        "bearing_6704": 1,
+        "nut_m3": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "wave_generator",
+        "wave_nut_0",
+        "wave_nut_1",
+        "wave_nut_2",
+        "wave_nut_3",
+        "bearing_6704"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "wave_generator",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_nut_0",
+        "wave_nut_1",
+        "wave_nut_2",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_nut_0",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Close the eccentric shaft",
+      "action": "Fit the upper eccentric collar and tighten two M3 x 16 countersunk screws into the lower nuts.",
+      "add": [
+        "motor_eccentric_cap",
+        "eccentric_join_screw_*"
+      ],
+      "move": {
+        "motor_eccentric_cap": [
+          0,
+          0,
+          24
+        ],
+        "eccentric_join_screw_*": [
+          0,
+          0,
+          44
+        ]
+      },
+      "targets": {
+        "eccentric_join_screw_*": [
+          0,
+          0,
+          24
+        ]
+      },
+      "number": 5,
+      "key": "step_05",
+      "tools": "",
+      "loose_parts": {
+        "motor_eccentric_cap": 1,
+        "screw_eccentric": 2
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "motor_eccentric_cap",
+        "eccentric_join_screw_0",
+        "eccentric_join_screw_1"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_nut_0",
+        "wave_nut_1",
+        "wave_nut_2",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Close the wave clamshell",
+      "action": "Fit the upper wave half around the 6704 bearing. Tighten four M3 x 12 countersunk screws into the lower nuts.",
+      "add": [
+        "wave_bearing_cap",
+        "wave_screw_*"
+      ],
+      "move": {
+        "wave_bearing_cap": [
+          0,
+          0,
+          25
+        ],
+        "wave_screw_*": [
+          0,
+          0,
+          43
+        ]
+      },
+      "targets": {
+        "wave_screw_*": [
+          0,
+          0,
+          25
+        ]
+      },
+      "number": 6,
+      "key": "step_06",
+      "tools": "",
+      "loose_parts": {
+        "wave_bearing_cap": 1,
+        "screw_wave": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "wave_bearing_cap",
+        "wave_screw_0",
+        "wave_screw_1",
+        "wave_screw_2",
+        "wave_screw_3"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Lower the fixed ring",
+      "action": "Lower the fixed ring around the cage. Align all six fins with the base and the service hole with the cage port (+X).",
+      "add": [
+        "fixed_profile_ring"
+      ],
+      "move": {
+        "fixed_profile_ring": [
+          0,
+          0,
+          37
+        ]
+      },
+      "number": 7,
+      "key": "step_07",
+      "tools": "",
+      "loose_parts": {
+        "fixed_profile_ring": 1
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "fixed_profile_ring"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Insert twelve rollers",
+      "action": "At input angle zero, insert one 7 mm OD x 12 mm nylon spacer in each cage slot.",
+      "add": [
+        "roller_*"
+      ],
+      "move": {
+        "roller_*": [
+          0,
+          0,
+          29
+        ]
+      },
+      "number": 8,
+      "key": "step_08",
+      "tools": "",
+      "loose_parts": {
+        "roller": 12
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_nut_0",
+        "cage_nut_1",
+        "cage_nut_2",
+        "cage_nut_3",
+        "cage_nut_4",
+        "cage_nut_5",
+        "cage_nut_6",
+        "cage_nut_7",
+        "cage_nut_8",
+        "cage_nut_9",
+        "cage_nut_10",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Fit and fasten the upper cage",
+      "action": "Load four M3 output nuts underneath the upper cage, then lower it over the teeth. Install all twelve M2 x 20 countersunk screws through the disc into the lower cage nuts.",
+      "add": [
+        "output_cage",
+        "output_nut_*",
+        "cage_screw_*"
+      ],
+      "move": {
+        "output_cage": [
+          0,
+          0,
+          31
+        ],
+        "output_nut_*": [
+          0,
+          0,
+          19
+        ],
+        "cage_screw_*": [
+          0,
+          0,
+          55
+        ]
+      },
+      "targets": {
+        "output_nut_*": [
+          0,
+          0,
+          31
+        ],
+        "cage_screw_*": [
+          0,
+          0,
+          31
+        ]
+      },
+      "number": 9,
+      "key": "step_09",
+      "tools": "",
+      "loose_parts": {
+        "output_cage": 1,
+        "nut_m3": 4,
+        "screw_cage": 12
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_cage",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "cage_screw_0",
+        "cage_screw_1",
+        "cage_screw_2",
+        "cage_screw_3",
+        "cage_screw_4",
+        "cage_screw_5",
+        "cage_screw_6",
+        "cage_screw_7",
+        "cage_screw_8",
+        "cage_screw_9",
+        "cage_screw_10",
+        "cage_screw_11"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "cage_lower_cap",
+        "output_cage",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_nut_0",
+        "case_nut_1",
+        "case_nut_2",
+        "case_nut_3",
+        "case_nut_4",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Fit the output bearing and close the case",
+      "action": "Seat the 6810 over the upper cage hub. Lower the housing over the bearing outer race. Insert six M3 x 30 socket caps from the top and tighten into the captive base nuts.",
+      "add": [
+        "bearing_6810",
+        "output_bearing_housing",
+        "case_screw_*"
+      ],
+      "move": {
+        "bearing_6810": [
+          0,
+          0,
+          22
+        ],
+        "output_bearing_housing": [
+          0,
+          0,
+          43
+        ],
+        "case_screw_*": [
+          0,
+          0,
+          83
+        ]
+      },
+      "targets": {
+        "case_screw_*": [
+          0,
+          0,
+          43
+        ]
+      },
+      "number": 10,
+      "key": "step_10",
+      "tools": "",
+      "loose_parts": {
+        "output_bearing_housing": 1,
+        "bearing_6810": 1,
+        "screw_case": 6
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "bearing_6810",
+        "output_bearing_housing",
+        "case_screw_0",
+        "case_screw_1",
+        "case_screw_2",
+        "case_screw_3",
+        "case_screw_4",
+        "case_screw_5"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Load and fit the output nut carrier",
+      "action": "Fit five M6 nuts and eight M3 nuts in the carrier's upward-facing pockets. Lower the loaded carrier into the 6810 bore, keeping the four off-grid fixing holes clear.",
+      "add": [
+        "output_retainer",
+        "output_attachment*"
+      ],
+      "move": {
+        "output_retainer": [
+          0,
+          0,
+          24
+        ],
+        "output_attachment_nut_*": [
+          0,
+          0,
+          42
+        ],
+        "output_attachment_m3_nut_*": [
+          0,
+          0,
+          42
+        ]
+      },
+      "targets": {
+        "output_attachment*": [
+          0,
+          0,
+          24
+        ]
+      },
+      "number": 11,
+      "key": "step_11",
+      "tools": "",
+      "loose_parts": {
+        "output_retainer": 1,
+        "nut_m6": 5,
+        "nut_m3": 8
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_retainer",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4",
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "output_retainer",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_nut_0",
+        "output_nut_1",
+        "output_nut_2",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4",
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    },
+    {
+      "title": "Close the output face",
+      "action": "Fit the output cover and tighten four M3 x 12 socket caps in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input 12 times for one reverse output turn.",
+      "add": [
+        "output_cover",
+        "output_screw_*"
+      ],
+      "move": {
+        "output_cover": [
+          0,
+          0,
+          24
+        ],
+        "output_screw_*": [
+          0,
+          0,
+          44
+        ]
+      },
+      "targets": {
+        "output_screw_*": [
+          0,
+          0,
+          24
+        ]
+      },
+      "number": 12,
+      "key": "step_12",
+      "tools": "",
+      "loose_parts": {
+        "output_cover": 1,
+        "screw_output": 4
+      },
+      "prepared_parts": {},
+      "added_instances": [
+        "output_cover",
+        "output_screw_0",
+        "output_screw_1",
+        "output_screw_2",
+        "output_screw_3"
+      ],
+      "shown_instances": [
+        "motor_mount_plate",
+        "fixed_profile_ring",
+        "output_bearing_housing",
+        "cage_lower_cap",
+        "output_cage",
+        "output_retainer",
+        "output_cover",
+        "motor_eccentric",
+        "motor_eccentric_cap",
+        "wave_generator",
+        "wave_bearing_cap",
+        "bearing_6810",
+        "bearing_6704",
+        "roller_00",
+        "roller_01",
+        "roller_02",
+        "roller_03",
+        "roller_04",
+        "roller_05",
+        "roller_06",
+        "roller_07",
+        "roller_08",
+        "roller_09",
+        "roller_10",
+        "roller_11",
+        "case_screw_0",
+        "case_nut_0",
+        "case_screw_1",
+        "case_nut_1",
+        "case_screw_2",
+        "case_nut_2",
+        "case_screw_3",
+        "case_nut_3",
+        "case_screw_4",
+        "case_nut_4",
+        "case_screw_5",
+        "case_nut_5",
+        "motor_screw_0",
+        "motor_screw_1",
+        "motor_screw_2",
+        "motor_screw_3",
+        "output_screw_0",
+        "output_nut_0",
+        "output_screw_1",
+        "output_nut_1",
+        "output_screw_2",
+        "output_nut_2",
+        "output_screw_3",
+        "output_nut_3",
+        "wave_screw_0",
+        "wave_nut_0",
+        "wave_screw_1",
+        "wave_nut_1",
+        "wave_screw_2",
+        "wave_nut_2",
+        "wave_screw_3",
+        "wave_nut_3",
+        "cage_screw_0",
+        "cage_nut_0",
+        "cage_screw_1",
+        "cage_nut_1",
+        "cage_screw_2",
+        "cage_nut_2",
+        "cage_screw_3",
+        "cage_nut_3",
+        "cage_screw_4",
+        "cage_nut_4",
+        "cage_screw_5",
+        "cage_nut_5",
+        "cage_screw_6",
+        "cage_nut_6",
+        "cage_screw_7",
+        "cage_nut_7",
+        "cage_screw_8",
+        "cage_nut_8",
+        "cage_screw_9",
+        "cage_nut_9",
+        "cage_screw_10",
+        "cage_nut_10",
+        "cage_screw_11",
+        "cage_nut_11",
+        "motor_clamp_0_screw_shaft_clamp",
+        "motor_clamp_0_nut_m3",
+        "eccentric_join_screw_0",
+        "eccentric_join_nut_0",
+        "eccentric_join_screw_1",
+        "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
+        "output_attachment_nut_4",
+        "output_attachment_m3_nut_0",
+        "output_attachment_m3_nut_1",
+        "output_attachment_m3_nut_2",
+        "output_attachment_m3_nut_3",
+        "output_attachment_m3_nut_4",
+        "output_attachment_m3_nut_5",
+        "output_attachment_m3_nut_6",
+        "output_attachment_m3_nut_7",
+        "nema17_front",
+        "nema17_stator",
+        "nema17_rear",
+        "nema17_pilot",
+        "nema17_shaft",
+        "nema17_connector"
+      ]
+    }
+  ],
+  "physical_item_count": 101,
+  "printed_keys": [
+    "motor_mount_plate",
+    "fixed_profile_ring",
+    "output_bearing_housing",
+    "output_cage",
+    "cage_lower_cap",
+    "output_retainer",
+    "output_cover",
+    "wave_generator",
+    "wave_bearing_cap",
+    "motor_eccentric",
+    "motor_eccentric_cap"
+  ],
+  "book": {
+    "cover_title": "Wave drive",
+    "cover_subtitle": "12:1 reduction / NEMA 17",
+    "project_name": "oomlout_oobb_part_motor_gearbox_wave_drive_version_5",
+    "project_url": "https://github.com/oomlout/oomlout_oobb_part_motor_gearbox_wave_drive_version_5",
+    "viewer_enabled": true,
+    "viewer_start": "step-01",
+    "viewer_url": "https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/",
+    "project_summary": "A 3D-printable 12:1 roller wave gearbox for a NEMA 17 motor, with an OOBB mounting base and output face. Twelve nylon spacers transfer motion from an eccentric wheel to the output cage. The output turns once in the opposite direction for every 12 motor turns.",
+    "logo_svg": "source_file/oomlout_logo_unshaded_original.svg",
+    "logo_symbol_subpaths": 3,
+    "details_title": "Project details",
+    "details": [
+      "Reduction: 12:1. Output rotates opposite to the motor.",
+      "Motor: NEMA 17, 40 mm body, 24 mm shaft.",
+      "Rollers: 12 nylon spacers, 7 mm OD, 12 mm depth, 3.2 mm bore.",
+      "Bearings: 6810 (50 x 65 x 7 mm); 6704 (20 x 27 x 4 mm).",
+      "Cage: M2 x 20 countersunk screws; 1.6 mm nominal tip clearance.",
+      "Eccentric joint: M3 x 16 countersunk screws and captive nuts.",
+      "Clamshell joint: M3 x 12 countersunk screws and captive nuts.",
+      "Case: M3 x 30 screws from above; nuts underneath the base.",
+      "Motor mount: M3 x 8 countersunk screws.",
+      "Regenerate CAD and instructions: python working.py",
+      "Hardware links: OOMP catalogue codes. Printed parts are named in the parts list.",
+      "AI-generated CAD and instructions. Fit and load capacity not physically tested."
+    ],
+    "summary_title": "Printed parts",
+    "hardware_title": "Hardware",
+    "summary_step": true,
+    "summary_view": "book_cover",
+    "signature_pages": 4,
+    "summary_scope": "printed_and_hardware"
+  },
+  "source_sha256": {
+    "motor_mount_plate.stl": "3747b46e71b240b51b0dd5ae72a19055fbd087f396d1a4cf7854cd2a67b59fb0",
+    "fixed_profile_ring.stl": "e8a533c3a2d2a7b0067d21326e3f24a69744a1cbebe12a305d486d9c28eb9e56",
+    "output_bearing_housing.stl": "e0f44676024f4ab87bc87bd1ce86cc203cc710c7265e22d9b6ba5a4d0a6787da",
+    "cage_lower_cap.stl": "8dc41ace7f553a4dcac329207184828b3e9adca8dbf9feb484fb978485853691",
+    "output_cage.stl": "9202acaef48dd32a97e8af12b1ecca2c63a917e5446bf94ff38eecdf4d74842a",
+    "output_retainer.stl": "1ee8b98d04a06adbb1a0350a0d6729204e0f444981039c542c67f9ff1e4b8704",
+    "output_cover.stl": "0f350b645e660ae71580ff2c434b517b4513ab4155602fe5eb32d8579982f72a",
+    "motor_eccentric.stl": "f3fa0bd1a60000ac41745d2dd6c4dbcc2ffc4bcab297b335676531ffb4f7f767",
+    "motor_eccentric_cap.stl": "d354344d5af629fad82895603c9c6855ac68aa6b52499f4f528e15f0f95354eb",
+    "wave_generator.stl": "bc9eb0679fe8aa80298ba86188c8849ad37cfcc0dcdeacefbc22bb899567655d",
+    "wave_bearing_cap.stl": "596ad343479bba700f75a432372e179a1b19b814a5ab41b4c531f92c3966b47b",
+    "render\\hardware\\bearing_6810.stl": "75d56f3e997130607095725518518d6cacd73a55b311ea6604ff386347652ccf",
+    "render\\hardware\\bearing_6704.stl": "9f5ef736eab5ff8569843a7fb1f4eaabbc491a90d871348a32bb43eb0aa2eb39",
+    "render\\hardware\\roller.stl": "b22a6a0dbb097f36dd3189326c005225524b123391a127ac0c06a1b0872ac423",
+    "render\\hardware\\screw_case.stl": "090543fef54d05052723f4898ad6fa2aa89c0f9f2f0353b9b588134337e810e0",
+    "render\\hardware\\nut_m3.stl": "a93915fca86e5563a53a9c72b0c3b9dd349bea4ce7e6895ab44b208594013361",
+    "render\\hardware\\screw_motor.stl": "3c83e0f740220ff889258430471b496f5d88a00590bf9979bd1122bfa73dfaa5",
+    "render\\hardware\\screw_output.stl": "24d5e3ad659e3a0c160a5fa1c088ac0e7d64b394db130598d7fb02b4359ef5de",
+    "render\\hardware\\screw_wave.stl": "5d0fb2db574a50d2b1a46962ed2a1564c3589680b1d69482f26b74f427b13b0a",
+    "render\\hardware\\screw_cage.stl": "0c37a44bcb2b6f97ec6536fff9995c4022b0086f534b8e575bc7444f5c957cfa",
+    "render\\hardware\\nut_m2.stl": "5bfa5d3f0cb7c4cc9b0ac7ecf9e36135d5ba3e8fdce96735a0dfbf685258ef80",
+    "render\\hardware\\screw_shaft_clamp.stl": "3c83e0f740220ff889258430471b496f5d88a00590bf9979bd1122bfa73dfaa5",
+    "render\\hardware\\screw_eccentric.stl": "8fb7c0265c34ee0962381798083075689a664766000d1d0a51e8db3604cd63ea",
+    "render\\hardware\\nut_m6.stl": "4c631db8b081d4061d295dd43f0211cd81a6ebbe1c8bdb3ea8c41b1f6cc00f94",
+    "render\\hardware\\nema17_front.stl": "c39fe059f9813cafb4dd8259a83e2e3b03b16d7ff4cdeeccb37d1f9f188f93da",
+    "render\\hardware\\nema17_stator.stl": "5f11e9aacceb052df0608ecedd0a10cb800c027e8e42d80f943328c1440853b9",
+    "render\\hardware\\nema17_rear.stl": "803d12f6dc825170e227102a5031e375f1510644cb9dc9008fb23eaa91080ef5",
+    "render\\hardware\\nema17_pilot.stl": "d8ca0d6fe2d6e3889af5cff087346eb34901a69503f8611b3b67dd8c67bd0687",
+    "render\\hardware\\nema17_shaft.stl": "41ca715c3afb07665474b27ca9221819665b3c72ed72aa23a98bdcd869be6c1b",
+    "render\\hardware\\nema17_connector.stl": "f6b35ea65451c1a72275cfeb1dabfd1249c80e8dde7d669d2d490d7fc0baa17f"
+  },
+  "recipe_sha256": "76f5d11e736285b45f3549a0d57473cf782c6f0fd6900c6327480c0245d311f9",
+  "generator_sha256": {
+    "working_oomp_populate.py": "f10f1f547e1a777cd71d80a3d8ca5cd36984921e064843132fccf19381bfe002",
+    "components\\wave_drive\\assembly_cards.py": "6fbaae511cb9a6a4154ca1a0c7abe9a2ae0bc438e86ff6f64e91749c724ed87a",
+    "components\\wave_drive\\render_studio.py": "08acc32cb5fed12a3b95513df2ded92e72e4dbbe1098ecfe0d89548d9e2bb7c8",
+    "components\\wave_drive\\assembly_booklet.py": "5d136c519e787db38d24ab66ec7a58e3b2a0ed7678b1cd16da5715968f093bc8",
+    "components\\wave_drive\\assembly_viewer.py": "47c59a251feeec154f0d5a5f3862010b628415b6e3286a861da00c5ea2452ca6",
+    "components\\wave_drive\\assembly_viewer.html": "c1d2271261cb49e8472751577321b74e4e657d6145bc49bd93990a8f0d379eac",
+    "source_file\\oomlout_logo_unshaded_original.svg": "72918ba326599a1e6ae495ae4cabb51cc7a462035d35ee30de984229e30d9d67"
+  },
+  "short_code_method": "OOMP md5_6_alpha: base36(first six hex digits of MD5(UTF-8 identity)). URL formatting does not register a redirect; local identities are explicitly marked.",
+  "summary_inventory": {
+    "printed": [
+      {
+        "key": "motor_mount_plate",
+        "name": "Motor base plate",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_mount_plate",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "fixed_profile_ring",
+        "name": "Fixed profile ring",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__fixed_profile_ring",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "output_bearing_housing",
+        "name": "6810 bearing housing",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_bearing_housing",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "cage_lower_cap",
+        "name": "Lower cage with teeth",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__cage_lower_cap",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "output_cage",
+        "name": "Upper cage and hub",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cage",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "output_retainer",
+        "name": "Output nut carrier",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_retainer",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "output_cover",
+        "name": "OOBB output cover",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__output_cover",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "motor_eccentric",
+        "name": "Lower eccentric shaft",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "motor_eccentric_cap",
+        "name": "Upper eccentric collar",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__motor_eccentric_cap",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "wave_generator",
+        "name": "Lower wave clamshell",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_generator",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      },
+      {
+        "key": "wave_bearing_cap",
+        "name": "Upper wave clamshell",
+        "detail": "",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__wave_bearing_cap",
+        "identity_source": "Project-local assembly identity",
+        "quantity": 1
+      }
+    ],
+    "hardware": [
+      {
+        "key": "bearing_6810",
+        "name": "6810 bearing",
+        "detail": "50 x 65 x 7 mm",
+        "id": "hardware_bearing_6800_series_6810_size_50_mm_id_65_mm_od_7_mm_depth",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "cb4eb99a384ce4439e763e05c6830f0a",
+        "md5_6_alpha": "7xku1",
+        "short_url": "https://oom.lt/a/7xku1",
+        "short_label": "oom.lt/a/7xku1",
+        "quantity": 1
+      },
+      {
+        "key": "bearing_6704",
+        "name": "6704 bearing",
+        "detail": "20 x 27 x 4 mm",
+        "id": "hardware_bearing_6700_series_6704_size_20_mm_id_27_mm_od_4_mm_depth",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "7edd1090264a248f9e6140547bebe5c5",
+        "md5_6_alpha": "4y780",
+        "short_url": "https://oom.lt/a/4y780",
+        "short_label": "oom.lt/a/4y780",
+        "quantity": 1
+      },
+      {
+        "key": "roller",
+        "name": "Spacer 7mm OD 12mm depth",
+        "detail": "7 OD x 12 mm; 3.2 bore",
+        "id": "hardware_spacer_m3_nylon_white_7_mm_outer_diameter_12_mm_depth",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "81d185e3cb9642e83879b78f94e82608",
+        "md5_6_alpha": "52cn9",
+        "short_url": "https://oom.lt/a/52cn9",
+        "short_label": "oom.lt/a/52cn9",
+        "quantity": 12
+      },
+      {
+        "key": "screw_case",
+        "name": "M3 x 30 socket cap",
+        "detail": "",
+        "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_30_mm_length",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "7e252fca70adce3700f60f1c0b0bd9dc",
+        "md5_6_alpha": "4x6wf",
+        "short_url": "https://oom.lt/a/4x6wf",
+        "short_label": "oom.lt/a/4x6wf",
+        "quantity": 6
+      },
+      {
+        "key": "screw_motor",
+        "name": "M3 x 8 countersunk",
+        "detail": "",
+        "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "e91880b617c6f217bb01f9803b4bc21d",
+        "md5_6_alpha": "93f5s",
+        "short_url": "https://oom.lt/a/93f5s",
+        "short_label": "oom.lt/a/93f5s",
+        "quantity": 5
+      },
+      {
+        "key": "screw_output",
+        "name": "M3 x 12 socket cap",
+        "detail": "",
+        "id": "hardware_screw_socket_cap_hex_head_black_m3_diameter_12_mm_length",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "699fa0ca1f3c788a8092c8ecc749280c",
+        "md5_6_alpha": "44d5s",
+        "short_url": "https://oom.lt/a/44d5s",
+        "short_label": "oom.lt/a/44d5s",
+        "quantity": 4
+      },
+      {
+        "key": "screw_wave",
+        "name": "M3 x 12 countersunk",
+        "detail": "",
+        "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_12_mm_length",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "2c6fb230ab08b4e2319686abe673d7e1",
+        "md5_6_alpha": "1qf1u",
+        "short_url": "https://oom.lt/a/1qf1u",
+        "short_label": "oom.lt/a/1qf1u",
+        "quantity": 4
+      },
+      {
+        "key": "screw_cage",
+        "name": "M2 x 20 countersunk",
+        "detail": "Hex drive; length includes head",
+        "id": "hardware_screw_countersunk_hex_head_black_m2_diameter_20_mm_length",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "7d8693653082a054ebcd71147110517d",
+        "md5_6_alpha": "4wbkj",
+        "short_url": "https://oom.lt/a/4wbkj",
+        "short_label": "oom.lt/a/4wbkj",
+        "quantity": 12
+      },
+      {
+        "key": "screw_eccentric",
+        "name": "M3 x 16 countersunk",
+        "detail": "Hex drive; length includes head",
+        "id": "hardware_screw_countersunk_hex_head_black_m3_diameter_16_mm_length",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "8dc04ae0424362764ab344c4d6c2d0ef",
+        "md5_6_alpha": "5j422",
+        "short_url": "https://oom.lt/a/5j422",
+        "short_label": "oom.lt/a/5j422",
+        "quantity": 2
+      },
+      {
+        "key": "nut_m2",
+        "name": "M2 hex nut",
+        "detail": "",
+        "id": "hardware_nut_m2",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "4ac513ae8036eb31717a4f72371557c4",
+        "md5_6_alpha": "2x0yb",
+        "short_url": "https://oom.lt/a/2x0yb",
+        "short_label": "oom.lt/a/2x0yb",
+        "quantity": 12
+      },
+      {
+        "key": "nut_m3",
+        "name": "M3 hex nut",
+        "detail": "",
+        "id": "hardware_nut_m3",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "632d2f1cf592d38bafebf6dcced02499",
+        "md5_6_alpha": "3vb5b",
+        "short_url": "https://oom.lt/a/3vb5b",
+        "short_label": "oom.lt/a/3vb5b",
+        "quantity": 25
+      },
+      {
+        "key": "nut_m6",
+        "name": "M6 hex nut",
+        "detail": "",
+        "id": "hardware_nut_m6",
+        "identity_source": "OOMP catalogue identity",
+        "md5": "0c5aa07f0758332d210758db9c5a2270",
+        "md5_6_alpha": "hcps",
+        "short_url": "https://oom.lt/a/hcps",
+        "short_label": "oom.lt/a/hcps",
+        "quantity": 5
+      },
+      {
+        "key": "nema17",
+        "name": "NEMA 17 motor",
+        "detail": "40 mm body; 24 mm D shaft",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft",
+        "identity_source": "Project-local assembly identity",
+        "md5": "4e65a045db3fe55d79344ec81627071d",
+        "md5_6_alpha": "324dc",
+        "short_url": "https://oom.lt/a/324dc",
+        "short_label": "oom.lt/a/324dc",
+        "quantity": 1
+      }
+    ]
+  },
+  "book_pages": [
+    {
+      "kind": "cover"
+    },
+    {
+      "kind": "details"
+    },
+    {
+      "kind": "instructions",
+      "group": 0
+    },
+    {
+      "kind": "instructions",
+      "group": 1
+    },
+    {
+      "kind": "instructions",
+      "group": 2
+    },
+    {
+      "kind": "summary",
+      "number": 13
+    },
+    {
+      "kind": "parts"
+    },
+    {
+      "kind": "back"
+    }
+  ],
+  "printed_piece_count": 11
+}

@@ -1,0 +1,27 @@
+include <parameters.scad>;
+use <oobb_hardware.scad>;
+include <geometry.scad>;
+// Complete inventory, spread across multiple print beds.
+translate([52.0, 44.36766840842552, 0]) motor_mount_plate();
+translate([158.36766840842552, 44.36766840842552, 0]) fixed_ring();
+translate([257.10300522527655, 44.36766840842552, 0]) output_housing();
+translate([29.25, 127.98533681685105, 0]) cage();
+translate([97.75, 127.98533681685105, 0]) cage_cap();
+translate([169.5, 131.23533681685103, 0]) output_retainer();
+translate([244.5, 131.23533681685103, 0]) output_cover();
+translate([310.25, 121.98533681685105, 0]) wave_generator();
+translate([23.25, 196.98533681685103, 0]) wave_cap();
+translate([68.5, 185.73533681685103, 0]) motor_eccentric();
+translate([102.5, 185.73533681685103, 0]) motor_eccentric_cap();
+translate([128.0, 177.23533681685103, 0]) roller();
+translate([145.0, 177.23533681685103, 0]) roller();
+translate([162.0, 177.23533681685103, 0]) roller();
+translate([179.0, 177.23533681685103, 0]) roller();
+translate([196.0, 177.23533681685103, 0]) roller();
+translate([213.0, 177.23533681685103, 0]) roller();
+translate([230.0, 177.23533681685103, 0]) roller();
+translate([247.0, 177.23533681685103, 0]) roller();
+translate([264.0, 177.23533681685103, 0]) roller();
+translate([281.0, 177.23533681685103, 0]) roller();
+translate([298.0, 177.23533681685103, 0]) roller();
+translate([315.0, 177.23533681685103, 0]) roller();
