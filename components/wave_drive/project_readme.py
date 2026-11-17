@@ -4,6 +4,7 @@ import json
 import re
 from pathlib import Path
 from PIL import Image, ImageOps
+from working_oomp_populate import define_project_readme
 
 
 def generate(**kwargs):
@@ -20,44 +21,36 @@ def generate(**kwargs):
         source = folder/"render/images"/(image_name+".png")
         if source.exists():
             ImageOps.contain(Image.open(source), (480,480)).save(thumbs/(image_name+".png"))
+    kwargs.setdefault("readme", define_project_readme())
+    page = kwargs["readme"]
+    inspiration = page["inspiration"]
     rows = [
-        f"# {book['cover_title']} - {book['cover_subtitle']}",
+        f"# {page['title']}",
         "",
-        f"**[Open the full-screen assembly instructions]({viewer})**",
+        page["description"],
         "",
-        f"[PDF booklet]({rel}/assembly/assembly_instructions.pdf) · [Download the standalone HTML]({book['project_url']}/raw/refs/heads/main/{rel}/assembly/assembly_instructions.html) · [Full details and written instructions](README_DETAILS.md)",
+        f"Inspired by [{inspiration['creator']}]({inspiration['creator_url']}) and their video [{inspiration['title']}]({inspiration['video_url']}).",
+        "",
+        page["ai_notice"],
         "",
         "> AI-generated CAD images and instructions. Errors possible.",
         "",
-        "## Summary",
+        "## Versions",
         "",
-        book["project_summary"],
+        "Open **HTML assembly instructions** to view the full-screen steps directly in your browser. Use **PDF download** for the printable booklet.",
         "",
-        "This is an entirely AI-generated coding project. Generated outputs are included and generally run, but the main purpose of publishing is to provide a starting point for modification with your own AI tools. Physical fit, wear, speed and load capacity have not been tested.",
-        "",
-        f"[![AI-generated CAD render of the assembled gearbox and motor]({rel}/assembly/readme/motor_fit.png)]({viewer})",
-        "",
-        "## Details",
-        "",
-        f"The gearbox uses one 6810 output bearing, one 6704 wave bearing and a {c['motor_body_depth']:g} mm NEMA 17 body. Its centred {c['base_width']} x {c['base_height']} OOBB base has M6 grid holes and M3 half-grid holes. The output face carries captive M6 and M3 nuts.",
-        "",
-        f"[Printable files and SCAD source]({rel}/) · [Dimensions, regeneration and assembly](README_DETAILS.md)",
-        "",
-        "## Parts",
-        "",
-        f"Print the {manifest['printed_piece_count']} gearbox parts. The combined `3dpr` file and print-bed layouts also contain {c['roller_count']} optional spacers: {c['roller_diameter']:g} mm OD x {c['roller_length']:g} mm depth, {c['roller_bore_diameter']:g} mm bore. Use these **or** purchased nylon spacers. Do not fit both sets.",
-        "",
-        f"[Boxed parts list]({viewer}#parts) · [Hardware quantities and print options](README_DETAILS.md#hardware)",
-        "",
-        f"[![AI-generated exploded CAD view with motor]({rel}/assembly/readme/exploded_motor.png)]({rel}/render/images/exploded_motor.png)",
-        "",
-        "## Assembly",
-        "",
-        f"[Start at step 1]({viewer}#step-01). Each screen shows one step and the parts needed. Use the arrow keys, swipe or the step selector; choose **Full screen** for the largest view. The downloaded HTML works offline with all images included.",
-        "",
-        f"For paper instructions, use the [eight-page A4 landscape PDF]({rel}/assembly/assembly_instructions.pdf). For preparation, screw lengths, shaft-clamp access and the complete written sequence, use the [detailed README](README_DETAILS.md#assembly-instructions).",
-        "",
+        "| Image | Version and description | Main README | HTML assembly instructions | PDF download |",
+        "| --- | --- | --- | --- | --- |",
     ]
+    for version in page["versions"]:
+        rows.append(
+            f"| [![AI-generated CAD render: {version['name']}]({version['image']})]({version['html']}) "
+            f"| **{version['name']}**<br>{version['description']} "
+            f"| [README]({version['readme']}) "
+            f"| [Open in browser]({version['html']}) "
+            f"| [Download PDF]({version['pdf']}) |"
+        )
+    rows.append("")
     (root/"README.md").write_text("\n".join(rows), encoding="utf-8")
 
     def root_links(value):

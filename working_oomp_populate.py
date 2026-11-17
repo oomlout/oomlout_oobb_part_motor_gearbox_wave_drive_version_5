@@ -172,6 +172,31 @@ def main(**kwargs):
     return options
 
 
+def define_project_readme(**kwargs):
+    """Landing page content; append one entry per published design version."""
+    kwargs = copy.deepcopy(kwargs)
+    kwargs.setdefault("title", "Wave drive")
+    kwargs.setdefault("description", "A 3D-printable roller wave gearbox for a NEMA 17 motor, with OOBB mounting holes on the base and output face. An eccentric wheel drives a cage through a ring of nylon rollers. This repository includes editable Python/OpenSCAD source, printable files and illustrated assembly instructions.")
+    kwargs.setdefault("inspiration", {
+        "creator": "Mishin Machine",
+        "creator_url": "https://www.youtube.com/@MishinMachine",
+        "title": "Wave Drive with Rolling Elements — Cycloidal Gear Alternative!",
+        "video_url": "https://www.youtube.com/watch?v=zOLQw-TxE7s",
+    })
+    kwargs.setdefault("ai_notice", "This is an entirely AI-generated coding project. The source code is largely unreadable by humans, but usable generated files are included. It is published so others can use their own AI tools to understand, modify and regenerate the design. Physical fit, wear, speed and load capacity have not been tested.")
+    kwargs.setdefault("versions", [
+        {
+            "name": "12:1 / NEMA 17",
+            "description": "Single roller bank; twelve 7 mm OD × 12 mm spacers; 6810 output bearing and 6704 wave bearing; 7 × 5 OOBB base. Includes optional printable spacers.",
+            "image": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/readme/motor_fit.png",
+            "readme": "README_DETAILS.md",
+            "html": "https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/",
+            "pdf": "https://github.com/oomlout/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/raw/refs/heads/main/parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/assembly_instructions.pdf",
+        },
+    ])
+    return kwargs
+
+
 def define_render_style(**kwargs):
     settings = {'provenance': 'OOBB SCAD meshes with the retained cream/teal/black/yellow studio '
                    'palette.',
