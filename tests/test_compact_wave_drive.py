@@ -164,6 +164,8 @@ def test_insertion_clearances_and_visible_output_gap():
 
 def test_shaft_clamp_service_path_and_countersunk_head():
     c = working_scad.resolve()
+    assert c["input_shaft_flat_depth"] == 0
+    assert c["input_shaft_diameter"] == 5
     assert c["shaft_clamp_z"]+c["shaft_access_diameter"]/2 < c["roller_z"]
     assert c["shaft_driver_diameter"] < c["shaft_access_diameter"]
     assert c["shaft_clamp_head_radius"]-c["shaft_clamp_screw_length"] == pytest.approx(c["input_shaft_diameter"]/2-c["input_shaft_flat_depth"])

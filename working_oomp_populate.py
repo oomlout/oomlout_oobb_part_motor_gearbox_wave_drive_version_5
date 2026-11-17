@@ -50,7 +50,7 @@ def define(**kwargs):
         "cage_screw_reference_length": 18,
         "cage_tip_extra_clearance": 1.0,
         "shaft_clamp_screw_length": 8,
-        "shaft_clamp_head_radius": 10.0,
+        "shaft_clamp_head_radius": 10.5,
         "shaft_clamp_axis_z": 5.8,
         "shaft_access_diameter": 2.6,
         "shaft_driver_diameter": 2.4,
@@ -91,7 +91,7 @@ def define(**kwargs):
         "housing_screw_count": 6,
         "housing_screw_angle": 30.0,
         "input_shaft_diameter": 5.0,
-        "input_shaft_flat_depth": 0.5,
+        "input_shaft_flat_depth": 0.0,  # Zero gives a plain round motor shaft.
         "shaft_fit_clearance": 0.10,
         "eccentric_join_screw_length": 16,
         "eccentric_join_pitch_radius": 6.75,
@@ -256,11 +256,11 @@ def define_render_style(**kwargs):
 
 def define_assembly_steps(**kwargs):
     return [
-        "Print the fit coupons. Check the 6810 seat, 6704 seat, motor D shaft, roller windows and OOBB nut pockets before the full build.",
+        "Print the fit coupons. Check the 6810 seat, 6704 seat, motor shaft, roller windows and OOBB nut pockets before the full build.",
         "Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g} mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads flush with the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor threads.",
         "Print cage_lower_cap with its teeth upright. Print output_cage with its broad closure face on the bed and integrated hub upward; inspect the bridge over its central blind recess. The cage rings remain {cage_plate_depth:g} mm thick to support the captive nuts and service bore.",
         "Seat {cage_screw_count} M2 nuts in the underside of the lower cage, one for each tooth, and lower it around the motor shaft. Its {cage_center_diameter:g} mm centre opening can also pass over the already fitted eccentric shaft and collars; fit the 6704 and rolling clamshells afterwards. Align its radial service hole along +X.",
-        "Preload two M3 nuts into the underside of the lower eccentric and an M3 nut into its radial pocket. Preload the M3 x {shaft_clamp_screw_length} countersunk shaft-clamp screw before closing the gearbox; its head has top clearance, so the tip can tighten onto the shaft flat. Fit the eccentric at Z={cam_base_z:g} mm with the flat and clamp facing +X.",
+        "Preload two M3 nuts into the underside of the lower eccentric and an M3 nut into its radial pocket. Preload the M3 x {shaft_clamp_screw_length} countersunk shaft-clamp screw before closing the gearbox; its head has top clearance, so the tip can tighten onto the motor shaft. Fit the eccentric at Z={cam_base_z:g} mm with the clamp facing +X.",
         "Load four M3 nuts into the lower 6704 clamshell (wave_generator), slide it over the eccentric journal and seat the 6704. The joint is at Z={wave_split_z:g} mm, exactly through the bearing centre; each half encloses 2 mm of bearing width plus its fit clearance.",
         "Fit the upper eccentric collar and join it to the lower eccentric using two M3 x {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These lengths include the head. Both heads sit flush; the journal shoulders preserve the bearing axial clearance.",
         "Close the upper 6704 clamshell (wave_bearing_cap) with four M3 x {wave_screw_length} countersunk screws. Lower the fixed ring over the upright cage and align its rounded rectangular bosses. Its +X service hole must line up with the lower cage's hole and shaft-clamp screw.",
@@ -455,7 +455,7 @@ def define_assembly_part_labels(**kwargs):
         },
         "nema17": {
             "name": "NEMA 17 motor",
-            "detail": "{motor_body_depth:g} mm body; 24 mm D shaft",
+            "detail": "{motor_body_depth:g} mm body; {motor_shaft_length:g} x {input_shaft_diameter:g} mm shaft",
         },
     }
 
@@ -484,7 +484,7 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Fit the cage with its captive nuts",
-            "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft flat (+X).",
+            "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft clamp (+X).",
             "add": ["cage_lower_cap", "cage_nut_*"],
             "move": {
                 "cage_lower_cap": [0, 0, 42],
@@ -496,7 +496,7 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Prepare and fit the lower eccentric",
-            "action": "Load two M2 joint nuts from below and one radial M3 clamp nut. Start the M3 x {shaft_clamp_screw_length} countersunk screw, leaving the bore clear. Slide onto the D shaft and snug the clamp through the cage port.",
+            "action": "Load two M3 joint nuts from below and one radial M3 clamp nut. Start the M3 x {shaft_clamp_screw_length} countersunk screw, leaving the bore clear. Slide onto the motor shaft and snug the clamp through the cage port.",
             "add": ["motor_eccentric", "eccentric_join_nut_*", "motor_clamp_*"],
             "move": {
                 "motor_eccentric": [0, 0, 43],

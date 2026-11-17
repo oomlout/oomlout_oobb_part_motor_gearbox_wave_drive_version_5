@@ -23,7 +23,7 @@ def define(**kwargs):
     kwargs.setdefault("motor_thread_depth", 6.0)
     kwargs.setdefault("motor_cap_depth", 6.0)
     kwargs.setdefault("motor_corner_chamfer", 3.0)
-    kwargs.setdefault("motor_shaft_flat_depth", 0.5)
+    kwargs.setdefault("motor_shaft_flat_depth", 0.0)
     return kwargs
 
 
@@ -130,7 +130,7 @@ def stage(**kwargs):
         "motor_shaft_tip_z_mm": face_z+settings["motor_shaft_length"],
         "motor_mount_holes_xy_mm": [[x,y] for x in [-15.5,15.5] for y in [-15.5,15.5]],
         "motor_to_gearbox_interference_mm3": 0,
-        "fit_status": "Direct motor plate and eccentric adapter are designed. Reference: 24 mm long 5 mm D shaft with 0.5 mm flat. Bearing load limits, fit and screw engagement require confirmation on the actual motor.",
+        "fit_status": f"Direct motor plate and eccentric adapter are designed. Reference shaft: {settings['motor_shaft_length']:g} mm long, {settings['motor_shaft_diameter']:g} mm diameter, {settings['motor_shaft_flat_depth']:g} mm flat depth (zero means round). Bearing load limits, fit and clamp grip require confirmation on the actual motor.",
     }
     (render_folder_path/"motor_fit.json").write_text(json.dumps(info,indent=2),encoding="utf-8")
     return records, arrays, hashes

@@ -23,9 +23,12 @@ module socket_recess(size,depth) {
 }
 module at_mounts(points) { for(p=points) translate([p[0],p[1],0]) children(); }
 module shaft_cut(h,fit=shaft_fit_clearance) {
-    linear_extrude(h) intersection() {
-        circle(r=input_shaft_diameter/2+fit);
-        translate([-10,-10]) square([10+input_shaft_diameter/2-input_shaft_flat_depth+fit,20]);
+    linear_extrude(h) {
+        if(input_shaft_flat_depth<=0) circle(r=input_shaft_diameter/2+fit);
+        else intersection() {
+            circle(r=input_shaft_diameter/2+fit);
+            translate([-10,-10]) square([10+input_shaft_diameter/2-input_shaft_flat_depth+fit,20]);
+        }
     }
 }
 module rounded_rectangle_plate(size=[119,119,3],radius=5) {

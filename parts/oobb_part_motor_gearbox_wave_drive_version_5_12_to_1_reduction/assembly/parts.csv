@@ -23,4 +23,4 @@ screw_shaft_clamp,M3 x 8 countersunk,Hex drive; length includes head,1,hardware_
 nut_m2,M2 hex nut,,12,hardware_nut_m2,2x0yb,https://oom.lt/a/2x0yb,OOMP catalogue identity
 nut_m3,M3 hex nut,,25,hardware_nut_m3,3vb5b,https://oom.lt/a/3vb5b,OOMP catalogue identity
 nut_m6,M6 hex nut,,5,hardware_nut_m6,hcps,https://oom.lt/a/hcps,OOMP catalogue identity
-nema17,NEMA 17 motor,40 mm body; 24 mm D shaft,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft,324dc,https://oom.lt/a/324dc,Project-local assembly identity
+nema17,NEMA 17 motor,40 mm body; 24 x 5 mm shaft,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_x_5_mm_shaft,8y8u9,https://oom.lt/a/8y8u9,Project-local assembly identity

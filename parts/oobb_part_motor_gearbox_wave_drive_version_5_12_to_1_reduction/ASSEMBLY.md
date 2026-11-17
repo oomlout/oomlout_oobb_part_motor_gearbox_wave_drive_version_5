@@ -21,13 +21,13 @@ Load six M3 nuts from below the plate. Seat the plate on the motor pilot and ins
 
 ## 02. Fit the cage with its captive nuts
 
-Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft flat (+X).
+Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft clamp (+X).
 
 [![AI-generated CAD assembly step 2: Fit the cage with its captive nuts](assembly/cards/step_02.png)](assembly/cards/step_02.png)
 
 ## 03. Prepare and fit the lower eccentric
 
-Load two M2 joint nuts from below and one radial M3 clamp nut. Start the M3 x 8 countersunk screw, leaving the bore clear. Slide onto the D shaft and snug the clamp through the cage port.
+Load two M3 joint nuts from below and one radial M3 clamp nut. Start the M3 x 8 countersunk screw, leaving the bore clear. Slide onto the motor shaft and snug the clamp through the cage port.
 
 [![AI-generated CAD assembly step 3: Prepare and fit the lower eccentric](assembly/cards/step_03.png)](assembly/cards/step_03.png)
 

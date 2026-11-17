@@ -26,8 +26,8 @@
   "quantity_audit": "Every physical item introduced once; singleton multipliers hidden; printed and hardware summary reconciled to production inventory; identical hardware roles combined",
   "layout_checks": "Text fits; only black typography; compact URL code/prefix hierarchy; no instruction prose or arrows; blank spacer has no marks",
   "physical_validation": "Not physically assembled or load tested",
-  "pdf_sha256": "54033e6adf39ce12289d62ef2968d8931b1650a340b6aaef02e9c5d72b988f58",
-  "html_sha256": "e3b0e4f97a5c5564fa92e2d2475e853370a276f656aa49288b93996c3861523f",
+  "pdf_sha256": "7679f0afe9aa7acf61e25c9a7dafaf7cae4ab99992bc744315b3c41f8600633e",
+  "html_sha256": "37a31d47566db70af81b23e6442756e0c0483d7e842b0da7c21609aa44545375",
   "html_slides": 17,
   "html_steps": 13,
   "html_self_contained": true

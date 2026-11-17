@@ -176,7 +176,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 3214.024,
+      "volume_mm3": 3214.226,
       "bounds_mm": [
         [
           -10.5,
@@ -195,7 +195,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 2256.54,
+      "volume_mm3": 2249.458,
       "bounds_mm": [
         [
           -10.25,
@@ -273,9 +273,9 @@
   ],
   "status": "passed",
   "source_sha256": {
-    "parameters.scad": "9a939ba16c0854aa183c5a27a110a4e8690d3aa500e77a225c3bdb4ac035d42a",
-    "geometry.scad": "9fd3b84b0303ffb50475ee67d0237bbe97831faf850095f85ac514881f566bab",
-    "compact_helpers.scad": "16c448ba7ac8b5171a50b4fe0db21d9d9a9395a2fc51ee903a905c428b509e21",
+    "parameters.scad": "34507ec3778185f77c30c607a738fc300f40d828ccc24d0f69998ed40d50fbfc",
+    "geometry.scad": "ffe2eee1f930337a95b53e0cfc5781e874a9bf8ed99c4875ae245dbe7b417cd1",
+    "compact_helpers.scad": "3717d579425eb016a93817399d123879f70c1b45450fe2a160f96988bae3e2c1",
     "oobb_hardware.scad": "b2cc3e6dc7a68915093d1d95f96ff134bd735518249c67e60bcf3e8244f6bb53"
   },
   "print_beds": [
@@ -310,6 +310,18 @@
           15.6
         ]
       ]
+    }
+  ],
+  "round_shaft_bores": [
+    {
+      "part": "motor_eccentric",
+      "diameter_mm": 5.2,
+      "maximum_radial_error_mm": 0.0007656460541261012
+    },
+    {
+      "part": "motor_eccentric_cap",
+      "diameter_mm": 5.2,
+      "maximum_radial_error_mm": 0.00024274728266293621
     }
   ],
   "scad_python_profile_max_error_mm": 5.0110401750241555e-09,

@@ -10,7 +10,7 @@
 - Default to one compact 12:1 bank with twelve 7 mm OD x 12 mm nylon spacers. Keep the archived dual-bank design separate.
 - Use one upper 6810 output bearing and one 6704 wave bearing. The eccentric mounts directly to the motor shaft; no lower 6810 or separate input bearing.
 - Use countersunk screws with captive nuts for every cage tooth, the eccentric joint and the M3 motor shaft clamp. The shaft-clamp primitive needs clearance="top" and an aligned driver-access bore through the case and lower cage. Keep all screw lengths at most 35 mm; countersunk lengths include the head.
-- The 40 mm NEMA 17 uses a designed direct motor plate and eccentric adapter. Its 24 mm D shaft is a reference dimension; load capacity and printed fits still need physical verification.
+- The 40 mm NEMA 17 uses a designed direct motor plate and eccentric adapter. Its reference shaft is plain round, 5 mm diameter and 24 mm long; both eccentric pieces use a round bore (flat depth zero). The M3 x 8 radial clamp has a nominal head radius of 10.5 mm. Load capacity and printed fits still need physical verification.
 - This project belongs in `C:/gh/oomlout_oobb_part_motor_gearbox_wave_drive_version_5`; do not recreate the old ChatGPT-folder project.
 - `python working.py` must regenerate every active populated configuration completely, including documentation and graphics, without AI or manual generated-file edits.
 - Store every configuration's drawings, images, scenes, instructions and validation reports inside its own `parts/<part-id>/` directory. Do not recreate root presentation, release or tools directories. ZIP packaging is disabled by default; distribute individual files and do not recreate large backup or print-pack archives.

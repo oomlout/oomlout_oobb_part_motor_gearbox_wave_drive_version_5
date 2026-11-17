@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 import working_scad
 from wave_drive.wave_profile.working import action as profile_points
-from shapely.geometry import Polygon
+from shapely.geometry import Point, Polygon
 
 
 def main(**kwargs):
@@ -38,6 +38,19 @@ def main(**kwargs):
         assert abs(mesh.bounds[0,2]) < .001, result
         report["solids"].append(result)
     report["print_beds"] = []
+    c = manifest["configuration"]
+    if c["input_shaft_flat_depth"] == 0:
+        report["round_shaft_bores"] = []
+        expected_radius = c["input_shaft_diameter"]/2+c["shaft_fit_clearance"]
+        for name in ["motor_eccentric", "motor_eccentric_cap"]:
+            mesh = trimesh.load(folder/(name+".stl"), force="mesh")
+            section = mesh.section(plane_origin=[0,0,.5], plane_normal=[0,0,1])
+            loops = [loop for loop in section.discrete if Polygon(loop[:,:2]).contains(Point(0,0))]
+            bore = min(loops, key=lambda loop: Polygon(loop[:,:2]).area)
+            radii = np.linalg.norm(bore[:,:2], axis=1)
+            error = float(np.max(np.abs(radii-expected_radius)))
+            assert error < .002, (name, error)
+            report["round_shaft_bores"].append({"part":name, "diameter_mm":2*expected_radius, "maximum_radial_error_mm":error})
     ring = trimesh.load(folder/"fixed_profile_ring.stl",force="mesh")
     section = ring.section(plane_origin=[0,0,ring.extents[2]/2],plane_normal=[0,0,1])
     profile_loop = max(section.discrete,key=len)

@@ -228,7 +228,7 @@ module output_cover() {
     }
 }
 module clamp_cuts(z) {
-    // Captive M3 nut; the countersunk head has top clearance so it can press on the flat.
+    // Captive M3 nut; top head clearance lets the screw press onto the motor shaft.
     translate([0,0,z]) rotate([0,90,0]) screw_hole("m3",12);
     translate([shaft_clamp_head_radius,0,z]) rotate([0,90,0]) oobb_shaft_clamp_m3();
     translate([5,0,z]) rotate([0,90,0]) oobb_nut_m3();

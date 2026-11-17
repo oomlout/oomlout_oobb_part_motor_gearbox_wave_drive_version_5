@@ -210,7 +210,7 @@ def resolve(**kwargs):
     if c["cam_base_z"] <= c["motor_pilot_height"]+.1:
         raise ValueError("Recessed eccentric must clear the motor pilot")
     if abs(c["shaft_clamp_head_radius"]-c["shaft_clamp_screw_length"]-(c["input_shaft_diameter"]/2-c["input_shaft_flat_depth"])) > .05:
-        raise ValueError("Shaft-clamp screw length must reach the motor flat at its nominal head position")
+        raise ValueError("Shaft-clamp screw length must reach the motor shaft surface at its nominal head position")
     # Motor-supported input has a finite shaft reach; reject unsupported long edits.
     if c["cam_cap_z"]+c["cam_cap_height"] > c["motor_shaft_length"]-1:
         raise ValueError("Motor shaft too short: increase verified motor shaft length for this roller")
@@ -392,7 +392,7 @@ def bom(**kwargs):
             "size": "M3",
             "quantity": 1,
             "length_mm": c["shaft_clamp_screw_length"],
-            "role": "motor shaft flat; captive nut and clearance above the head, serviced through aligned radial port",
+            "role": "motor shaft clamp; captive nut and clearance above the head, serviced through aligned radial port",
         },
         {
             "item": "M3 hex nut",

@@ -290,13 +290,13 @@
     "nema17": {
       "key": "nema17",
       "name": "NEMA 17 motor",
-      "detail": "40 mm body; 24 mm D shaft",
-      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft",
+      "detail": "40 mm body; 24 x 5 mm shaft",
+      "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_x_5_mm_shaft",
       "identity_source": "Project-local assembly identity",
-      "md5": "4e65a045db3fe55d79344ec81627071d",
-      "md5_6_alpha": "324dc",
-      "short_url": "https://oom.lt/a/324dc",
-      "short_label": "oom.lt/a/324dc",
+      "md5": "e56941553d63e94f30c15e8fa72897e0",
+      "md5_6_alpha": "8y8u9",
+      "short_url": "https://oom.lt/a/8y8u9",
+      "short_label": "oom.lt/a/8y8u9",
       "quantity": 1
     }
   },
@@ -390,7 +390,7 @@
     },
     {
       "title": "Fit the cage with its captive nuts",
-      "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft flat (+X).",
+      "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft clamp (+X).",
       "add": [
         "cage_lower_cap",
         "cage_nut_*"
@@ -472,7 +472,7 @@
     },
     {
       "title": "Prepare and fit the lower eccentric",
-      "action": "Load two M2 joint nuts from below and one radial M3 clamp nut. Start the M3 x 8 countersunk screw, leaving the bore clear. Slide onto the D shaft and snug the clamp through the cage port.",
+      "action": "Load two M3 joint nuts from below and one radial M3 clamp nut. Start the M3 x 8 countersunk screw, leaving the bore clear. Slide onto the motor shaft and snug the clamp through the cage port.",
       "add": [
         "motor_eccentric",
         "eccentric_join_nut_*",
@@ -1665,15 +1665,15 @@
     "summary_scope": "printed_and_hardware"
   },
   "source_sha256": {
-    "motor_mount_plate.stl": "3747b46e71b240b51b0dd5ae72a19055fbd087f396d1a4cf7854cd2a67b59fb0",
-    "fixed_profile_ring.stl": "e8a533c3a2d2a7b0067d21326e3f24a69744a1cbebe12a305d486d9c28eb9e56",
+    "motor_mount_plate.stl": "4d8d990fb22d4cadc7b4ce6f0276500574a420f86354f19fa8171d69725d3ff9",
+    "fixed_profile_ring.stl": "2f5467013ed6a9c5940dc70fe98843d0c39da25da85efed9d07e3794ff3802cc",
     "output_bearing_housing.stl": "e0f44676024f4ab87bc87bd1ce86cc203cc710c7265e22d9b6ba5a4d0a6787da",
-    "cage_lower_cap.stl": "8dc41ace7f553a4dcac329207184828b3e9adca8dbf9feb484fb978485853691",
+    "cage_lower_cap.stl": "1baf3bd200a57239d367941db63e37430b06e6a3d4a2795d890c0a014a023dbc",
     "output_cage.stl": "9202acaef48dd32a97e8af12b1ecca2c63a917e5446bf94ff38eecdf4d74842a",
     "output_retainer.stl": "1ee8b98d04a06adbb1a0350a0d6729204e0f444981039c542c67f9ff1e4b8704",
     "output_cover.stl": "0f350b645e660ae71580ff2c434b517b4513ab4155602fe5eb32d8579982f72a",
-    "motor_eccentric.stl": "f3fa0bd1a60000ac41745d2dd6c4dbcc2ffc4bcab297b335676531ffb4f7f767",
-    "motor_eccentric_cap.stl": "d354344d5af629fad82895603c9c6855ac68aa6b52499f4f528e15f0f95354eb",
+    "motor_eccentric.stl": "1c64b82131e9f9a3ce226d559e332e66f66f97c1c22736cb1282baf7e1f3db07",
+    "motor_eccentric_cap.stl": "725441843c1996e0b0ea101233889b283bf71febf4cb15def781c9c55ba11456",
     "wave_generator.stl": "bc9eb0679fe8aa80298ba86188c8849ad37cfcc0dcdeacefbc22bb899567655d",
     "wave_bearing_cap.stl": "596ad343479bba700f75a432372e179a1b19b814a5ab41b4c531f92c3966b47b",
     "render\\hardware\\bearing_6810.stl": "75d56f3e997130607095725518518d6cacd73a55b311ea6604ff386347652ccf",
@@ -1693,12 +1693,12 @@
     "render\\hardware\\nema17_stator.stl": "5f11e9aacceb052df0608ecedd0a10cb800c027e8e42d80f943328c1440853b9",
     "render\\hardware\\nema17_rear.stl": "803d12f6dc825170e227102a5031e375f1510644cb9dc9008fb23eaa91080ef5",
     "render\\hardware\\nema17_pilot.stl": "d8ca0d6fe2d6e3889af5cff087346eb34901a69503f8611b3b67dd8c67bd0687",
-    "render\\hardware\\nema17_shaft.stl": "41ca715c3afb07665474b27ca9221819665b3c72ed72aa23a98bdcd869be6c1b",
+    "render\\hardware\\nema17_shaft.stl": "b8873357493f64c144ceff19d6b15b47bbad356e253d0a21c08e4b49aa40629d",
     "render\\hardware\\nema17_connector.stl": "f6b35ea65451c1a72275cfeb1dabfd1249c80e8dde7d669d2d490d7fc0baa17f"
   },
-  "recipe_sha256": "76f5d11e736285b45f3549a0d57473cf782c6f0fd6900c6327480c0245d311f9",
+  "recipe_sha256": "6abdde1561b751a1847cf2005e88b8eb482314348eda77f4895e301d9812f597",
   "generator_sha256": {
-    "working_oomp_populate.py": "f10f1f547e1a777cd71d80a3d8ca5cd36984921e064843132fccf19381bfe002",
+    "working_oomp_populate.py": "cd15f8fb1b0c32907a40c2216479e86d2ce7b816180489b31d6413b17e212187",
     "components\\wave_drive\\assembly_cards.py": "6fbaae511cb9a6a4154ca1a0c7abe9a2ae0bc438e86ff6f64e91749c724ed87a",
     "components\\wave_drive\\render_studio.py": "08acc32cb5fed12a3b95513df2ded92e72e4dbbe1098ecfe0d89548d9e2bb7c8",
     "components\\wave_drive\\assembly_booklet.py": "5d136c519e787db38d24ab66ec7a58e3b2a0ed7678b1cd16da5715968f093bc8",
@@ -1946,13 +1946,13 @@
       {
         "key": "nema17",
         "name": "NEMA 17 motor",
-        "detail": "40 mm body; 24 mm D shaft",
-        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_mm_d_shaft",
+        "detail": "40 mm body; 24 x 5 mm shaft",
+        "id": "oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_x_5_mm_shaft",
         "identity_source": "Project-local assembly identity",
-        "md5": "4e65a045db3fe55d79344ec81627071d",
-        "md5_6_alpha": "324dc",
-        "short_url": "https://oom.lt/a/324dc",
-        "short_label": "oom.lt/a/324dc",
+        "md5": "e56941553d63e94f30c15e8fa72897e0",
+        "md5_6_alpha": "8y8u9",
+        "short_url": "https://oom.lt/a/8y8u9",
+        "short_label": "oom.lt/a/8y8u9",
         "quantity": 1
       }
     ]

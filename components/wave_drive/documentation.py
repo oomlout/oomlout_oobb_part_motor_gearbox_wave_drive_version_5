@@ -9,6 +9,7 @@ def generate(**kwargs):
     folder = Path(kwargs["part_folder"])
     manifest = json.loads((folder/"manifest.json").read_text(encoding="utf-8"))
     c = manifest["configuration"]
+    shaft_profile = "plain round" if c["input_shaft_flat_depth"] == 0 else f"D profile with {c['input_shaft_flat_depth']:g} mm flat depth"
     rows = [
         f"# {c['reduction']}:1 OOBB roller wave drive",
         "",
@@ -20,14 +21,14 @@ def generate(**kwargs):
         "",
         "The base includes M6 grid holes and M3 half-grid holes outside the housing. On the output face, half-grid positions are omitted where a nut pocket would meet another pocket, an assembly fixing or the edge. Every provided attachment hole has its own captive nut.",
         "",
-        f"The output nut carrier sits inside the 6810's 50 mm bore. Its stepped cover ends {c['output_above_housing']:g} mm above the teal housing. The 6704 rolling member has two full-diameter clamshell halves joined exactly at the bearing centre, Z={c['wave_split_z']:g} mm. Two M3 x {c['eccentric_join_screw_length']} countersunk screws with captive nuts join the eccentric shaft pieces; an M3 x {c['shaft_clamp_screw_length']} countersunk screw with captive nut and head clearance secures them to the motor flat.",
+        f"The output nut carrier sits inside the 6810's 50 mm bore. Its stepped cover ends {c['output_above_housing']:g} mm above the teal housing. The 6704 rolling member has two full-diameter clamshell halves joined exactly at the bearing centre, Z={c['wave_split_z']:g} mm. Two M3 x {c['eccentric_join_screw_length']} countersunk screws with captive nuts join the eccentric shaft pieces; an M3 x {c['shaft_clamp_screw_length']} countersunk screw with captive nut and head clearance secures them to the motor shaft.",
         "",
         f"All {c['roller_count']} teeth are integrated into the lower cage and print upright. Every tooth gets an M2 x {c['cage_screw_length']} countersunk screw, tightened from above into a lower captive nut. The upper closure and support disc are one printed part, with its broad face on the bed and hub upward. Its central blind roof is a bridge; inspect it after printing. The lower ring is {c['cage_plate_depth']:g} mm thick; the upper closure is {c['cage_upper_plate_depth']:g} mm. Raising the cage screw heads {c['cage_head_lift']:g} mm accommodates the longer screws and leaves {c['cage_tip_clearance']:g} mm nominal clearance below their tips. Raised nut seats preserve full engagement. The bearing/output stack is also {c['cage_head_lift']:g} mm higher; deeper case head wells retain the 30 mm case screws.",
         "",
         f"Assembly clearance: every cage screw uses OOBB clearance=top so its head passes through the upper disc before fitting the bearing/output carrier. The {c['cage_center_diameter']:g} mm lower opening slides over the bare assembled eccentric shaft and its fasteners; fit the 6704 and rolling clamshells afterwards. The output face has a {c['output_face_clearance']:g} mm underside gap above the housing and {c['output_radial_clearance']:g} mm radial neck clearance. See render/assembly_access_validation.json for continuous insertion checks.",
         f"Shaft service access: align the housing and lower-cage ports with the shaft screw at input angle zero (+X). A straight 2 mm hex driver, maximum shaft diameter {c['shaft_driver_diameter']:g} mm, reaches the screw through a {c['shaft_access_diameter']:g} mm bore at Z={c['shaft_clamp_z']:g} mm, below the rollers. Preload the screw before closing the case; the port passes a driver, not its head. See render/shaft_access_validation.json for the complete-assembly clearance check.",
         "",
-        f"Gearbox height above motor face: {c['assembly_height']:g} mm. Reference motor body: {c['motor_body_depth']:g} mm, shaft: {c['motor_shaft_length']:g} x {c['input_shaft_diameter']:g} mm with {c['input_shaft_flat_depth']:g} mm D flat.",
+        f"Gearbox height above motor face: {c['assembly_height']:g} mm. Reference motor body: {c['motor_body_depth']:g} mm, shaft: {c['motor_shaft_length']:g} x {c['input_shaft_diameter']:g} mm, {shaft_profile}. Both eccentric pieces have {c['shaft_fit_clearance']:g} mm radial bore clearance. The shaft is held by the radial clamp screw; verify its grip on the actual motor before applying load.",
         "",
         f"Print one of each gearbox part ({manifest['printed_piece_count']} parts), or the {len(manifest['print_beds'])} print-bed layouts. Do not print both sets. The combined 3dpr file and print beds also include twelve optional printable spacers, {c['roller_diameter']:g} mm OD x {c['roller_length']:g} mm deep with a {c['roller_bore_diameter']:g} mm bore. Use either these or the purchased nylon spacers, not both. Bearings, motor and fasteners are purchased items. Fit coupons are optional.",
         "",

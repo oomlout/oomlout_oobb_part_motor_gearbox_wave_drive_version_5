@@ -37,9 +37,12 @@ module nema17_pilot() {
     }
 }
 module nema17_shaft() {
-    linear_extrude(motor_shaft_length) intersection() {
-        circle(d=motor_shaft_diameter);
-        translate([-10,-10]) square([10+motor_shaft_diameter/2-motor_shaft_flat_depth,20]);
+    linear_extrude(motor_shaft_length) {
+        if(motor_shaft_flat_depth<=0) circle(d=motor_shaft_diameter);
+        else intersection() {
+            circle(d=motor_shaft_diameter);
+            translate([-10,-10]) square([10+motor_shaft_diameter/2-motor_shaft_flat_depth,20]);
+        }
     }
 }
 module nema17_connector() {

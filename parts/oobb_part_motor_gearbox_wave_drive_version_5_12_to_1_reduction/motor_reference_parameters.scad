@@ -11,5 +11,5 @@ motor_shaft_diameter = 5.0;
 motor_body_width = 42.3;
 motor_cap_depth = 6.0;
 motor_corner_chamfer = 3.0;
-motor_shaft_flat_depth = 0.5;
+motor_shaft_flat_depth = 0.0;
 motor_face_z = 0.0;
