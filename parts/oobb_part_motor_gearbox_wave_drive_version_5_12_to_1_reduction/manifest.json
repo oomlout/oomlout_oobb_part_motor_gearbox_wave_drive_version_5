@@ -18,6 +18,7 @@
     ],
     "roller_material": "nylon",
     "include_printable_spacers": true,
+    "include_extended_eccentric": true,
     "roller_bank_count": 1,
     "motor_plate_depth": 4.0,
     "motor_screw_length": 8,
@@ -52,13 +53,33 @@
     "cage_tip_extra_clearance": 1.0,
     "shaft_clamp_screw_length": 8,
     "shaft_clamp_head_radius": 10.5,
-    "shaft_clamp_axis_z": 5.8,
-    "shaft_access_diameter": 2.6,
+    "eccentric_base_z": 2.4,
+    "eccentric_top_z": 25.4,
+    "shaft_clamp_axis_z": 22.0,
     "shaft_driver_diameter": 2.4,
+    "eccentric_key_inner_radius": 3.9,
+    "eccentric_key_outer_radius": 4.8,
+    "eccentric_key_depth": 1.0,
+    "eccentric_key_clearance": 0.15,
+    "extended_eccentric_diameter": 19.2,
+    "extended_eccentric_screw_length": 30,
+    "extended_eccentric_socket_depth": 3.2,
     "bearing_seat_clearance": 0.1,
     "journal_clearance": 0.05,
     "bearing_axial_clearance": 0.2,
-    "output_plate_diameter": 65.0,
+    "output_plate_diameter": 61.8,
+    "output_view_diameter": 20.0,
+    "output_plate_clamp_mounts": [
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        -20
+      ]
+    ],
+    "output_plate_clamp_screw_length": 10,
     "output_cover_depth": 4.3,
     "output_above_housing": 1.5,
     "output_hub_depth": 2.1,
@@ -92,7 +113,7 @@
     "input_shaft_diameter": 5.0,
     "input_shaft_flat_depth": 0.0,
     "shaft_fit_clearance": 0.1,
-    "eccentric_join_screw_length": 16,
+    "eccentric_join_screw_length": 20,
     "eccentric_join_pitch_radius": 6.75,
     "wave_screw_length": 12,
     "exploded_spacing": 24.0,
@@ -292,22 +313,18 @@
       }
     },
     "assembly_steps": [
-      "Print the fit coupons. Check the 6810 seat, 6704 seat, motor shaft, roller windows and OOBB nut pockets before the full build.",
-      "Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g} mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads {countersunk_head_proud:g} mm proud of the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor threads.",
-      "Print cage_lower_cap with its teeth upright. Print output_cage with its broad closure face on the bed and integrated hub upward; inspect the bridge over its central blind recess. The lower cage has an underside clearance ring for the motor screw heads; the upper cage has a clearance ring above the wave screws.",
-      "Seat {cage_screw_count} M2 nuts in the underside of the lower cage, one for each tooth, and lower it around the motor shaft. Its {cage_center_diameter:g} mm centre opening can also pass over the already fitted eccentric shaft and collars; fit the 6704 and rolling clamshells afterwards. Align its radial service hole along +X.",
-      "Preload two M3 nuts into the underside of the lower eccentric and an M3 nut into its radial pocket. Preload the M3 x {shaft_clamp_screw_length} countersunk shaft-clamp screw before closing the gearbox; its head has top clearance, so the tip can tighten onto the motor shaft. Fit the eccentric at Z={cam_base_z:g} mm with the clamp facing +X.",
-      "Load four M3 nuts into the lower 6704 clamshell (wave_generator), slide it over the eccentric journal and seat the 6704. The joint is at Z={wave_split_z:g} mm, exactly through the bearing centre; each half encloses 2 mm of bearing width plus its fit clearance.",
-      "Fit the upper eccentric collar and join it to the lower eccentric using two M3 x {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These lengths include the head. Both heads sit {countersunk_head_proud:g} mm proud; the journal shoulders preserve the bearing axial clearance.",
-      "Close the upper 6704 clamshell (wave_bearing_cap) with four M3 x {wave_screw_length} countersunk screws. Lower the fixed ring over the upright cage and align its rounded rectangular bosses. Its +X service hole must line up with the lower cage's hole and shaft-clamp screw.",
-      "At input angle zero, the eccentric points along +X. Insert all {roller_count} nylon spacers axially between the lower cage teeth. Preload the four M3 output nuts into the underside of the combined upper closure/hub (output_cage), then fit it over the teeth.",
-      "Install one M2 x {cage_screw_length} countersunk screw through every tooth from above into its captive lower nut. The OOBB top-clearance cuts let the complete heads pass through the integrated upper disc. Tighten all {cage_screw_count} before fitting the 6810 and output carrier. Countersunk screw lengths include their heads.",
-      "Fit the single 6810 around the integrated upper hub. There is no separate output_hub disc. The central blind recess clears the motor shaft tip by {motor_shaft_end_clearance:g} mm.",
-      "Fit the upper bearing housing with its mouth downward. Install the {housing_screw_count} M3 x {case_screw_length} socket caps from the top into the captive base nuts. The fixed ring and upper housing retain the bearing outer race.",
-      "Place the recessed output nut carrier (output_retainer) on the hub inside the 6810 with its hex pockets upward. The hub backs the carrier's nut-pocket bridge cuts. Load all {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment nuts; all pockets fit inside the 50 mm bearing bore.",
-      "Close the sandwich with the stepped output_cover and four M3 x {output_screw_length} countersunk screws in the off-grid fixing positions {output_fixing_mounts}. The freed corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and {output_m3_mount_count} M3 in total. The face remains {output_above_housing:g} mm above the teal housing, with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g} mm radial neck clearance. Use light preload at the printed cage nut seats and the generated attachment-depth limits.",
-      "To tighten the motor shaft clamp after assembly, turn the input until the housing port, rotating cage port and screw head all line up along +X. Insert a straight 2 mm hex driver with a shaft no larger than {shaft_driver_diameter:g} mm through the {shaft_access_diameter:g} mm service bore at Z={shaft_clamp_z:g} mm. The bore is for the slim driver, not a full-size bit holder or screw insertion. Withdraw the driver before rotating the input.",
-      "Turn the input slowly by hand and check one reverse output turn per {reduction} input turns. Physical fit, motor bearing loads, vibration and printed strength remain untested."
+      "Load six M3 nuts from below the plate. Seat the plate on the motor pilot and install four M3 x {motor_screw_length} countersunk screws with heads {countersunk_head_proud:g} mm proud of its top face.",
+      "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate.",
+      "Load two M3 joint nuts from below. Slide the lower eccentric onto the motor shaft with its semicircular alignment tongue upward.",
+      "Seat four M3 nuts underneath the lower clamshell. Lower it around the eccentric journal and seat the 6704 bearing squarely in its recess.",
+      "Load the radial M3 nut from the top of the upper eccentric and start its M3 x {shaft_clamp_screw_length} clamp screw. Match the semicircular key and recess at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length} countersunk joiners, then tighten the upper shaft clamp before fitting the outer case.",
+      "Fit the upper wave half around the 6704 bearing. Tighten four M3 x {wave_screw_length} countersunk screws into the lower nuts.",
+      "Confirm the upper shaft clamp is tight, then lower the fixed ring around the cage and align all six fins with the base.",
+      "At input angle zero, insert one {roller_diameter:g} mm OD x {roller_length:g} mm nylon spacer in each cage slot.",
+      "Load four M3 output nuts underneath the upper cage, then lower it over the teeth. Install all twelve M2 x {cage_screw_length} countersunk screws through the disc into the lower cage nuts.",
+      "Seat the 6810 over the upper cage hub. Lower the housing over the bearing outer race. Insert six M3 x {case_screw_length} socket caps from the top and tighten into the captive base nuts.",
+      "Load {output_m3_mount_count} M3 attachment nuts into the carrier and two M3 sandwich nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length} countersunk screws. The plate is now clamped as a separate assembly; its viewing hole and bolt-clearance holes stay open.",
+      "Lower the preassembled output plate over the bearing and fasten it to the cage with four M3 x {output_screw_length} countersunk screws. Keep the separate short sandwich screws tight. With power disconnected, hand-turn the input {reduction} times for one reverse output turn and observe the shaft through the {output_view_diameter:g} mm opening."
     ],
     "generate_assembly_cards": true,
     "assembly_card_style": {
@@ -394,7 +411,7 @@
       },
       {
         "title": "Fit the cage with its captive nuts",
-        "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft clamp (+X).",
+        "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate.",
         "add": [
           "cage_lower_cap",
           "cage_nut_*"
@@ -421,11 +438,10 @@
       },
       {
         "title": "Prepare and fit the lower eccentric",
-        "action": "Load two M3 joint nuts from below and one radial M3 clamp nut. Start the M3 x {shaft_clamp_screw_length} countersunk screw, leaving the bore clear. Slide onto the motor shaft and snug the clamp through the cage port.",
+        "action": "Load two M3 joint nuts from below. Slide the lower eccentric onto the motor shaft with its semicircular alignment tongue upward.",
         "add": [
           "motor_eccentric",
-          "eccentric_join_nut_*",
-          "motor_clamp_*"
+          "eccentric_join_nut_*"
         ],
         "move": {
           "motor_eccentric": [
@@ -437,25 +453,10 @@
             0,
             0,
             31
-          ],
-          "motor_clamp_0_nut_m3": [
-            16,
-            0,
-            43
-          ],
-          "motor_clamp_0_screw_shaft_clamp": [
-            32,
-            0,
-            43
           ]
         },
         "targets": {
           "eccentric_join_nut_*": [
-            0,
-            0,
-            43
-          ],
-          "motor_clamp_*": [
             0,
             0,
             43
@@ -502,10 +503,11 @@
       },
       {
         "title": "Close the eccentric shaft",
-        "action": "Fit the upper eccentric collar and tighten two M3 x {eccentric_join_screw_length} countersunk screws into the lower nuts.",
+        "action": "Load the radial M3 nut from the top of the upper eccentric and start its M3 x {shaft_clamp_screw_length} clamp screw. Match the semicircular key and recess at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length} countersunk joiners, then tighten the upper shaft clamp before fitting the outer case.",
         "add": [
           "motor_eccentric_cap",
-          "eccentric_join_screw_*"
+          "eccentric_join_screw_*",
+          "motor_clamp_*"
         ],
         "move": {
           "motor_eccentric_cap": [
@@ -517,6 +519,16 @@
             0,
             0,
             44
+          ],
+          "motor_clamp_0_nut_m3": [
+            0,
+            0,
+            60
+          ],
+          "motor_clamp_0_screw_shaft_clamp": [
+            26,
+            0,
+            24
           ]
         },
         "targets": {
@@ -556,7 +568,7 @@
       },
       {
         "title": "Lower the fixed ring",
-        "action": "Lower the fixed ring around the cage. Align all six fins with the base and the service hole with the cage port (+X).",
+        "action": "Confirm the upper shaft clamp is tight, then lower the fixed ring around the cage and align all six fins with the base.",
         "add": [
           "fixed_profile_ring"
         ],
@@ -654,11 +666,13 @@
         }
       },
       {
-        "title": "Load and fit the output nut carrier",
-        "action": "Fit five M6 nuts and eight M3 nuts in the carrier's upward-facing pockets. Lower the loaded carrier into the 6810 bore, keeping the four off-grid fixing holes clear.",
+        "title": "Preassemble the output plate",
+        "action": "Load {output_m3_mount_count} M3 attachment nuts into the carrier and two M3 sandwich nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length} countersunk screws. The plate is now clamped as a separate assembly; its viewing hole and bolt-clearance holes stay open.",
         "add": [
           "output_retainer",
-          "output_attachment*"
+          "output_cover",
+          "output_attachment*",
+          "plate_clamp_*"
         ],
         "move": {
           "output_retainer": [
@@ -666,15 +680,25 @@
             0,
             24
           ],
-          "output_attachment_nut_*": [
-            0,
-            0,
-            42
-          ],
           "output_attachment_m3_nut_*": [
             0,
             0,
             42
+          ],
+          "output_cover": [
+            0,
+            0,
+            60
+          ],
+          "plate_clamp_*_nut_m3": [
+            0,
+            0,
+            12
+          ],
+          "plate_clamp_*_screw_output_clamp": [
+            0,
+            0,
+            80
           ]
         },
         "targets": {
@@ -687,13 +711,33 @@
       },
       {
         "title": "Close the output face",
-        "action": "Fit the output cover and tighten four M3 x {output_screw_length} countersunk screws in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input {reduction} times for one reverse output turn.",
+        "action": "Lower the preassembled output plate over the bearing and fasten it to the cage with four M3 x {output_screw_length} countersunk screws. Keep the separate short sandwich screws tight. With power disconnected, hand-turn the input {reduction} times for one reverse output turn and observe the shaft through the {output_view_diameter:g} mm opening.",
         "add": [
-          "output_cover",
           "output_screw_*"
+        ],
+        "prepared": [
+          "output_retainer",
+          "output_cover",
+          "output_attachment*",
+          "plate_clamp_*"
         ],
         "move": {
           "output_cover": [
+            0,
+            0,
+            24
+          ],
+          "output_retainer": [
+            0,
+            0,
+            24
+          ],
+          "output_attachment*": [
+            0,
+            0,
+            24
+          ],
+          "plate_clamp_*": [
             0,
             0,
             24
@@ -790,6 +834,10 @@
         "name": "M3 x {output_screw_length} countersunk",
         "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{output_screw_length}_mm_length"
       },
+      "screw_output_clamp": {
+        "name": "M3 x {output_plate_clamp_screw_length} countersunk",
+        "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{output_plate_clamp_screw_length}_mm_length"
+      },
       "screw_wave": {
         "name": "M3 x {wave_screw_length} countersunk",
         "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{wave_screw_length}_mm_length"
@@ -816,10 +864,6 @@
       "nut_m3": {
         "name": "M3 hex nut",
         "catalogue_id": "hardware_nut_m3"
-      },
-      "nut_m6": {
-        "name": "M6 hex nut",
-        "catalogue_id": "hardware_nut_m6"
       },
       "nema17": {
         "name": "NEMA 17 motor",
@@ -848,7 +892,10 @@
         "Clamshell joint: M3 x {wave_screw_length} countersunk screws and captive nuts.",
         "Case: M3 x {case_screw_length} screws from above; nuts underneath the base.",
         "Motor mount: M3 x {motor_screw_length} countersunk screws.",
-        "Regenerate CAD and instructions: python working.py",
+        "Output: {output_view_diameter:g} mm viewing hole; {output_m3_mount_count} captive M3 attachment nuts.",
+        "Output sandwich: two M3 x {output_plate_clamp_screw_length} short joiners, separate from the cage fixings.",
+        "Tighten the upper shaft clamp before fitting the outer case.",
+        "Optional extended shaft: two M3 x {extended_eccentric_screw_length} socket-cap joiners.",
         "Hardware links: OOMP catalogue codes. Printed parts are named in the parts list.",
         "AI-generated CAD and instructions. Fit and load capacity not physically tested."
       ],
@@ -924,11 +971,12 @@
     "cam_z": 10.2,
     "cam_base_z": 2.4,
     "cam_shoulder_z": 7.799999999999999,
-    "cam_cap_z": 15.399999999999999,
-    "cam_cap_height": 6.8,
-    "shaft_clamp_z": 5.8,
-    "eccentric_join_head_z": 23.2,
-    "eccentric_join_nut_z": 7.299999999999999,
+    "cam_cap_z": 13.299999999999999,
+    "cam_cap_height": 12.1,
+    "cam_upper_journal_depth": 2.0999999999999996,
+    "shaft_clamp_z": 22.0,
+    "eccentric_join_head_z": 26.4,
+    "eccentric_join_nut_z": 6.499999999999998,
     "wave_head_recess": -1.0,
     "wave_nut_z": 1.3,
     "housing_top_z": 36.6,
@@ -945,13 +993,16 @@
     "output_neck_height": 5.800000000000004,
     "retainer_depth": 5.800000000000004,
     "output_head_seat": 39.1,
+    "output_plate_clamp_nut_z": 29.200000000000003,
+    "extended_eccentric_height": 24.800000000000004,
+    "extended_eccentric_head_z": 34.9,
     "motor_thread_engagement": 3.0,
     "shaft_blind_depth": 0,
     "output_attachment_nut_z": 28.700000000000006,
     "output_m3_attachment_nut_z": 31.200000000000006,
-    "output_bolt_projection_max": 9.399999999999995,
+    "output_bolt_projection_max": 17.2,
     "output_bolt_projection_min": 7.399999999999999,
-    "output_m3_bolt_projection_max": 6.899999999999995,
+    "output_m3_bolt_projection_max": 17.2,
     "output_m3_bolt_projection_min": 6.399999999999999,
     "output_fixing_mounts": [
       [
@@ -971,28 +1022,7 @@
         -20.0
       ]
     ],
-    "output_m6_mounts": [
-      [
-        0,
-        0
-      ],
-      [
-        15.0,
-        0
-      ],
-      [
-        -15.0,
-        0
-      ],
-      [
-        0,
-        15.0
-      ],
-      [
-        0,
-        -15.0
-      ]
-    ],
+    "output_m6_mounts": [],
     "output_m3_mounts": [
       [
         -15.0,
@@ -1003,32 +1033,24 @@
         15.0
       ],
       [
-        -7.5,
-        -7.5
-      ],
-      [
-        -7.5,
-        7.5
-      ],
-      [
-        7.5,
-        -7.5
-      ],
-      [
-        7.5,
-        7.5
-      ],
-      [
         15.0,
         -15.0
       ],
       [
         15.0,
         15.0
+      ],
+      [
+        -15.0,
+        0.0
+      ],
+      [
+        15.0,
+        0.0
       ]
     ],
-    "output_m6_mount_count": 5,
-    "output_m3_mount_count": 8,
+    "output_m6_mount_count": 0,
+    "output_m3_mount_count": 6,
     "output_nut_z": 23.099999999999998,
     "cage_head_seat": 25.9,
     "cage_nut_z": 5.899999999999999,
@@ -1092,8 +1114,8 @@
       "arguments": [],
       "quantity": 1,
       "size": [
-        65.0,
-        65.0
+        61.8,
+        61.8
       ]
     },
     {
@@ -1102,8 +1124,8 @@
       "arguments": [],
       "quantity": 1,
       "size": [
-        65.0,
-        65.0
+        61.8,
+        61.8
       ]
     },
     {
@@ -1160,9 +1182,21 @@
       ],
       "replaces": "roller",
       "role": "Optional printed alternative to the purchased nylon spacers; use one set only"
+    },
+    {
+      "name": "motor_eccentric_cap_extended",
+      "module": "motor_eccentric_cap_extended",
+      "arguments": [],
+      "quantity": 1,
+      "size": [
+        24,
+        24
+      ],
+      "replaces": "motor_eccentric_cap",
+      "role": "Optional flush-height shaft; replace the two M3 countersunk joiners with M3 x 30 socket caps"
     }
   ],
-  "print_instance_count": 23,
+  "print_instance_count": 24,
   "hardware": [
     {
       "item": "6810 bearing",
@@ -1202,6 +1236,13 @@
       "quantity": 4
     },
     {
+      "item": "Output sandwich countersunk screw",
+      "size": "M3",
+      "length_mm": 10,
+      "quantity": 2,
+      "role": "Preassemble the output plate before fitting it to the cage"
+    },
+    {
       "item": "Wave clamshell countersunk screw",
       "size": "M3",
       "length_mm": 12,
@@ -1217,7 +1258,7 @@
       "item": "Eccentric countersunk screw",
       "size": "M3",
       "quantity": 2,
-      "length_mm": 16,
+      "length_mm": 20,
       "role": "join the eccentric halves; length includes the countersunk head"
     },
     {
@@ -1225,17 +1266,12 @@
       "size": "M3",
       "quantity": 1,
       "length_mm": 8,
-      "role": "motor shaft clamp; captive nut and clearance above the head, serviced through aligned radial port"
+      "role": "upper motor shaft clamp; tighten before fitting the outer case"
     },
     {
       "item": "M3 hex nut",
       "quantity": 25,
       "role": "assembly nuts plus captive half-grid output attachment nuts"
-    },
-    {
-      "item": "M6 hex nut",
-      "quantity": 5,
-      "role": "OOBB output attachment; payload bolts depend on attached plate thickness"
     },
     {
       "item": "M2 hex nut",
@@ -1292,8 +1328,8 @@
       "part": "output_retainer",
       "instance": 0,
       "xy": [
-        169.5,
-        131.23533681685103
+        167.9,
+        129.63533681685104
       ],
       "call": "output_retainer();"
     },
@@ -1301,8 +1337,8 @@
       "part": "output_cover",
       "instance": 0,
       "xy": [
-        244.5,
-        131.23533681685103
+        239.70000000000002,
+        129.63533681685104
       ],
       "call": "output_cover();"
     },
@@ -1310,7 +1346,7 @@
       "part": "wave_generator",
       "instance": 0,
       "xy": [
-        310.25,
+        303.85,
         121.98533681685105
       ],
       "call": "wave_generator();"
@@ -1320,7 +1356,7 @@
       "instance": 0,
       "xy": [
         23.25,
-        196.98533681685103
+        193.78533681685104
       ],
       "call": "wave_cap();"
     },
@@ -1329,7 +1365,7 @@
       "instance": 0,
       "xy": [
         68.5,
-        185.73533681685103
+        182.53533681685104
       ],
       "call": "motor_eccentric();"
     },
@@ -1338,7 +1374,7 @@
       "instance": 0,
       "xy": [
         102.5,
-        185.73533681685103
+        182.53533681685104
       ],
       "call": "motor_eccentric_cap();"
     },
@@ -1347,7 +1383,7 @@
       "instance": 0,
       "xy": [
         128.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1356,7 +1392,7 @@
       "instance": 1,
       "xy": [
         145.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1365,7 +1401,7 @@
       "instance": 2,
       "xy": [
         162.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1374,7 +1410,7 @@
       "instance": 3,
       "xy": [
         179.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1383,7 +1419,7 @@
       "instance": 4,
       "xy": [
         196.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1392,7 +1428,7 @@
       "instance": 5,
       "xy": [
         213.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1401,7 +1437,7 @@
       "instance": 6,
       "xy": [
         230.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1410,7 +1446,7 @@
       "instance": 7,
       "xy": [
         247.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1419,7 +1455,7 @@
       "instance": 8,
       "xy": [
         264.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1428,7 +1464,7 @@
       "instance": 9,
       "xy": [
         281.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1437,7 +1473,7 @@
       "instance": 10,
       "xy": [
         298.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
     },
@@ -1446,9 +1482,18 @@
       "instance": 11,
       "xy": [
         315.0,
-        177.23533681685103
+        174.03533681685104
       ],
       "call": "roller();"
+    },
+    {
+      "part": "motor_eccentric_cap_extended",
+      "instance": 0,
+      "xy": [
+        340.5,
+        182.53533681685104
+      ],
+      "call": "motor_eccentric_cap_extended();"
     }
   ],
   "print_beds": [
@@ -1498,12 +1543,12 @@
           "part": "output_retainer",
           "instance": 0,
           "size": [
-            65.0,
-            65.0
+            61.8,
+            61.8
           ],
           "xy": [
-            128.23533681685103,
-            128.23533681685103
+            126.63533681685104,
+            126.63533681685104
           ]
         },
         {
@@ -1514,7 +1559,7 @@
             46.5
           ],
           "xy": [
-            187.98533681685103,
+            184.78533681685104,
             118.98533681685105
           ]
         },
@@ -1543,6 +1588,18 @@
           ]
         },
         {
+          "part": "motor_eccentric_cap_extended",
+          "instance": 0,
+          "size": [
+            24,
+            24
+          ],
+          "xy": [
+            71.0,
+            200.4706736337021
+          ]
+        },
+        {
           "part": "printable_spacer",
           "instance": 0,
           "size": [
@@ -1550,7 +1607,7 @@
             7.0
           ],
           "xy": [
-            168.23533681685103,
+            165.03533681685104,
             149.73533681685103
           ]
         },
@@ -1562,7 +1619,7 @@
             7.0
           ],
           "xy": [
-            179.23533681685103,
+            176.03533681685104,
             149.73533681685103
           ]
         },
@@ -1574,7 +1631,7 @@
             7.0
           ],
           "xy": [
-            190.23533681685103,
+            187.03533681685104,
             149.73533681685103
           ]
         },
@@ -1586,7 +1643,7 @@
             7.0
           ],
           "xy": [
-            201.23533681685103,
+            198.03533681685104,
             149.73533681685103
           ]
         },
@@ -1598,8 +1655,92 @@
             7.0
           ],
           "xy": [
-            212.23533681685103,
+            209.03533681685104,
             149.73533681685103
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 5,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            6.5
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 6,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            17.5
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 7,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            28.5
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 8,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            39.5
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 9,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            50.5
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 10,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            61.5
+          ]
+        },
+        {
+          "part": "printable_spacer",
+          "instance": 11,
+          "size": [
+            7.0,
+            7.0
+          ],
+          "xy": [
+            207.23533681685103,
+            72.5
           ]
         }
       ]
@@ -1614,12 +1755,12 @@
           "part": "output_cover",
           "instance": 0,
           "size": [
-            65.0,
-            65.0
+            61.8,
+            61.8
           ],
           "xy": [
-            35.5,
-            35.5
+            33.9,
+            33.9
           ]
         },
         {
@@ -1630,7 +1771,7 @@
             58.5
           ],
           "xy": [
-            101.25,
+            98.05,
             32.25
           ]
         },
@@ -1642,7 +1783,7 @@
             58.5
           ],
           "xy": [
-            163.75,
+            160.55,
             32.25
           ]
         },
@@ -1655,91 +1796,7 @@
           ],
           "xy": [
             26.25,
-            95.25
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 5,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            200.5,
-            6.5
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 6,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            211.5,
-            6.5
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 7,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            200.5,
-            17.5
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 8,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            211.5,
-            17.5
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 9,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            200.5,
-            28.5
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 10,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            211.5,
-            28.5
-          ]
-        },
-        {
-          "part": "printable_spacer",
-          "instance": 11,
-          "size": [
-            7.0,
-            7.0
-          ],
-          "xy": [
-            200.5,
-            39.5
+            92.05
           ]
         }
       ]

@@ -69,6 +69,10 @@ def scad_literal(value):
     return json.dumps(value, ensure_ascii=True)
 
 
+def scad_numeric_array(value):
+    return isinstance(value, list) and all(isinstance(item, (int, float)) or scad_numeric_array(item) for item in value)
+
+
 def export_hardware(folder, **kwargs):
     from wave_drive.compact_recipe import ensure_local_hardware
     ensure_local_hardware()
@@ -141,7 +145,7 @@ def make_part(part, **kwargs):
     (folder / "parameters.scad").write_text(header + "\n".join(
         f"{name} = {scad_literal(value)};"
         for name, value in settings.items()
-        if not name.startswith("taxonomy_") and name not in skip and isinstance(value, (int, float, str, bool))
+        if not name.startswith("taxonomy_") and name not in skip and (isinstance(value, (int, float, str, bool)) or scad_numeric_array(value))
     ) + "\n", encoding="utf-8")
     shutil.copyfile(ROOT / "components" / "wave_drive" / "wave_drive.scad", folder / "geometry.scad")
     shutil.copyfile(ROOT / "components" / "wave_drive" / "compact_helpers.scad", folder / "compact_helpers.scad")
@@ -180,12 +184,13 @@ def make_part(part, **kwargs):
         (folder / f"print_bed_{index:02d}.scad").write_text(prefix + "\n".join(scene), encoding="utf-8")
     scenes = {
         "assembly": 'input_angle = 0;\nexplode = 0;\nassembly(input_angle, explode);',
+        "assembly_extended": 'input_angle = 0;\nassembly(input_angle, 0, true);',
         "animation": 'input_angle = 360 * $t;\nassembly(input_angle, 0);',
         "exploded": 'assembly(0, exploded_spacing);',
         "cutaway": 'difference() { assembly(0, 0); translate([-100,-100,cage_floor_z]) cube([200,100,100]); }',
         "motion_section": 'motion_section(0);',
         "fit_coupons": 'fit_coupons();',
-        "collision_check": 'collision_check(is_undef(check_angle) ? 0 : check_angle);',
+        "collision_check": 'collision_check(is_undef(check_angle) ? 0 : check_angle, is_undef(use_extended) ? false : use_extended);',
     }
     for name, body in scenes.items():
         (folder / (name + ".scad")).write_text(prefix + body + "\n", encoding="utf-8")
@@ -218,7 +223,7 @@ def make_part(part, **kwargs):
         for index in range(1, len(print_beds)+1):
             render_scad(folder / f"print_bed_{index:02d}.scad", folder / f"print_bed_{index:02d}.stl")
     if images:
-        for name in ["assembly", "cutaway", "exploded", "3dpr", "motion_section", "fit_coupons"]:
+        for name in ["assembly", "assembly_extended", "cutaway", "exploded", "3dpr", "motion_section", "fit_coupons"]:
             print("Preview", name, flush=True)
             options = ["--imgsize=1600,1200", "--viewall", "--autocenter", "--colorscheme=Tomorrow", "--projection=o"]
             if name in ["motion_section", "3dpr", "fit_coupons"]:
@@ -233,6 +238,8 @@ def make_part(part, **kwargs):
             threads=c.get("render_threads", 8),
         )
         validate_fasteners.main(part_folder=folder)
+        from wave_drive import validate_eccentric_options
+        validate_eccentric_options.main(part_folder=folder)
         validate_stock_lengths.main(part_folder=folder)
         documentation.generate(part_folder=folder)
         if c.get("generate_assembly_cards", True) and c.get("generate_renders", True) and not kwargs.get("no_renders", False):

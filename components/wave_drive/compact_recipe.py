@@ -23,25 +23,31 @@ def output_mount_layout(**kwargs):
     web = kwargs["mount_minimum_web"]
     m3_radius = kwargs["mount_m3_pocket_radius"]
     m6_radius = kwargs["mount_m6_pocket_radius"]
-    m6 = [[0, 0], [pitch, 0], [-pitch, 0], [0, pitch], [0, -pitch]]
+    view_radius = kwargs["output_view_diameter"]/2
+    m6 = [p for p in [[0, 0], [pitch, 0], [-pitch, 0], [0, pitch], [0, -pitch]]
+          if math.hypot(*p)-m6_radius >= view_radius+web]
     x, y = kwargs["output_fixing_x"], kwargs["output_fixing_y"]
     assembly = [[x, y], [-y, x], [-x, -y], [y, -x]]
     # Half-grid candidates, including axial positions; reject any pocket that
     # would merge with another nut, an assembly screw, or the outside edge.
     count = math.floor(radius/(pitch/2))
     m3 = []
-    for i in range(-count, count+1):
-        for j in range(-count, count+1):
-            point = [i*pitch/2, j*pitch/2]
-            if max(math.hypot(*p) for p in output_m3_pocket_points(point, **kwargs))+kwargs["mount_m3_edge_wall"] > radius:
-                continue
-            if any(math.dist(point, other) < m3_radius+m6_radius+web for other in m6):
-                continue
-            if any(math.dist(point, other) < m3_radius+1.8+web for other in assembly):
-                continue
-            if any(math.dist(point, other) < 2*m3_radius+web for other in m3):
-                continue
-            m3.append(point)
+    candidates = [[-pitch,-pitch],[-pitch,pitch],[pitch,-pitch],[pitch,pitch]]
+    candidates += [[i*pitch/2,j*pitch/2] for i in range(-count,count+1) for j in range(-count,count+1)]
+    for point in candidates:
+        if math.hypot(*point)-m3_radius < view_radius+web:
+            continue
+        if max(math.hypot(*p) for p in output_m3_pocket_points(point, **kwargs))+kwargs["mount_m3_edge_wall"] > radius:
+            continue
+        if any(math.dist(point, other) < m3_radius+m6_radius+web for other in m6):
+            continue
+        if any(math.dist(point, other) < m3_radius+1.8+web for other in assembly):
+            continue
+        if any(math.dist(point, other) < m3_radius+kwargs["mount_m3_hex_radius"]+web for other in kwargs["output_plate_clamp_mounts"]):
+            continue
+        if any(math.dist(point, other) < 2*m3_radius+web for other in m3):
+            continue
+        m3.append(point)
     return {
         "output_fixing_mounts": assembly,
         "output_m6_mounts": m6,
@@ -143,10 +149,11 @@ def resolve(**kwargs):
     c["wave_lower_depth"] = c["wave_split_z"]-c["wave_z"]
     c["wave_cap_depth"] = c["wave_height"]-c["wave_lower_depth"]
     c["cam_z"] = c["wave_z"]+c["wave_seat_z"]-1
-    c["cam_base_z"] = c["shaft_clamp_axis_z"]-3.4
+    c["cam_base_z"] = c["eccentric_base_z"]
     c["cam_shoulder_z"] = c["cam_z"]-c["cam_base_z"]
-    c["cam_cap_z"] = c["cam_z"]+5.2
-    c["cam_cap_height"] = 6.8
+    c["cam_cap_z"] = c["wave_split_z"]
+    c["cam_cap_height"] = c["eccentric_top_z"]-c["cam_cap_z"]
+    c["cam_upper_journal_depth"] = c["cam_z"]+5.2-c["cam_cap_z"]
     c["shaft_clamp_z"] = c["shaft_clamp_axis_z"]
     c["eccentric_join_head_z"] = c["cam_cap_z"]+c["cam_cap_height"]+c["countersunk_head_proud"]
     c["eccentric_join_nut_z"] = c["eccentric_join_head_z"]-c["eccentric_join_screw_length"]+.1
@@ -176,17 +183,28 @@ def resolve(**kwargs):
     c["output_neck_height"] = c["output_cover_z"]-c["retainer_z"]
     c["retainer_depth"] = c["output_neck_height"]
     c["output_head_seat"] = c["assembly_height"]+c["countersunk_head_proud"]
+    c["output_plate_clamp_nut_z"] = c["output_head_seat"]-c["output_plate_clamp_screw_length"]+.1
+    c["extended_eccentric_height"] = c["assembly_height"]-c["cam_cap_z"]
+    c["extended_eccentric_head_z"] = c["assembly_height"]-c["extended_eccentric_socket_depth"]
+    if c["extended_eccentric_head_z"]-c["extended_eccentric_screw_length"] > c["eccentric_join_nut_z"]:
+        raise ValueError("Extended eccentric screws must fully engage the lower nuts")
+    if c["extended_eccentric_head_z"]-c["extended_eccentric_screw_length"] < c["cam_base_z"]+.5:
+        raise ValueError("Extended eccentric screws must stop above the underside")
+    if c["extended_eccentric_diameter"] > c["output_view_diameter"]-.6:
+        raise ValueError("Extended shaft needs radial clearance through the viewing hole")
     c["motor_thread_engagement"] = c["motor_screw_length"]-c["motor_head_seat"]
     if c["motor_thread_engagement"] < 3:
         raise ValueError("Motor screws need at least 3 mm nominal thread engagement")
     c["shaft_blind_depth"] = max(0,c["motor_shaft_length"]+c["motor_shaft_end_clearance"]-c["hub_z"])
     c["output_attachment_nut_z"] = c["output_cover_z"]-c["output_nut_depth"]+.1
     c["output_m3_attachment_nut_z"] = c["output_cover_z"]-c["output_m3_nut_depth"]+.1
-    c["output_bolt_projection_max"] = c["assembly_height"]-c["output_attachment_nut_z"]
+    c["output_bolt_projection_max"] = c["assembly_height"]-(c["wave_z"]+c["wave_height"]-c["wave_head_recess"]+.3)
     c["output_bolt_projection_min"] = c["assembly_height"]-(c["output_attachment_nut_z"]+c["output_nut_height"])+3.0
-    c["output_m3_bolt_projection_max"] = c["assembly_height"]-c["output_m3_attachment_nut_z"]
+    c["output_m3_bolt_projection_max"] = c["output_bolt_projection_max"]
     c["output_m3_bolt_projection_min"] = c["assembly_height"]-(c["output_m3_attachment_nut_z"]+c["output_m3_nut_height"])+2.0
     c.update(output_mount_layout(**c))
+    if not c["output_m6_mount_count"]:
+        c["assembly_part_labels"].pop("nut_m6", None)
     if not 0 < c["case_boss_rounding_fraction"] <= 1:
         raise ValueError("Boss rounding fraction must be greater than zero and at most one")
     if not 0 < c["output_face_clearance"] <= c["output_above_housing"]-.7+1e-8:
@@ -211,20 +229,18 @@ def resolve(**kwargs):
     # remain below the rolling member and keep their full 1.6 mm engagement.
     if c["cage_nut_z"] < c["cage_cap_z"]+.2 or c["cage_nut_z"]+1.6 > c["roller_z"]-.05:
         raise ValueError("Cage countersunk screws must engage the lower nuts without protruding")
-    if c["shaft_clamp_z"]+c["shaft_access_diameter"]/2 >= c["roller_z"]:
-        raise ValueError("Shaft driver must pass below the rollers")
-    if c["shaft_driver_diameter"] >= c["shaft_access_diameter"]:
-        raise ValueError("Driver needs clearance through the service port")
+    if c["shaft_clamp_z"]-c["shaft_driver_diameter"]/2 <= c["wave_z"]+c["wave_height"]-c["wave_head_recess"]:
+        raise ValueError("Upper shaft clamp driver must pass above the wave screws before the case is fitted")
     if c["cam_base_z"] <= c["motor_pilot_height"]+.1:
         raise ValueError("Recessed eccentric must clear the motor pilot")
     if abs(c["shaft_clamp_head_radius"]-c["shaft_clamp_screw_length"]-(c["input_shaft_diameter"]/2-c["input_shaft_flat_depth"])) > .05:
         raise ValueError("Shaft-clamp screw length must reach the motor shaft surface at its nominal head position")
     # Motor-supported input has a finite shaft reach; reject unsupported long edits.
-    if c["cam_cap_z"]+c["cam_cap_height"] > c["motor_shaft_length"]-1:
-        raise ValueError("Motor shaft too short: increase verified motor shaft length for this roller")
+    if c["shaft_clamp_z"]+1.5 > c["motor_shaft_length"]-.3:
+        raise ValueError("Motor shaft must reach the full upper clamp screw contact")
     if c["housing_top_depth"] < c["bearing_stack_height"]+2:
         raise ValueError("This motor stack needs a taller top holder / longer case screws")
-    for key in ["case_screw_length", "motor_screw_length", "output_screw_length", "wave_screw_length", "cage_screw_length", "eccentric_join_screw_length", "shaft_clamp_screw_length"]:
+    for key in ["case_screw_length", "motor_screw_length", "output_screw_length", "wave_screw_length", "cage_screw_length", "eccentric_join_screw_length", "shaft_clamp_screw_length", "output_plate_clamp_screw_length", "extended_eccentric_screw_length"]:
         if c[key] > c["max_screw_length"]:
             raise ValueError("Socket cap exceeds requested maximum")
     if c["motor_screw_length"]-c["motor_head_seat"] > c["motor_thread_depth"]-.5:
@@ -321,9 +337,7 @@ def piece_definitions(**kwargs):
 
 def optional_print_definitions(**kwargs):
     c = resolve(**kwargs)
-    if not c["include_printable_spacers"]:
-        return []
-    return [
+    pieces = [
         {
             "name": "printable_spacer",
             "module": "roller",
@@ -334,11 +348,24 @@ def optional_print_definitions(**kwargs):
             "role": "Optional printed alternative to the purchased nylon spacers; use one set only",
         },
     ]
+    if not c["include_printable_spacers"]:
+        pieces = []
+    if c["include_extended_eccentric"]:
+        pieces.append({
+            "name": "motor_eccentric_cap_extended",
+            "module": "motor_eccentric_cap_extended",
+            "arguments": [],
+            "quantity": 1,
+            "size": [24, 24],
+            "replaces": "motor_eccentric_cap",
+            "role": "Optional flush-height shaft; replace the two M3 countersunk joiners with M3 x 30 socket caps",
+        })
+    return pieces
 
 
 def bom(**kwargs):
     c = resolve(**kwargs)
-    return [
+    items = [
         {
             "item": "6810 bearing",
             "quantity": 1,
@@ -377,6 +404,13 @@ def bom(**kwargs):
             "quantity": 4,
         },
         {
+            "item": "Output sandwich countersunk screw",
+            "size": "M3",
+            "length_mm": c["output_plate_clamp_screw_length"],
+            "quantity": len(c["output_plate_clamp_mounts"]),
+            "role": "Preassemble the output plate before fitting it to the cage",
+        },
+        {
             "item": "Wave clamshell countersunk screw",
             "size": "M3",
             "length_mm": c["wave_screw_length"],
@@ -400,11 +434,11 @@ def bom(**kwargs):
             "size": "M3",
             "quantity": 1,
             "length_mm": c["shaft_clamp_screw_length"],
-            "role": "motor shaft clamp; captive nut and clearance above the head, serviced through aligned radial port",
+            "role": "upper motor shaft clamp; tighten before fitting the outer case",
         },
         {
             "item": "M3 hex nut",
-            "quantity": c["housing_screw_count"]+11+c["output_m3_mount_count"],
+            "quantity": c["housing_screw_count"]+11+c["output_m3_mount_count"]+len(c["output_plate_clamp_mounts"]),
             "role": "assembly nuts plus captive half-grid output attachment nuts",
         },
         {
@@ -417,3 +451,4 @@ def bom(**kwargs):
             "quantity": c["cage_screw_count"],
         },
     ]
+    return [item for item in items if item["quantity"]]

@@ -23,6 +23,11 @@
   size: M3
   length_mm: 16
   quantity: 4
+- item: Output sandwich countersunk screw
+  size: M3
+  length_mm: 10
+  quantity: 2
+  role: Preassemble the output plate before fitting it to the cage
 - item: Wave clamshell countersunk screw
   size: M3
   length_mm: 12
@@ -34,19 +39,15 @@
 - item: Eccentric countersunk screw
   size: M3
   quantity: 2
-  length_mm: 16
+  length_mm: 20
   role: join the eccentric halves; length includes the countersunk head
 - item: Shaft clamp countersunk screw
   size: M3
   quantity: 1
   length_mm: 8
-  role: motor shaft clamp; captive nut and clearance above the head, serviced through
-    aligned radial port
+  role: upper motor shaft clamp; tighten before fitting the outer case
 - item: M3 hex nut
   quantity: 25
   role: assembly nuts plus captive half-grid output attachment nuts
-- item: M6 hex nut
-  quantity: 5
-  role: OOBB output attachment; payload bolts depend on attached plate thickness
 - item: M2 hex nut
   quantity: 12

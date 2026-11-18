@@ -185,7 +185,7 @@ def instance_definitions(**kwargs):
             "level": 1,
             "open": False,
         })
-    for index, (z, level) in enumerate([(c["shaft_clamp_z"],3)]):
+    for index, (z, level) in enumerate([(c["shaft_clamp_z"],6)]):
         for part, x in [("screw_shaft_clamp",c["shaft_clamp_head_radius"]), ("nut_m3",5)]:
             hardware(**{
                 "part": part,
@@ -224,4 +224,13 @@ def instance_definitions(**kwargs):
             "level": 13.5,
             "open": False,
         })
+    for index, xy in enumerate(c["output_plate_clamp_mounts"]):
+        for part, z in [("screw_output_clamp", c["output_head_seat"]), ("nut_m3", c["output_plate_clamp_nut_z"])]:
+            hardware(**{
+                "part": part,
+                "name": f"plate_clamp_{index}_{part}",
+                "pos": xy+[z],
+                "level": 14,
+                "open": False,
+            })
     return records

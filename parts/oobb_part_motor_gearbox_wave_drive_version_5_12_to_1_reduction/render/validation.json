@@ -5,20 +5,20 @@
   "bearing_instances": 2,
   "shaft_instances": 0,
   "nylon_roller_instances": 12,
-  "fastener_instances": 75,
-  "total_instances": 106,
-  "gearbox_instances": 100,
+  "fastener_instances": 72,
+  "total_instances": 103,
+  "gearbox_instances": 97,
   "motor_reference_meshes": 6,
   "native_scad_registration_checks": [
     {
       "group": "cage",
       "bounds_error_mm": 0.0,
-      "relative_volume_error": 0.0
+      "relative_volume_error": 1.724633127584369e-16
     },
     {
       "group": "input",
       "bounds_error_mm": 0.0,
-      "relative_volume_error": 1.6657519164574012e-16
+      "relative_volume_error": 0.0
     },
     {
       "group": "wave",
@@ -33,7 +33,7 @@
     {
       "group": "fixed",
       "bounds_error_mm": 0.0,
-      "relative_volume_error": 2.0632301172784812e-16
+      "relative_volume_error": 2.0625377949499253e-16
     },
     {
       "group": "rollers",
@@ -42,15 +42,15 @@
     }
   ],
   "source_sha256": {
-    "motor_mount_plate.stl": "edcb1c330bc53be9a18ca912df07e10ce92cf92486a19a196931f88a75bbcfc6",
-    "fixed_profile_ring.stl": "2f5467013ed6a9c5940dc70fe98843d0c39da25da85efed9d07e3794ff3802cc",
+    "motor_mount_plate.stl": "6ef7a203a1105f14781298c6e075dbfa610dafccc8f509609ce03cc35f6c7d27",
+    "fixed_profile_ring.stl": "e3aa71e9961f45def11d29b382138487b558e7a16b2126c06593418311471936",
     "output_bearing_housing.stl": "e0f44676024f4ab87bc87bd1ce86cc203cc710c7265e22d9b6ba5a4d0a6787da",
-    "cage_lower_cap.stl": "b03f619dd04e1260d82ea36e4291e87828f1284b7ab54d7f3c4d81dc42eba14f",
-    "output_cage.stl": "6702e8a3eb2bc6c5e4df0a2a4572f6da851235c4d4f7ad3992c255d6d00cf136",
-    "output_retainer.stl": "1ee8b98d04a06adbb1a0350a0d6729204e0f444981039c542c67f9ff1e4b8704",
-    "output_cover.stl": "c40ef629517adb628970c53e413248674e191d0eb7f9da85246c8ca6d70a98f0",
-    "motor_eccentric.stl": "5e512cccfc2b13013a28719bf5105fc2c1dd84b3fc8f6ce894ff96d6c353495e",
-    "motor_eccentric_cap.stl": "092e921e68c7363d956290b5540ee02b7859f7eec65b1700a348c794c074f9ca",
+    "cage_lower_cap.stl": "9a7de819ddade99bff923300391506f7f1df624254745d20c7f01ccbd6ebcc65",
+    "output_cage.stl": "00c6af374b2ff879f16c832aa5e5ab7fd1dab9bf6439ce1a3a7bb9a088f1613e",
+    "output_retainer.stl": "6d50985eb42c2e71120f1846a4f228ce9ff2077d7b7f067a9b75ef5dbae99bd5",
+    "output_cover.stl": "dc8f3638fb12d4e4f616111560312412c7e1a5793198868d30be9f8fe2a89087",
+    "motor_eccentric.stl": "4de62f7d3d56c8aa47974cd86fea7487e27f4c197995bc76fe176fed24291960",
+    "motor_eccentric_cap.stl": "0cdab9013a21ea7978d746e23b274d84739f07f41a2d5d786c05982f2b810238",
     "wave_generator.stl": "c36dd59470d477cb08bd281e93f2208ea32d80ed697a1c05f74cf7d788398d3d",
     "wave_bearing_cap.stl": "40c3764ebc6dd30b680fd808eb030bbacea4f35804af36fcfd75d78f85b1dbb7",
     "render\\hardware\\bearing_6810.stl": "75d56f3e997130607095725518518d6cacd73a55b311ea6604ff386347652ccf",
@@ -64,8 +64,8 @@
     "render\\hardware\\screw_cage.stl": "0c37a44bcb2b6f97ec6536fff9995c4022b0086f534b8e575bc7444f5c957cfa",
     "render\\hardware\\nut_m2.stl": "5bfa5d3f0cb7c4cc9b0ac7ecf9e36135d5ba3e8fdce96735a0dfbf685258ef80",
     "render\\hardware\\screw_shaft_clamp.stl": "3c83e0f740220ff889258430471b496f5d88a00590bf9979bd1122bfa73dfaa5",
-    "render\\hardware\\screw_eccentric.stl": "8fb7c0265c34ee0962381798083075689a664766000d1d0a51e8db3604cd63ea",
-    "render\\hardware\\nut_m6.stl": "4c631db8b081d4061d295dd43f0211cd81a6ebbe1c8bdb3ea8c41b1f6cc00f94",
+    "render\\hardware\\screw_eccentric.stl": "c8188ffe97a208f3b550e8c7a116a269ab7c7300ca67f81ac41f9ee3d6a6f34a",
+    "render\\hardware\\screw_output_clamp.stl": "80d663c9a77fa1070af5c5b3bdc012bca78e33f1dac1b59b6ca870a9d9f9eeed",
     "render\\hardware\\nema17_front.stl": "c39fe059f9813cafb4dd8259a83e2e3b03b16d7ff4cdeeccb37d1f9f188f93da",
     "render\\hardware\\nema17_stator.stl": "5f11e9aacceb052df0608ecedd0a10cb800c027e8e42d80f943328c1440853b9",
     "render\\hardware\\nema17_rear.stl": "803d12f6dc825170e227102a5031e375f1510644cb9dc9008fb23eaa91080ef5",

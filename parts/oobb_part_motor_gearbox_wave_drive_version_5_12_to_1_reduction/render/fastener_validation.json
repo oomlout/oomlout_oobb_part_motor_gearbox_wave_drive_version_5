@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "fastener_instances": 75,
+  "fastener_instances": 72,
   "cage_screw_stack": [
     {
       "name": "cage_screw_0",
@@ -133,7 +133,7 @@
       "size": "M3",
       "head": "countersunk",
       "head_proud_mm": 1.0,
-      "tip_clearance_mm": 4.799999999999999,
+      "tip_clearance_mm": 3.9999999999999987,
       "nut_engagement_mm": 2.5
     },
     {
@@ -141,11 +141,27 @@
       "size": "M3",
       "head": "countersunk",
       "head_proud_mm": 1.0,
-      "tip_clearance_mm": 4.799999999999999,
+      "tip_clearance_mm": 3.9999999999999987,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "plate_clamp_0_screw_output_clamp",
+      "size": "M3",
+      "head": "countersunk",
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 1.1000000000000014,
+      "nut_engagement_mm": 2.5
+    },
+    {
+      "name": "plate_clamp_1_screw_output_clamp",
+      "size": "M3",
+      "head": "countersunk",
+      "head_proud_mm": 1.0,
+      "tip_clearance_mm": 1.1000000000000014,
       "nut_engagement_mm": 2.5
     }
   ],
-  "planar_contact_fragments": 138,
+  "planar_contact_fragments": 146,
   "volumetric_components": [
     {
       "bounds_mm": [

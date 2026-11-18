@@ -20,6 +20,7 @@ def define(**kwargs):
         "roller_lengths_available": [6, 12, 15, 18, 20, 25, 30],
         "roller_material": "nylon",
         "include_printable_spacers": True,
+        "include_extended_eccentric": True,
         "roller_bank_count": 1,
         "motor_plate_depth": 4.0,
         "motor_screw_length": 8,
@@ -54,13 +55,24 @@ def define(**kwargs):
         "cage_tip_extra_clearance": 1.0,
         "shaft_clamp_screw_length": 8,
         "shaft_clamp_head_radius": 10.5,
-        "shaft_clamp_axis_z": 5.8,
-        "shaft_access_diameter": 2.6,
+        "eccentric_base_z": 2.4,
+        "eccentric_top_z": 25.4,
+        "shaft_clamp_axis_z": 22.0,
         "shaft_driver_diameter": 2.4,
+        "eccentric_key_inner_radius": 3.9,
+        "eccentric_key_outer_radius": 4.8,
+        "eccentric_key_depth": 1.0,
+        "eccentric_key_clearance": 0.15,
+        "extended_eccentric_diameter": 19.2,
+        "extended_eccentric_screw_length": 30,
+        "extended_eccentric_socket_depth": 3.2,
         "bearing_seat_clearance": 0.10,
         "journal_clearance": 0.05,
         "bearing_axial_clearance": 0.20,
-        "output_plate_diameter": 65.0,
+        "output_plate_diameter": 61.8,
+        "output_view_diameter": 20.0,
+        "output_plate_clamp_mounts": [[0, 20], [0, -20]],
+        "output_plate_clamp_screw_length": 10,
         "output_cover_depth": 4.3,
         "output_above_housing": 1.5,
         "output_hub_depth": 2.1,
@@ -95,7 +107,7 @@ def define(**kwargs):
         "input_shaft_diameter": 5.0,
         "input_shaft_flat_depth": 0.0,  # Zero gives a plain round motor shaft.
         "shaft_fit_clearance": 0.10,
-        "eccentric_join_screw_length": 16,
+        "eccentric_join_screw_length": 20,
         "eccentric_join_pitch_radius": 6.75,
         "wave_screw_length": 12,
         "exploded_spacing": 24.0,
@@ -189,7 +201,7 @@ def define_project_readme(**kwargs):
     kwargs.setdefault("versions", [
         {
             "name": "12:1 / NEMA 17",
-            "description": "Single roller bank; twelve 7 mm OD × 12 mm spacers; 6810 output bearing and 6704 wave bearing; 7 × 5 OOBB base. Includes optional printable spacers.",
+            "description": "Single roller bank; twelve 7 mm OD × 12 mm spacers; 6810 output bearing and 6704 wave bearing; 7 × 5 OOBB base. 20 mm viewing hole and independently clamped output plate. Includes printable spacers and an optional extended input shaft.",
             "image": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/assembly/readme/motor_fit.png",
             "readme": "parts/oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction/README.md",
             "html": "https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/",
@@ -257,24 +269,8 @@ def define_render_style(**kwargs):
 
 
 def define_assembly_steps(**kwargs):
-    return [
-        "Print the fit coupons. Check the 6810 seat, 6704 seat, motor shaft, roller windows and OOBB nut pockets before the full build.",
-        "Load six M3 case nuts into the underside of the base. Mount the {motor_body_depth:g} mm NEMA 17 with four M3 x {motor_screw_length} countersunk screws, heads {countersunk_head_proud:g} mm proud of the plate. Confirm {motor_thread_engagement:g} mm engagement fits the motor threads.",
-        "Print cage_lower_cap with its teeth upright. Print output_cage with its broad closure face on the bed and integrated hub upward; inspect the bridge over its central blind recess. The lower cage has an underside clearance ring for the motor screw heads; the upper cage has a clearance ring above the wave screws.",
-        "Seat {cage_screw_count} M2 nuts in the underside of the lower cage, one for each tooth, and lower it around the motor shaft. Its {cage_center_diameter:g} mm centre opening can also pass over the already fitted eccentric shaft and collars; fit the 6704 and rolling clamshells afterwards. Align its radial service hole along +X.",
-        "Preload two M3 nuts into the underside of the lower eccentric and an M3 nut into its radial pocket. Preload the M3 x {shaft_clamp_screw_length} countersunk shaft-clamp screw before closing the gearbox; its head has top clearance, so the tip can tighten onto the motor shaft. Fit the eccentric at Z={cam_base_z:g} mm with the clamp facing +X.",
-        "Load four M3 nuts into the lower 6704 clamshell (wave_generator), slide it over the eccentric journal and seat the 6704. The joint is at Z={wave_split_z:g} mm, exactly through the bearing centre; each half encloses 2 mm of bearing width plus its fit clearance.",
-        "Fit the upper eccentric collar and join it to the lower eccentric using two M3 x {eccentric_join_screw_length} countersunk screws and the preloaded nuts. These lengths include the head. Both heads sit {countersunk_head_proud:g} mm proud; the journal shoulders preserve the bearing axial clearance.",
-        "Close the upper 6704 clamshell (wave_bearing_cap) with four M3 x {wave_screw_length} countersunk screws. Lower the fixed ring over the upright cage and align its rounded rectangular bosses. Its +X service hole must line up with the lower cage's hole and shaft-clamp screw.",
-        "At input angle zero, the eccentric points along +X. Insert all {roller_count} nylon spacers axially between the lower cage teeth. Preload the four M3 output nuts into the underside of the combined upper closure/hub (output_cage), then fit it over the teeth.",
-        "Install one M2 x {cage_screw_length} countersunk screw through every tooth from above into its captive lower nut. The OOBB top-clearance cuts let the complete heads pass through the integrated upper disc. Tighten all {cage_screw_count} before fitting the 6810 and output carrier. Countersunk screw lengths include their heads.",
-        "Fit the single 6810 around the integrated upper hub. There is no separate output_hub disc. The central blind recess clears the motor shaft tip by {motor_shaft_end_clearance:g} mm.",
-        "Fit the upper bearing housing with its mouth downward. Install the {housing_screw_count} M3 x {case_screw_length} socket caps from the top into the captive base nuts. The fixed ring and upper housing retain the bearing outer race.",
-        "Place the recessed output nut carrier (output_retainer) on the hub inside the 6810 with its hex pockets upward. The hub backs the carrier's nut-pocket bridge cuts. Load all {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment nuts; all pockets fit inside the 50 mm bearing bore.",
-        "Close the sandwich with the stepped output_cover and four M3 x {output_screw_length} countersunk screws in the off-grid fixing positions {output_fixing_mounts}. The freed corner grid holes now take attachment nuts: {output_m6_mount_count} M6 and {output_m3_mount_count} M3 in total. The face remains {output_above_housing:g} mm above the teal housing, with a {output_face_clearance:g} mm underside gap and {output_radial_clearance:g} mm radial neck clearance. Use light preload at the printed cage nut seats and the generated attachment-depth limits.",
-        "To tighten the motor shaft clamp after assembly, turn the input until the housing port, rotating cage port and screw head all line up along +X. Insert a straight 2 mm hex driver with a shaft no larger than {shaft_driver_diameter:g} mm through the {shaft_access_diameter:g} mm service bore at Z={shaft_clamp_z:g} mm. The bore is for the slim driver, not a full-size bit holder or screw insertion. Withdraw the driver before rotating the input.",
-        "Turn the input slowly by hand and check one reverse output turn per {reduction} input turns. Physical fit, motor bearing loads, vibration and printed strength remain untested.",
-    ]
+    """Keep the plain sequence synchronized with the editable pictorial steps."""
+    return [step["action"] for step in define_assembly_cards(**kwargs)]
 
 
 def define_assembly_card_style(**kwargs):
@@ -332,7 +328,10 @@ def define_assembly_book(**kwargs):
         "Clamshell joint: M3 x {wave_screw_length} countersunk screws and captive nuts.",
         "Case: M3 x {case_screw_length} screws from above; nuts underneath the base.",
         "Motor mount: M3 x {motor_screw_length} countersunk screws.",
-        "Regenerate CAD and instructions: python working.py",
+        "Output: {output_view_diameter:g} mm viewing hole; {output_m3_mount_count} captive M3 attachment nuts.",
+        "Output sandwich: two M3 x {output_plate_clamp_screw_length} short joiners, separate from the cage fixings.",
+        "Tighten the upper shaft clamp before fitting the outer case.",
+        "Optional extended shaft: two M3 x {extended_eccentric_screw_length} socket-cap joiners.",
         "Hardware links: OOMP catalogue codes. Printed parts are named in the parts list.",
         "AI-generated CAD and instructions. Fit and load capacity not physically tested.",
     ])
@@ -424,6 +423,10 @@ def define_assembly_part_labels(**kwargs):
             "name": "M3 x {output_screw_length} countersunk",
             "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{output_screw_length}_mm_length",
         },
+        "screw_output_clamp": {
+            "name": "M3 x {output_plate_clamp_screw_length} countersunk",
+            "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{output_plate_clamp_screw_length}_mm_length",
+        },
         "screw_wave": {
             "name": "M3 x {wave_screw_length} countersunk",
             "catalogue_id": "hardware_screw_countersunk_hex_head_black_m3_diameter_{wave_screw_length}_mm_length",
@@ -486,7 +489,7 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Fit the cage with its captive nuts",
-            "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate. Align the service hole with the shaft clamp (+X).",
+            "action": "Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward onto the plate.",
             "add": ["cage_lower_cap", "cage_nut_*"],
             "move": {
                 "cage_lower_cap": [0, 0, 42],
@@ -498,17 +501,14 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Prepare and fit the lower eccentric",
-            "action": "Load two M3 joint nuts from below and one radial M3 clamp nut. Start the M3 x {shaft_clamp_screw_length} countersunk screw, leaving the bore clear. Slide onto the motor shaft and snug the clamp through the cage port.",
-            "add": ["motor_eccentric", "eccentric_join_nut_*", "motor_clamp_*"],
+            "action": "Load two M3 joint nuts from below. Slide the lower eccentric onto the motor shaft with its semicircular alignment tongue upward.",
+            "add": ["motor_eccentric", "eccentric_join_nut_*"],
             "move": {
                 "motor_eccentric": [0, 0, 43],
                 "eccentric_join_nut_*": [0, 0, 31],
-                "motor_clamp_0_nut_m3": [16, 0, 43],
-                "motor_clamp_0_screw_shaft_clamp": [32, 0, 43],
             },
             "targets": {
                 "eccentric_join_nut_*": [0, 0, 43],
-                "motor_clamp_*": [0, 0, 43],
             },
         },
         {
@@ -527,11 +527,13 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Close the eccentric shaft",
-            "action": "Fit the upper eccentric collar and tighten two M3 x {eccentric_join_screw_length} countersunk screws into the lower nuts.",
-            "add": ["motor_eccentric_cap", "eccentric_join_screw_*"],
+            "action": "Load the radial M3 nut from the top of the upper eccentric and start its M3 x {shaft_clamp_screw_length} clamp screw. Match the semicircular key and recess at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length} countersunk joiners, then tighten the upper shaft clamp before fitting the outer case.",
+            "add": ["motor_eccentric_cap", "eccentric_join_screw_*", "motor_clamp_*"],
             "move": {
                 "motor_eccentric_cap": [0, 0, 24],
                 "eccentric_join_screw_*": [0, 0, 44],
+                "motor_clamp_0_nut_m3": [0, 0, 60],
+                "motor_clamp_0_screw_shaft_clamp": [26, 0, 24],
             },
             "targets": {
                 "eccentric_join_screw_*": [0, 0, 24],
@@ -551,7 +553,7 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Lower the fixed ring",
-            "action": "Lower the fixed ring around the cage. Align all six fins with the base and the service hole with the cage port (+X).",
+            "action": "Confirm the upper shaft clamp is tight, then lower the fixed ring around the cage and align all six fins with the base.",
             "add": ["fixed_profile_ring"],
             "move": {
                 "fixed_profile_ring": [0, 0, 37],
@@ -593,13 +595,15 @@ def define_assembly_cards(**kwargs):
             },
         },
         {
-            "title": "Load and fit the output nut carrier",
-            "action": "Fit five M6 nuts and eight M3 nuts in the carrier's upward-facing pockets. Lower the loaded carrier into the 6810 bore, keeping the four off-grid fixing holes clear.",
-            "add": ["output_retainer", "output_attachment*"],
+            "title": "Preassemble the output plate",
+            "action": "Load {output_m3_mount_count} M3 attachment nuts into the carrier and two M3 sandwich nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length} countersunk screws. The plate is now clamped as a separate assembly; its viewing hole and bolt-clearance holes stay open.",
+            "add": ["output_retainer", "output_cover", "output_attachment*", "plate_clamp_*"],
             "move": {
                 "output_retainer": [0, 0, 24],
-                "output_attachment_nut_*": [0, 0, 42],
                 "output_attachment_m3_nut_*": [0, 0, 42],
+                "output_cover": [0, 0, 60],
+                "plate_clamp_*_nut_m3": [0, 0, 12],
+                "plate_clamp_*_screw_output_clamp": [0, 0, 80],
             },
             "targets": {
                 "output_attachment*": [0, 0, 24],
@@ -607,10 +611,14 @@ def define_assembly_cards(**kwargs):
         },
         {
             "title": "Close the output face",
-            "action": "Fit the output cover and tighten four M3 x {output_screw_length} countersunk screws in the off-grid fixing holes. Align the service ports to adjust the shaft clamp with a slim 2 mm hex driver. Withdraw it, disconnect power and hand-turn the input {reduction} times for one reverse output turn.",
-            "add": ["output_cover", "output_screw_*"],
+            "action": "Lower the preassembled output plate over the bearing and fasten it to the cage with four M3 x {output_screw_length} countersunk screws. Keep the separate short sandwich screws tight. With power disconnected, hand-turn the input {reduction} times for one reverse output turn and observe the shaft through the {output_view_diameter:g} mm opening.",
+            "add": ["output_screw_*"],
+            "prepared": ["output_retainer", "output_cover", "output_attachment*", "plate_clamp_*"],
             "move": {
                 "output_cover": [0, 0, 24],
+                "output_retainer": [0, 0, 24],
+                "output_attachment*": [0, 0, 24],
+                "plate_clamp_*": [0, 0, 24],
                 "output_screw_*": [0, 0, 44],
             },
             "targets": {

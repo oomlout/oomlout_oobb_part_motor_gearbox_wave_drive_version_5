@@ -103,8 +103,6 @@
       "cage_nut_9",
       "cage_nut_10",
       "cage_nut_11",
-      "motor_clamp_0_screw_shaft_clamp",
-      "motor_clamp_0_nut_m3",
       "eccentric_join_nut_0",
       "eccentric_join_nut_1",
       "nema17_front",
@@ -123,7 +121,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 175.49305725097656,
+    "ortho_scale_mm": 172.83470153808594,
     "device": "GPU"
   },
   "step_04": {
@@ -159,8 +157,6 @@
       "cage_nut_9",
       "cage_nut_10",
       "cage_nut_11",
-      "motor_clamp_0_screw_shaft_clamp",
-      "motor_clamp_0_nut_m3",
       "eccentric_join_nut_0",
       "eccentric_join_nut_1",
       "nema17_front",
@@ -238,7 +234,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 185.66665649414062,
+    "ortho_scale_mm": 206.2371368408203,
     "device": "GPU"
   },
   "step_06": {
@@ -651,6 +647,7 @@
       "cage_lower_cap",
       "output_cage",
       "output_retainer",
+      "output_cover",
       "motor_eccentric",
       "motor_eccentric_cap",
       "wave_generator",
@@ -727,19 +724,16 @@
       "eccentric_join_nut_0",
       "eccentric_join_screw_1",
       "eccentric_join_nut_1",
-      "output_attachment_nut_0",
-      "output_attachment_nut_1",
-      "output_attachment_nut_2",
-      "output_attachment_nut_3",
-      "output_attachment_nut_4",
       "output_attachment_m3_nut_0",
       "output_attachment_m3_nut_1",
       "output_attachment_m3_nut_2",
       "output_attachment_m3_nut_3",
       "output_attachment_m3_nut_4",
       "output_attachment_m3_nut_5",
-      "output_attachment_m3_nut_6",
-      "output_attachment_m3_nut_7",
+      "plate_clamp_0_screw_output_clamp",
+      "plate_clamp_0_nut_m3",
+      "plate_clamp_1_screw_output_clamp",
+      "plate_clamp_1_nut_m3",
       "nema17_front",
       "nema17_stator",
       "nema17_rear",
@@ -756,7 +750,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 209.2935333251953,
+    "ortho_scale_mm": 276.7576599121094,
     "device": "GPU"
   },
   "step_12": {
@@ -848,19 +842,16 @@
       "eccentric_join_nut_0",
       "eccentric_join_screw_1",
       "eccentric_join_nut_1",
-      "output_attachment_nut_0",
-      "output_attachment_nut_1",
-      "output_attachment_nut_2",
-      "output_attachment_nut_3",
-      "output_attachment_nut_4",
       "output_attachment_m3_nut_0",
       "output_attachment_m3_nut_1",
       "output_attachment_m3_nut_2",
       "output_attachment_m3_nut_3",
       "output_attachment_m3_nut_4",
       "output_attachment_m3_nut_5",
-      "output_attachment_m3_nut_6",
-      "output_attachment_m3_nut_7",
+      "plate_clamp_0_screw_output_clamp",
+      "plate_clamp_0_nut_m3",
+      "plate_clamp_1_screw_output_clamp",
+      "plate_clamp_1_nut_m3",
       "nema17_front",
       "nema17_stator",
       "nema17_rear",
@@ -989,7 +980,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 77.99100494384766,
+    "ortho_scale_mm": 74.15145111083984,
     "device": "GPU"
   },
   "part_motor_eccentric": {
@@ -1005,7 +996,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 30.418643951416016,
+    "ortho_scale_mm": 27.91220474243164,
     "device": "GPU"
   },
   "part_motor_eccentric_cap": {
@@ -1021,7 +1012,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 26.396955490112305,
+    "ortho_scale_mm": 31.318090438842773,
     "device": "GPU"
   },
   "part_wave_generator": {
@@ -1152,6 +1143,22 @@
     "ortho_scale_mm": 22.641082763671875,
     "device": "GPU"
   },
+  "part_screw_output_clamp": {
+    "objects": [
+      "plate_clamp_0_screw_output_clamp"
+    ],
+    "size": [
+      360,
+      300
+    ],
+    "camera_eye": [
+      1.2,
+      -1.6,
+      1.35
+    ],
+    "ortho_scale_mm": 15.47983169555664,
+    "device": "GPU"
+  },
   "part_screw_wave": {
     "objects": [
       "wave_screw_0"
@@ -1197,7 +1204,7 @@
       -1.6,
       1.35
     ],
-    "ortho_scale_mm": 22.641082763671875,
+    "ortho_scale_mm": 27.415250778198242,
     "device": "GPU"
   },
   "part_screw_shaft_clamp": {
@@ -1246,22 +1253,6 @@
       1.35
     ],
     "ortho_scale_mm": 7.68621826171875,
-    "device": "GPU"
-  },
-  "part_nut_m6": {
-    "objects": [
-      "output_attachment_nut_0"
-    ],
-    "size": [
-      360,
-      300
-    ],
-    "camera_eye": [
-      1.2,
-      -1.6,
-      1.35
-    ],
-    "ortho_scale_mm": 15.1980562210083,
     "device": "GPU"
   },
   "part_nema17": {
@@ -1374,19 +1365,16 @@
       "eccentric_join_nut_0",
       "eccentric_join_screw_1",
       "eccentric_join_nut_1",
-      "output_attachment_nut_0",
-      "output_attachment_nut_1",
-      "output_attachment_nut_2",
-      "output_attachment_nut_3",
-      "output_attachment_nut_4",
       "output_attachment_m3_nut_0",
       "output_attachment_m3_nut_1",
       "output_attachment_m3_nut_2",
       "output_attachment_m3_nut_3",
       "output_attachment_m3_nut_4",
       "output_attachment_m3_nut_5",
-      "output_attachment_m3_nut_6",
-      "output_attachment_m3_nut_7",
+      "plate_clamp_0_screw_output_clamp",
+      "plate_clamp_0_nut_m3",
+      "plate_clamp_1_screw_output_clamp",
+      "plate_clamp_1_nut_m3",
       "nema17_front",
       "nema17_stator",
       "nema17_rear",

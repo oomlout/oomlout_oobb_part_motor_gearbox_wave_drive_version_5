@@ -24,7 +24,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 32710.254,
+      "volume_mm3": 32733.929,
       "bounds_mm": [
         [
           -38.86877296494399,
@@ -62,7 +62,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 14734.689,
+      "volume_mm3": 13639.305,
       "bounds_mm": [
         [
           -29.25,
@@ -81,7 +81,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 9068.872,
+      "volume_mm3": 9146.975,
       "bounds_mm": [
         [
           -29.25,
@@ -100,7 +100,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 7986.851,
+      "volume_mm3": 8415.052,
       "bounds_mm": [
         [
           -26.2,
@@ -119,16 +119,16 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 11857.284,
+      "volume_mm3": 10987.106,
       "bounds_mm": [
         [
-          -32.5,
-          -32.5,
+          -30.9,
+          -30.9,
           0.0
         ],
         [
-          32.5,
-          32.5,
+          30.9,
+          30.9,
           4.3
         ]
       ]
@@ -176,7 +176,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 3169.003,
+      "volume_mm3": 2832.707,
       "bounds_mm": [
         [
           -10.5,
@@ -186,7 +186,7 @@
         [
           11.75,
           11.0,
-          13.0
+          11.899999999999999
         ]
       ]
     },
@@ -195,7 +195,7 @@
       "watertight": true,
       "positive_volume": true,
       "connected_components": 1,
-      "volume_mm3": 2290.962,
+      "volume_mm3": 3682.973,
       "bounds_mm": [
         [
           -10.25,
@@ -205,7 +205,7 @@
         [
           11.75,
           11.0,
-          6.8
+          12.1
         ]
       ]
     },
@@ -225,6 +225,25 @@
           3.5,
           3.5,
           12.0
+        ]
+      ]
+    },
+    {
+      "name": "motor_eccentric_cap_extended",
+      "watertight": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "volume_mm3": 6777.951,
+      "bounds_mm": [
+        [
+          -10.25,
+          -11.0,
+          0.0
+        ],
+        [
+          11.75,
+          11.0,
+          24.800000000000004
         ]
       ]
     }
@@ -273,31 +292,31 @@
   ],
   "status": "passed",
   "source_sha256": {
-    "parameters.scad": "c84fe1c0b7e8c8063ecc429e34b2a2254fd8149833463845a29261b78058d724",
-    "geometry.scad": "a7fc2e786088dcd3d3675ec7989291f15db7c855212cab02ef115340b9d91720",
+    "parameters.scad": "40a4cea9ea64da7d3b83195f227f62ff671226e63cbc9a86951dd49f1ad9745f",
+    "geometry.scad": "f3b21d2ec45bf8a263fbc4ea11c156d6e8fb1a538fff55601fef38563a166513",
     "compact_helpers.scad": "b0ef62a121444e8dcbaf6a19fed67ea60813d1a2bc52250ee15ab16a816cf03d",
     "oobb_hardware.scad": "b2cc3e6dc7a68915093d1d95f96ff134bd735518249c67e60bcf3e8244f6bb53"
   },
   "print_beds": [
     {
       "bed": 1,
-      "parts": 12,
+      "parts": 20,
       "bounds_mm": [
         [
           3.0,
-          3.367668408425523,
+          3.0,
           0.0
         ],
         [
-          215.73533681685103,
+          212.53533681685104,
           211.4706736337021,
-          21.9
+          24.800000000000004
         ]
       ]
     },
     {
       "bed": 2,
-      "parts": 11,
+      "parts": 4,
       "bounds_mm": [
         [
           3.0,
@@ -305,8 +324,8 @@
           0.0
         ],
         [
-          215.0,
-          118.5,
+          189.8,
+          115.3,
           15.6
         ]
       ]
@@ -316,15 +335,15 @@
     {
       "part": "motor_eccentric",
       "diameter_mm": 5.2,
-      "maximum_radial_error_mm": 0.0007656460541261012
+      "maximum_radial_error_mm": 0.00015595695515679964
     },
     {
       "part": "motor_eccentric_cap",
       "diameter_mm": 5.2,
-      "maximum_radial_error_mm": 0.00024274728266293621
+      "maximum_radial_error_mm": 0.0002395042225935562
     }
   ],
   "scad_python_profile_max_error_mm": 5.0110401750241555e-09,
-  "print_instance_count": 23,
+  "print_instance_count": 24,
   "limitations": "Geometric checks only. Printed fit, friction, wear, backlash and torque require bench tests."
 }

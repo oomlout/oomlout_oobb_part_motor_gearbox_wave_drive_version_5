@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "name": "aligned_halves",
+      "status": "passed",
+      "expect_empty": true
+    },
+    {
+      "name": "key_rejects_half_turn",
+      "status": "passed",
+      "expect_empty": false
+    },
+    {
+      "name": "viewing_hole",
+      "status": "passed",
+      "expect_empty": true
+    },
+    {
+      "name": "payload_clearance",
+      "status": "passed",
+      "expect_empty": true
+    },
+    {
+      "name": "extended_clamp_nut_loading",
+      "status": "passed",
+      "expect_empty": true
+    },
+    {
+      "name": "extended_fasteners",
+      "status": "passed",
+      "expect_empty": true
+    }
+  ],
+  "extended_collision_angles": [
+    {
+      "angle": 0,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 45,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 90,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 135,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 180,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 225,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 270,
+      "interference_mm3": 0
+    },
+    {
+      "angle": 315,
+      "interference_mm3": 0
+    }
+  ],
+  "status": "passed",
+  "extended_top_z_mm": 38.1,
+  "extended_radial_clearance_mm": 0.40000000000000036,
+  "extended_screw_tip_clearance_mm": 2.4999999999999987,
+  "limitations": "Geometric checks only; printed fit and running performance require physical tests."
+}

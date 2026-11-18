@@ -1,3 +1,5 @@
-mesh_validation.json: generated; see report for check scope
-render\fastener_validation.json: generated; see report for check scope
-render\motor_fit.json: generated; see report for check scope
+mesh_validation.json: see report for scope
+render/fastener_validation.json: see report for scope
+render/motor_fit.json: see report for scope
+render/shaft_access_validation.json: see report for scope
+render/extended_eccentric_validation.json: see report for scope

@@ -1,33 +1,44 @@
 # 12:1 OOBB roller wave drive
 
-One bank of 12 nylon spacers, 7 mm OD x 12 mm long. Output speed is -1/12 of input speed. One 6810 supports the output; one 6704 supports the eccentric wave wheel.
+One bank of 12 nylon spacers, 7 mm OD x 12 mm deep. Output speed is -1/12 of input speed. One 6810 supports the output; one 6704 supports the wave wheel.
 
-Main circular body: 71.2 mm OD with 3 mm bearing-seat walls. Six rounded rectangular screw fins have 5.7 mm rounding, ending on the screw centreline; their rear rounding is buried in the cylinder so the visible junction stays flat. Nut-pocket walls are 2 mm nominal. Base grid: 7 x 5 OOBB units (104 x 74 mm rectangle), 4 mm deep. The central cylinder and boss footprint extend the base where needed. Corner and upper/lower rectangle edge radii: 5 / 1.5 mm.
+[Assembly instructions in your browser](https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/) · [PDF booklet](assembly/assembly_instructions.pdf) · [Written sequence](ASSEMBLY.md)
 
-Full output face: 65 mm OD, with 5 captive M6 and 8 captive M3 attachment nuts on the OOBB grid and half-grid. A separate nut carrier and 4.3 mm cover trap them. Four off-grid M3 x 16 countersunk assembly screws, with heads 1 mm proud, at [[20.0, 10.0], [-10.0, 20.0], [-20.0, -10.0], [10.0, -20.0]] clamp the sandwich into captive cage nuts, freeing the former corner fixing holes for four more M3 attachments. The rotated corner pockets include at least 0.5 mm of edge material, including the OOBB bridge cuts. The input ends in a blind pocket.
+The 7 x 5 OOBB base has M6 and M3 holes, 5 mm corner radii and 1.5 mm rounded edges. The main housing is 71.2 mm OD. Reference motor: 40 mm NEMA 17 body, plain round 5 mm shaft, 24 mm long.
 
-The base includes M6 grid holes and M3 half-grid holes outside the housing. On the output face, half-grid positions are omitted where a nut pocket would meet another pocket, an assembly fixing or the edge. Every provided attachment hole has its own captive nut.
+## Wiggle shaft
 
-The output nut carrier sits inside the 6810's 50 mm bore. Its stepped cover ends 1.5 mm above the teal housing. The 6704 rolling member has two full-diameter clamshell halves joined exactly at the bearing centre, Z=13.3 mm. Two M3 x 16 countersunk screws with captive nuts join the eccentric shaft pieces; an M3 x 8 countersunk screw with captive nut and head clearance secures them to the motor shaft.
+Both eccentric pieces split at Z=13.3 mm, the centre of the 6704 bearing. A semicircular tongue on the lower journal fits a matching recess in the upper journal. Its 0.15 mm clearance allows the two halves to register without forcing the printed fit.
 
-All 12 teeth are integrated into the lower cage and print upright. Every tooth gets an M2 x 20 countersunk screw, tightened from above into a lower captive nut. The upper closure and support disc are one printed part, with its broad face on the bed and hub upward. Its central blind roof is a bridge; inspect it after printing. The lower ring is 3 mm thick; the upper closure is 6 mm. Raising the cage screw heads 3 mm accommodates the longer screws and leaves 1.6 mm nominal clearance below their tips. Raised nut seats preserve full engagement. Annular clearance pockets clear the raised M3 motor and wave screw heads throughout rotation. The bearing/output stack is also 3 mm higher; deeper case head wells retain the 30 mm case screws.
+Load the upper radial M3 nut from the top and tighten the M3 x 8 countersunk clamp onto the motor shaft before fitting the fixed ring and upper cage. The case and lower cage have no adjustment access holes. Two M3 x 20 countersunk screws join the short eccentric to its lower captive nuts.
 
-Assembly clearance: every cage screw uses OOBB clearance=top so its head passes through the upper disc before fitting the bearing/output carrier. The 25 mm lower opening slides over the bare assembled eccentric shaft and its fasteners; fit the 6704 and rolling clamshells afterwards. The output face has a 0.8 mm underside gap above the housing and 0.6 mm radial neck clearance. See render/assembly_access_validation.json for continuous insertion checks.
-Shaft service access: align the housing and lower-cage ports with the shaft screw at input angle zero (+X). A straight 2 mm hex driver, maximum shaft diameter 2.4 mm, reaches the screw through a 2.6 mm bore at Z=5.8 mm, below the rollers. Preload the screw before closing the case; the port passes a driver, not its head. See render/shaft_access_validation.json for the complete-assembly clearance check.
+Optional extended version: [motor_eccentric_cap_extended.stl](motor_eccentric_cap_extended.stl) replaces the short upper piece. Its 19.2 mm stem reaches the output face at Z=38.1 mm, with clearance through the 20 mm viewing hole. Use two M3 x 30 socket caps instead of the short version's countersunk joiners. Reuse the lower piece and captive nuts. See [assembly_extended.scad](assembly_extended.scad). Do not install both upper pieces.
 
-Gearbox height above motor face: 38.1 mm. Reference motor body: 40 mm, shaft: 24 x 5 mm, plain round. Both eccentric pieces have 0.1 mm radial bore clearance. The shaft is held by the radial clamp screw; verify its grip on the actual motor before applying load.
+## Output plate
 
-Print one of each gearbox part (11 parts), or the 2 print-bed layouts. Do not print both sets. The combined 3dpr file and print beds also include twelve optional printable spacers, 7 mm OD x 12 mm deep with a 3.2 mm bore. Use either these or the purchased nylon spacers, not both. Bearings, motor and fasteners are purchased items. Fit coupons are optional.
+The flat-sided output face is 61.8 mm OD with a 20 mm central viewing hole. It has no overhanging outer lip; the bearing remains visible. The output face stays 1.5 mm above the housing.
 
-Open motor_fit.scad, exploded_motor.scad or animation.scad. Blender views and the editable scene are in render/images and render/scenes. Read [ASSEMBLY.md](ASSEMBLY.md) before assembly.
+Preassemble the carrier and cover with two M3 x 10 countersunk screws and separate captive M3 nuts. Then attach the complete sandwich to the cage with four M3 x 16 countersunk screws. The short screws stay in place while installing or removing the plate.
+
+The carrier holds 6 M3 attachment nuts on the OOBB half-grid. Nut positions that conflict with the viewing hole or plate fasteners are omitted; this compact version has no captive M6 output nuts. M6 holes remain in the base. Attachment centres, in mm: [[-15.0, -15.0], [-15.0, 15.0], [15.0, -15.0], [15.0, 15.0], [-15.0, 0.0], [15.0, 0.0]].
+
+Clearance holes continue below the attachment nuts through the carrier and cage. M3 payload bolt projection below the output face may be 6.40 to 17.20 mm, allowing at least 2 mm thread engagement while stopping above the moving wave screws. Measure the actual printed assembly; longer bolts must not reach the moving parts.
+
+## Printing and assembly
+
+Print the 11 required gearbox pieces. The combined 3dpr file and print beds also include 12 optional printable spacers and the optional extended upper eccentric. Choose one upper eccentric and either purchased nylon spacers or printed spacers. Bearings, motor and fasteners are purchased items.
+
+Print the lower cage with its teeth upward and the upper cage with its broad face on the bed. Inspect bridge material, bearing seats and the alignment key before assembly. The upper and lower cage have annular clearances for the raised M3 wave and motor screw heads.
+
+M3 axial countersunk heads sit 1 mm proud; do not force them flush. M2 cage screws stay seated, with 1.6 mm nominal tip clearance. The radial shaft clamp tightens onto the shaft. Motor screws retain 3 mm nominal thread engagement. Socket-cap lengths exclude the head; countersunk lengths include it.
 
 ![Motor assembly](render/images/motor_fit.png)
 
 ![Exploded assembly](render/images/exploded_motor.png)
 
-Motor mounting: four M3 x 8 countersunk screws sit 1 mm proud of the base and engage 3 mm of the motor threads. Six M3 x 30 socket caps enter from the top housing into captive M3 nuts loaded from underneath the base. Their tips stop at the base underside.
-
 ## Hardware
+
+Quantities below are for the short-shaft assembly. The extended option replaces its two eccentric joiners with two M3 x 30 socket caps.
 
 | Item | Quantity | Size / length |
 | --- | ---: | --- |
@@ -37,30 +48,14 @@ Motor mounting: four M3 x 8 countersunk screws sit 1 mm proud of the base and en
 | Case socket cap screw | 6 | M3 x 30 mm |
 | Motor countersunk screw | 4 | M3 x 8 mm |
 | Output countersunk screw | 4 | M3 x 16 mm |
+| Output sandwich countersunk screw | 2 | M3 x 10 mm |
 | Wave clamshell countersunk screw | 4 | M3 x 12 mm |
 | Cage tooth countersunk screw | 12 | M2 x 20 mm |
-| Eccentric countersunk screw | 2 | M3 x 16 mm |
+| Eccentric countersunk screw | 2 | M3 x 20 mm |
 | Shaft clamp countersunk screw | 1 | M3 x 8 mm |
 | M3 hex nut | 25 |  |
-| M6 hex nut | 5 |  |
 | M2 hex nut | 12 |  |
-
-Payload bolts are not included: select them for the attached part thickness and the depth limits below.
-
-## Output attachment
-
-Bolt projection below the output face must be between 7.40 and 9.40 mm for approximately 3 to 5 mm engagement in the captive M6 nuts. Longer bolts can bottom out or damage the blind pocket. These limits are for the generated geometry; verify actual printed fits.
-
-For M3 attachment bolts, projection below the output face must be 6.40 to 6.90 mm for approximately 2 to 2.5 mm engagement. Attachment pockets have closed floors; the four off-grid assembly screws use the separate longer stack and must not be replaced with payload bolts.
-
-M6 attachment centres (mm): [[0, 0], [15.0, 0], [-15.0, 0], [0, 15.0], [0, -15.0]]. M3 attachment centres (mm): [[-15.0, -15.0], [-15.0, 15.0], [-7.5, -7.5], [-7.5, 7.5], [7.5, -7.5], [7.5, 7.5], [15.0, -15.0], [15.0, 15.0]].
-
-The motor shaft tip is at Z=24 mm; the blind roof is 1.9 mm above it. There is no upper input bearing, shaft extension or coupling through the output plate.
 
 ## Verification
 
-See mesh_validation.json for printable solids and native interference checks, and render/validation.json, render/fastener_validation.json and render/motor_fit.json for assembly registration and hardware fits. Reports describe only checks actually executed.
-
-This single-bank design is not counterbalanced. Printed fit, fastener-seat strength, actual motor bearing loads, wear, heat, backlash and operating speed/torque have not been physically tested. The motor drawing specifies an envelope, not a bearing load rating.
-
-[A4 assembly instruction cards](assembly/assembly_instructions.pdf) - signature-padded booklet, with a cover, project details, four steps per instruction page, a full-page completed view and boxed printed and hardware inventories.
+See mesh_validation.json and the reports in render/ for the checks actually performed. This single-bank design is not counterbalanced. Printed fit, clamp grip, wear, backlash, motor bearing loads and operating speed/torque still need physical testing.

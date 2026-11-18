@@ -38,13 +38,13 @@ def test_compact_inventory_and_bearing_envelope():
     pieces = working_scad.piece_definitions(**c)
     records = instance_definitions(configuration=c)
     assert len(pieces) == sum(p["quantity"] for p in pieces) == 11
-    assert Counter(r["kind"] for r in records) == {"printed":11,"roller":12,"bearing":2,"fastener":75}
+    assert Counter(r["kind"] for r in records) == {"printed":11,"roller":12,"bearing":2,"fastener":72}
     assert sum(r["part"]=="bearing_6810" for r in records) == 1
     assert sum(r["part"]=="bearing_6704" for r in records) == 1
     assert len(records) == len(set(r["name"] for r in records))
     assert c["roller_length"] == 12 and c["roller_diameter"] == 7
     assert c["base_edge_radius"] == 1.5
-    assert c["output_plate_diameter"] == 65
+    assert c["output_plate_diameter"] == 61.8
     assert c["output_grid_pitch"] == 15
     assert c["hub_height"]-c["shaft_blind_depth"] >= .5
     assert c["assembly_height"]-c["housing_top_z"] == pytest.approx(1.5)
@@ -59,7 +59,7 @@ def test_compact_inventory_and_bearing_envelope():
 
 def test_motor_shaft_and_screw_engagement():
     c = working_scad.resolve()
-    assert c["cam_cap_z"]+c["cam_cap_height"] < c["motor_shaft_length"]-1
+    assert c["shaft_clamp_z"]+1.5 <= c["motor_shaft_length"]-.3
     assert c["motor_pilot_height"]+.2 < c["motor_plate_depth"]
     # Every tooth gets a screw, tightened from above before the 6810 is fitted.
     assert c["cage_screw_count"] == c["roller_count"] == 12
@@ -112,8 +112,8 @@ def test_motor_shaft_and_screw_engagement():
 
 def test_output_sandwich_pocket_walls_and_capture():
     c = working_scad.resolve()
-    assert len(c["output_m6_mounts"]) == 5
-    assert len(c["output_m3_mounts"]) == 8
+    assert len(c["output_m6_mounts"]) == 0
+    assert len(c["output_m3_mounts"]) == 6
     pockets = [(p, c["mount_m6_pocket_radius"]) for p in c["output_m6_mounts"]]
     pockets += [(p, c["mount_m3_pocket_radius"]) for p in c["output_m3_mounts"]]
     for index, (point, radius) in enumerate(pockets):
@@ -177,8 +177,8 @@ def test_shaft_clamp_service_path_and_countersunk_head():
     c = working_scad.resolve()
     assert c["input_shaft_flat_depth"] == 0
     assert c["input_shaft_diameter"] == 5
-    assert c["shaft_clamp_z"]+c["shaft_access_diameter"]/2 < c["roller_z"]
-    assert c["shaft_driver_diameter"] < c["shaft_access_diameter"]
+    assert c["shaft_clamp_z"]-c["shaft_driver_diameter"]/2 > c["wave_z"]+c["wave_height"]-c["wave_head_recess"]
+    assert "shaft_access_diameter" not in c
     assert c["shaft_clamp_head_radius"]-c["shaft_clamp_screw_length"] == pytest.approx(c["input_shaft_diameter"]/2-c["input_shaft_flat_depth"])
     assert c["cam_base_z"] > c["motor_pilot_height"]+.1
     primitive = next(d for d in working_scad.hardware_definitions(**c) if d["name"] == "oobb_shaft_clamp_m3")["kwargs"]
@@ -239,9 +239,32 @@ def test_optional_printable_spacers_are_packed_without_duplicate_assembly_parts(
     c = working_scad.resolve()
     pieces = working_scad.piece_definitions(**c)
     extra = optional_print_definitions(**c)
-    assert len(extra) == 1 and extra[0]["quantity"] == 12
+    assert len(extra) == 2 and extra[0]["quantity"] == 12
     assert extra[0]["module"] == "roller" and extra[0]["replaces"] == "roller"
     beds = working_scad.pack_print_beds(pieces+extra)
-    assert sum(len(bed["parts"]) for bed in beds) == 23
+    assert sum(len(bed["parts"]) for bed in beds) == 24
     assert sum(p["part"] == "printable_spacer" for bed in beds for p in bed["parts"]) == 12
-    assert optional_print_definitions(include_printable_spacers=False) == []
+    assert optional_print_definitions(include_printable_spacers=False, include_extended_eccentric=False) == []
+
+
+def test_keyed_mid_bearing_split_and_extended_option():
+    c = working_scad.resolve()
+    assert c["cam_cap_z"] == pytest.approx(c["wave_bearing_z"]+2)
+    assert c["eccentric_key_depth"] < c["cam_upper_journal_depth"]-.5
+    assert c["eccentric_key_inner_radius"]-c["eccentricity"]-c["eccentric_key_clearance"] > c["input_shaft_diameter"]/2+c["shaft_fit_clearance"]
+    assert c["cam_cap_z"]+c["extended_eccentric_height"] == pytest.approx(c["assembly_height"])
+    assert (c["output_view_diameter"]-c["extended_eccentric_diameter"])/2 >= .3
+    assert c["cam_base_z"]+.5 < c["extended_eccentric_head_z"]-c["extended_eccentric_screw_length"] < c["eccentric_join_nut_z"]
+
+
+def test_independent_output_sandwich_and_open_payload_paths():
+    c = working_scad.resolve()
+    assert c["output_view_diameter"] == 20
+    assert len(c["output_plate_clamp_mounts"]) == 2
+    assert c["output_head_seat"]-c["output_plate_clamp_screw_length"] > c["retainer_z"]+.5
+    assert c["output_plate_clamp_nut_z"]+2.5 < c["output_cover_z"]
+    assert c["output_m3_bolt_projection_max"] > c["output_m3_bolt_projection_min"]+5
+    for point in c["output_m3_mounts"]:
+        assert math.hypot(*point)-c["mount_m3_pocket_radius"] >= c["output_view_diameter"]/2+c["mount_minimum_web"]
+        for joint in c["output_plate_clamp_mounts"]:
+            assert math.dist(point,joint) >= c["mount_m3_pocket_radius"]+c["mount_m3_hex_radius"]+c["mount_minimum_web"]

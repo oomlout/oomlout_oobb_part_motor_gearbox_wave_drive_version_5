@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "Straight driver envelope from outside the housing to 0.05 mm in front of the M3 screw head; complete assembly, motor, rollers and all fasteners at input/cage angle zero.",
+  "scope": "Straight driver access to the upper M3 shaft clamp before fitting the outer case and upper cage; lower cage, wave halves, rollers, motor and installed fasteners included. No housing access port is required.",
   "volumetric_components": [
     {
       "bounds_mm": [

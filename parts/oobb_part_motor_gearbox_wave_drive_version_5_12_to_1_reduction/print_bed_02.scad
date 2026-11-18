@@ -1,14 +1,7 @@
 include <parameters.scad>;
 use <oobb_hardware.scad>;
 include <geometry.scad>;
-translate([35.5, 35.5, 0]) output_cover();
-translate([101.25, 32.25, 0]) cage();
-translate([163.75, 32.25, 0]) cage_cap();
-translate([26.25, 95.25, 0]) wave_cap();
-translate([200.5, 6.5, 0]) roller();
-translate([211.5, 6.5, 0]) roller();
-translate([200.5, 17.5, 0]) roller();
-translate([211.5, 17.5, 0]) roller();
-translate([200.5, 28.5, 0]) roller();
-translate([211.5, 28.5, 0]) roller();
-translate([200.5, 39.5, 0]) roller();
+translate([33.9, 33.9, 0]) output_cover();
+translate([98.05, 32.25, 0]) cage();
+translate([160.55, 32.25, 0]) cage_cap();
+translate([26.25, 92.05, 0]) wave_cap();

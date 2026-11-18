@@ -42,10 +42,11 @@ wave_split_z=wave_bearing_z+2;
 wave_lower_depth=wave_split_z-wave_z;
 wave_cap_depth=wave_height-wave_lower_depth;
 cam_z=wave_z+wave_seat_z-1;
-cam_base_z=shaft_clamp_axis_z-3.4;
+cam_base_z=eccentric_base_z;
 cam_shoulder_z=cam_z-cam_base_z;
-cam_cap_z=cam_z+5.2;
-cam_cap_height=6.8;
+cam_cap_z=wave_split_z;
+cam_cap_height=eccentric_top_z-cam_cap_z;
+cam_upper_journal_depth=cam_z+5.2-cam_cap_z;
 shaft_clamp_z=shaft_clamp_axis_z;
 eccentric_join_head_z=cam_cap_z+cam_cap_height+countersunk_head_proud;
 eccentric_join_nut_z=eccentric_join_head_z-eccentric_join_screw_length+0.1;
@@ -66,13 +67,17 @@ output_flange_z=housing_top_z+output_face_clearance;
 output_neck_height=output_cover_z-retainer_z;
 retainer_depth=output_neck_height;
 output_head_seat=assembly_height+countersunk_head_proud;
+output_plate_clamp_nut_z=output_head_seat-output_plate_clamp_screw_length+0.1;
+extended_eccentric_height=assembly_height-cam_cap_z;
+extended_eccentric_head_z=assembly_height-extended_eccentric_socket_depth;
 shaft_blind_depth=max(0,motor_shaft_length+motor_shaft_end_clearance-hub_z);
 output_nut_z=cage_floor_z+cage_head_lift+0.3;
 cage_head_seat=hub_z;
 cage_nut_z=cage_head_seat-cage_screw_length;
 wave_mounts=[for(a=[0:90:270]) [18*cos(a),18*sin(a)]];
 output_mounts=[[output_fixing_x,output_fixing_y],[-output_fixing_y,output_fixing_x],[-output_fixing_x,-output_fixing_y],[output_fixing_y,-output_fixing_x]];
-output_attachment_mounts=[[0,0],[output_grid_pitch,0],[-output_grid_pitch,0],[0,output_grid_pitch],[0,-output_grid_pitch]];
+output_attachment_mounts=[for(p=[[0,0],[output_grid_pitch,0],[-output_grid_pitch,0],[0,output_grid_pitch],[0,-output_grid_pitch]])
+    if(norm(p)-mount_m6_pocket_radius>=output_view_diameter/2+mount_minimum_web) p];
 function separated(p,points,d)=len(points)==0?true:min([for(q=points) norm(p-q)])>=d;
 function select_m3_mounts(points,index=0,selected=[])=index>=len(points)?selected:
     select_m3_mounts(points,index+1,separated(points[index],selected,2*mount_m3_pocket_radius+mount_minimum_web)?concat(selected,[points[index]]):selected);
@@ -81,16 +86,19 @@ function m3_pocket_points(p)=[for(q=concat(
     [for(a=[0:60:300]) polar(mount_m3_hex_radius,a)],
     [for(x=[-mount_m3_bridge_half_width,mount_m3_bridge_half_width],y=[-mount_m3_bridge_half_height,mount_m3_bridge_half_height]) [x,y]]))
     p+rotate_point(q,m3_mount_angle(p))];
-output_m3_candidates=[for(i=[-floor(output_plate_diameter/output_grid_pitch):floor(output_plate_diameter/output_grid_pitch)],j=[-floor(output_plate_diameter/output_grid_pitch):floor(output_plate_diameter/output_grid_pitch)])
-    let(p=[i*output_grid_pitch/2,j*output_grid_pitch/2])
-    if(max([for(q=m3_pocket_points(p)) norm(q)])+mount_m3_edge_wall<=min(output_plate_diameter/2,25-journal_clearance) &&
+output_m3_grid=concat([[-output_grid_pitch,-output_grid_pitch],[-output_grid_pitch,output_grid_pitch],[output_grid_pitch,-output_grid_pitch],[output_grid_pitch,output_grid_pitch]],
+    [for(i=[-floor(output_plate_diameter/output_grid_pitch):floor(output_plate_diameter/output_grid_pitch)],j=[-floor(output_plate_diameter/output_grid_pitch):floor(output_plate_diameter/output_grid_pitch)]) [i*output_grid_pitch/2,j*output_grid_pitch/2]]);
+output_m3_candidates=[for(p=output_m3_grid)
+    if(norm(p)-mount_m3_pocket_radius>=output_view_diameter/2+mount_minimum_web &&
+       separated(p,output_plate_clamp_mounts,mount_m3_pocket_radius+mount_m3_hex_radius+mount_minimum_web) &&
+       max([for(q=m3_pocket_points(p)) norm(q)])+mount_m3_edge_wall<=min(output_plate_diameter/2,25-journal_clearance) &&
        separated(p,output_attachment_mounts,mount_m3_pocket_radius+mount_m6_pocket_radius+mount_minimum_web) &&
        separated(p,output_mounts,mount_m3_pocket_radius+1.8+mount_minimum_web)) p];
 output_m3_attachment_mounts=select_m3_mounts(output_m3_candidates);
 motor_mounts=[for(x=[-motor_hole_pitch/2,motor_hole_pitch/2],y=[-motor_hole_pitch/2,motor_hole_pitch/2]) [x,y]];
 assert(overhang && max_screw_length<=35);
 assert(roller_bank_count==1 && bearing_output=="6810" && bearing_wave=="6704");
-assert(cam_cap_z+cam_cap_height<=motor_shaft_length-1,"Motor shaft too short");
+assert(shaft_clamp_z+1.5<=motor_shaft_length-0.3,"Motor shaft must reach the upper clamp");
 assert(housing_top_depth>=bearing_stack_height+2,"Top bearing holder too thin");
 include <compact_helpers.scad>;
 
@@ -139,7 +147,6 @@ module fixed_ring() {
         // Upper outer-race retaining lip; clear the cage and support only the outer race.
         translate([0,0,ring_height-0.3]) cylinder(r=31.5,h=0.4);
         case_mounts() translate([0,0,-eps]) screw_hole("m3",ring_height+2*eps);
-        translate([0,0,shaft_clamp_z-ring_z]) shaft_service_port();
     }
 }
 module output_housing() {
@@ -163,6 +170,9 @@ module cage_face_down() {
             translate([0,0,hub_height]) tube(cage_outer,12.6,cage_upper_plate_depth);
         }
         if(shaft_blind_depth>0) translate([0,0,hub_height-shaft_blind_depth]) cylinder(r=12.6,h=shaft_blind_depth+cage_upper_plate_depth+eps);
+        translate([0,0,-eps]) cylinder(d=output_view_diameter,h=hub_height+cage_upper_plate_depth+2*eps);
+        at_mounts(output_attachment_mounts) translate([0,0,-eps]) screw_hole("m6",hub_height+cage_upper_plate_depth+2*eps);
+        at_mounts(output_m3_attachment_mounts) translate([0,0,-eps]) screw_hole("m3",hub_height+cage_upper_plate_depth+2*eps);
         // A full annular sweep clears the proud wave screws at every input angle.
         if(wave_head_relief_depth>0)
             translate([0,0,hub_height+cage_upper_plate_depth-wave_head_relief_depth])
@@ -205,12 +215,7 @@ module cage_cap() {
             tube(sqrt(2)*motor_hole_pitch/2+m3_countersunk_radius+countersunk_head_clearance,
                 sqrt(2)*motor_hole_pitch/2-m3_countersunk_radius-countersunk_head_clearance,
                 motor_head_relief_depth+eps);
-        translate([0,0,shaft_clamp_z-cage_cap_z]) shaft_service_port();
     }
-}
-module shaft_service_port() {
-    // Alignment: eccentric +X, lower cage service bore +X, housing bore +X.
-    translate([shaft_clamp_head_radius,0,0]) rotate([0,90,0]) cylinder(d=shaft_access_diameter,h=60);
 }
 module output_retainer() {
     // Print pocket mouths on the bed; in use they face up into the separate cover.
@@ -220,19 +225,25 @@ module output_retainer() {
             cylinder(r=26.2,h=output_cover_z-(hub_z+bearing_stack_height));
         }
         at_mounts(output_mounts) translate([0,0,-eps]) screw_hole("m3",retainer_depth+2*eps);
+        translate([0,0,-eps]) cylinder(d=output_view_diameter,h=retainer_depth+2*eps);
+        at_mounts(output_attachment_mounts) translate([0,0,-eps]) screw_hole("m6",retainer_depth+2*eps);
+        at_mounts(output_m3_attachment_mounts) translate([0,0,-eps]) screw_hole("m3",retainer_depth+2*eps);
+        at_mounts(output_plate_clamp_mounts) {
+            translate([0,0,-eps]) screw_hole("m3",retainer_depth+2*eps);
+            translate([0,0,output_cover_z-output_plate_clamp_nut_z-2.5])
+                scale([1,1,(output_plate_clamp_nut_z+2.5-retainer_z+eps)/2.7]) oobb_nut_m3();
+        }
         at_mounts(output_attachment_mounts) oobb_nut_m6();
         for(p=output_m3_attachment_mounts) translate([p[0],p[1],0]) rotate([0,0,m3_mount_angle(p)])
             scale([1,1,output_m3_nut_depth/2.7]) oobb_nut_m3();
     }
 }
 module output_cover() {
-    // Printed and assembled face up. Closed pocket floors keep payload bolts blind.
+    // Flat-sided cover; viewing and payload holes continue through the carrier.
     difference() {
-        union() {
-            cylinder(r=31.5-output_radial_clearance,h=output_cover_depth);
-            translate([0,0,output_flange_z-output_cover_z]) cylinder(d=output_plate_diameter,h=assembly_height-output_flange_z);
-        }
-        at_mounts(output_mounts) {
+        cylinder(d=output_plate_diameter,h=output_cover_depth);
+        translate([0,0,-eps]) cylinder(d=output_view_diameter,h=output_cover_depth+2*eps);
+        at_mounts(concat(output_mounts,output_plate_clamp_mounts)) {
             translate([0,0,-eps]) screw_hole("m3",output_cover_depth+2*eps);
             translate([0,0,output_cover_depth+countersunk_head_proud]) oobb_countersunk_m3();
         }
@@ -240,12 +251,19 @@ module output_cover() {
         at_mounts(output_m3_attachment_mounts) translate([0,0,-eps]) screw_hole("m3",output_cover_depth+2*eps);
     }
 }
-module clamp_cuts(z) {
+module clamp_cuts(z,top) {
     // Captive M3 nut; top head clearance lets the screw press onto the motor shaft.
     translate([0,0,z]) rotate([0,90,0]) screw_hole("m3",12);
     translate([shaft_clamp_head_radius,0,z]) rotate([0,90,0]) oobb_shaft_clamp_m3();
     translate([5,0,z]) rotate([0,90,0]) oobb_nut_m3();
-    translate([5,-3.35,-eps]) cube([2.7,6.7,z+eps]);
+    translate([5,-3.35,z]) cube([2.7,6.7,top-z+eps]);
+}
+module eccentric_key(height,clearance=0) {
+    translate([eccentricity,0,0]) linear_extrude(height)
+        offset(delta=clearance) intersection() {
+            difference() { circle(r=eccentric_key_outer_radius); circle(r=eccentric_key_inner_radius); }
+            translate([0,-eccentric_key_outer_radius]) square([eccentric_key_outer_radius,2*eccentric_key_outer_radius]);
+        }
 }
 module motor_eccentric() {
     difference() {
@@ -253,26 +271,35 @@ module motor_eccentric() {
             cylinder(r=9,h=cam_shoulder_z);
             translate([0,0,cage_cap_z-cam_base_z]) cylinder(r=10.5,h=cam_shoulder_z-(cage_cap_z-cam_base_z));
             translate([eccentricity,0,cam_shoulder_z]) cylinder(r=11,h=1);
-            translate([eccentricity,0,cam_shoulder_z+1]) cylinder(r=10-journal_clearance,h=4.2);
+            translate([eccentricity,0,cam_shoulder_z+1]) cylinder(r=10-journal_clearance,h=cam_cap_z-cam_base_z-cam_shoulder_z-1);
+            translate([0,0,cam_cap_z-cam_base_z]) eccentric_key(eccentric_key_depth);
         }
         translate([0,0,-eps]) shaft_cut(cam_shoulder_z+5.2+2*eps);
-        clamp_cuts(3.4);
         at_mounts(eccentric_join_mounts) {
             translate([0,0,-eps]) screw_hole("m3",cam_shoulder_z+5.2+2*eps);
             translate([0,0,-eps]) scale([1,1,(eccentric_join_nut_z+2.5-cam_base_z+eps)/2.7]) oobb_nut_m3();
         }
     }
 }
-module motor_eccentric_cap() {
+module motor_eccentric_cap(extended=false) {
+    top=extended?extended_eccentric_height:cam_cap_height;
     difference() {
-        translate([eccentricity,0,0]) cylinder(r=11,h=cam_cap_height);
-        translate([0,0,-eps]) shaft_cut(cam_cap_height+2*eps);
+        union() {
+            translate([eccentricity,0,0]) cylinder(r=10-journal_clearance,h=cam_upper_journal_depth);
+            translate([eccentricity,0,cam_upper_journal_depth]) cylinder(r=11,h=cam_cap_height-cam_upper_journal_depth);
+            if(extended) translate([0,0,cam_cap_height-eps]) cylinder(d=extended_eccentric_diameter,h=top-cam_cap_height+eps);
+        }
+        translate([0,0,-eps]) shaft_cut(extended?motor_shaft_length-cam_cap_z+motor_shaft_end_clearance:cam_cap_height+2*eps);
+        translate([0,0,-eps]) eccentric_key(eccentric_key_depth+eccentric_key_clearance+eps,eccentric_key_clearance);
+        clamp_cuts(shaft_clamp_z-cam_cap_z,top);
         at_mounts(eccentric_join_mounts) {
-            translate([0,0,-eps]) screw_hole("m3",cam_cap_height+2*eps);
-            translate([0,0,cam_cap_height+countersunk_head_proud]) oobb_countersunk_m3();
+            translate([0,0,-eps]) screw_hole("m3",top+2*eps);
+            if(extended) translate([0,0,top-extended_eccentric_socket_depth]) socket_recess("m3",extended_eccentric_socket_depth+eps);
+            else translate([0,0,top+countersunk_head_proud]) oobb_countersunk_m3();
         }
     }
 }
+module motor_eccentric_cap_extended() { motor_eccentric_cap(true); }
 module roller() { tube(roller_radius,roller_bore_diameter/2,roller_length); }
 module cage_assembly(a=0,explode=0) {
     rotate([0,0,-a/roller_count]) {
@@ -282,10 +309,10 @@ module cage_assembly(a=0,explode=0) {
         translate([0,0,output_cover_z+14*explode]) output_cover();
     }
 }
-module input_assembly(a=0,explode=0) {
+module input_assembly(a=0,explode=0,extended=false) {
     rotate([0,0,a]) {
         translate([0,0,cam_base_z+3*explode]) motor_eccentric();
-        translate([0,0,cam_cap_z+6*explode]) motor_eccentric_cap();
+        translate([0,0,cam_cap_z+6*explode]) motor_eccentric_cap(extended);
     }
 }
 module wave_assembly(a=0,explode=0) {
@@ -306,10 +333,10 @@ module fixed_assembly(explode=0) {
     translate([0,0,ring_z+2*explode]) fixed_ring();
     translate([0,0,housing_top_z+12*explode]) mirror([0,0,1]) output_housing();
 }
-module assembly(a=0,explode=0) {
+module assembly(a=0,explode=0,extended=false) {
     color("Turquoise") fixed_assembly(explode);
     color([0.08,0.08,0.08]) cage_assembly(a,explode);
-    color("Goldenrod") input_assembly(a,explode);
+    color("Goldenrod") input_assembly(a,explode,extended);
     color("SteelBlue") wave_assembly(a,explode);
     color("Silver") nominal_bearings(a,explode);
     color("Ivory") roller_assembly(a,explode);
@@ -329,10 +356,10 @@ module fit_coupons() {
     translate([70,55,0]) roller();
     translate([100,55,0]) difference() { translate([-6,-6,0]) cube([12,12,6]); oobb_nut_m3(); translate([0,0,-eps]) screw_hole("m3",7); }
 }
-module collision_check(a=0) {
+module collision_check(a=0,extended=false) {
     translate([70,0,0]) cube([1,1,1]);
-    intersection() { fixed_assembly(); union() { cage_assembly(a); input_assembly(a); wave_assembly(a); roller_assembly(a); } }
-    intersection() { cage_assembly(a); union() { input_assembly(a); wave_assembly(a); roller_assembly(a); } }
-    intersection() { input_assembly(a); wave_assembly(a); }
-    intersection() { nominal_bearings(a); union() { fixed_assembly(); cage_assembly(a); input_assembly(a); wave_assembly(a); } }
+    intersection() { fixed_assembly(); union() { cage_assembly(a); input_assembly(a,0,extended); wave_assembly(a); roller_assembly(a); } }
+    intersection() { cage_assembly(a); union() { input_assembly(a,0,extended); wave_assembly(a); roller_assembly(a); } }
+    intersection() { input_assembly(a,0,extended); wave_assembly(a); }
+    intersection() { nominal_bearings(a); union() { fixed_assembly(); cage_assembly(a); input_assembly(a,0,extended); wave_assembly(a); } }
 }

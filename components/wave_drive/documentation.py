@@ -9,38 +9,49 @@ def generate(**kwargs):
     folder = Path(kwargs["part_folder"])
     manifest = json.loads((folder/"manifest.json").read_text(encoding="utf-8"))
     c = manifest["configuration"]
-    shaft_profile = "plain round" if c["input_shaft_flat_depth"] == 0 else f"D profile with {c['input_shaft_flat_depth']:g} mm flat depth"
+    viewer = c["assembly_book"]["viewer_url"]
     rows = [
         f"# {c['reduction']}:1 OOBB roller wave drive",
         "",
-        f"One bank of {c['roller_count']} nylon spacers, {c['roller_diameter']:g} mm OD x {c['roller_length']:g} mm long. Output speed is -1/{c['reduction']} of input speed. One 6810 supports the output; one 6704 supports the eccentric wave wheel.",
+        f"One bank of {c['roller_count']} nylon spacers, {c['roller_diameter']:g} mm OD x {c['roller_length']:g} mm deep. Output speed is -1/{c['reduction']} of input speed. One 6810 supports the output; one 6704 supports the wave wheel.",
         "",
-        f"Main circular body: {2*c['housing_radius']:g} mm OD with {c['output_holder_wall']:g} mm bearing-seat walls. Six rounded rectangular screw fins have {c['case_boss_corner_radius']:g} mm rounding, ending on the screw centreline; their rear rounding is buried in the cylinder so the visible junction stays flat. Nut-pocket walls are {c['case_boss_wall']:g} mm nominal. Base grid: {c['base_width']} x {c['base_height']} OOBB units ({c['housing_flange_width']:g} x {c['housing_flange_height']:g} mm rectangle), {c['motor_plate_depth']:g} mm deep. The central cylinder and boss footprint extend the base where needed. Corner and upper/lower rectangle edge radii: {c['housing_flange_corner_radius']:g} / {c['base_edge_radius']:g} mm.",
+        f"[Assembly instructions in your browser]({viewer}) · [PDF booklet](assembly/assembly_instructions.pdf) · [Written sequence](ASSEMBLY.md)",
         "",
-        f"Full output face: {c['output_plate_diameter']:g} mm OD, with {c['output_m6_mount_count']} captive M6 and {c['output_m3_mount_count']} captive M3 attachment nuts on the OOBB grid and half-grid. A separate nut carrier and {c['output_cover_depth']:g} mm cover trap them. Four off-grid M3 x {c['output_screw_length']} countersunk assembly screws, with heads {c['countersunk_head_proud']:g} mm proud, at {c['output_fixing_mounts']} clamp the sandwich into captive cage nuts, freeing the former corner fixing holes for four more M3 attachments. The rotated corner pockets include at least {c['mount_m3_edge_wall']:g} mm of edge material, including the OOBB bridge cuts. The input ends in a blind pocket.",
+        f"The {c['base_width']} x {c['base_height']} OOBB base has M6 and M3 holes, {c['housing_flange_corner_radius']:g} mm corner radii and {c['base_edge_radius']:g} mm rounded edges. The main housing is {2*c['housing_radius']:g} mm OD. Reference motor: {c['motor_body_depth']:g} mm NEMA 17 body, plain round {c['input_shaft_diameter']:g} mm shaft, {c['motor_shaft_length']:g} mm long.",
         "",
-        "The base includes M6 grid holes and M3 half-grid holes outside the housing. On the output face, half-grid positions are omitted where a nut pocket would meet another pocket, an assembly fixing or the edge. Every provided attachment hole has its own captive nut.",
+        "## Wiggle shaft",
         "",
-        f"The output nut carrier sits inside the 6810's 50 mm bore. Its stepped cover ends {c['output_above_housing']:g} mm above the teal housing. The 6704 rolling member has two full-diameter clamshell halves joined exactly at the bearing centre, Z={c['wave_split_z']:g} mm. Two M3 x {c['eccentric_join_screw_length']} countersunk screws with captive nuts join the eccentric shaft pieces; an M3 x {c['shaft_clamp_screw_length']} countersunk screw with captive nut and head clearance secures them to the motor shaft.",
+        f"Both eccentric pieces split at Z={c['cam_cap_z']:g} mm, the centre of the 6704 bearing. A semicircular tongue on the lower journal fits a matching recess in the upper journal. Its {c['eccentric_key_clearance']:g} mm clearance allows the two halves to register without forcing the printed fit.",
         "",
-        f"All {c['roller_count']} teeth are integrated into the lower cage and print upright. Every tooth gets an M2 x {c['cage_screw_length']} countersunk screw, tightened from above into a lower captive nut. The upper closure and support disc are one printed part, with its broad face on the bed and hub upward. Its central blind roof is a bridge; inspect it after printing. The lower ring is {c['cage_plate_depth']:g} mm thick; the upper closure is {c['cage_upper_plate_depth']:g} mm. Raising the cage screw heads {c['cage_head_lift']:g} mm accommodates the longer screws and leaves {c['cage_tip_clearance']:g} mm nominal clearance below their tips. Raised nut seats preserve full engagement. Annular clearance pockets clear the raised M3 motor and wave screw heads throughout rotation. The bearing/output stack is also {c['cage_head_lift']:g} mm higher; deeper case head wells retain the 30 mm case screws.",
+        f"Load the upper radial M3 nut from the top and tighten the M3 x {c['shaft_clamp_screw_length']} countersunk clamp onto the motor shaft before fitting the fixed ring and upper cage. The case and lower cage have no adjustment access holes. Two M3 x {c['eccentric_join_screw_length']} countersunk screws join the short eccentric to its lower captive nuts.",
         "",
-        f"Assembly clearance: every cage screw uses OOBB clearance=top so its head passes through the upper disc before fitting the bearing/output carrier. The {c['cage_center_diameter']:g} mm lower opening slides over the bare assembled eccentric shaft and its fasteners; fit the 6704 and rolling clamshells afterwards. The output face has a {c['output_face_clearance']:g} mm underside gap above the housing and {c['output_radial_clearance']:g} mm radial neck clearance. See render/assembly_access_validation.json for continuous insertion checks.",
-        f"Shaft service access: align the housing and lower-cage ports with the shaft screw at input angle zero (+X). A straight 2 mm hex driver, maximum shaft diameter {c['shaft_driver_diameter']:g} mm, reaches the screw through a {c['shaft_access_diameter']:g} mm bore at Z={c['shaft_clamp_z']:g} mm, below the rollers. Preload the screw before closing the case; the port passes a driver, not its head. See render/shaft_access_validation.json for the complete-assembly clearance check.",
+        f"Optional extended version: [motor_eccentric_cap_extended.stl](motor_eccentric_cap_extended.stl) replaces the short upper piece. Its {c['extended_eccentric_diameter']:g} mm stem reaches the output face at Z={c['assembly_height']:g} mm, with clearance through the {c['output_view_diameter']:g} mm viewing hole. Use two M3 x {c['extended_eccentric_screw_length']} socket caps instead of the short version's countersunk joiners. Reuse the lower piece and captive nuts. See [assembly_extended.scad](assembly_extended.scad). Do not install both upper pieces.",
         "",
-        f"Gearbox height above motor face: {c['assembly_height']:g} mm. Reference motor body: {c['motor_body_depth']:g} mm, shaft: {c['motor_shaft_length']:g} x {c['input_shaft_diameter']:g} mm, {shaft_profile}. Both eccentric pieces have {c['shaft_fit_clearance']:g} mm radial bore clearance. The shaft is held by the radial clamp screw; verify its grip on the actual motor before applying load.",
+        "## Output plate",
         "",
-        f"Print one of each gearbox part ({manifest['printed_piece_count']} parts), or the {len(manifest['print_beds'])} print-bed layouts. Do not print both sets. The combined 3dpr file and print beds also include twelve optional printable spacers, {c['roller_diameter']:g} mm OD x {c['roller_length']:g} mm deep with a {c['roller_bore_diameter']:g} mm bore. Use either these or the purchased nylon spacers, not both. Bearings, motor and fasteners are purchased items. Fit coupons are optional.",
+        f"The flat-sided output face is {c['output_plate_diameter']:g} mm OD with a {c['output_view_diameter']:g} mm central viewing hole. It has no overhanging outer lip; the bearing remains visible. The output face stays {c['output_above_housing']:g} mm above the housing.",
         "",
-        "Open motor_fit.scad, exploded_motor.scad or animation.scad. Blender views and the editable scene are in render/images and render/scenes. Read [ASSEMBLY.md](ASSEMBLY.md) before assembly.",
+        f"Preassemble the carrier and cover with two M3 x {c['output_plate_clamp_screw_length']} countersunk screws and separate captive M3 nuts. Then attach the complete sandwich to the cage with four M3 x {c['output_screw_length']} countersunk screws. The short screws stay in place while installing or removing the plate.",
+        "",
+        f"The carrier holds {c['output_m3_mount_count']} M3 attachment nuts on the OOBB half-grid. Nut positions that conflict with the viewing hole or plate fasteners are omitted; this compact version has no captive M6 output nuts. M6 holes remain in the base. Attachment centres, in mm: {c['output_m3_mounts']}.",
+        "",
+        f"Clearance holes continue below the attachment nuts through the carrier and cage. M3 payload bolt projection below the output face may be {c['output_m3_bolt_projection_min']:.2f} to {c['output_m3_bolt_projection_max']:.2f} mm, allowing at least 2 mm thread engagement while stopping above the moving wave screws. Measure the actual printed assembly; longer bolts must not reach the moving parts.",
+        "",
+        "## Printing and assembly",
+        "",
+        f"Print the {manifest['printed_piece_count']} required gearbox pieces. The combined 3dpr file and print beds also include {c['roller_count']} optional printable spacers and the optional extended upper eccentric. Choose one upper eccentric and either purchased nylon spacers or printed spacers. Bearings, motor and fasteners are purchased items.",
+        "",
+        "Print the lower cage with its teeth upward and the upper cage with its broad face on the bed. Inspect bridge material, bearing seats and the alignment key before assembly. The upper and lower cage have annular clearances for the raised M3 wave and motor screw heads.",
+        "",
+        f"M3 axial countersunk heads sit {c['countersunk_head_proud']:g} mm proud; do not force them flush. M2 cage screws stay seated, with {c['cage_tip_clearance']:g} mm nominal tip clearance. The radial shaft clamp tightens onto the shaft. Motor screws retain {c['motor_thread_engagement']:g} mm nominal thread engagement. Socket-cap lengths exclude the head; countersunk lengths include it.",
         "",
         "![Motor assembly](render/images/motor_fit.png)",
         "",
         "![Exploded assembly](render/images/exploded_motor.png)",
         "",
-        f"Motor mounting: four M3 x {c['motor_screw_length']} countersunk screws sit {c['countersunk_head_proud']:g} mm proud of the base and engage {c['motor_thread_engagement']:g} mm of the motor threads. Six M3 x {c['case_screw_length']} socket caps enter from the top housing into captive M3 nuts loaded from underneath the base. Their tips stop at the base underside.",
-        "",
         "## Hardware",
+        "",
+        "Quantities below are for the short-shaft assembly. The extended option replaces its two eccentric joiners with two M3 x 30 socket caps.",
         "",
         "| Item | Quantity | Size / length |",
         "| --- | ---: | --- |",
@@ -48,63 +59,15 @@ def generate(**kwargs):
     for item in manifest["hardware"]:
         dimension = item.get("dimensions", (item.get("size", "")+" x "+str(item["length_mm"])+" mm") if "length_mm" in item else "")
         rows.append(f"| {item['item']} | {item['quantity']} | {dimension} |")
-    rows += [
-        "",
-        "Payload bolts are not included: select them for the attached part thickness and the depth limits below.",
-        "",
-        "## Output attachment",
-        "",
-        f"Bolt projection below the output face must be between {c['output_bolt_projection_min']:.2f} and {c['output_bolt_projection_max']:.2f} mm for approximately 3 to 5 mm engagement in the captive M6 nuts. Longer bolts can bottom out or damage the blind pocket. These limits are for the generated geometry; verify actual printed fits.",
-        "",
-        f"For M3 attachment bolts, projection below the output face must be {c['output_m3_bolt_projection_min']:.2f} to {c['output_m3_bolt_projection_max']:.2f} mm for approximately 2 to 2.5 mm engagement. Attachment pockets have closed floors; the four off-grid assembly screws use the separate longer stack and must not be replaced with payload bolts.",
-        "",
-        f"M6 attachment centres (mm): {c['output_m6_mounts']}. M3 attachment centres (mm): {c['output_m3_mounts']}.",
-        "",
-        f"The motor shaft tip is at Z={c['motor_shaft_length']:g} mm; the blind roof is {c['hub_z']+c['shaft_blind_depth']-c['motor_shaft_length']:g} mm above it. There is no upper input bearing, shaft extension or coupling through the output plate.",
-        "",
-        "## Verification",
-        "",
-        "See mesh_validation.json for printable solids and native interference checks, and render/validation.json, render/fastener_validation.json and render/motor_fit.json for assembly registration and hardware fits. Reports describe only checks actually executed.",
-        "",
-        "This single-bank design is not counterbalanced. Printed fit, fastener-seat strength, actual motor bearing loads, wear, heat, backlash and operating speed/torque have not been physically tested. The motor drawing specifies an envelope, not a bearing load rating.",
-    ]
-    (folder/"README.md").write_text("\n".join(rows)+"\n",encoding="utf-8")
-    assembly = [f"# Assembly - {c['reduction']}:1 wave drive", "", "Dimensions in millimetres. Exploded spacing is illustrative.", ""]
-    if c.get("assembly_cards"):
-        assembly += [
-            "AI-generated images and instructions. Errors possible.",
-            "[Open the single-step HTML viewer](assembly/assembly_instructions.html). The file includes its images and works offline. Use arrow keys, swipe, the step selector or the full-screen button.",
-            "",
-            "[Print the A4 instructions](assembly/assembly_instructions.pdf) - booklet in reading order, with four numbered panels per landscape instruction page. Cover and project details precede the steps; a full-page finished view follows the steps; signature padding keeps the boxed printed and hardware inventories immediately before the back cover.",
-            "",
-            "Each parts box lists the new parts for that panel, with the image followed by a compact quantity such as x2. Hardware entries have oom.lt/a/ catalogue links; printed entries have names and no codes. The [full inventory](assembly/parts.csv) distinguishes catalogue and project-local identities; generating a local code does not register a public redirect.",
-            "",
-            "Every panel retains the complete assembly-so-far in its normal materials. Nuts are shown below or above the receiving part in the same panel; increased separation exposes nuts underneath their receiving parts, without arrows. Hardware threads and bearing internals are simplified in the CAD illustration. Printed panels contain only numbers, diagrams and part details; the companion notes retain the written sequence.",
-            "",
-            "Before assembly, clean bridge material and check the fit coupons. Print the lower cage teeth upward and the upper cage broad face down, hub upward. Inspect the upper cage's bridged central roof. Countersunk screw lengths include the head; socket-cap lengths are measured below the head. The M3 motor, eccentric, wave and output joining heads intentionally sit 1 mm proud; do not force them flush. The M2 cage screws remain seated, and the radial M3 shaft clamp tightens onto the motor shaft.",
-            "",
-        ]
-        for index, step in enumerate(c["assembly_cards"], 1):
-            assembly += [
-                f"## {index:02d}. {step['title']}",
-                "",
-                step["action"].format(**c),
-                "",
-                f"[![AI-generated CAD assembly step {index}: {step['title']}](assembly/cards/step_{index:02d}.png)](assembly/cards/step_{index:02d}.png)",
-                "",
-            ]
-        rows += ["", "[A4 assembly instruction cards](assembly/assembly_instructions.pdf) - signature-padded booklet, with a cover, project details, four steps per instruction page, a full-page completed view and boxed printed and hardware inventories."]
-        (folder/"README.md").write_text("\n".join(rows)+"\n", encoding="utf-8")
-    else:
-        for index, step in enumerate(c["assembly_steps"], 1):
-            assembly.append(f"{index}. {step.format(**c)}")
-            assembly.append("")
-    assembly += [f"Payload bolt projection below output face: M6 {c['output_bolt_projection_min']:.2f} to {c['output_bolt_projection_max']:.2f} mm; M3 {c['output_m3_bolt_projection_min']:.2f} to {c['output_m3_bolt_projection_max']:.2f} mm.", "", "![Exploded view](render/images/exploded_motor.png)"]
-    (folder/"ASSEMBLY.md").write_text("\n".join(assembly)+"\n",encoding="utf-8")
-    checks = []
-    for path in [folder/"mesh_validation.json",folder/"render/fastener_validation.json",folder/"render/motor_fit.json"]:
-        if path.exists(): checks.append(str(path.relative_to(folder))+": generated; see report for check scope")
-    (folder/"validation.txt").write_text("\n".join(checks or ["SCAD and documentation generated; mesh checks have not run in this build."])+"\n",encoding="utf-8")
+    rows += ["", "## Verification", "", "See mesh_validation.json and the reports in render/ for the checks actually performed. This single-bank design is not counterbalanced. Printed fit, clamp grip, wear, backlash, motor bearing loads and operating speed/torque still need physical testing.", ""]
+    (folder/"README.md").write_text("\n".join(rows),encoding="utf-8")
+    assembly = [f"# Assembly - {c['reduction']}:1 wave drive", "", "AI-generated images and instructions. Errors possible.", "", f"[Open the browser instructions]({viewer}) · [Print the booklet](assembly/assembly_instructions.pdf)", "", "The diagrams show the short eccentric. For the extended option, substitute the extended upper piece and two M3 x 30 socket caps at the eccentric closing step. Tighten the upper shaft clamp before installing the outer case. Prepare the complete output sandwich before installing it.", ""]
+    for index, step in enumerate(c["assembly_cards"],1):
+        assembly += [f"## {index:02d}. {step['title']}", "", step["action"].format(**c), "", f"[![AI-generated assembly step {index}](assembly/cards/step_{index:02d}.png)](assembly/cards/step_{index:02d}.png)", ""]
+    assembly += [f"M3 payload bolt projection below the output face: {c['output_m3_bolt_projection_min']:.2f} to {c['output_m3_bolt_projection_max']:.2f} mm. Check the actual print before fitting longer bolts.", ""]
+    (folder/"ASSEMBLY.md").write_text("\n".join(assembly),encoding="utf-8")
+    checks = [name+": see report for scope" for name in ["mesh_validation.json","render/fastener_validation.json","render/motor_fit.json","render/shaft_access_validation.json","render/extended_eccentric_validation.json"] if (folder/name).exists()]
+    (folder/"validation.txt").write_text("\n".join(checks)+"\n",encoding="utf-8")
 
 
 def captions(**kwargs):
@@ -115,7 +78,7 @@ def captions(**kwargs):
     return {
         "assembly": {
             "title": f"{c['reduction']}:1 OOBB roller wave gearbox",
-            "subtitle": f"Output sandwich: {c['output_m6_mount_count']} captive M6 + {c['output_m3_mount_count']} captive M3 attachment nuts.",
+            "subtitle": f"Flat output plate: {c['output_view_diameter']:g} mm viewing hole and {c['output_m3_mount_count']} captive M3 attachment nuts.",
             "footer": f"{2*c['housing_radius']:g} mm body OD | {c['output_plate_diameter']:g} mm output face | one 6810 + one 6704",
         },
         "motor_fit": {
@@ -136,7 +99,7 @@ def captions(**kwargs):
         "exploded": {
             "title": "The complete output and roller stack",
             "subtitle": f"{n} printed pieces, {c['roller_count']} nylon rollers and two bearings. Full output plate above.",
-            "footer": "One bank | socket caps at most 35 mm | captive M6 and M3 output nuts",
+            "footer": "One bank | short and extended input options | independently clamped output plate",
         },
         "open_mechanism": {
             "title": "Inside the roller wave drive",
@@ -144,7 +107,7 @@ def captions(**kwargs):
             "footer": f"7 mm OD rollers | {c['reduction']}:1 reverse output | motor-supported input",
         },
         "parts": {
-            "title": "Every printed piece",
+            "title": "Required gearbox parts",
             "subtitle": f"{n} printed instances on {len(manifest['print_beds'])} beds. Purchased hardware is excluded.",
             "footer": "Production SCAD meshes | printing orientations shown | fit coupons provided separately",
         },

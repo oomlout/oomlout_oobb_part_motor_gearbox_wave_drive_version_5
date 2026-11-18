@@ -35,13 +35,14 @@ def main(**kwargs):
     cage_stack = []
     joint_stack = []
     for record in fasteners:
-        if record["part"] in ["screw_eccentric", "screw_wave", "screw_output"]:
+        if record["part"] in ["screw_eccentric", "screw_wave", "screw_output", "screw_output_clamp"]:
             joint_mesh = trimesh.load(folder/"render/hardware"/(record["part"]+".stl"), force="mesh")
             bounds = joint_mesh.apply_transform(record["matrix"]).bounds
             eccentric = record["part"] == "screw_eccentric"
-            output = record["part"] == "screw_output"
-            nut_bottom = c["output_nut_z"] if output else c["eccentric_join_nut_z"] if eccentric else c["wave_z"]+c["wave_nut_z"]
-            underside = c["cage_floor_z"] if output else c["cam_base_z"] if eccentric else c["wave_z"]
+            output = record["part"] in ["screw_output", "screw_output_clamp"]
+            sandwich = record["part"] == "screw_output_clamp"
+            nut_bottom = c["output_plate_clamp_nut_z"] if sandwich else c["output_nut_z"] if output else c["eccentric_join_nut_z"] if eccentric else c["wave_z"]+c["wave_nut_z"]
+            underside = c["retainer_z"] if sandwich else c["cage_floor_z"] if output else c["cam_base_z"] if eccentric else c["wave_z"]
             head_top = c["output_head_seat"] if output else c["eccentric_join_head_z"] if eccentric else c["wave_z"]+c["wave_height"]-c["wave_head_recess"]
             assert bounds[0, 2] <= nut_bottom+1e-4
             assert bounds[0, 2] >= underside-1e-4
@@ -68,9 +69,10 @@ def main(**kwargs):
     (folder/"render/fastener_validation.json").write_text(json.dumps(report,indent=2))
     assert passed, report
     print(f"PASS: {len(fasteners)} screw/nut envelopes clear the native gearbox.")
-    # A slim straight 2 mm hex driver must reach the radial clamp after assembly.
+    # The upper clamp is tightened before the fixed ring and upper cage are fitted.
     driver = "translate([shaft_clamp_head_radius+0.05,0,shaft_clamp_z]) rotate([0,90,0]) cylinder(d=shaft_driver_diameter,h=60,$fn=64);"
-    access_body = prefix+"\ntranslate([80,0,0]) cube([1,1,1]);\nintersection() { "+driver+" union() { assembly(0); translate([0,0,motor_face_z]) nema17_reference();\n"+"\n".join(calls)+"\n} }\n"
+    accessible_calls = [call for record,call in zip(fasteners,calls) if record["level"] <= 7]
+    access_body = prefix+"\ntranslate([80,0,0]) cube([1,1,1]);\nintersection() { "+driver+" union() { motor_mount_plate(); translate([0,0,cage_cap_z]) cage_cap(); input_assembly(0); wave_assembly(0); roller_assembly(0); translate([0,0,motor_face_z]) nema17_reference();\n"+"\n".join(accessible_calls)+"\n} }\n"
     access_path = folder/"render/cache/shaft_access_check.scad"
     access_path.write_text(access_body)
     working_scad.render_scad(access_path,access_path.with_suffix(".stl"))
@@ -80,12 +82,12 @@ def main(**kwargs):
     access_passed = len(access_solids)==1 and np.allclose(access_solids[0].bounds,[[80,0,0],[81,1,1]],atol=1e-5)
     access_report = {
         "status": "passed" if access_passed else "failed",
-        "scope": "Straight driver envelope from outside the housing to 0.05 mm in front of the M3 screw head; complete assembly, motor, rollers and all fasteners at input/cage angle zero.",
+        "scope": "Straight driver access to the upper M3 shaft clamp before fitting the outer case and upper cage; lower cage, wave halves, rollers, motor and installed fasteners included. No housing access port is required.",
         "volumetric_components": [{"bounds_mm":p.bounds.tolist(),"volume_mm3":float(p.volume)} for p in access_solids],
     }
     (folder/"render/shaft_access_validation.json").write_text(json.dumps(access_report,indent=2))
     assert access_passed, access_report
-    print("PASS: aligned shaft-clamp driver path clears the full assembly.")
+    print("PASS: upper shaft clamp is accessible before the case is fitted.")
     # Assembly access is different from an interference-free final position.
     eccentric_hardware = [call for record, call in zip(fasteners, calls) if record["name"].startswith(("motor_clamp_", "eccentric_join_"))]
     eccentric_group = "union() { input_assembly(0); "+"\n".join(eccentric_hardware)+" }"

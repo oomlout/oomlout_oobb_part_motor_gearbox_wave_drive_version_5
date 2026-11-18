@@ -333,8 +333,6 @@
         "cage_nut_9",
         "cage_nut_10",
         "cage_nut_11",
-        "motor_clamp_0_screw_shaft_clamp",
-        "motor_clamp_0_nut_m3",
         "eccentric_join_nut_0",
         "eccentric_join_nut_1",
         "nema17_front",
@@ -359,16 +357,6 @@
           0.0,
           0.0,
           41.85
-        ],
-        "motor_clamp_0_nut_m3": [
-          21.6,
-          0.0,
-          58.050000000000004
-        ],
-        "motor_clamp_0_screw_shaft_clamp": [
-          43.2,
-          0.0,
-          58.050000000000004
         ]
       },
       "muted_names": [],
@@ -417,8 +405,6 @@
         "cage_nut_9",
         "cage_nut_10",
         "cage_nut_11",
-        "motor_clamp_0_screw_shaft_clamp",
-        "motor_clamp_0_nut_m3",
         "eccentric_join_nut_0",
         "eccentric_join_nut_1",
         "nema17_front",
@@ -535,6 +521,16 @@
           0.0,
           0.0,
           59.400000000000006
+        ],
+        "motor_clamp_0_nut_m3": [
+          0.0,
+          0.0,
+          81.0
+        ],
+        "motor_clamp_0_screw_shaft_clamp": [
+          35.1,
+          0.0,
+          32.400000000000006
         ]
       },
       "muted_names": [],
@@ -1190,6 +1186,7 @@
         "cage_lower_cap",
         "output_cage",
         "output_retainer",
+        "output_cover",
         "motor_eccentric",
         "motor_eccentric_cap",
         "wave_generator",
@@ -1266,19 +1263,16 @@
         "eccentric_join_nut_0",
         "eccentric_join_screw_1",
         "eccentric_join_nut_1",
-        "output_attachment_nut_0",
-        "output_attachment_nut_1",
-        "output_attachment_nut_2",
-        "output_attachment_nut_3",
-        "output_attachment_nut_4",
         "output_attachment_m3_nut_0",
         "output_attachment_m3_nut_1",
         "output_attachment_m3_nut_2",
         "output_attachment_m3_nut_3",
         "output_attachment_m3_nut_4",
         "output_attachment_m3_nut_5",
-        "output_attachment_m3_nut_6",
-        "output_attachment_m3_nut_7",
+        "plate_clamp_0_screw_output_clamp",
+        "plate_clamp_0_nut_m3",
+        "plate_clamp_1_screw_output_clamp",
+        "plate_clamp_1_nut_m3",
         "nema17_front",
         "nema17_stator",
         "nema17_rear",
@@ -1291,31 +1285,6 @@
           0.0,
           0.0,
           32.400000000000006
-        ],
-        "output_attachment_nut_0": [
-          0.0,
-          0.0,
-          56.7
-        ],
-        "output_attachment_nut_1": [
-          0.0,
-          0.0,
-          56.7
-        ],
-        "output_attachment_nut_2": [
-          0.0,
-          0.0,
-          56.7
-        ],
-        "output_attachment_nut_3": [
-          0.0,
-          0.0,
-          56.7
-        ],
-        "output_attachment_nut_4": [
-          0.0,
-          0.0,
-          56.7
         ],
         "output_attachment_m3_nut_0": [
           0.0,
@@ -1347,15 +1316,30 @@
           0.0,
           56.7
         ],
-        "output_attachment_m3_nut_6": [
+        "output_cover": [
           0.0,
           0.0,
-          56.7
+          81.0
         ],
-        "output_attachment_m3_nut_7": [
+        "plate_clamp_0_nut_m3": [
           0.0,
           0.0,
-          56.7
+          16.200000000000003
+        ],
+        "plate_clamp_1_nut_m3": [
+          0.0,
+          0.0,
+          16.200000000000003
+        ],
+        "plate_clamp_0_screw_output_clamp": [
+          0.0,
+          0.0,
+          108.0
+        ],
+        "plate_clamp_1_screw_output_clamp": [
+          0.0,
+          0.0,
+          108.0
         ]
       },
       "muted_names": [],
@@ -1460,19 +1444,16 @@
         "eccentric_join_nut_0",
         "eccentric_join_screw_1",
         "eccentric_join_nut_1",
-        "output_attachment_nut_0",
-        "output_attachment_nut_1",
-        "output_attachment_nut_2",
-        "output_attachment_nut_3",
-        "output_attachment_nut_4",
         "output_attachment_m3_nut_0",
         "output_attachment_m3_nut_1",
         "output_attachment_m3_nut_2",
         "output_attachment_m3_nut_3",
         "output_attachment_m3_nut_4",
         "output_attachment_m3_nut_5",
-        "output_attachment_m3_nut_6",
-        "output_attachment_m3_nut_7",
+        "plate_clamp_0_screw_output_clamp",
+        "plate_clamp_0_nut_m3",
+        "plate_clamp_1_screw_output_clamp",
+        "plate_clamp_1_nut_m3",
         "nema17_front",
         "nema17_stator",
         "nema17_rear",
@@ -1482,6 +1463,61 @@
       ],
       "offsets": {
         "output_cover": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_retainer": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_m3_nut_0": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_m3_nut_1": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_m3_nut_2": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_m3_nut_3": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_m3_nut_4": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_m3_nut_5": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "plate_clamp_0_screw_output_clamp": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "plate_clamp_0_nut_m3": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "plate_clamp_1_screw_output_clamp": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "plate_clamp_1_nut_m3": [
           0.0,
           0.0,
           32.400000000000006
@@ -1765,6 +1801,21 @@
         "output_screw_0"
       ]
     },
+    "part_screw_output_clamp": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "plate_clamp_0_screw_output_clamp"
+      ]
+    },
     "part_screw_wave": {
       "eye": [
         1.2,
@@ -1853,21 +1904,6 @@
       "margin": 1.2,
       "include_names": [
         "case_nut_0"
-      ]
-    },
-    "part_nut_m6": {
-      "eye": [
-        1.2,
-        -1.6,
-        1.35
-      ],
-      "size": [
-        360,
-        300
-      ],
-      "margin": 1.2,
-      "include_names": [
-        "output_attachment_nut_0"
       ]
     },
     "part_nema17": {
@@ -1989,19 +2025,16 @@
         "eccentric_join_nut_0",
         "eccentric_join_screw_1",
         "eccentric_join_nut_1",
-        "output_attachment_nut_0",
-        "output_attachment_nut_1",
-        "output_attachment_nut_2",
-        "output_attachment_nut_3",
-        "output_attachment_nut_4",
         "output_attachment_m3_nut_0",
         "output_attachment_m3_nut_1",
         "output_attachment_m3_nut_2",
         "output_attachment_m3_nut_3",
         "output_attachment_m3_nut_4",
         "output_attachment_m3_nut_5",
-        "output_attachment_m3_nut_6",
-        "output_attachment_m3_nut_7",
+        "plate_clamp_0_screw_output_clamp",
+        "plate_clamp_0_nut_m3",
+        "plate_clamp_1_screw_output_clamp",
+        "plate_clamp_1_nut_m3",
         "nema17_front",
         "nema17_stator",
         "nema17_rear",

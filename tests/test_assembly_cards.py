@@ -28,7 +28,7 @@ def test_recipe_accounts_for_every_part_once_and_preloads_before_transfer():
         totals.update(quantities(added, instances))
         seen.update(added)
     assert seen == {r["name"] for r in instances}
-    assert sum(totals.values()) == 101
+    assert sum(totals.values()) == 98
     assert totals["nema17"] == 1
     assert totals["nut_m2"] == 12
     assert totals["nut_m3"] == 25
@@ -106,7 +106,7 @@ def test_summary_combines_shared_hardware_without_losing_counts():
     }
     groups = inventory_groups(data=data)
     assert sum(p["quantity"] for p in groups["printed"]) == 11
-    assert sum(p["quantity"] for p in groups["hardware"]) == 90
+    assert sum(p["quantity"] for p in groups["hardware"]) == 87
     motor_screws = [p for p in groups["hardware"] if p["id"] == parts["screw_motor"]["id"]]
     assert len(motor_screws) == 1 and motor_screws[0]["quantity"] == 5
     assert len(groups["hardware"]) == len({p["id"] for p in groups["hardware"]})
