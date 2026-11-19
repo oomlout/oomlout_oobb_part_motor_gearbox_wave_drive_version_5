@@ -1,74 +1,55 @@
-"""Single-file offline viewer, generated from the audited assembly inventory."""
+"""Offline A4 page viewer generated from the same pages and links as the PDF."""
 import base64
 import copy
 import hashlib
 import html
 import json
 from pathlib import Path
+import fitz
 
 
 def publish(**kwargs):
     kwargs = copy.deepcopy(kwargs)
-    output = Path(kwargs["output"])
-    data = kwargs["data"]
-    book = data["book"]
-    if not book.get("viewer_enabled", True):
+    output = Path(kwargs['output'])
+    data = kwargs['data']
+    book = data['book']
+    if not book.get('viewer_enabled', True):
         return
-
-    def embedded(path):
-        return "data:image/png;base64,"+base64.b64encode(path.read_bytes()).decode("ascii")
-
-    images = {}
-    slides = []
-    for index, page in enumerate(data["book_pages"], 1):
-        if page["kind"] not in ["cover", "details", "parts", "back"]:
-            continue
-        name = page["kind"]
-        images[name] = embedded(output/"pages"/f"page_{index:02d}.png")
-    slides.extend([
-        {"id": "cover", "label": "Cover", "image": "cover", "mode": "page"},
-        {"id": "details", "label": "Project details", "image": "details", "mode": "page"},
-    ])
-    for step in data["steps"]:
-        key = step["key"]
-        images[key] = embedded(output/"render/raw"/(key+".png"))
-        slides.append({
-            "id": key.replace("_", "-"),
-            "label": "Step "+str(step["number"]),
-            "number": step["number"],
-            "image": key,
-            "mode": "step",
-            "description": step["action"],
-            "parts": step["loose_parts"],
-        })
-    if book["summary_step"]:
-        number = len(data["steps"])+1
-        images["complete"] = embedded(output/"render/raw"/(book["summary_view"]+".png"))
-        slides.append({"id": f"step-{number:02d}", "label": f"Step {number}", "number": number, "image": "complete", "mode": "step", "parts": {}, "description": "Completed gearbox with NEMA 17 motor."})
-    slides.extend([
-        {"id": "parts", "label": "Parts list", "image": "parts", "mode": "page"},
-        {"id": "back", "label": "Back cover", "image": "back", "mode": "page"},
-    ])
-    parts = {}
-    for key, part in data["parts"].items():
-        images["part_"+key] = embedded(output/"render/raw"/("part_"+key+".png"))
-        parts[key] = {k: part[k] for k in ["name", "short_url", "md5_6_alpha"] if k in part}
-    payload = {
-        "slides": slides,
-        "images": images,
-        "parts": parts,
-        "start": book["viewer_start"],
-    }
-    template = Path(__file__).with_name("assembly_viewer.html").read_text(encoding="utf-8")
-    result = template.replace("__TITLE__", html.escape(book["cover_title"]+" | Assembly instructions"))
-    result = result.replace("__PROJECT_URL__", html.escape(book["project_url"], quote=True))
-    result = result.replace("__DATA__", json.dumps(payload, separators=(",", ":")).replace("<", "\\u003c"))
-    target = output/"assembly_instructions.html"
-    target.write_text(result, encoding="utf-8")
-    report_path = output/"validation.json"
+    assert book['viewer_layout'] == 'a4-landscape-four-step'
+    per_page = data['style']['columns'] * data['style']['rows']
+    assert per_page == 4 and data['style']['page_mm'] == [297, 210]
+    images, slides = {}, []
+    with fitz.open(output/'assembly_instructions.pdf') as pdf:
+        for index, (spec, page) in enumerate(zip(data['book_pages'], pdf), 1):
+            key = f'page-{index:02d}'
+            kind = spec['kind']
+            numbers = []
+            if kind == 'instructions':
+                first = spec['group'] * per_page + 1
+                last = min(first + per_page - 1, len(data['steps']))
+                numbers = list(range(first, last + 1))
+                label = f'Steps {first}-{last}'
+            elif kind == 'summary':
+                label = 'Completed assembly'
+            else:
+                label = {'cover':'Cover', 'details':'Project details', 'parts':'Parts list', 'back':'Back cover', 'spacer':'Blank page'}[kind]
+            image = output/'pages'/f'page_{index:02d}.png'
+            images[key] = 'data:image/png;base64,' + base64.b64encode(image.read_bytes()).decode('ascii')
+            links = []
+            for link in page.get_links():
+                if link.get('uri', '').startswith('https://'):
+                    rect = link['from']
+                    links.append(dict(url=link['uri'], rect=[rect.x0/page.rect.width, rect.y0/page.rect.height, rect.width/page.rect.width, rect.height/page.rect.height]))
+            slides.append(dict(id=key, label=label, image=key, number=index, kind=kind, steps=numbers, links=links))
+    assert len(slides) == len(data['book_pages'])
+    payload = dict(slides=slides, images=images, start=book['viewer_start'], layout=book['viewer_layout'], paper_mm=[297,210], step_count=len(data['steps']))
+    template = Path(__file__).with_name('assembly_viewer.html').read_text(encoding='utf-8')
+    result = template.replace('__TITLE__', html.escape(book['cover_title']+' | Assembly instructions'))
+    result = result.replace('__PROJECT_URL__', html.escape(book['project_url'], quote=True))
+    result = result.replace('__DATA__', json.dumps(payload, separators=(',', ':')).replace('<', '\\u003c'))
+    target = output/'assembly_instructions.html'
+    target.write_text(result, encoding='utf-8')
+    report_path = output/'validation.json'
     report = json.loads(report_path.read_text())
-    report["html_sha256"] = hashlib.sha256(target.read_bytes()).hexdigest()
-    report["html_slides"] = len(slides)
-    report["html_steps"] = sum(s["mode"] == "step" for s in slides)
-    report["html_self_contained"] = True
+    report.update(html_sha256=hashlib.sha256(target.read_bytes()).hexdigest(), html_slides=len(slides), html_steps=len(data['steps']), html_self_contained=True, html_layout=book['viewer_layout'], html_instruction_page_steps=[s['steps'] for s in slides if s['kind']=='instructions'])
     report_path.write_text(json.dumps(report, indent=2))

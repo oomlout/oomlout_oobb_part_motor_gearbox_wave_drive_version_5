@@ -27,8 +27,29 @@
   "layout_checks": "Text fits; only black typography; compact URL code/prefix hierarchy; no instruction prose or arrows; blank spacer has no marks",
   "physical_validation": "Not physically assembled or load tested",
   "pdf_sha256": "844c5f9ff1db2884d71d651d9aa6e6c69f3a4ef90c4bb44a3e99b1317cee76ad",
-  "html_sha256": "c27a3b87c13511e39c0e5ea06c24941710c220546d2308ad2c1bbe7c09815aac",
-  "html_slides": 17,
-  "html_steps": 13,
-  "html_self_contained": true
+  "html_sha256": "6198bda0373848e64030ff23eeae51d914ce67292fb1d745ee15b3fa2661ca09",
+  "html_slides": 8,
+  "html_steps": 12,
+  "html_self_contained": true,
+  "html_layout": "a4-landscape-four-step",
+  "html_instruction_page_steps": [
+    [
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6,
+      7,
+      8
+    ],
+    [
+      9,
+      10,
+      11,
+      12
+    ]
+  ]
 }

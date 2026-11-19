@@ -1678,7 +1678,8 @@
     "project_name": "oomlout_oobb_part_motor_gearbox_wave_drive_version_5",
     "project_url": "https://github.com/oomlout/oomlout_oobb_part_motor_gearbox_wave_drive_version_5",
     "viewer_enabled": true,
-    "viewer_start": "step-01",
+    "viewer_layout": "a4-landscape-four-step",
+    "viewer_start": "page-03",
     "viewer_url": "https://oomlout.github.io/oomlout_oobb_part_motor_gearbox_wave_drive_version_5/",
     "project_summary": "A 3D-printable 12:1 roller wave gearbox for a NEMA 17 motor, with an OOBB mounting base and output face. Twelve nylon spacers transfer motion from an eccentric wheel to the output cage. The output turns once in the opposite direction for every 12 motor turns.",
     "logo_svg": "source_file/oomlout_logo_unshaded_original.svg",
@@ -1741,17 +1742,48 @@
     "render\\hardware\\nema17_shaft.stl": "b8873357493f64c144ceff19d6b15b47bbad356e253d0a21c08e4b49aa40629d",
     "render\\hardware\\nema17_connector.stl": "f6b35ea65451c1a72275cfeb1dabfd1249c80e8dde7d669d2d490d7fc0baa17f"
   },
-  "recipe_sha256": "a9b21cc10a3cc108c614a7e4e10fc2a40221b52ecf6b4fc0153b492a1f4fbc51",
+  "recipe_sha256": "aa1ea84bb93f9700b7e9ad66eeb49be19918aff4b740ffd3dd17ae7bb7b1a43e",
   "generator_sha256": {
-    "working_oomp_populate.py": "e0ef96de837d7eb0f9a44259116567d743a1e57ea4fce2dd880eeff503cfdcd7",
+    "working_oomp_populate.py": "7d3d347e40e1b16851ff0ba13bdbad2b7875e09c3765d0891974bb1467830eaf",
     "components\\wave_drive\\assembly_cards.py": "6fbaae511cb9a6a4154ca1a0c7abe9a2ae0bc438e86ff6f64e91749c724ed87a",
     "components\\wave_drive\\render_studio.py": "08acc32cb5fed12a3b95513df2ded92e72e4dbbe1098ecfe0d89548d9e2bb7c8",
     "components\\wave_drive\\assembly_booklet.py": "ee7ebd035d27f3446ee54b64102a3b6b0410255765eecbf3ad201fd429815b57",
-    "components\\wave_drive\\assembly_viewer.py": "47c59a251feeec154f0d5a5f3862010b628415b6e3286a861da00c5ea2452ca6",
-    "components\\wave_drive\\assembly_viewer.html": "c1d2271261cb49e8472751577321b74e4e657d6145bc49bd93990a8f0d379eac",
+    "components\\wave_drive\\assembly_viewer.py": "94aacc295569b17aaef9f20f4a135f52db35bfe69521e4bca4f0eb0c01593060",
+    "components\\wave_drive\\assembly_viewer.html": "8bcd2ef338b898f47c3c4debb86c5c4bf41bd9493f38cbfe0507db18ffeeab67",
     "source_file\\oomlout_logo_unshaded_original.svg": "72918ba326599a1e6ae495ae4cabb51cc7a462035d35ee30de984229e30d9d67"
   },
   "short_code_method": "OOMP md5_6_alpha: base36(first six hex digits of MD5(UTF-8 identity)). URL formatting does not register a redirect; local identities are explicitly marked.",
+  "printed_piece_count": 11,
+  "book_pages": [
+    {
+      "kind": "cover"
+    },
+    {
+      "kind": "details"
+    },
+    {
+      "kind": "instructions",
+      "group": 0
+    },
+    {
+      "kind": "instructions",
+      "group": 1
+    },
+    {
+      "kind": "instructions",
+      "group": 2
+    },
+    {
+      "kind": "summary",
+      "number": 13
+    },
+    {
+      "kind": "parts"
+    },
+    {
+      "kind": "back"
+    }
+  ],
   "summary_inventory": {
     "printed": [
       {
@@ -2001,36 +2033,5 @@
         "quantity": 1
       }
     ]
-  },
-  "book_pages": [
-    {
-      "kind": "cover"
-    },
-    {
-      "kind": "details"
-    },
-    {
-      "kind": "instructions",
-      "group": 0
-    },
-    {
-      "kind": "instructions",
-      "group": 1
-    },
-    {
-      "kind": "instructions",
-      "group": 2
-    },
-    {
-      "kind": "summary",
-      "number": 13
-    },
-    {
-      "kind": "parts"
-    },
-    {
-      "kind": "back"
-    }
-  ],
-  "printed_piece_count": 11
+  }
 }
