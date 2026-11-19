@@ -95,7 +95,7 @@ def main(**kwargs):
         {
             "name": "cage_head_entry",
             "scope": "2.15 mm radius screw-head envelope through the integrated upper disc before the bearing and output nut carrier are installed.",
-            "body": "intersection() { translate([0,0,cage_floor_z]) cage(); cage_mounts() translate([0,0,hub_z+0.01]) cylinder(r=2.15,h=hub_height+2); }",
+            "body": "intersection() { translate([0,0,cage_floor_z]) cage(); cage_mounts() translate([0,0,cage_head_seat+0.01]) cylinder(r=2.15,h=cage_slope_height+hub_height+2); }",
         },
         {
             "name": "lower_cage_over_eccentric",

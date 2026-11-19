@@ -12,7 +12,7 @@
   role: one bank; free rollers without fixed axles
 - item: Case socket cap screw
   size: M3
-  length_mm: 30
+  length_mm: 35
   quantity: 6
 - item: Motor countersunk screw
   size: M3
@@ -21,7 +21,7 @@
   role: motor plate to four tapped motor holes
 - item: Output countersunk screw
   size: M3
-  length_mm: 16
+  length_mm: 20
   quantity: 4
 - item: Output sandwich countersunk screw
   size: M3
@@ -47,7 +47,10 @@
   length_mm: 8
   role: upper motor shaft clamp; tighten before fitting the outer case
 - item: M3 hex nut
-  quantity: 25
+  quantity: 23
   role: assembly nuts plus captive half-grid output attachment nuts
+- item: M6 hex nut
+  quantity: 4
+  role: OOBB output attachment; payload bolts depend on attached plate thickness
 - item: M2 hex nut
   quantity: 12

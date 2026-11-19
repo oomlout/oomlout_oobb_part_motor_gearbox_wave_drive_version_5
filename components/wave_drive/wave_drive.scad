@@ -28,7 +28,8 @@ wave_z=window_z+roller_end_clearance;
 roller_z=wave_z+(wave_height-roller_length)/2;
 cage_floor_z=window_z+window_height;
 cage_head_lift=cage_screw_length-cage_screw_reference_length+cage_tip_extra_clearance;
-cage_upper_plate_depth=cage_plate_depth+cage_head_lift;
+cage_slope_height=cage_outer-(25-journal_clearance);
+cage_upper_plate_depth=cage_plate_depth+cage_head_lift+cage_slope_height;
 hub_z=cage_floor_z+cage_upper_plate_depth;
 bearing_z=hub_z+0.1;
 ring_height=hub_z-ring_z;
@@ -54,7 +55,7 @@ eccentric_join_mounts=[[eccentricity,-eccentric_join_pitch_radius],[eccentricity
 wave_head_recess=-countersunk_head_proud;
 wave_nut_z=wave_height-wave_head_recess-wave_screw_length+0.3;
 housing_top_z=hub_z+bearing_stack_height+3.5;
-case_socket_depth=case_socket_recess+cage_head_lift;
+case_socket_depth=case_socket_recess+cage_head_lift+cage_slope_height-(case_screw_length-30);
 case_head_seat=housing_top_z-case_socket_depth;
 housing_top_depth=housing_top_z-hub_z;
 motor_head_seat=motor_plate_depth+countersunk_head_proud;
@@ -68,16 +69,16 @@ output_neck_height=output_cover_z-retainer_z;
 retainer_depth=output_neck_height;
 output_head_seat=assembly_height+countersunk_head_proud;
 output_plate_clamp_nut_z=output_head_seat-output_plate_clamp_screw_length+0.1;
-extended_eccentric_height=assembly_height-cam_cap_z;
+extended_eccentric_height=assembly_height-eccentric_top_z;
 extended_eccentric_head_z=assembly_height-extended_eccentric_socket_depth;
 shaft_blind_depth=max(0,motor_shaft_length+motor_shaft_end_clearance-hub_z);
 output_nut_z=cage_floor_z+cage_head_lift+0.3;
-cage_head_seat=hub_z;
+cage_head_seat=hub_z-cage_slope_height;
 cage_nut_z=cage_head_seat-cage_screw_length;
 wave_mounts=[for(a=[0:90:270]) [18*cos(a),18*sin(a)]];
 output_mounts=[[output_fixing_x,output_fixing_y],[-output_fixing_y,output_fixing_x],[-output_fixing_x,-output_fixing_y],[output_fixing_y,-output_fixing_x]];
 output_attachment_mounts=[for(p=[[0,0],[output_grid_pitch,0],[-output_grid_pitch,0],[0,output_grid_pitch],[0,-output_grid_pitch]])
-    if(norm(p)-mount_m6_pocket_radius>=output_view_diameter/2+mount_minimum_web) p];
+    if(norm(p)>=output_view_diameter/2+5 && norm(p)+mount_m6_pocket_radius+mount_minimum_web<=25-journal_clearance) p];
 function separated(p,points,d)=len(points)==0?true:min([for(q=points) norm(p-q)])>=d;
 function select_m3_mounts(points,index=0,selected=[])=index>=len(points)?selected:
     select_m3_mounts(points,index+1,separated(points[index],selected,2*mount_m3_pocket_radius+mount_minimum_web)?concat(selected,[points[index]]):selected);
@@ -163,11 +164,17 @@ module output_housing() {
     }
 }
 module cage_face_down() {
-    // Intermediate construction coordinates; cage() gives the printing orientation.
+    // Production print orientation: hub on the bed, 45-degree shoulder above it.
     render(convexity=20) difference() {
         union() {
             cylinder(r=25-journal_clearance,h=hub_height);
-            translate([0,0,hub_height]) tube(cage_outer,12.6,cage_upper_plate_depth);
+            translate([0,0,hub_height]) difference() {
+                union() {
+                    cylinder(r1=25-journal_clearance,r2=cage_outer,h=cage_slope_height);
+                    translate([0,0,cage_slope_height]) cylinder(r=cage_outer,h=cage_upper_plate_depth-cage_slope_height);
+                }
+                translate([0,0,-eps]) cylinder(r=12.6,h=cage_upper_plate_depth+2*eps);
+            }
         }
         if(shaft_blind_depth>0) translate([0,0,hub_height-shaft_blind_depth]) cylinder(r=12.6,h=shaft_blind_depth+cage_upper_plate_depth+eps);
         translate([0,0,-eps]) cylinder(d=output_view_diameter,h=hub_height+cage_upper_plate_depth+2*eps);
@@ -186,12 +193,12 @@ module cage_face_down() {
         }
         cage_mounts() {
             translate([0,0,-eps]) screw_hole("m2",hub_height+cage_upper_plate_depth+2*eps);
-            translate([0,0,hub_height]) rotate([180,0,0]) oobb_cage_countersunk_m2();
+            translate([0,0,hub_height+cage_slope_height]) rotate([180,0,0]) oobb_cage_countersunk_m2();
         }
     }
 }
 module cage() {
-    // Broad closure on the bed, integrated hub upward. The central blind roof bridges.
+    // Turn the printed cage over for assembly.
     translate([0,0,hub_height+cage_upper_plate_depth]) mirror([0,0,1]) cage_face_down();
 }
 module cage_cap() {
@@ -233,7 +240,7 @@ module output_retainer() {
             translate([0,0,output_cover_z-output_plate_clamp_nut_z-2.5])
                 scale([1,1,(output_plate_clamp_nut_z+2.5-retainer_z+eps)/2.7]) oobb_nut_m3();
         }
-        at_mounts(output_attachment_mounts) oobb_nut_m6();
+        for(p=output_attachment_mounts) translate([p[0],p[1],0]) rotate([0,0,m3_mount_angle(p)]) oobb_nut_m6();
         for(p=output_m3_attachment_mounts) translate([p[0],p[1],0]) rotate([0,0,m3_mount_angle(p)])
             scale([1,1,output_m3_nut_depth/2.7]) oobb_nut_m3();
     }
@@ -258,13 +265,6 @@ module clamp_cuts(z,top) {
     translate([5,0,z]) rotate([0,90,0]) oobb_nut_m3();
     translate([5,-3.35,z]) cube([2.7,6.7,top-z+eps]);
 }
-module eccentric_key(height,clearance=0) {
-    translate([eccentricity,0,0]) linear_extrude(height)
-        offset(delta=clearance) intersection() {
-            difference() { circle(r=eccentric_key_outer_radius); circle(r=eccentric_key_inner_radius); }
-            translate([0,-eccentric_key_outer_radius]) square([eccentric_key_outer_radius,2*eccentric_key_outer_radius]);
-        }
-}
 module motor_eccentric() {
     difference() {
         union() {
@@ -272,8 +272,9 @@ module motor_eccentric() {
             translate([0,0,cage_cap_z-cam_base_z]) cylinder(r=10.5,h=cam_shoulder_z-(cage_cap_z-cam_base_z));
             translate([eccentricity,0,cam_shoulder_z]) cylinder(r=11,h=1);
             translate([eccentricity,0,cam_shoulder_z+1]) cylinder(r=10-journal_clearance,h=cam_cap_z-cam_base_z-cam_shoulder_z-1);
-            translate([0,0,cam_cap_z-cam_base_z]) eccentric_key(eccentric_key_depth);
+
         }
+        translate([eccentricity-11,0,-eps]) cylinder(r=eccentric_mark_radius,h=cam_cap_z-cam_base_z+2*eps);
         translate([0,0,-eps]) shaft_cut(cam_shoulder_z+5.2+2*eps);
         at_mounts(eccentric_join_mounts) {
             translate([0,0,-eps]) screw_hole("m3",cam_shoulder_z+5.2+2*eps);
@@ -281,25 +282,32 @@ module motor_eccentric() {
         }
     }
 }
-module motor_eccentric_cap(extended=false) {
-    top=extended?extended_eccentric_height:cam_cap_height;
+module motor_eccentric_cap() {
+    top=cam_cap_height;
     difference() {
         union() {
             translate([eccentricity,0,0]) cylinder(r=10-journal_clearance,h=cam_upper_journal_depth);
             translate([eccentricity,0,cam_upper_journal_depth]) cylinder(r=11,h=cam_cap_height-cam_upper_journal_depth);
-            if(extended) translate([0,0,cam_cap_height-eps]) cylinder(d=extended_eccentric_diameter,h=top-cam_cap_height+eps);
         }
-        translate([0,0,-eps]) shaft_cut(extended?motor_shaft_length-cam_cap_z+motor_shaft_end_clearance:cam_cap_height+2*eps);
-        translate([0,0,-eps]) eccentric_key(eccentric_key_depth+eccentric_key_clearance+eps,eccentric_key_clearance);
+        translate([0,0,-eps]) shaft_cut(cam_cap_height+2*eps);
+        translate([eccentricity-11,0,-eps]) cylinder(r=eccentric_mark_radius,h=top+2*eps);
         clamp_cuts(shaft_clamp_z-cam_cap_z,top);
         at_mounts(eccentric_join_mounts) {
             translate([0,0,-eps]) screw_hole("m3",top+2*eps);
-            if(extended) translate([0,0,top-extended_eccentric_socket_depth]) socket_recess("m3",extended_eccentric_socket_depth+eps);
-            else translate([0,0,top+countersunk_head_proud]) oobb_countersunk_m3();
+            translate([0,0,top+countersunk_head_proud]) oobb_countersunk_m3();
         }
     }
 }
-module motor_eccentric_cap_extended() { motor_eccentric_cap(true); }
+// The optional lifter mounts on the common upper collar.
+module motor_eccentric_cap_extended() {
+    difference() {
+        cylinder(d=extended_eccentric_diameter,h=extended_eccentric_height);
+        at_mounts(eccentric_join_mounts) {
+            translate([0,0,-eps]) screw_hole("m3",extended_eccentric_height+2*eps);
+            translate([0,0,extended_eccentric_height-extended_eccentric_socket_depth]) socket_recess("m3",extended_eccentric_socket_depth+eps);
+        }
+    }
+}
 module roller() { tube(roller_radius,roller_bore_diameter/2,roller_length); }
 module cage_assembly(a=0,explode=0) {
     rotate([0,0,-a/roller_count]) {
@@ -312,7 +320,8 @@ module cage_assembly(a=0,explode=0) {
 module input_assembly(a=0,explode=0,extended=false) {
     rotate([0,0,a]) {
         translate([0,0,cam_base_z+3*explode]) motor_eccentric();
-        translate([0,0,cam_cap_z+6*explode]) motor_eccentric_cap(extended);
+        translate([0,0,cam_cap_z+6*explode]) motor_eccentric_cap();
+        if(extended) translate([0,0,eccentric_top_z+7*explode]) motor_eccentric_cap_extended();
     }
 }
 module wave_assembly(a=0,explode=0) {

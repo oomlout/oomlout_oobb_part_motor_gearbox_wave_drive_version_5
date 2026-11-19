@@ -38,7 +38,7 @@ def test_compact_inventory_and_bearing_envelope():
     pieces = working_scad.piece_definitions(**c)
     records = instance_definitions(configuration=c)
     assert len(pieces) == sum(p["quantity"] for p in pieces) == 11
-    assert Counter(r["kind"] for r in records) == {"printed":11,"roller":12,"bearing":2,"fastener":72}
+    assert Counter(r["kind"] for r in records) == {"printed":11,"roller":12,"bearing":2,"fastener":74}
     assert sum(r["part"]=="bearing_6810" for r in records) == 1
     assert sum(r["part"]=="bearing_6704" for r in records) == 1
     assert len(records) == len(set(r["name"] for r in records))
@@ -73,7 +73,7 @@ def test_motor_shaft_and_screw_engagement():
     assert c["cage_head_lift"] == pytest.approx(3)
     assert c["cage_tip_clearance"] == pytest.approx(1.6)
     assert c["cage_nut_z"]+1.6 < c["roller_z"]
-    assert c["cage_upper_plate_depth"] == pytest.approx(6)
+    assert c["cage_upper_plate_depth"]-c["cage_slope_height"] == pytest.approx(6)
     engagement = c["motor_screw_length"]-c["motor_head_seat"]
     assert 3 <= engagement <= c["motor_thread_depth"]-.5
     # Full nominal nut engagement, and no screw projecting into the other moving body.
@@ -112,8 +112,8 @@ def test_motor_shaft_and_screw_engagement():
 
 def test_output_sandwich_pocket_walls_and_capture():
     c = working_scad.resolve()
-    assert len(c["output_m6_mounts"]) == 0
-    assert len(c["output_m3_mounts"]) == 6
+    assert len(c["output_m6_mounts"]) == 4
+    assert len(c["output_m3_mounts"]) == 4
     pockets = [(p, c["mount_m6_pocket_radius"]) for p in c["output_m6_mounts"]]
     pockets += [(p, c["mount_m3_pocket_radius"]) for p in c["output_m3_mounts"]]
     for index, (point, radius) in enumerate(pockets):
@@ -128,8 +128,8 @@ def test_output_sandwich_pocket_walls_and_capture():
         for fixing in c["output_fixing_mounts"]:
             assert math.dist(point,fixing) >= c["mount_m3_pocket_radius"]+1.8+c["mount_minimum_web"]
     assert all([x,y] in c["output_m3_mounts"] for x in [-15,15] for y in [-15,15])
-    assert c["output_head_seat"]-c["assembly_height"] == pytest.approx(1)
-    assert c["output_screw_length"] == 16
+    assert c["output_head_seat"]-c["assembly_height"] == pytest.approx(.5)
+    assert c["output_screw_length"] == 20
     for key, height in [("output_attachment_nut_z",5), ("output_m3_attachment_nut_z",2.5)]:
         assert c[key]+height < c["output_cover_z"]
         assert c[key] > c["hub_z"]+c["shaft_blind_depth"]
@@ -163,12 +163,12 @@ def test_insertion_clearances_and_visible_output_gap():
 
 def test_proud_m3_heads_clear_rotating_cage_and_retain_threads():
     c = working_scad.resolve()
-    assert c["motor_head_relief_depth"] == pytest.approx(1)
-    assert c["wave_head_relief_depth"] == pytest.approx(1)
+    assert c["motor_head_relief_depth"] == pytest.approx(.5)
+    assert c["wave_head_relief_depth"] == pytest.approx(.5)
     assert c["cage_cap_z"]+c["motor_head_relief_depth"]-c["motor_head_seat"] == pytest.approx(.3)
     assert c["cage_floor_z"]+c["wave_head_relief_depth"]-(c["wave_z"]+c["wave_height"]-c["wave_head_recess"]) == pytest.approx(.3)
     assert c["cage_plate_depth"]-c["motor_head_relief_depth"] >= 2-1e-8
-    assert c["eccentric_join_head_z"]-c["cam_cap_z"]-c["cam_cap_height"] == pytest.approx(1)
+    assert c["eccentric_join_head_z"]-c["cam_cap_z"]-c["cam_cap_height"] == pytest.approx(.5)
     assert c["eccentric_join_nut_z"]-(c["eccentric_join_head_z"]-c["eccentric_join_screw_length"]) == pytest.approx(.1)
     assert c["wave_nut_z"]-(c["wave_height"]-c["wave_head_recess"]-c["wave_screw_length"]) == pytest.approx(.3)
 
@@ -247,12 +247,10 @@ def test_optional_printable_spacers_are_packed_without_duplicate_assembly_parts(
     assert optional_print_definitions(include_printable_spacers=False, include_extended_eccentric=False) == []
 
 
-def test_keyed_mid_bearing_split_and_extended_option():
+def test_marked_mid_bearing_split_and_extended_option():
     c = working_scad.resolve()
     assert c["cam_cap_z"] == pytest.approx(c["wave_bearing_z"]+2)
-    assert c["eccentric_key_depth"] < c["cam_upper_journal_depth"]-.5
-    assert c["eccentric_key_inner_radius"]-c["eccentricity"]-c["eccentric_key_clearance"] > c["input_shaft_diameter"]/2+c["shaft_fit_clearance"]
-    assert c["cam_cap_z"]+c["extended_eccentric_height"] == pytest.approx(c["assembly_height"])
+    assert c["eccentric_top_z"]+c["extended_eccentric_height"] == pytest.approx(c["assembly_height"])
     assert (c["output_view_diameter"]-c["extended_eccentric_diameter"])/2 >= .3
     assert c["cam_base_z"]+.5 < c["extended_eccentric_head_z"]-c["extended_eccentric_screw_length"] < c["eccentric_join_nut_z"]
 
@@ -260,6 +258,11 @@ def test_keyed_mid_bearing_split_and_extended_option():
 def test_independent_output_sandwich_and_open_payload_paths():
     c = working_scad.resolve()
     assert c["output_view_diameter"] == 20
+    # Removing all plate joiners must not expose another usable grid site.
+    from wave_drive.compact_recipe import output_mount_layout
+    free = output_mount_layout(**dict(c, output_plate_clamp_mounts=[], output_fixing_x=90, output_fixing_y=90))
+    assert free["output_m3_mounts"] == c["output_m3_mounts"]
+    assert free["output_m6_mounts"] == c["output_m6_mounts"]
     assert len(c["output_plate_clamp_mounts"]) == 2
     assert c["output_head_seat"]-c["output_plate_clamp_screw_length"] > c["retainer_z"]+.5
     assert c["output_plate_clamp_nut_z"]+2.5 < c["output_cover_z"]

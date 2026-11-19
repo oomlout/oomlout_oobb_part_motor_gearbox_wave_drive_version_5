@@ -21,11 +21,11 @@ def generate(**kwargs):
         "",
         "## Wiggle shaft",
         "",
-        f"Both eccentric pieces split at Z={c['cam_cap_z']:g} mm, the centre of the 6704 bearing. A semicircular tongue on the lower journal fits a matching recess in the upper journal. Its {c['eccentric_key_clearance']:g} mm clearance allows the two halves to register without forcing the printed fit.",
+        f"Both eccentric pieces split at Z={c['cam_cap_z']:g} mm, the centre of the 6704 bearing. Align the small semicircular edge marks on the two collars.",
         "",
         f"Load the upper radial M3 nut from the top and tighten the M3 x {c['shaft_clamp_screw_length']} countersunk clamp onto the motor shaft before fitting the fixed ring and upper cage. The case and lower cage have no adjustment access holes. Two M3 x {c['eccentric_join_screw_length']} countersunk screws join the short eccentric to its lower captive nuts.",
         "",
-        f"Optional extended version: [motor_eccentric_cap_extended.stl](motor_eccentric_cap_extended.stl) replaces the short upper piece. Its {c['extended_eccentric_diameter']:g} mm stem reaches the output face at Z={c['assembly_height']:g} mm, with clearance through the {c['output_view_diameter']:g} mm viewing hole. Use two M3 x {c['extended_eccentric_screw_length']} socket caps instead of the short version's countersunk joiners. Reuse the lower piece and captive nuts. See [assembly_extended.scad](assembly_extended.scad). Do not install both upper pieces.",
+        f"Optional extended version: [motor_eccentric_cap_extended.stl](motor_eccentric_cap_extended.stl) sits on the standard upper collar. Its {c['extended_eccentric_diameter']:g} mm stem reaches the output face at Z={c['assembly_height']:g} mm, with clearance through the {c['output_view_diameter']:g} mm viewing hole. Use two M3 x {c['extended_eccentric_screw_length']} socket caps instead of the short version's countersunk joiners. Reuse the lower piece and captive nuts. See [assembly_extended.scad](assembly_extended.scad). Fit the shaft clamp nut before adding the lifter.",
         "",
         "## Output plate",
         "",
@@ -33,15 +33,15 @@ def generate(**kwargs):
         "",
         f"Preassemble the carrier and cover with two M3 x {c['output_plate_clamp_screw_length']} countersunk screws and separate captive M3 nuts. Then attach the complete sandwich to the cage with four M3 x {c['output_screw_length']} countersunk screws. The short screws stay in place while installing or removing the plate.",
         "",
-        f"The carrier holds {c['output_m3_mount_count']} M3 attachment nuts on the OOBB half-grid. Nut positions that conflict with the viewing hole or plate fasteners are omitted; this compact version has no captive M6 output nuts. M6 holes remain in the base. Attachment centres, in mm: {c['output_m3_mounts']}.",
+        f"The carrier holds {c['output_m3_mount_count']} M3 attachment nuts on the OOBB half-grid. The carrier also holds {c['output_m6_mount_count']} M6 nuts with their flats toward the centre. M6 holes remain in the base. M3 centres in mm: {c['output_m3_mounts']}. M6 centres in mm: {c['output_m6_mounts']}.",
         "",
         f"Clearance holes continue below the attachment nuts through the carrier and cage. M3 payload bolt projection below the output face may be {c['output_m3_bolt_projection_min']:.2f} to {c['output_m3_bolt_projection_max']:.2f} mm, allowing at least 2 mm thread engagement while stopping above the moving wave screws. Measure the actual printed assembly; longer bolts must not reach the moving parts.",
         "",
         "## Printing and assembly",
         "",
-        f"Print the {manifest['printed_piece_count']} required gearbox pieces. The combined 3dpr file and print beds also include {c['roller_count']} optional printable spacers and the optional extended upper eccentric. Choose one upper eccentric and either purchased nylon spacers or printed spacers. Bearings, motor and fasteners are purchased items.",
+        f"Print the {manifest['printed_piece_count']} required gearbox pieces. The combined 3dpr file and print beds also include {c['roller_count']} optional printable spacers and the optional separate shaft lifter. Fit the lifter for the tall option. Choose either purchased nylon spacers or printed spacers. Bearings, motor and fasteners are purchased items.",
         "",
-        "Print the lower cage with its teeth upward and the upper cage with its broad face on the bed. Inspect bridge material, bearing seats and the alignment key before assembly. The upper and lower cage have annular clearances for the raised M3 wave and motor screw heads.",
+        "Print the lower cage with its teeth upward and the upper cage with its hub face on the bed and its 45-degree shoulder widening upward. Inspect bridge material, bearing seats and the orientation marks before assembly. The upper and lower cage have annular clearances for the raised M3 wave and motor screw heads.",
         "",
         f"M3 axial countersunk heads sit {c['countersunk_head_proud']:g} mm proud; do not force them flush. M2 cage screws stay seated, with {c['cage_tip_clearance']:g} mm nominal tip clearance. The radial shaft clamp tightens onto the shaft. Motor screws retain {c['motor_thread_engagement']:g} mm nominal thread engagement. Socket-cap lengths exclude the head; countersunk lengths include it.",
         "",
@@ -51,7 +51,7 @@ def generate(**kwargs):
         "",
         "## Hardware",
         "",
-        "Quantities below are for the short-shaft assembly. The extended option replaces its two eccentric joiners with two M3 x 30 socket caps.",
+        "Quantities below are for the short-shaft assembly. The extended option replaces its two eccentric joiners with two M3 x 35 socket caps.",
         "",
         "| Item | Quantity | Size / length |",
         "| --- | ---: | --- |",
@@ -61,7 +61,7 @@ def generate(**kwargs):
         rows.append(f"| {item['item']} | {item['quantity']} | {dimension} |")
     rows += ["", "## Verification", "", "See mesh_validation.json and the reports in render/ for the checks actually performed. This single-bank design is not counterbalanced. Printed fit, clamp grip, wear, backlash, motor bearing loads and operating speed/torque still need physical testing.", ""]
     (folder/"README.md").write_text("\n".join(rows),encoding="utf-8")
-    assembly = [f"# Assembly - {c['reduction']}:1 wave drive", "", "AI-generated images and instructions. Errors possible.", "", f"[Open the browser instructions]({viewer}) · [Print the booklet](assembly/assembly_instructions.pdf)", "", "The diagrams show the short eccentric. For the extended option, substitute the extended upper piece and two M3 x 30 socket caps at the eccentric closing step. Tighten the upper shaft clamp before installing the outer case. Prepare the complete output sandwich before installing it.", ""]
+    assembly = [f"# Assembly - {c['reduction']}:1 wave drive", "", "AI-generated images and instructions. Errors possible.", "", f"[Open the browser instructions]({viewer}) · [Print the booklet](assembly/assembly_instructions.pdf)", "", "The diagrams show the short eccentric. For the extended option, place the lifter on the standard upper collar and use two M3 x 35 socket caps at the eccentric closing step. Tighten the upper shaft clamp before installing the outer case. Prepare the complete output sandwich before installing it.", ""]
     for index, step in enumerate(c["assembly_cards"],1):
         assembly += [f"## {index:02d}. {step['title']}", "", step["action"].format(**c), "", f"[![AI-generated assembly step {index}](assembly/cards/step_{index:02d}.png)](assembly/cards/step_{index:02d}.png)", ""]
     assembly += [f"M3 payload bolt projection below the output face: {c['output_m3_bolt_projection_min']:.2f} to {c['output_m3_bolt_projection_max']:.2f} mm. Check the actual print before fitting longer bolts.", ""]
@@ -78,7 +78,7 @@ def captions(**kwargs):
     return {
         "assembly": {
             "title": f"{c['reduction']}:1 OOBB roller wave gearbox",
-            "subtitle": f"Flat output plate: {c['output_view_diameter']:g} mm viewing hole and {c['output_m3_mount_count']} captive M3 attachment nuts.",
+            "subtitle": f"Flat output plate: {c['output_view_diameter']:g} mm viewing hole, {c['output_m6_mount_count']} captive M6 nuts and {c['output_m3_mount_count']} captive M3 nuts.",
             "footer": f"{2*c['housing_radius']:g} mm body OD | {c['output_plate_diameter']:g} mm output face | one 6810 + one 6704",
         },
         "motor_fit": {

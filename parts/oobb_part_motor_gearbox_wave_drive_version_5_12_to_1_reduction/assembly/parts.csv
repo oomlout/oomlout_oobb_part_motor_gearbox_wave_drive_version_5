@@ -13,14 +13,15 @@ wave_bearing_cap,Upper wave clamshell,,1,oobb_part_motor_gearbox_wave_drive_vers
 bearing_6810,6810 bearing,50 x 65 x 7 mm,1,hardware_bearing_6800_series_6810_size_50_mm_id_65_mm_od_7_mm_depth,7xku1,https://oom.lt/a/7xku1,OOMP catalogue identity
 bearing_6704,6704 bearing,20 x 27 x 4 mm,1,hardware_bearing_6700_series_6704_size_20_mm_id_27_mm_od_4_mm_depth,4y780,https://oom.lt/a/4y780,OOMP catalogue identity
 roller,Spacer 7mm OD 12mm depth,7 OD x 12 mm; 3.2 bore,12,hardware_spacer_m3_nylon_white_7_mm_outer_diameter_12_mm_depth,52cn9,https://oom.lt/a/52cn9,OOMP catalogue identity
-screw_case,M3 x 30 socket cap,,6,hardware_screw_socket_cap_hex_head_black_m3_diameter_30_mm_length,4x6wf,https://oom.lt/a/4x6wf,OOMP catalogue identity
+screw_case,M3 x 35 socket cap,,6,hardware_screw_socket_cap_hex_head_black_m3_diameter_35_mm_length,22vya,https://oom.lt/a/22vya,OOMP catalogue identity
 screw_motor,M3 x 8 countersunk,,4,hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length,93f5s,https://oom.lt/a/93f5s,OOMP catalogue identity
-screw_output,M3 x 16 countersunk,,4,hardware_screw_countersunk_hex_head_black_m3_diameter_16_mm_length,5j422,https://oom.lt/a/5j422,OOMP catalogue identity
+screw_output,M3 x 20 countersunk,,4,hardware_screw_countersunk_hex_head_black_m3_diameter_20_mm_length,7oupv,https://oom.lt/a/7oupv,OOMP catalogue identity
 screw_output_clamp,M3 x 10 countersunk,,2,hardware_screw_countersunk_hex_head_black_m3_diameter_10_mm_length,9z21w,https://oom.lt/a/9z21w,OOMP catalogue identity
 screw_wave,M3 x 12 countersunk,,4,hardware_screw_countersunk_hex_head_black_m3_diameter_12_mm_length,1qf1u,https://oom.lt/a/1qf1u,OOMP catalogue identity
 screw_cage,M2 x 20 countersunk,Hex drive; length includes head,12,hardware_screw_countersunk_hex_head_black_m2_diameter_20_mm_length,4wbkj,https://oom.lt/a/4wbkj,OOMP catalogue identity
 screw_eccentric,M3 x 20 countersunk,Hex drive; length includes head,2,hardware_screw_countersunk_hex_head_black_m3_diameter_20_mm_length,7oupv,https://oom.lt/a/7oupv,OOMP catalogue identity
 screw_shaft_clamp,M3 x 8 countersunk,Hex drive; length includes head,1,hardware_screw_countersunk_hex_head_black_m3_diameter_8_mm_length,93f5s,https://oom.lt/a/93f5s,OOMP catalogue identity
 nut_m2,M2 hex nut,,12,hardware_nut_m2,2x0yb,https://oom.lt/a/2x0yb,OOMP catalogue identity
-nut_m3,M3 hex nut,,25,hardware_nut_m3,3vb5b,https://oom.lt/a/3vb5b,OOMP catalogue identity
+nut_m3,M3 hex nut,,23,hardware_nut_m3,3vb5b,https://oom.lt/a/3vb5b,OOMP catalogue identity
+nut_m6,M6 hex nut,,4,hardware_nut_m6,hcps,https://oom.lt/a/hcps,OOMP catalogue identity
 nema17,NEMA 17 motor,40 mm body; 24 x 5 mm shaft,1,oobb_part_motor_gearbox_wave_drive_version_5_12_to_1_reduction__nema17__nema_17_motor_40_mm_body;_24_x_5_mm_shaft,8y8u9,https://oom.lt/a/8y8u9,Project-local assembly identity

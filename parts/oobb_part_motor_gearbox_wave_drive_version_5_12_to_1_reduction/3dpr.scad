@@ -5,7 +5,7 @@ include <geometry.scad>;
 translate([52.0, 44.36766840842552, 0]) motor_mount_plate();
 translate([158.36766840842552, 44.36766840842552, 0]) fixed_ring();
 translate([257.10300522527655, 44.36766840842552, 0]) output_housing();
-translate([29.25, 127.98533681685105, 0]) cage();
+translate([29.25, 127.98533681685105, 0]) cage_face_down();
 translate([97.75, 127.98533681685105, 0]) cage_cap();
 translate([167.9, 129.63533681685104, 0]) output_retainer();
 translate([239.70000000000002, 129.63533681685104, 0]) output_cover();

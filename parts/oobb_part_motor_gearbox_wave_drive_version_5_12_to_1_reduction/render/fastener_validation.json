@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "fastener_instances": 72,
+  "fastener_instances": 74,
   "cage_screw_stack": [
     {
       "name": "cage_screw_0",
@@ -68,100 +68,100 @@
       "name": "output_screw_0",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 3.200000000000003,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 3.0,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "output_screw_1",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 3.200000000000003,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 3.0,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "output_screw_2",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 3.200000000000003,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 3.0,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "output_screw_3",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 3.200000000000003,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 3.0,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_0",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 1.0000000000000018,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 0.5000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_1",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 1.0000000000000018,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 0.5000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_2",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 1.0000000000000018,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 0.5000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "wave_screw_3",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 1.0000000000000018,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 0.5000000000000018,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "eccentric_join_screw_0",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 3.9999999999999987,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 3.4999999999999987,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "eccentric_join_screw_1",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 3.9999999999999987,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 3.4999999999999987,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "plate_clamp_0_screw_output_clamp",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 1.1000000000000014,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 0.6000000000000014,
       "nut_engagement_mm": 2.5
     },
     {
       "name": "plate_clamp_1_screw_output_clamp",
       "size": "M3",
       "head": "countersunk",
-      "head_proud_mm": 1.0,
-      "tip_clearance_mm": 1.1000000000000014,
+      "head_proud_mm": 0.5,
+      "tip_clearance_mm": 0.6000000000000014,
       "nut_engagement_mm": 2.5
     }
   ],
-  "planar_contact_fragments": 146,
+  "planar_contact_fragments": 134,
   "volumetric_components": [
     {
       "bounds_mm": [

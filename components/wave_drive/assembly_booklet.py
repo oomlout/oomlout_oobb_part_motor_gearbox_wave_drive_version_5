@@ -171,14 +171,15 @@ def publish(**kwargs):
         pdf.setFont(mono, 27)
         pdf.drawString(x+4*mm, top-11*mm, str(index+1))
         items = list(step["loose_parts"].items())
-        assert 0 < len(items) <= 4
+        assert 0 < len(items) <= 5
+        row_height = min(20, 88 / len(items))
         box_w = 34*mm
         box_x, box_top = x+card_w-box_w-3*mm, top-3*mm
-        box_h = (len(items)*20+4)*mm
+        box_h = (len(items)*row_height+4)*mm
         border(box_x, box_top-box_h, box_w, box_h, main=False)
         for item_index, (key, count) in enumerate(items):
             part = data["parts"][key]
-            item_top = box_top-(2+item_index*20)*mm
+            item_top = box_top-(2+item_index*row_height)*mm
             # Quantity overlays the thumbnail's clear bottom-right corner.
             thumb = picture("part_"+key, box_x+2*mm, item_top-10*mm, box_w-4*mm, style["thumbnail_height_mm"]*mm)
             quantity(count, thumb[0]+thumb[2]+style["quantity_shift_mm"]*mm, thumb[1]+.3*mm)

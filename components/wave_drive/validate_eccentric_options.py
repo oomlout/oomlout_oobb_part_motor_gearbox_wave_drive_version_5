@@ -28,13 +28,13 @@ def main(**kwargs):
         report["checks"].append({"name": name, "status": "passed", "expect_empty": expect_empty})
 
     check("aligned_halves", "intersection() { translate([0,0,cam_base_z]) motor_eccentric(); translate([0,0,cam_cap_z]) motor_eccentric_cap(); }")
-    check("key_rejects_half_turn", "intersection() { translate([0,0,cam_cap_z]) eccentric_key(eccentric_key_depth); translate([eccentricity,0,cam_cap_z]) rotate([0,0,180]) translate([-eccentricity,0,0]) motor_eccentric_cap(); }", False)
     plate = "union() { translate([0,0,cage_floor_z]) cage(); translate([0,0,output_cover_z]) mirror([0,0,1]) output_retainer(); translate([0,0,output_cover_z]) output_cover(); }"
     check("viewing_hole", "intersection() { "+plate+" translate([0,0,cage_floor_z-1]) cylinder(d=output_view_diameter-0.02,h=assembly_height-cage_floor_z+2); }")
     check("payload_clearance", "intersection() { "+plate+" at_mounts(output_m3_attachment_mounts) translate([0,0,cage_floor_z-1]) cylinder(r=1.5,h=assembly_height-cage_floor_z+2); }")
 
+    check("m6_payload_clearance", "intersection() { "+plate+" at_mounts(output_attachment_mounts) translate([0,0,cage_floor_z-1]) cylinder(r=3,h=assembly_height-cage_floor_z+2); }")
     if c["include_extended_eccentric"]:
-        check("extended_clamp_nut_loading", "intersection() { translate([0,0,cam_cap_z]) motor_eccentric_cap(true); translate([5.01,-3.34,shaft_clamp_z]) cube([2.68,6.68,assembly_height-shaft_clamp_z+1]); }")
+        check("extended_clamp_nut_loading", "intersection() { translate([0,0,cam_cap_z]) motor_eccentric_cap(); translate([5.01,-3.34,shaft_clamp_z]) cube([2.68,6.68,assembly_height-shaft_clamp_z+1]); }")
         for angle in [0,45,90,135,180,225,270,315]:
             # Reuse the production collision scene; it already contains a witness.
             path = target/f"extended_collision_{angle}.stl"
@@ -57,11 +57,11 @@ def main(**kwargs):
             calls.append(f'multmatrix({json.dumps(matrix)}) import("{mesh.as_posix()}");')
         check("extended_fasteners", "intersection() { union() { assembly(0,0,true); nema17_reference(); } union() { "+"\n".join(calls)+" } }")
         mesh = trimesh.load(folder/"motor_eccentric_cap_extended.stl", force="mesh")
-        assert abs(mesh.bounds[1,2]+c["cam_cap_z"]-c["assembly_height"]) < 1e-5
+        assert abs(mesh.bounds[1,2]+c["eccentric_top_z"]-c["assembly_height"]) < 1e-5
         report["extended_top_z_mm"] = c["assembly_height"]
         report["extended_radial_clearance_mm"] = (c["output_view_diameter"]-c["extended_eccentric_diameter"])/2
         report["extended_screw_tip_clearance_mm"] = c["extended_eccentric_head_z"]-c["extended_eccentric_screw_length"]-c["cam_base_z"]
     report["status"] = "passed"
     report["limitations"] = "Geometric checks only; printed fit and running performance require physical tests."
     (folder/"render/extended_eccentric_validation.json").write_text(json.dumps(report,indent=2)+"\n")
-    print("PASS: keyed shaft, viewing hole, payload clearance and extended input option.", flush=True)
+    print("PASS: marked shaft, viewing hole, payload clearance and extended input option.", flush=True)

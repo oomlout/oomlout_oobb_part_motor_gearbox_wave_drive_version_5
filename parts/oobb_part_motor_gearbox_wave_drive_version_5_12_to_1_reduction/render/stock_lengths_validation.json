@@ -19,13 +19,13 @@
       }
     ],
     "status": "geometry_passed",
-    "assembly_height_mm": 38.1
+    "assembly_height_mm": 42.4
   },
   {
     "roller_length_mm": 15,
     "scope": "Compact motor stack; only 12 mm is the release default",
     "status": "rejected_by_stack_constraints",
-    "reason": "Wave screws must fully engage nuts retained inside the lower clamshell"
+    "reason": "Extended eccentric screws must fully engage the lower nuts"
   },
   {
     "roller_length_mm": 18,

@@ -19,7 +19,7 @@ include_extended_eccentric: true
 roller_bank_count: 1
 motor_plate_depth: 4.0
 motor_screw_length: 8
-case_screw_length: 30
+case_screw_length: 35
 case_socket_recess: 3.6
 case_nut_z: 0.1
 motor_body_depth: 40.0
@@ -33,7 +33,7 @@ case_boss_wall: 2.0
 case_boss_rounding_fraction: 1.0
 case_boss_overlap: 1.5
 max_screw_length: 35.0
-countersunk_head_proud: 1.0
+countersunk_head_proud: 0.5
 countersunk_head_clearance: 0.3
 m3_countersunk_radius: 3.6
 eccentricity: 0.75
@@ -54,12 +54,9 @@ eccentric_base_z: 2.4
 eccentric_top_z: 25.4
 shaft_clamp_axis_z: 22.0
 shaft_driver_diameter: 2.4
-eccentric_key_inner_radius: 3.9
-eccentric_key_outer_radius: 4.8
-eccentric_key_depth: 1.0
-eccentric_key_clearance: 0.15
+eccentric_mark_radius: 0.8
 extended_eccentric_diameter: 19.2
-extended_eccentric_screw_length: 30
+extended_eccentric_screw_length: 35
 extended_eccentric_socket_depth: 3.2
 bearing_seat_clearance: 0.1
 journal_clearance: 0.05
@@ -67,20 +64,20 @@ bearing_axial_clearance: 0.2
 output_plate_diameter: 61.8
 output_view_diameter: 20.0
 output_plate_clamp_mounts:
-- - 0
-  - 20
-- - 0
-  - -20
+- - 8
+  - 19.2
+- - -8
+  - -19.2
 output_plate_clamp_screw_length: 10
 output_cover_depth: 4.3
 output_above_housing: 1.5
 output_hub_depth: 2.1
 output_grid_pitch: 15.0
 output_fixing_x: 20.0
-output_fixing_y: 10.0
+output_fixing_y: 7.5
 output_face_clearance: 0.8
 output_radial_clearance: 0.6
-output_screw_length: 16
+output_screw_length: 20
 output_nut_depth: 5.2
 output_nut_height: 5.0
 output_m3_nut_depth: 2.7
@@ -265,13 +262,14 @@ assembly_steps:
 - Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward
   onto the plate.
 - Load two M3 joint nuts from below. Slide the lower eccentric onto the motor shaft
-  with its semicircular alignment tongue upward.
+  with its bearing journal upward. Locate the small semicircular mark on the edge
+  of the lower collar.
 - Seat four M3 nuts underneath the lower clamshell. Lower it around the eccentric
   journal and seat the 6704 bearing squarely in its recess.
 - Load the radial M3 nut from the top of the upper eccentric and start its M3 x {shaft_clamp_screw_length}
-  clamp screw. Match the semicircular key and recess at the middle of the bearing.
-  Tighten the two M3 x {eccentric_join_screw_length} countersunk joiners, then tighten
-  the upper shaft clamp before fitting the outer case.
+  clamp screw. Align the semicircular edge marks at the middle of the bearing. Tighten
+  the two M3 x {eccentric_join_screw_length} countersunk joiners, then tighten the
+  upper shaft clamp before fitting the outer case.
 - Fit the upper wave half around the 6704 bearing. Tighten four M3 x {wave_screw_length}
   countersunk screws into the lower nuts.
 - Confirm the upper shaft clamp is tight, then lower the fixed ring around the cage
@@ -284,10 +282,10 @@ assembly_steps:
 - Seat the 6810 over the upper cage hub. Lower the housing over the bearing outer
   race. Insert six M3 x {case_screw_length} socket caps from the top and tighten into
   the captive base nuts.
-- Load {output_m3_mount_count} M3 attachment nuts into the carrier and two M3 sandwich
-  nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length}
-  countersunk screws. The plate is now clamped as a separate assembly; its viewing
-  hole and bolt-clearance holes stay open.
+- Load {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment nuts into
+  the carrier and two M3 sandwich nuts from underneath. Fit the flat cover and tighten
+  two M3 x {output_plate_clamp_screw_length} countersunk screws. The plate is now
+  clamped as a separate assembly; its viewing hole and bolt-clearance holes stay open.
 - Lower the preassembled output plate over the bearing and fasten it to the cage with
   four M3 x {output_screw_length} countersunk screws. Keep the separate short sandwich
   screws tight. With power disconnected, hand-turn the input {reduction} times for
@@ -385,7 +383,8 @@ assembly_cards:
     - 42
 - title: Prepare and fit the lower eccentric
   action: Load two M3 joint nuts from below. Slide the lower eccentric onto the motor
-    shaft with its semicircular alignment tongue upward.
+    shaft with its bearing journal upward. Locate the small semicircular mark on the
+    edge of the lower collar.
   add:
   - motor_eccentric
   - eccentric_join_nut_*
@@ -434,7 +433,7 @@ assembly_cards:
     - 34
 - title: Close the eccentric shaft
   action: Load the radial M3 nut from the top of the upper eccentric and start its
-    M3 x {shaft_clamp_screw_length} clamp screw. Match the semicircular key and recess
+    M3 x {shaft_clamp_screw_length} clamp screw. Align the semicircular edge marks
     at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length}
     countersunk joiners, then tighten the upper shaft clamp before fitting the outer
     case.
@@ -561,10 +560,11 @@ assembly_cards:
     - 0
     - 43
 - title: Preassemble the output plate
-  action: Load {output_m3_mount_count} M3 attachment nuts into the carrier and two
-    M3 sandwich nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length}
-    countersunk screws. The plate is now clamped as a separate assembly; its viewing
-    hole and bolt-clearance holes stay open.
+  action: Load {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment
+    nuts into the carrier and two M3 sandwich nuts from underneath. Fit the flat cover
+    and tighten two M3 x {output_plate_clamp_screw_length} countersunk screws. The
+    plate is now clamped as a separate assembly; its viewing hole and bolt-clearance
+    holes stay open.
   add:
   - output_retainer
   - output_cover
@@ -575,7 +575,7 @@ assembly_cards:
     - 0
     - 0
     - 24
-    output_attachment_m3_nut_*:
+    output_attachment*:
     - 0
     - 0
     - 42
@@ -753,13 +753,13 @@ assembly_book:
   - 'Clamshell joint: M3 x {wave_screw_length} countersunk screws and captive nuts.'
   - 'Case: M3 x {case_screw_length} screws from above; nuts underneath the base.'
   - 'Motor mount: M3 x {motor_screw_length} countersunk screws.'
-  - 'Output: {output_view_diameter:g} mm viewing hole; {output_m3_mount_count} captive
-    M3 attachment nuts.'
+  - 'Output: {output_view_diameter:g} mm viewing hole; {output_m6_mount_count} M6
+    and {output_m3_mount_count} M3 attachment nuts.'
   - 'Output sandwich: two M3 x {output_plate_clamp_screw_length} short joiners, separate
     from the cage fixings.'
   - Tighten the upper shaft clamp before fitting the outer case.
-  - 'Optional extended shaft: two M3 x {extended_eccentric_screw_length} socket-cap
-    joiners.'
+  - 'Optional lifter on standard upper collar: two M3 x {extended_eccentric_screw_length}
+    socket-cap joiners.'
   - 'Hardware links: OOMP catalogue codes. Printed parts are named in the parts list.'
   - AI-generated CAD and instructions. Fit and load capacity not physically tested.
   summary_title: Printed parts
@@ -798,7 +798,7 @@ oobb_details:
   roller_bank_count: 1
   motor_plate_depth: 4.0
   motor_screw_length: 8
-  case_screw_length: 30
+  case_screw_length: 35
   case_socket_recess: 3.6
   case_nut_z: 0.1
   motor_body_depth: 40.0
@@ -812,7 +812,7 @@ oobb_details:
   case_boss_rounding_fraction: 1.0
   case_boss_overlap: 1.5
   max_screw_length: 35.0
-  countersunk_head_proud: 1.0
+  countersunk_head_proud: 0.5
   countersunk_head_clearance: 0.3
   m3_countersunk_radius: 3.6
   eccentricity: 0.75
@@ -833,12 +833,9 @@ oobb_details:
   eccentric_top_z: 25.4
   shaft_clamp_axis_z: 22.0
   shaft_driver_diameter: 2.4
-  eccentric_key_inner_radius: 3.9
-  eccentric_key_outer_radius: 4.8
-  eccentric_key_depth: 1.0
-  eccentric_key_clearance: 0.15
+  eccentric_mark_radius: 0.8
   extended_eccentric_diameter: 19.2
-  extended_eccentric_screw_length: 30
+  extended_eccentric_screw_length: 35
   extended_eccentric_socket_depth: 3.2
   bearing_seat_clearance: 0.1
   journal_clearance: 0.05
@@ -846,20 +843,20 @@ oobb_details:
   output_plate_diameter: 61.8
   output_view_diameter: 20.0
   output_plate_clamp_mounts:
-  - - 0
-    - 20
-  - - 0
-    - -20
+  - - 8
+    - 19.2
+  - - -8
+    - -19.2
   output_plate_clamp_screw_length: 10
   output_cover_depth: 4.3
   output_above_housing: 1.5
   output_hub_depth: 2.1
   output_grid_pitch: 15.0
   output_fixing_x: 20.0
-  output_fixing_y: 10.0
+  output_fixing_y: 7.5
   output_face_clearance: 0.8
   output_radial_clearance: 0.6
-  output_screw_length: 16
+  output_screw_length: 20
   output_nut_depth: 5.2
   output_nut_height: 5.0
   output_m3_nut_depth: 2.7
@@ -1045,14 +1042,14 @@ oobb_details:
   - Seat twelve M2 nuts underneath the lower cage, then lower the cage teeth upward
     onto the plate.
   - Load two M3 joint nuts from below. Slide the lower eccentric onto the motor shaft
-    with its semicircular alignment tongue upward.
+    with its bearing journal upward. Locate the small semicircular mark on the edge
+    of the lower collar.
   - Seat four M3 nuts underneath the lower clamshell. Lower it around the eccentric
     journal and seat the 6704 bearing squarely in its recess.
   - Load the radial M3 nut from the top of the upper eccentric and start its M3 x
-    {shaft_clamp_screw_length} clamp screw. Match the semicircular key and recess
-    at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length}
-    countersunk joiners, then tighten the upper shaft clamp before fitting the outer
-    case.
+    {shaft_clamp_screw_length} clamp screw. Align the semicircular edge marks at the
+    middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length} countersunk
+    joiners, then tighten the upper shaft clamp before fitting the outer case.
   - Fit the upper wave half around the 6704 bearing. Tighten four M3 x {wave_screw_length}
     countersunk screws into the lower nuts.
   - Confirm the upper shaft clamp is tight, then lower the fixed ring around the cage
@@ -1065,10 +1062,11 @@ oobb_details:
   - Seat the 6810 over the upper cage hub. Lower the housing over the bearing outer
     race. Insert six M3 x {case_screw_length} socket caps from the top and tighten
     into the captive base nuts.
-  - Load {output_m3_mount_count} M3 attachment nuts into the carrier and two M3 sandwich
-    nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length}
-    countersunk screws. The plate is now clamped as a separate assembly; its viewing
-    hole and bolt-clearance holes stay open.
+  - Load {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment nuts
+    into the carrier and two M3 sandwich nuts from underneath. Fit the flat cover
+    and tighten two M3 x {output_plate_clamp_screw_length} countersunk screws. The
+    plate is now clamped as a separate assembly; its viewing hole and bolt-clearance
+    holes stay open.
   - Lower the preassembled output plate over the bearing and fasten it to the cage
     with four M3 x {output_screw_length} countersunk screws. Keep the separate short
     sandwich screws tight. With power disconnected, hand-turn the input {reduction}
@@ -1166,7 +1164,8 @@ oobb_details:
       - 42
   - title: Prepare and fit the lower eccentric
     action: Load two M3 joint nuts from below. Slide the lower eccentric onto the
-      motor shaft with its semicircular alignment tongue upward.
+      motor shaft with its bearing journal upward. Locate the small semicircular mark
+      on the edge of the lower collar.
     add:
     - motor_eccentric
     - eccentric_join_nut_*
@@ -1215,8 +1214,8 @@ oobb_details:
       - 34
   - title: Close the eccentric shaft
     action: Load the radial M3 nut from the top of the upper eccentric and start its
-      M3 x {shaft_clamp_screw_length} clamp screw. Match the semicircular key and
-      recess at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length}
+      M3 x {shaft_clamp_screw_length} clamp screw. Align the semicircular edge marks
+      at the middle of the bearing. Tighten the two M3 x {eccentric_join_screw_length}
       countersunk joiners, then tighten the upper shaft clamp before fitting the outer
       case.
     add:
@@ -1342,10 +1341,11 @@ oobb_details:
       - 0
       - 43
   - title: Preassemble the output plate
-    action: Load {output_m3_mount_count} M3 attachment nuts into the carrier and two
-      M3 sandwich nuts from underneath. Fit the flat cover and tighten two M3 x {output_plate_clamp_screw_length}
-      countersunk screws. The plate is now clamped as a separate assembly; its viewing
-      hole and bolt-clearance holes stay open.
+    action: Load {output_m6_mount_count} M6 and {output_m3_mount_count} M3 attachment
+      nuts into the carrier and two M3 sandwich nuts from underneath. Fit the flat
+      cover and tighten two M3 x {output_plate_clamp_screw_length} countersunk screws.
+      The plate is now clamped as a separate assembly; its viewing hole and bolt-clearance
+      holes stay open.
     add:
     - output_retainer
     - output_cover
@@ -1356,7 +1356,7 @@ oobb_details:
       - 0
       - 0
       - 24
-      output_attachment_m3_nut_*:
+      output_attachment*:
       - 0
       - 0
       - 42
@@ -1534,13 +1534,13 @@ oobb_details:
     - 'Clamshell joint: M3 x {wave_screw_length} countersunk screws and captive nuts.'
     - 'Case: M3 x {case_screw_length} screws from above; nuts underneath the base.'
     - 'Motor mount: M3 x {motor_screw_length} countersunk screws.'
-    - 'Output: {output_view_diameter:g} mm viewing hole; {output_m3_mount_count} captive
-      M3 attachment nuts.'
+    - 'Output: {output_view_diameter:g} mm viewing hole; {output_m6_mount_count} M6
+      and {output_m3_mount_count} M3 attachment nuts.'
     - 'Output sandwich: two M3 x {output_plate_clamp_screw_length} short joiners,
       separate from the cage fixings.'
     - Tighten the upper shaft clamp before fitting the outer case.
-    - 'Optional extended shaft: two M3 x {extended_eccentric_screw_length} socket-cap
-      joiners.'
+    - 'Optional lifter on standard upper collar: two M3 x {extended_eccentric_screw_length}
+      socket-cap joiners.'
     - 'Hardware links: OOMP catalogue codes. Printed parts are named in the parts
       list.'
     - AI-generated CAD and instructions. Fit and load capacity not physically tested.

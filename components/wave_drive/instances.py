@@ -54,7 +54,8 @@ def instance_definitions(**kwargs):
         },
         {
             "part": "output_cage",
-            "pos": [0, 0, c["cage_floor_z"]],
+            "mirror": True,
+            "height": c["retainer_z"],
             "level": 9,
             "open": False,
         },
@@ -212,6 +213,7 @@ def instance_definitions(**kwargs):
             "part": "nut_m6",
             "name": f"output_attachment_nut_{index}",
             "pos": xy+[c["output_attachment_nut_z"]],
+            "rotation_z": math.degrees(math.atan2(xy[1],xy[0]))-30,
             "level": 13.5,
             "open": False,
         })

@@ -6,17 +6,17 @@
       "expect_empty": true
     },
     {
-      "name": "key_rejects_half_turn",
-      "status": "passed",
-      "expect_empty": false
-    },
-    {
       "name": "viewing_hole",
       "status": "passed",
       "expect_empty": true
     },
     {
       "name": "payload_clearance",
+      "status": "passed",
+      "expect_empty": true
+    },
+    {
+      "name": "m6_payload_clearance",
       "status": "passed",
       "expect_empty": true
     },
@@ -66,8 +66,8 @@
     }
   ],
   "status": "passed",
-  "extended_top_z_mm": 38.1,
+  "extended_top_z_mm": 42.4,
   "extended_radial_clearance_mm": 0.40000000000000036,
-  "extended_screw_tip_clearance_mm": 2.4999999999999987,
+  "extended_screw_tip_clearance_mm": 1.7999999999999958,
   "limitations": "Geometric checks only; printed fit and running performance require physical tests."
 }

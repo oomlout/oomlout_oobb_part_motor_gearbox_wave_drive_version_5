@@ -25,7 +25,7 @@ def output_mount_layout(**kwargs):
     m6_radius = kwargs["mount_m6_pocket_radius"]
     view_radius = kwargs["output_view_diameter"]/2
     m6 = [p for p in [[0, 0], [pitch, 0], [-pitch, 0], [0, pitch], [0, -pitch]]
-          if math.hypot(*p)-m6_radius >= view_radius+web]
+          if math.hypot(*p) >= view_radius+5.0 and math.hypot(*p)+m6_radius+web <= radius]
     x, y = kwargs["output_fixing_x"], kwargs["output_fixing_y"]
     assembly = [[x, y], [-y, x], [-x, -y], [y, -x]]
     # Half-grid candidates, including axial positions; reject any pocket that
@@ -135,7 +135,8 @@ def resolve(**kwargs):
     c["roller_z"] = c["wave_z"]+(c["wave_height"]-c["roller_length"])/2
     c["cage_floor_z"] = c["window_z"]+c["window_height"]
     c["cage_head_lift"] = c["cage_screw_length"]-c["cage_screw_reference_length"]+c["cage_tip_extra_clearance"]
-    c["cage_upper_plate_depth"] = c["cage_plate_depth"]+c["cage_head_lift"]
+    c["cage_slope_height"] = c["cage_outer_radius"]-(25-c["journal_clearance"])
+    c["cage_upper_plate_depth"] = c["cage_plate_depth"]+c["cage_head_lift"]+c["cage_slope_height"]
     c["hub_z"] = c["cage_floor_z"]+c["cage_upper_plate_depth"]
     c["bearing_z"] = c["hub_z"]+.1
     c["ring_height"] = c["hub_z"]-c["ring_z"]
@@ -166,7 +167,7 @@ def resolve(**kwargs):
     if c["eccentric_join_pitch_radius"]+3.6 > 10.5:
         raise ValueError("Eccentric countersinks need a 0.5 mm rim inside the 22 mm collar")
     c["housing_top_z"] = c["hub_z"]+c["bearing_stack_height"]+3.5
-    c["case_socket_depth"] = c["case_socket_recess"]+c["cage_head_lift"]
+    c["case_socket_depth"] = c["case_socket_recess"]+c["cage_head_lift"]+c["cage_slope_height"]-(c["case_screw_length"]-30)
     c["case_head_seat"] = c["housing_top_z"]-c["case_socket_depth"]
     c["housing_top_depth"] = c["housing_top_z"]-c["hub_z"]
     c["motor_head_seat"] = c["motor_plate_depth"]+c["countersunk_head_proud"]
@@ -184,7 +185,7 @@ def resolve(**kwargs):
     c["retainer_depth"] = c["output_neck_height"]
     c["output_head_seat"] = c["assembly_height"]+c["countersunk_head_proud"]
     c["output_plate_clamp_nut_z"] = c["output_head_seat"]-c["output_plate_clamp_screw_length"]+.1
-    c["extended_eccentric_height"] = c["assembly_height"]-c["cam_cap_z"]
+    c["extended_eccentric_height"] = c["assembly_height"]-c["eccentric_top_z"]
     c["extended_eccentric_head_z"] = c["assembly_height"]-c["extended_eccentric_socket_depth"]
     if c["extended_eccentric_head_z"]-c["extended_eccentric_screw_length"] > c["eccentric_join_nut_z"]:
         raise ValueError("Extended eccentric screws must fully engage the lower nuts")
@@ -222,7 +223,7 @@ def resolve(**kwargs):
     c["output_nut_z"] = c["cage_floor_z"]+c["cage_head_lift"]+.2
     if c["output_head_seat"]-c["output_screw_length"] > c["output_nut_z"]+1e-8:
         raise ValueError("Output screws do not fully engage the captive cage nuts")
-    c["cage_head_seat"] = c["hub_z"]
+    c["cage_head_seat"] = c["hub_z"]-c["cage_slope_height"]
     c["cage_nut_z"] = c["cage_head_seat"]-c["cage_screw_length"]
     c["cage_tip_clearance"] = c["cage_head_seat"]-c["cage_screw_length"]-c["cage_cap_z"]
     # Deeper underside nut tunnels reach into the tooth roots; nominal nuts
@@ -278,7 +279,7 @@ def piece_definitions(**kwargs):
         },
         {
             "name": "output_cage",
-            "module": "cage",
+            "module": "cage_face_down",
             "arguments": [],
             "quantity": 1,
             "size": [2*c["cage_outer_radius"], 2*c["cage_outer_radius"]],
@@ -357,8 +358,8 @@ def optional_print_definitions(**kwargs):
             "arguments": [],
             "quantity": 1,
             "size": [24, 24],
-            "replaces": "motor_eccentric_cap",
-            "role": "Optional flush-height shaft; replace the two M3 countersunk joiners with M3 x 30 socket caps",
+            "fits_on": "motor_eccentric_cap",
+            "role": "Optional lifter on the standard upper collar. Use two M3 x 35 socket caps through the stack.",
         })
     return pieces
 

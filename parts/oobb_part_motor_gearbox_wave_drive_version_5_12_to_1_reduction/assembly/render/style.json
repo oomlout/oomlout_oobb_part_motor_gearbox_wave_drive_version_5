@@ -1263,12 +1263,14 @@
         "eccentric_join_nut_0",
         "eccentric_join_screw_1",
         "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
         "output_attachment_m3_nut_0",
         "output_attachment_m3_nut_1",
         "output_attachment_m3_nut_2",
         "output_attachment_m3_nut_3",
-        "output_attachment_m3_nut_4",
-        "output_attachment_m3_nut_5",
         "plate_clamp_0_screw_output_clamp",
         "plate_clamp_0_nut_m3",
         "plate_clamp_1_screw_output_clamp",
@@ -1286,6 +1288,26 @@
           0.0,
           32.400000000000006
         ],
+        "output_attachment_nut_0": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_1": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_2": [
+          0.0,
+          0.0,
+          56.7
+        ],
+        "output_attachment_nut_3": [
+          0.0,
+          0.0,
+          56.7
+        ],
         "output_attachment_m3_nut_0": [
           0.0,
           0.0,
@@ -1302,16 +1324,6 @@
           56.7
         ],
         "output_attachment_m3_nut_3": [
-          0.0,
-          0.0,
-          56.7
-        ],
-        "output_attachment_m3_nut_4": [
-          0.0,
-          0.0,
-          56.7
-        ],
-        "output_attachment_m3_nut_5": [
           0.0,
           0.0,
           56.7
@@ -1444,12 +1456,14 @@
         "eccentric_join_nut_0",
         "eccentric_join_screw_1",
         "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
         "output_attachment_m3_nut_0",
         "output_attachment_m3_nut_1",
         "output_attachment_m3_nut_2",
         "output_attachment_m3_nut_3",
-        "output_attachment_m3_nut_4",
-        "output_attachment_m3_nut_5",
         "plate_clamp_0_screw_output_clamp",
         "plate_clamp_0_nut_m3",
         "plate_clamp_1_screw_output_clamp",
@@ -1472,6 +1486,26 @@
           0.0,
           32.400000000000006
         ],
+        "output_attachment_nut_0": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_nut_1": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_nut_2": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
+        "output_attachment_nut_3": [
+          0.0,
+          0.0,
+          32.400000000000006
+        ],
         "output_attachment_m3_nut_0": [
           0.0,
           0.0,
@@ -1488,16 +1522,6 @@
           32.400000000000006
         ],
         "output_attachment_m3_nut_3": [
-          0.0,
-          0.0,
-          32.400000000000006
-        ],
-        "output_attachment_m3_nut_4": [
-          0.0,
-          0.0,
-          32.400000000000006
-        ],
-        "output_attachment_m3_nut_5": [
           0.0,
           0.0,
           32.400000000000006
@@ -1906,6 +1930,21 @@
         "case_nut_0"
       ]
     },
+    "part_nut_m6": {
+      "eye": [
+        1.2,
+        -1.6,
+        1.35
+      ],
+      "size": [
+        360,
+        300
+      ],
+      "margin": 1.2,
+      "include_names": [
+        "output_attachment_nut_0"
+      ]
+    },
     "part_nema17": {
       "eye": [
         1.2,
@@ -2025,12 +2064,14 @@
         "eccentric_join_nut_0",
         "eccentric_join_screw_1",
         "eccentric_join_nut_1",
+        "output_attachment_nut_0",
+        "output_attachment_nut_1",
+        "output_attachment_nut_2",
+        "output_attachment_nut_3",
         "output_attachment_m3_nut_0",
         "output_attachment_m3_nut_1",
         "output_attachment_m3_nut_2",
         "output_attachment_m3_nut_3",
-        "output_attachment_m3_nut_4",
-        "output_attachment_m3_nut_5",
         "plate_clamp_0_screw_output_clamp",
         "plate_clamp_0_nut_m3",
         "plate_clamp_1_screw_output_clamp",
